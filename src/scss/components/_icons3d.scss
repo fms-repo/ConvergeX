@@ -1,0 +1,499 @@
+.icon3d {
+  .icon-wrap {
+    display: inline-block;
+    margin: 0 auto;
+    perspective: 100px;
+    position: relative;
+    i {
+      display: block;
+      transform-style: preserve-3d;
+      transform: rotate3d(3, -5, 3, 33deg);
+    }
+  }
+
+  .overlay-3d {
+    position: absolute;
+    color: #fff;
+    filter: blur(20px);
+    top: 2px;
+    @include use-rtl-ltr(left, auto, 2px);
+    @include use-rtl-ltr(right, 2px, auto);
+    opacity: 0.3;
+  }
+
+  .emboss1 {
+    position: absolute;
+    opacity: 1;
+    text-shadow: 0 0 3px #000;
+    filter: blur(1px);
+    top: 1px;
+    @include use-rtl-ltr(left, auto, 3px);
+    @include use-rtl-ltr(right, 3px, auto);
+  }
+
+  .emboss2 {
+    position: absolute;
+    opacity: 0.7;
+    filter: blur(1px);
+    top: 2px;
+    @include use-rtl-ltr(left, auto, 4px);
+    @include use-rtl-ltr(right, 4px, auto);
+  }
+
+  .emboss3 {
+    position: absolute;
+    opacity: 1;
+    filter: blur(1px);
+    top: 1px;
+    @include use-rtl-ltr(left, auto, 2px);
+    @include use-rtl-ltr(right, 2px, auto);
+    @include use-theme(color, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.3));
+    &:before {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .shadow-3d {
+    position: absolute;
+    color: #000;
+    filter: blur(8px);
+    top: 15px;
+    @include use-rtl-ltr(left, auto, 15px);
+    @include use-rtl-ltr(right, 15px, auto);
+    opacity: 0.05
+  }
+
+  .front-3d {
+    @include use-theme(color, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.3));
+    &:before {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .primary-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(-120deg, $palette-primary-light 30%, $palette-primary-main 80%, $palette-primary-dark 100%);
+      }
+    }
+    .emboss2 {
+      color: $palette-primary-main
+    }
+    .emboss1 {
+      color: $palette-primary-dark
+    }
+    &:before {
+      background-image: linear-gradient(-120deg, $palette-primary-light 30%, $palette-primary-main 80%, $palette-primary-dark 100%);
+    }
+  }
+
+  .secondary-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(-120deg, $palette-secondary-light 30%, $palette-secondary-main 80%, $palette-secondary-dark 100%);
+      }
+    }
+    .emboss2 {
+      color: $palette-secondary-main
+    }
+    .emboss1 {
+      color: $palette-secondary-dark
+    }
+    &:before {
+      background-image: linear-gradient(-120deg, $palette-secondary-light 30%, $palette-secondary-main 80%, $palette-secondary-dark 100%);
+    }
+  }
+
+  .accent-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(-120deg, $palette-accent-light 30%, $palette-accent-main 80%, $palette-accent-dark 100%);
+      }
+    }
+    .emboss2 {
+      color: $palette-accent-main
+    }
+    .emboss1 {
+      color: $palette-accent-dark
+    }
+    &:before {
+      background-image: linear-gradient(-120deg, $palette-accent-light 30%, $palette-accent-main 80%, $palette-accent-dark 100%);
+    }
+  }
+
+  .primary-double-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(-120deg, $palette-accent-light 30%, $palette-accent-main 50%, $palette-primary-main 80%);
+      }
+    }
+    .emboss2 {
+      color: $palette-accent-main
+    }
+    .emboss1 {
+      color: $palette-accent-dark
+    }
+    &:before {
+      background-image: linear-gradient(-120deg, $palette-accent-light 30%, $palette-accent-main 50%, $palette-primary-main 80%);
+    }
+  }
+
+  .secondary-double-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(-120deg, $palette-secondary-main 40%, $palette-primary-main 80%, $palette-primary-dark 100%);
+      }
+    }
+    .emboss2 {
+      color: $palette-secondary-main
+    }
+    .emboss1 {
+      color: $palette-primary-dark
+    }
+    &:before {
+      background-image: linear-gradient(-120deg, $palette-secondary-main 40%, $palette-primary-main 80%, $palette-primary-dark 100%);
+    }
+  }
+
+  .accent-double-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(-120deg, $palette-accent-light 20%, $palette-accent-main 40%, $palette-secondary-dark 70%, $palette-secondary-main 90%);
+      }
+    }
+    .emboss2 {
+      color: $palette-accent-main
+    }
+    .emboss1 {
+      color: $palette-accent-dark
+    }
+    &:before {
+      background-image: linear-gradient(-120deg, $palette-accent-light 20%, $palette-accent-main 40%, $palette-secondary-dark 70%, $palette-secondary-main 90%);
+    }
+  }
+
+  .red-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('red', '100') 30%, material-color('red', '500') 80%, material-color('red', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('red', '500')
+    }
+    .emboss1 {
+      color: material-color('red', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('red', '100') 30%, material-color('red', '500') 80%, material-color('red', '900') 100%);
+    }
+  }
+
+  .pink-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('pink', '100') 30%, material-color('pink', '500') 80%, material-color('pink', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('pink', '500')
+    }
+    .emboss1 {
+      color: material-color('pink', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('pink', '100') 30%, material-color('pink', '500') 80%, material-color('pink', '900') 100%);
+    }
+  }
+
+  .purple-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('purple', '100') 30%, material-color('purple', '500') 80%, material-color('purple', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('purple', '500')
+    }
+    .emboss1 {
+      color: material-color('purple', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('purple', '100') 30%, material-color('purple', '500') 80%, material-color('purple', '900') 100%);
+    }
+  }
+
+  .deep-purple-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('deep-purple', '100') 30%, material-color('deep-purple', '500') 80%, material-color('deep-purple', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('deep-purple', '500')
+    }
+    .emboss1 {
+      color: material-color('deep-purple', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('deep-purple', '100') 30%, material-color('deep-purple', '500') 80%, material-color('deep-purple', '900') 100%);
+    }
+  }
+
+  .indigo-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('indigo', '100') 30%, material-color('indigo', '500') 80%, material-color('indigo', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('indigo', '500')
+    }
+    .emboss1 {
+      color: material-color('indigo', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('indigo', '100') 30%, material-color('indigo', '500') 80%, material-color('indigo', '900') 100%);
+    }
+  }
+
+  .blue-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('blue', '100') 30%, material-color('blue', '500') 80%, material-color('blue', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('blue', '500')
+    }
+    .emboss1 {
+      color: material-color('blue', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('blue', '100') 30%, material-color('blue', '500') 80%, material-color('blue', '900') 100%);
+    }
+  }
+
+  .light-blue-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('light-blue', '100') 30%, material-color('light-blue', '500') 80%, material-color('light-blue', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('light-blue', '500')
+    }
+    .emboss1 {
+      color: material-color('light-blue', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('light-blue', '100') 30%, material-color('light-blue', '500') 80%, material-color('light-blue', '900') 100%);
+    }
+  }
+
+  .cyan-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('cyan', '100') 30%, material-color('cyan', '500') 80%, material-color('cyan', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('cyan', '500')
+    }
+    .emboss1 {
+      color: material-color('cyan', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('cyan', '100') 30%, material-color('cyan', '500') 80%, material-color('cyan', '900') 100%);
+    }
+  }
+
+  .teal-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('teal', '100') 30%, material-color('teal', '500') 80%, material-color('teal', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('teal', '500')
+    }
+    .emboss1 {
+      color: material-color('teal', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('teal', '100') 30%, material-color('teal', '500') 80%, material-color('teal', '900') 100%);
+    }
+  }
+
+  .green-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('green', '100') 30%, material-color('green', '500') 80%, material-color('green', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('green', '500')
+    }
+    .emboss1 {
+      color: material-color('green', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('green', '100') 30%, material-color('green', '500') 80%, material-color('green', '900') 100%);
+    }
+  }
+
+  .light-green-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('light-green', '100') 30%, material-color('light-green', '500') 80%, material-color('light-green', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('light-green', '500')
+    }
+    .emboss1 {
+      color: material-color('light-green', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('light-green', '100') 30%, material-color('light-green', '500') 80%, material-color('light-green', '900') 100%);
+    }
+  }
+
+  .lime-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('lime', '100') 30%, material-color('lime', '500') 80%, material-color('lime', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('lime', '500')
+    }
+    .emboss1 {
+      color: material-color('lime', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('lime', '100') 30%, material-color('lime', '500') 80%, material-color('lime', '900') 100%);
+    }
+  }
+
+  .yellow-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('yellow', '100') 30%, material-color('yellow', '500') 80%, material-color('yellow', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('yellow', '500')
+    }
+    .emboss1 {
+      color: material-color('yellow', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('yellow', '100') 30%, material-color('yellow', '500') 80%, material-color('yellow', '900') 100%);
+    }
+  }
+
+  .amber-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('amber', '100') 30%, material-color('amber', '500') 80%, material-color('amber', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('amber', '500')
+    }
+    .emboss1 {
+      color: material-color('amber', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('amber', '100') 30%, material-color('amber', '500') 80%, material-color('amber', '900') 100%);
+    }
+  }
+
+  .orange-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('orange', '100') 30%, material-color('orange', '500') 80%, material-color('orange', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('orange', '500')
+    }
+    .emboss1 {
+      color: material-color('orange', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('orange', '100') 30%, material-color('orange', '500') 80%, material-color('orange', '900') 100%);
+    }
+  }
+
+  .deep-orange-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('deep-orange', '100') 30%, material-color('deep-orange', '500') 80%, material-color('deep-orange', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('deep-orange', '500')
+    }
+    .emboss1 {
+      color: material-color('deep-orange', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('deep-orange', '100') 30%, material-color('deep-orange', '500') 80%, material-color('deep-orange', '900') 100%);
+    }
+  }
+
+  .brown-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('brown', '100') 30%, material-color('brown', '500') 80%, material-color('brown', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('brown', '500')
+    }
+    .emboss1 {
+      color: material-color('brown', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('brown', '100') 30%, material-color('brown', '500') 80%, material-color('brown', '900') 100%);
+    }
+  }
+
+  .grey-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('grey', '100') 30%, material-color('grey', '500') 80%, material-color('grey', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('grey', '500')
+    }
+    .emboss1 {
+      color: material-color('grey', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('grey', '100') 30%, material-color('grey', '500') 80%, material-color('grey', '900') 100%);
+    }
+  }
+
+  .blue-grey-icon3d {
+    .emboss3 {
+      &:before {
+        background-image: linear-gradient(90deg, material-color('blue-grey', '100') 30%, material-color('blue-grey', '500') 80%, material-color('blue-grey', '900') 100%);
+      }
+    }
+    .emboss2 {
+      color: material-color('blue-grey', '500')
+    }
+    .emboss1 {
+      color: material-color('blue-grey', '900')
+    }
+    &:before {
+      background-image: linear-gradient(90deg, material-color('blue-grey', '100') 30%, material-color('blue-grey', '500') 80%, material-color('blue-grey', '900') 100%);
+    }
+  }
+}

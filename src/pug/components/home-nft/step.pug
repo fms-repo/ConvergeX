@@ -1,0 +1,45 @@
+include ../title/title.pug
+include ../icons3d.pug
+
+#nft-step
+  .container
+    +parallax-title($t.nft.sell_bgtitle, $t.nft.sell_title, 'double-main')
+    .row.step.spacing6-sm-up
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-image-multiple', 'secondary-double')
+            .left
+              +icons3d('mdi-cog', 'primary')
+            .right
+              +icons3d('mdi-plus-thick', 'accent')
+          .glow.primary
+            h6.use-text-subtitle2 #{$t.nft.step_title1}
+            p.use-text-paragraph #{$t.nft.step_desc1}
+          hr.divider.primary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-arrow-up-circle', 'primary-double')
+            .left
+              +icons3d('mdi-hexagon', 'accent')
+            .right
+              +icons3d('mdi-source-branch', 'secondary')
+          .glow.secondary
+            h6.use-text-subtitle2 #{$t.nft.step_title2}
+            p.use-text-paragraph #{$t.nft.step_desc2}
+          hr.divider.secondary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-shopping', 'accent-double')
+            .left
+              +icons3d('mdi-chart-timeline-variant', 'primary')
+            .right
+              +icons3d('mdi-tag', 'secondary')
+          .glow.accent
+            h6.use-text-subtitle2 #{$t.nft.step_title3}
+            p.use-text-paragraph #{$t.nft.step_desc3}

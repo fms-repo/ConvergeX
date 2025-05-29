@@ -1,0 +1,162 @@
+include ../title/parallax-title.pug
+include ./slider-art.pug
+include ../cards/products/countdown-card
+
+-
+  var nftList = [
+    {
+      img: imgAPI.photosL[46],
+      circulation: '100000',
+      timeleft: 30000000,
+      title: 'Lorem Ipsum Dolor 1',
+      bid: 20,
+      like: 100,
+      price: 0.5,
+      href: link.productDetail,
+      avatars: [
+        imgAPI.avatar[0],
+        imgAPI.avatar[1],
+        imgAPI.avatar[4],
+        imgAPI.avatar[5],
+      ]
+    },
+    {
+      img: imgAPI.photosL[8],
+      circulation: '100000',
+      timeleft: 560000000,
+      title: 'Lorem Ipsum Dolor 2',
+      bid: 20,
+      like: 100,
+      price: 0.5,
+      href: link.productDetail,
+      avatars: [
+        imgAPI.logos[0],
+        imgAPI.avatar[2],
+        imgAPI.logos[4],
+        imgAPI.avatar[4],
+      ]
+    },
+    {
+      img: imgAPI.photosL[7],
+      circulation: '100000',
+      timeleft: 250000000,
+      title: 'Lorem Ipsum Dolor 3',
+      bid: 20,
+      like: 100,
+      price: 0.5,
+      href: link.productDetail,
+      avatars: [
+        imgAPI.logos[1],
+        imgAPI.logos[2],
+        imgAPI.logos[5],
+        imgAPI.avatar[6],
+      ]
+    },
+    {
+      img: imgAPI.photosL[50],
+      circulation: '100000',
+      timeleft: 110000000,
+      title: 'Lorem Ipsum Dolor 4',
+      bid: 20,
+      like: 100,
+      price: 0.5,
+      href: link.productDetail,
+      avatars: [
+        imgAPI.avatar[6],
+        imgAPI.logos[7],
+        imgAPI.avatar[8],
+        imgAPI.avatar[10],
+      ]
+    },
+    {
+      img: imgAPI.photosL[5],
+      circulation: '100000',
+      timeleft: 500000000,
+      title: 'Lorem Ipsum Dolor 5',
+      bid: 20,
+      like: 100,
+      price: 0.5,
+      href: link.productDetail,
+      avatars: [
+        imgAPI.logos[10],
+        imgAPI.logos[11],
+        imgAPI.logos[12],
+        imgAPI.logos[20],
+      ]
+    },
+    {
+      img: imgAPI.photosL[7],
+      circulation: '100,000',
+      timeleft: 1000000,
+      title: 'Lorem Ipsum Dolor 6',
+      bid: 20,
+      like: 100,
+      price: 0.5,
+      href: link.productDetail,
+      avatars: [
+        imgAPI.avatar[10],
+        imgAPI.logos[11],
+        imgAPI.avatar[3],
+        imgAPI.avatar[4],
+      ]
+    }
+  ];
+
+#nft-auction
+  .root
+    +parallax-title($t.nft.header_explore, $t.nft.auction_title, 'double-main')
+    .wrap
+      .background
+        .floating-artwork
+          +slider-art('nft-auction')
+            div
+              h2.use-text-title
+                span
+                | LIVE
+              p.mb-6
+                | #{$t.nft.auction_desc}
+              |
+              |
+              a.btn.btn-outlined.button.black-white.btn-large.waves-effect
+                | #{$t.btn_seeall}
+              |
+              |
+    .slider-wrap
+      .carousel
+        .slick-carousel#auction-carousel(data-length=nftList.length)
+          .props.item-props-first
+            div
+          each item, index in nftList
+            .item
+              +countdown-card(
+                item.img,
+                item.title,
+                item.circulation,
+                item.like,
+                item.price,
+                item.href,
+                item.avatars,
+                item.bid,
+                item.timeleft
+              )
+          .props.item-props-first
+            div
+        |
+        |
+        button.btn-floating.nav.prev.waves-effect#prev_auction(type="button")
+          |
+          |
+          i.ion-ios-arrow-back
+          |
+          |
+        |
+        |
+        button.btn-floating.nav.next.waves-effect#next_auction(type="button")
+          |
+          |
+          i.ion-ios-arrow-forward
+          |
+          |
+        |
+        |
+

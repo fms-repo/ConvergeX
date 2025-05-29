@@ -1,0 +1,71 @@
+#cv-portfolios {
+  .root {
+    z-index: 10;
+    position: relative;
+    @include breakpoints-down(sm) {
+      .container {
+        padding: 0 !important
+      }
+    }
+  }
+  .filter {
+    position: relative;
+    z-index: 20;
+    overflow: auto;
+    width: auto;
+    flex-grow: inherit;
+    padding: $spacing1;
+    margin-bottom: $spacing5;
+    display: flex;
+    background: $gradient-triple-light;
+    border-radius: 40px;
+    @include breakpoints-down(md) {
+      padding: spacing(1, 2);
+    }
+    > .btn {
+      background: transparent;
+      border-radius: 40px;
+      font-weight: $font-medium;
+      color: $palette-common-black;
+      white-space: nowrap;
+      min-width: 100px;
+      display: inline-flex;
+      -webkit-box-flex: 0;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      @include breakpoints-up(sm) {
+        padding: spacing(0, 2);
+        box-shadow: none;
+        @include margin-right($spacing3)
+      }
+      &.selected {
+        background: $palette-common-black;
+        color: $palette-common-white
+      }
+    }
+  }
+  .massonry {
+    columns: 3 300px;
+    column-gap: $spacing4
+  }
+
+  .item {
+    break-inside: avoid;
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    &.loaded {
+      opacity: 1;
+      transition: all 0.3s ease-out;
+      transform: translateY(0px);
+    }
+  }
+
+  .item-carousel {
+    position: relative;
+    @include breakpoints-down(sm) {
+      padding: spacing(0, 1)
+    }
+  }
+}

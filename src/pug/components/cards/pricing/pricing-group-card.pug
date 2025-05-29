@@ -1,0 +1,131 @@
+-
+  var monthlyList = [
+    {
+      title: 'Free',
+      price: 0,
+      description: ['10 users included', '2 GB of storage'],
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      buttonText: 'pricing_free',
+      buttonVariant: 'outlined',
+      link: link.register,
+    },
+    {
+      title: 'Best Value',
+      price: 5,
+      description: [
+        '15 users included',
+        '10 GB of storage',
+        'Help center access',
+      ],
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      buttonText: 'pricing_buy',
+      buttonVariant: 'outlined',
+      link: link.register
+    },
+    {
+      title: 'Pro',
+      price: 15,
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      description: [
+        '20 users included',
+        '10 GB of storage',
+        'Help center access',
+      ],
+      buttonText: 'pricing_buy',
+      buttonVariant: 'contained',
+      link: link.register,
+    },
+    {
+      title: 'VIP',
+      price: 30,
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      description: [
+        '50 users included',
+        '30 GB of storage',
+        'Phone & email support',
+      ],
+      buttonText: 'btn_contact',
+      buttonVariant: 'outlined',
+      link: link.contact
+    }
+  ];
+
+  var yearlyList = [
+    {
+      title: 'Pro',
+      price: 50,
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      description: [
+        '20 users included',
+        '10 GB of storage',
+        'Help center access',
+        'Priority email support',
+      ],
+      buttonText: 'pricing_buy',
+      buttonVariant: 'contained',
+      link: link.register,
+    },
+    {
+      title: 'Best Value',
+      price: 155,
+      description: [
+        '15 users included',
+        '10 GB of storage',
+        'Help center access',
+        'Priority email support'
+      ],
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      buttonText: 'pricing_buy',
+      buttonVariant: 'outlined',
+      link: link.register,
+    },
+    {
+      title: 'VIP',
+      price: 300,
+      info: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+      description: [
+        '50 users included',
+        '30 GB of storage',
+        'Help center access',
+        'Phone & email support',
+      ],
+      buttonText: 'btn_contact',
+      buttonVariant: 'outlined',
+      link: link.contact,
+    }
+  ];
+
+include ../../title/title.pug
+include ./pricing-basic-card.pug
+
+.pricing-group-card
+  .container.root
+    +title-main($t.pricing_title, 'center')
+    p.use-text-subtitle2.text-center
+      | #{$t.pricing_desc}
+    .tab.mx-2
+      .d-flex.justify-content-center
+        ul.tabs.tabs-basic.primary
+          li.tab
+            |
+            |
+            a.tab-label.waves-effect.active(href='#month') Monhtly
+            |
+            |
+          li.tab
+            |
+            |
+            a.tab-label.waves-effect(href='#year') Yearly
+            |
+            |
+      .tab-content.pricing-group
+        #month.tab-item
+          .row.items-end
+            each tier, index in monthlyList
+              .col-md-3.col-sm-6.px-0
+                +pricing-basic-card(tier.title, tier.price, tier.description, tier.info, $t[tier.buttonText], 'month', tier.link)
+        #year.tab-item
+          .row.items-end.spacing4-md-up
+            each tier, index in yearlyList
+              .col-sm-4.px-0
+                +pricing-basic-card(tier.title, tier.price, tier.description, tier.info, $t[tier.buttonText], 'year', tier.link)

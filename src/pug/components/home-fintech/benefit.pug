@@ -1,0 +1,93 @@
+include ../title/parallax-title.pug
+include ../icons3d.pug
+
+#fintech-benefit
+  .container.max-lg--lg-up
+    +parallax-title($t.fintech.discover_bgtitle, $t.fintech.discover_title, 'double-main')
+    .root
+      .container.deco-wrap.max-md.fixed-width
+        .deco
+          .orbit.border-secondary
+            .inner.border-secondary
+              |
+              |
+              svg.line-round
+                use(xlink:href=assets+'/images/decoration/line-round.svg#main')
+              |
+              |
+              svg.line-round-big
+                use(xlink:href=assets+'/images/decoration/line-round-big.svg#main')
+              |
+              |
+          .orbit.border-primary
+            .inner.border-primary
+              |
+              |
+              svg.line-round
+                use(xlink:href=assets+'/images/decoration/line-round.svg#main')
+              |
+              |
+              svg.line-round-big
+                use(xlink:href=assets+'/images/decoration/line-round-big.svg#main')
+              |
+              |
+      .row.align-items-center
+        .col-md-3.col-sm-7
+          .wow.fadeInRightShort(
+            data-wow-offset="100"
+            data-aos-delay="0.5s"
+            data-aos-duration="0.5s"
+          )
+            ul.list.primary.text-end
+              li.use-text-primary
+                +icons3d('mdi-clock-time-eight-outline', 'primary')
+                h6.use-text-primary #{$t.fintech.benefit_title1}
+                | #{$t.fintech.benefit_desc1}
+              li
+                +icons3d('mdi-shield-lock', 'primary')
+                h6.use-text-primary #{$t.fintech.benefit_title2}
+                | #{$t.fintech.benefit_desc2}
+              li
+                +icons3d('mdi-check-circle', 'primary')
+                h6.use-text-primary #{$t.fintech.benefit_title3}
+                | #{$t.fintech.benefit_desc3}
+        .col-md-3.col-sm-5.col-6.px-0
+          .person
+            .background.use-bg-primary-main
+              span
+            |
+            |
+            span.img
+              img(src=imgAPI.avatar[22] alt="male")/
+            |
+            |
+        .col-md-3.col-sm-5.col-6.px-0
+          .person
+            .background.use-bg-secondary-main
+              span
+            |
+            |
+            span.img
+              img(src=imgAPI.avatar[13] alt="female")/
+            |
+            |
+        .col-md-3.col-sm-7
+          .wow.fadeInLeftShort(
+            data-wow-offset="100"
+            data-aos-delay="0.5s"
+            data-aos-duration="0.5s"
+          )
+            ul.list.secondary
+              li.use-text-secondary
+                +icons3d('mdi-cog', 'secondary')
+                h6.use-text-secondary #{$t.fintech.benefit_title4}
+                | #{$t.fintech.benefit_desc4}
+              li
+                +icons3d('mdi-emoticon', 'secondary')
+                h6.use-text-secondary #{$t.fintech.benefit_title5}
+                | #{$t.fintech.benefit_desc5}
+              li
+                +icons3d('mdi-plus-circle', 'secondary')
+                h6.use-text-secondary #{$t.fintech.benefit_title6}
+                | #{$t.fintech.benefit_desc6}
+                

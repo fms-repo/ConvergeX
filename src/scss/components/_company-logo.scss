@@ -1,0 +1,18 @@
+.company-logo
+  .root {
+    display: flex;
+    @include breakpoints-up(sm) {
+      justify-content: center;
+    }
+    @include breakpoints-down(sm) {
+      overflow-x: auto
+    }
+    img {
+      height: 64px;
+      margin: $spacing4;
+      transition: all 0.3s ease-out;
+      &:hover {
+        filter: none
+      }
+    }
+  }

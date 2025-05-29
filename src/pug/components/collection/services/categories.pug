@@ -1,0 +1,40 @@
+include ../../title/title.pug
+
+-
+  var categories_items = [
+    {
+      icon: 'mdi-monitor-shimmer',
+      text: 'Website Design',
+    },
+    {
+      icon: 'mdi-cloud-outline',
+      text: 'Hosting',
+    },
+    {
+      icon: 'mdi-chart-bar',
+      text: 'Big Data Analysis',
+    },
+    {
+      icon: 'mdi-file-document-outline',
+      text: 'Reporting',
+    },
+    {
+      icon: 'mdi-bullseye-arrow',
+      text: 'Digital Strategy',
+    },
+    {
+      icon: 'mdi-briefcase-outline',
+      text: 'Business Consulting',
+    },
+  ];
+
+.services-style
+  .root
+    .container.fixed-width--lg-up
+      +title-main($t.service_bundle_title, 'center')
+      p.text-center.use-text-subtitle2
+        | #{$t.service_banner_title}
+      .row.spacing2.mt-5
+        each item in categories_items
+          .col-md-2.col-sm-4.col-6
+            +icon-card(item.icon, item.text, '#')

@@ -1,0 +1,124 @@
+include ../title/parallax-title.pug
+include ../title/title.pug
+
+-
+  var communityData = [
+    {
+      icon: 'ion-logo-github',
+      name: 'Github',
+      type: 'large',
+      color: 'primary',
+      rotate: -90,
+      x: 0,
+      y: 0
+    },
+    {
+      icon: 'ion-md-send',
+      name: 'telegram',
+      type: 'medium',
+      color: 'secondary',
+      rotate: 0,
+      x: 320,
+      y: 10
+    },
+    {
+      icon: 'ion-logo-twitter',
+      name: 'twitter',
+      type: 'medium',
+      color: 'secondary',
+      rotate: 180,
+      x: 40,
+      y: 315
+    },
+    {
+      icon: 'ion-md-mail',
+      name: 'Mailinglist',
+      type: 'small',
+      color: 'accent',
+      rotate: 180,
+      x: 275,
+      y: 295
+    },
+    {
+      icon: 'ion-logo-reddit',
+      name: 'reddit',
+      type: 'large',
+      color: 'primary',
+      rotate: 120,
+      x: 425,
+      y: 303
+    },
+    {
+      icon: 'ion-logo-facebook',
+      name: 'facebook',
+      type: 'medium',
+      color: 'secondary',
+      rotate: 80,
+      x: 748,
+      y: 277
+    },
+    {
+      icon: 'ion-logo-youtube',
+      name: 'YouTube',
+      type: 'small',
+      color: 'accent',
+      rotate: 120,
+      x: 580,
+      y: 100
+    },
+    {
+      icon: 'ion-md-wifi',
+      name: 'podcast',
+      type: 'small',
+      color: 'accent',
+      rotate: -60,
+      x: 720,
+      y: 10
+    },
+    {
+      icon: 'ion-md-chatboxes',
+      name: 'discord',
+      type: 'large',
+      color: 'primary',
+      rotate: 0,
+      x: 873,
+      y: 0
+    }
+  ]
+
+#ai-community
+  .container.root
+    .px-3
+      +parallax-title($t.ai_landing.community_bgtitle, $t.ai_landing.cta_title, 'triple-custom')
+      p.use-text-subtitle2.text-center(class="sm:px-15")
+        | #{$t.ai_landing.community_desc}
+    div
+      .circle-group
+        each item, index in communityData
+          div
+            .wow.zoomInShort(data-wow-offset="50" data-wow-delay=(0.2 * index) + "s" data-wow-duration="0.5s")
+              .circle(
+                class='fill-'+item.color + ' ' + item.type
+                style="top:" + item.y + "px;" + "left:" + item.x + "px"
+              )
+                |
+                |
+                svg(style="transform: rotate(" + item.rotate + "deg)")
+                  if (item.type === 'large')
+                    include ./svg/circle-large.pug
+                  else if (item.type === 'medium')
+                    include ./svg/circle-medium.pug
+                  else
+                    include ./svg/circle-small.pug
+                |
+                |
+                a.paper.waves-effect(href="javascipt:void(0)")
+                  |
+                  |
+                  i(class=item.icon)
+                  |
+                  |
+                  h6
+                    | #{item.name}
+                |
+                |

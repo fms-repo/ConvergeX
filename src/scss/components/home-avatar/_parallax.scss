@@ -1,0 +1,156 @@
+.parallax-geometric {
+  .parallax-wrap {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 0;
+    @include breakpoints-down(md) {
+      display: none;
+    }
+  }
+
+  .inner-parallax {
+    height: 2500px;
+    width: 50%;
+    position: absolute;
+    display: block;
+    @include use-theme(opacity, 0.5, 0.75);
+    .figure {
+      height: 2500px;
+      width: 50%;
+      display: block;
+      position: absolute;
+      :deep(.Masthead), :deep(.Masthead__image) {
+        overflow: visible
+      }
+      img {
+        height: auto;
+        margin: 0;
+        display: block;
+      }
+    }
+    .figure > div {
+      height: 2500px;
+      width: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .right {
+    top: -120px;
+    @include right(-180px);
+    width: 50%;
+  }
+
+  .full {
+    top: -400px;
+    @include right(-50px);
+    width: 50%;
+  }
+
+  .big {
+    top: 1000px;
+    @include right(-200px);
+    width: 50%;
+    .oval.small {
+      @include right(750px)
+    }
+  }
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .oval {
+    opacity: 0.3;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    mask-image: url(../images/decoration/oval.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-image: url(../images/decoration/oval.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    span {
+      background: $gradient-primary-dark
+    }
+    &.giga {
+      width: 255px;
+      height: 255px;
+      @include right(500px);
+      top: 0;
+    }
+    &.big {
+      width: 255px;
+      height: 255px;
+      @include right(600px);
+      top: 800px;
+    }
+    &.small {
+      width: 205px;
+      height: 205px;
+      @include right(600px);
+      top: 100px;
+    }
+  }
+
+  .triangle {
+    width: 509px;
+    height: 668px;
+    @include right(120px);
+    @include margin-left(auto);
+    top: 300px;
+    transform: scale(0.7);
+    display: block;
+    position: relative;
+    mask-image: url(../images/decoration/triangle.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-image: url(../images/decoration/triangle.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    span {
+      background: $gradient-triple-main
+    }
+  }
+  .parallax-vertical {
+    width: 100%;
+    height: 100%;
+    @include breakpoints-up(lg) {
+      transform: scale(0.5);
+      transform-origin: top left
+    }
+    @include breakpoints-up(xl) {
+      display: none
+    }
+  }
+
+  .parallax-dot {
+    @include use-theme(fill, $light-text-disabled, $dark-text-disabled);
+    width: 845px;
+    height: 800px;
+    opacity: 0.3;
+    @include left(0)
+  }
+
+  .dots {
+    position: relative;
+    top: -200px;
+    height: 500px;
+    display: block;
+    @include left(-800px);
+    &.start {
+      top: -2600px;
+      @include left(-500px);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+#company-collage
+  .static(class=overlap ? 'overlap' : '')
+    .gallery
+      .string-deco.string1
+        span
+      .string-deco.string2
+        span
+      .mt-10.show-sm-up(style='z-index: 1')
+        figure
+          |
+          |
+          img(src=imgAPI.photosS[12], alt='collage')/
+          |
+          |
+      div(style='z-index: 1')
+        figure
+          |
+          |
+          img(src=imgAPI.photosP[32], alt='collage')/
+          |
+          |
+      .mt-10.show-md-up
+        .mt-1.person
+          figure
+            |
+            |
+            img(src=imgAPI.avatar[34], alt='collage')/
+            |
+            |
+      .mt-sm-20.mt-10(style='z-index: 2')
+        figure
+          |
+          |
+          img(src=imgAPI.photosL[14], alt='collage')/
+          |
+          |
+        .mx-1
+          |
+          |
+          if btnJoin
+            a.btn.full-width.btn-large.waves-effect(href=link.career)
+              | #{$t.btn_join}
+              i.material-icons.right arrow_forward
+          |
+          |
+      .mt-sm-16.mt-3
+        figure
+          |
+          |
+          img(src=imgAPI.photosS[13], alt='collage')/
+          |
+          |

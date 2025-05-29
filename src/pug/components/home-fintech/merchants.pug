@@ -1,0 +1,109 @@
+include ../title/title
+-
+  var logos1 = [
+    imgAPI.logos[1],
+    imgAPI.logos[2],
+    imgAPI.logos[3],
+    imgAPI.logos[4],
+    imgAPI.logos[5],
+    imgAPI.logos[6],
+    imgAPI.logos[7],
+    imgAPI.logos[8],
+    imgAPI.logos[9],
+    imgAPI.logos[10],
+    imgAPI.logos[11],
+    imgAPI.logos[12]
+  ];
+  var logos2 = [
+    imgAPI.logos[13],
+    imgAPI.logos[14],
+    imgAPI.logos[15],
+    imgAPI.logos[16],
+    imgAPI.logos[17],
+    imgAPI.logos[18],
+    imgAPI.logos[19],
+    imgAPI.logos[20],
+    imgAPI.logos[21],
+    imgAPI.logos[22],
+    imgAPI.logos[23],
+    imgAPI.logos[24]
+  ];
+  var logos3 = [
+    imgAPI.logos[25],
+    imgAPI.logos[26],
+    imgAPI.logos[27],
+    imgAPI.logos[28],
+    imgAPI.logos[29],
+    imgAPI.logos[30],
+    imgAPI.logos[31],
+    imgAPI.logos[32],
+    imgAPI.logos[33],
+    imgAPI.logos[34],
+    imgAPI.logos[35],
+    imgAPI.logos[36]
+  ];
+
+#fintech-merchants
+  .root
+    .container.fixed-width--md-up
+      +title-main($t.fintech.title_partner, 'center')
+      .tab
+        .row.spacing6.justify-content-center
+          .col-md-10.col-sm-12(class="md:mt-5")
+            .d-flex.justify-content-center
+              ul.tabs.tabs-slider.primary
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect.active(href='#tab-1') Online
+                  |
+                  |
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect(href='#tab-2') Offline
+                  |
+                  |
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect(href='#tab-3') Channel
+                  |
+                  |
+            #tab-1.tab-item.active
+              .tab-content
+                section
+                  .row
+                    each logo, index in logos1
+                      .col-sm-3.col-4(class="md:p-4")
+                        .img-logo
+                          |
+                          |
+                          img(src=logo alt="logo"+index)/
+                          |
+                          |
+            #tab-2.tab-item
+              .tab-content
+                section
+                  .row
+                    each logo, index in logos2
+                      .col-sm-3.col-4(class="md:p-4")
+                        .img-logo
+                          |
+                          |
+                          img(src=logo alt="logo"+index)/
+                          |
+                          |
+            #tab-3.tab-item
+              .tab-content
+                section
+                  .row
+                    each logo, index in logos3
+                      .col-sm-3.col-4(class="md:p-4")
+                        .img-logo
+                          |
+                          |
+                          img(src=logo alt="logo"+index)/
+                          |
+                          |
+  

@@ -1,0 +1,85 @@
+include ../title/parallax-title.pug
+
+-
+  var sliderData = [
+    {
+      image: imgAPI.photosL[3],
+      subtitle: 'Vivamus sit amet',
+      title: 'The Lorem Ipsum Dolor Sit',
+      rating: 5,
+      duration: '2h 15m',
+      desc: 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci.'
+    },
+    {
+      image: imgAPI.photosP[16],
+      subtitle: 'Vivamus sit amet',
+      title: 'The Lorem Ipsum Dolor Sit',
+      rating: 5,
+      duration: '2h 15m',
+      desc: 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci.'
+    },
+    {
+      image: imgAPI.photosP[20],
+      subtitle: 'Vivamus sit amet',
+      title: 'The Lorem Ipsum Dolor Sit',
+      rating: 5,
+      duration: '2h 15m',
+      desc: 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci.'
+    },
+    {
+      image: imgAPI.photosL[4],
+      subtitle: 'Vivamus sit amet',
+      title: 'The Lorem Ipsum Dolor Sit',
+      rating: 5,
+      duration: '2h 15m',
+      desc: 'Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci.'
+    }
+  ]
+
+#blockchain-event-slider
+  .container
+    +parallax-title($t.blockchain.event_bgtitle, $t.blockchain.event_title, 'triple-main')
+    .row
+      .col-md-11.col-sm-12
+        .root
+          h2.title-event
+            span Past
+            | Events
+          .slider-wrap
+            .anim-slider
+              each item in sliderData
+                .slide.slider-content.anim-slide
+                  section.inner.item
+                    .inner-bg
+                      .row.spacing2
+                        .col-sm-6
+                          .text
+                            h1 #{item.title}
+                              span.use-text-subtitle2 #{item.subtitle}
+                            article.desc
+                              p.use-text-paragraph #{item.desc}
+                        .col-sm-6
+                          section.image
+                            figure
+                              |
+                              |
+                              img(src=item.image alt=item.title)/
+                              |
+                              |
+                            article.btn-area
+                              |
+                              |
+                              a.btn.black.btn-large(href=link.blogDetail) #{$t.blockchain.event_stories}
+                              |
+                              |
+              nav.anim-arrows
+                |
+                |
+                a.prev.anim-arrows-prev(href='#')
+                  i.material-icons.icon arrow_back
+                |
+                |
+                a.next.anim-arrows-next(href='#')
+                  i.material-icons.icon arrow_forward
+                |
+                |

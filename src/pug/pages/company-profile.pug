@@ -1,0 +1,62 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Profile"
+  - var pageName = "profile"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#about-page
+    .main-wrap.has-fixed-scroll
+      include ../components/header/main.pug
+      |
+      |
+      |
+      include ../components/artworks/blur-gradient.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          .mt-5
+            section#banner
+              include ../components/hero-banner/profile-banner.pug
+              +profile-banner(
+                imgAPI.avatar[31],
+                imgAPI.photosL[34],
+                brand.profileName,
+                brand.profileTitle2,
+                123,
+                456,
+                78,
+                [imgAPI.avatar[10], imgAPI.avatar[11], imgAPI.avatar[3], imgAPI.avatar[4], imgAPI.logos[12], imgAPI.avatar[20], imgAPI.logos[8], imgAPI.avatar[1], imgAPI.avatar[3]],
+                ['facebook', 'twitter', 'linkedin', 'instagram']
+              )
+                include ../components/parallax-3d/snail.pug
+                +parallax3d-snail() 
+          // ##### END BANNER #####
+          |
+          |
+          |
+          .container
+            .row.spacing2
+              .col-md-8.col-sm-12.px-0
+                include ../components/company/team/gallery.pug
+              .col-md-4.col-sm-12.px-2.pt-3
+                include ../components/company/team/sidebar.pug
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

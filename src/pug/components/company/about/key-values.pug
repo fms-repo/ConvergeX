@@ -1,0 +1,56 @@
+include ../../title/title.pug
+
+#company-about
+  .container.values
+    .title-key
+      div
+        h1 3 Key Values
+    .row.justify-content-between
+      .col-md-3.col-sm-12
+        +title-main($t.values_title)
+        .wow.fadeInLeftShort(data-wow-offset='100' data-wow-delay='0' data-wow-duration='0.5s')
+          .text
+            p.mb-3.use-text-bold
+              | #{$t.about_key_subtitle}
+            p
+              | #{$t.about_key_desc}
+      .col-md-6.col-sm-12.key-group
+        .wow.zoomInShort(data-wow-offset='100' data-wow-delay='100' data-wow-duration='0.5s')
+          div
+            .card.value
+              |
+              |
+              i.use-text-grd-triple-light.ion-ios-ionic
+              |
+              |
+              strong.use-text-subtitle2.use-text-bold
+                | #{$t.values_info_title1}
+              |
+              |
+              p #{$t.values_info_desc1}
+        .wow.zoomInShort(data-wow-offset='100' data-wow-delay='500' data-wow-duration='0.5s')
+          div(class="lg:justify-end lg:flex")
+            .card.value
+              |
+              |
+              i.use-text-grd-triple-light.ion-ios-medical-outline
+              |
+              |
+              strong.use-text-subtitle2.use-text-bold
+                | #{$t.values_info_title2}
+              |
+              |
+              p #{$t.values_info_desc2}
+        .wow.zoomInShort(data-wow-offset='100' data-wow-delay='700' data-wow-duration='0.5s')
+          div
+            .card.value
+              |
+              |
+              i.use-text-grd-triple-light.ion-ios-color-filter-outline
+              |
+              |
+              strong.use-text-subtitle2.use-text-bold
+                | #{$t.values_info_title3}
+              |
+              |
+              p #{$t.values_info_desc4}

@@ -1,0 +1,44 @@
+.call-to-action {
+  position: relative;
+  z-index: 1;
+  .action {
+    text-align: center;
+    margin-top: $spacing10;
+    @include breakpoints-down(lg) {
+      padding-top: 0;
+      padding-bottom: $spacing3
+    }
+    @include breakpoints-down(sm) {
+      padding: spacing(0, 2);
+      margin-top: $spacing5;
+    }
+    h4 {
+      margin-bottom: $spacing6
+    }
+  }
+
+  .btn-area {
+    margin: spacing(5, 0);
+    justify-content: center;
+    position: relative;
+    display: flex;
+    @include breakpoints-down(sm) {
+      justify-content: space-around;
+    }
+    a {
+      @include breakpoints-up(sm) {
+        @include margin-right($spacing2)
+      }
+      @include breakpoints-down(sm) {
+        margin: 4px;
+      }
+      img {
+        width: 160px;
+        @include breakpoints-down(sm) {
+          width: 100%
+        }
+      }
+    }
+  }
+
+}

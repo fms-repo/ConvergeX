@@ -1,0 +1,77 @@
+.stone-parallax {
+  .parallax-wrap {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    left: 0;
+    z-index: 0;
+    @include breakpoints-down(md) {
+      display: none;
+    }
+  }
+
+  .inner-parallax {
+    height: 2500px;
+    width: 50%;
+    position: absolute;
+    display: block;
+    filter: blur(5px);
+    @include use-theme(opacity, 0.25, 0.5);
+    .parallax-figure {
+      height: 2500px;
+      width: 50%;
+      display: block;
+      position: absolute;
+      img {
+        height: auto;
+        margin: 0;
+        width: auto;
+        display: block;
+      }
+    }
+    .parallax-figure > div {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .left {
+    top: 480px;
+    left: -130px;
+    img {
+      transform: rotate(70deg) scale(1);
+      transform-origin: center center;
+    }
+  }
+
+  .right {
+    top: 100px;
+    right: -600px;
+    img {
+      transform: rotate(-30deg) scale(1);
+      transform-origin: center center;
+    }
+  }
+
+  .top {
+    top: 400px;
+    right: -500px;
+    img {
+      width: 300px;
+      transform: rotate(-20deg) scaleX(-1);
+      transform-origin: center center;
+    }
+  }
+
+  .bottom {
+    top: 1700px;
+    left: -250px;
+    img {
+      width: 300px;
+      transform: rotate(30deg) scaleX(-1);
+      transform-origin: center center;
+    }
+  }
+}

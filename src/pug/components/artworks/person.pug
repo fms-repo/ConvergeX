@@ -1,0 +1,114 @@
+include ../icons3d.pug
+
+mixin person-art(person)
+  .person-artwork
+    .person
+      .background
+        .secondary
+          |
+          |
+          svg.filled
+            use(xlink:href=assets+'/images/decoration/deco-liquid-fill.svg#main')
+          |
+          |
+          svg.outlined
+            use(xlink:href=assets+'/images/decoration/deco-liquid-fill.svg#main')
+          |
+          |
+        .primary
+          |
+          |
+          svg.filled
+            use(xlink:href=assets+'/images/decoration/deco-liquid-fill.svg#main')
+          |
+          |
+          svg.outlined
+            use(xlink:href=assets+'/images/decoration/deco-liquid-fill.svg#main')
+          |
+          |
+      .photo
+        |
+        |
+        img(src=person alt='person')/
+        |
+        |
+      .icons
+        .secondary
+          +icons3d('mdi-cloud', 'secondary')
+        .accent
+          +icons3d('mdi-gamepad-square', 'accent')
+      .screen
+        |
+        |
+        span.top
+          img(src=imgAPI.apps[1] alt="apps")/
+        |
+        |
+        span.center
+          img(src=imgAPI.apps[3] alt="apps")/
+        |
+        |
+        span.bottom
+          img(src=imgAPI.apps[2] alt="apps")/
+        |
+        |
+      .app-ui
+        .resume
+          |
+          |
+          span Total Assets
+          |
+          |
+          h3
+            | $
+            |
+            |
+            strong 1200.31
+            | (21%)
+            |
+            |
+            i.mdi.mdi-arrow-up &nbsp;
+            |
+            |
+        .counter
+          .asset
+            |
+            |
+            span
+              img(src=imgAPI.logos[52] alt="logo")/
+              | ION
+            |
+            |
+            strong 1120.65
+            |
+            |
+          |
+          |
+          hr.divider-vertical
+          |
+          |
+          .asset
+            |
+            |
+            span
+              img(src=imgAPI.logos[48] alt=logo)/
+              | BTC
+            |
+            |
+            strong 0.000123
+            |
+            |
+          |
+          |
+          hr.divider-vertical
+          |
+          |
+          .asset
+            |
+            |
+            span
+              img(src=imgAPI.logos[53] alt=logo)/
+              | IOT
+            |
+            |
+            strong 0.000555

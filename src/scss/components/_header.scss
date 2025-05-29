@@ -1,0 +1,622 @@
+$flag: '../images/flag-logo.png';
+
+@mixin flag-icon{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  @include margin-right(5px);
+  top: 1px;
+  background: url($flag) no-repeat transparent;
+  background-size: 16px auto;
+  &.ar {
+    background-position: 0 3px;
+  }
+  &.zh {
+    background-position: 0 -12px
+  }
+  &.en {
+    background-position: 0 -28px
+  }
+  &.de {
+    background-position: 0 -44px
+  }
+  &.id {
+    background-position: 0 -62px
+  }
+  &.pt {
+    background-position: 0 -79px
+  }
+}
+
+.popover {
+  @include palette-background-paper;
+  width: 200px;
+}
+
+.switch-toggle {
+  margin-top: 0;
+}
+
+#menu_blank {
+  height: 0;
+}
+
+.start-mobile {
+  @include breakpoints-down(sm) {
+    margin: spacing(0, 2)
+  }
+}
+
+.header {
+  @include palette-text-primary;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .container {
+    #main-wrap & {
+      padding: 0;
+    }
+  }
+  .sidenav-trigger {
+    margin: 0
+  }
+  &.fixed {
+    position: fixed;
+    top: 0;
+    &:not(.open-drawer) {
+      @include use-theme(background, rgba($light-background-paper, 0.8), rgba($dark-background-paper, 0.8));
+      backdrop-filter: saturate(180%) blur(20px);
+      @include use-theme(box-shadow, 0px 1px 36px -16px $palette-primary-main, 0px 1px 36px -16px $palette-common-black);
+    }
+    @include palette-background-paper;
+    .header-content {
+      padding-top: 0;
+      padding-bottom: 0;
+      @include breakpoints-down(sm) {
+        @include padding-right(4px);
+      }
+    }
+    .vertical-divider {
+      min-height: $spacing3;
+    }
+    .logo {
+      img {
+        height: 32px;
+        width: 32px
+      }
+    }
+    nav {
+      padding: 0;
+    }
+  }
+  &.open-drawer {
+    @include palette-background-paper;
+    .mega-menu-root {
+      height: 100% !important
+    }
+  }
+  .search {
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    align-items: center;
+    @include margin-left($spacing2);
+    @include breakpoints-down(sm) {
+      margin: spacing(0, 2, 2);
+    }
+    @include breakpoints-up(sm) {
+      flex: 1;
+    }
+    &.short {
+      width: 250px;
+    }
+    .input-field {
+      @include padding-right($spacing2);
+      min-height: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+      border: none;
+      border-radius: $rounded-big;
+      @include palette-background-paper;
+      @include padding-left($spacing5);
+      input {
+        height: auto;
+        padding: spacing(1, 0);
+        line-height: normal;
+        max-height: none;
+        display: block;
+        margin: 4px;
+        border: none !important;
+        box-shadow: none !important;
+        @include breakpoints-down(sm) {
+          padding: 4px 0
+        }
+      }
+    }
+  }
+  .search-icon {
+    position: absolute;
+    font-size: 24px;
+    @include left($spacing1);
+    @include palette-text-secondary;
+    top: 10px;
+    @include breakpoints-down(sm) {
+      top: 6px
+    }
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing1;
+  @include breakpoints-down(sm) {
+    @include padding-right(4px);
+  }
+  & nav {
+    transition: all 0.3s ease;
+    align-items: center;
+    margin: 3px 0;
+    display: flex;
+    @include breakpoints-up(sm) {
+      padding: $spacing1
+    }
+    .user-menu {
+      margin: 0
+    }
+    .menu-setting {
+      position: relative;
+      margin: 0;
+      a {
+        padding: spacing(0.5, 1);
+        display: block;
+      }
+    }
+    & > * {
+      @include breakpoints-up(sm) {
+        margin: 0 $spacing1
+      }
+    }
+  }
+  .collection-header {
+    text-transform: capitalize;
+    font-size: 0.875rem;
+    @include palette-text-secondary;
+  }
+  .collection, .collection-item, .collection-header {
+    border: none !important;
+  }
+  .logo {
+    @include breakpoints-down(sm) {
+      flex: 1
+    }
+    & a {
+      text-decoration: none;
+    }
+    & img {
+      transition: all 0.3s ease;
+      height: 48px;
+      width: 48px;
+    }
+    @include breakpoints-between(sm, lg) {
+      flex: 1
+    }
+  }
+  .dropdown-content {
+    padding: 4px;
+    overflow: visible !important;
+    @include shade;
+    li {
+      border-radius: $rounded-big;
+      height: auto;
+      min-height: 0;
+      a.menu-list {
+        text-transform: capitalize;
+        font-size: 14px;
+        &.current {
+          @include use-theme(background, $palette-primary-light, $palette-primary-dark);
+          @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+        }
+        i {
+          margin: 0
+        }
+      }
+    }
+    .child-menu {
+      left: -100%;
+      @include use-rtl(right, 100%);
+    }
+  }
+}
+
+nav.nav-menu {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  .btn-icon.hamburger {
+    padding: 0;
+    line-height: 52px;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    transform: scale(-1)
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    @include palette-background-text-primary
+  }
+  .scrollactive-nav {
+    list-style: none;
+    display: flex;
+    @include padding-left(12px);
+    ul:not(.dropdown-content) > li {
+      position: relative;
+      .btn {
+        &:before {
+          content: "";
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          opacity: 0;
+          left: calc(50% - 15px);
+          bottom: 0px;
+          top: auto;
+          position: absolute;
+          @include use-theme(background, $palette-primary-main, $gradient-triple-light);
+          transform: scale(0);
+          transition: all 0.2s cubic-bezier(0.42, 0.16, 0.21, 0.93);
+        }
+        &:after {
+          content: "";
+          height: 7px;
+          border-radius: 8px;
+          width: 7px;
+          margin: 0 auto;
+          left: calc(50% - 6px);
+          bottom: 0px;
+          opacity: 0;
+          top: auto;
+          border: none;
+          position: absolute;
+          transform-origin: center left;
+          @include use-theme(background, $palette-primary-main, $gradient-triple-light);
+          transition: all 0.3s cubic-bezier(0.42, 0.16, 0.21, 0.93);
+        }
+      }
+      &:hover {
+        transition: all 0.3s ease-out;
+        .btn {
+          @include use-theme(color, $palette-primary-main, $palette-primary-light);
+          &:after {
+            width: 20px;
+            left: calc(50% - 3px);
+            opacity: 1;
+          }
+          &:before {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+      &.current {
+        .btn {
+          &:before {
+            transform: scale(1);
+            opacity: 1;
+          }
+          &:after {
+            width: 20px;
+            left: calc(50% - 3px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    i.right.icon {
+      @include margin-left(0);
+      line-height: inherit;
+    }
+    .multi-menu {
+      flex: 1;
+      .btn {
+        font-size: 13px;
+        margin: spacing(0, 0.5);
+        padding: 4px;
+      }
+    }
+    .btn  {
+      font-size: 16px;
+      font-weight: $font-medium;
+      margin: spacing(1, 1.5, 0);
+      list-style: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: $spacing1;
+      height: auto;
+      line-height: 12px;
+      @include palette-text-primary;
+    }
+  }
+  @include breakpoints-down(lg) {
+    justify-content: space-between;
+  }
+}
+
+.lang-menu {
+  .flag {
+    margin: 0;
+    & i {
+      @include margin-left($spacing2);
+      @include flag-icon;
+    }
+  }
+}
+
+.collection .collection-item.avatar :not(.circle-clipper) > .circle.flag {
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.lang-opt {
+  display: block;
+  padding: 0 !important;
+  @include palette-text-primary;
+}
+
+.lang-list {
+  min-height: 0 !important;
+}
+
+.vertical-divider {
+  border-left: 1px solid;
+  @include palette-divider;
+  height: 24px;
+}
+
+.setting {
+  .icon {
+    transition: all 0.3s ease;
+    @include palette-text-secondary;
+    display: block;
+    font-size: 24px;
+  }
+  .active {
+    transform: rotate(30deg)
+  }
+  .dropdown-content {
+    width: 240px !important;
+    border-radius: 12px;
+    [dir="ltr"] & {
+      right: $spacing1 !important;
+      left: auto !important
+    }
+    [dir="rtl"] & {
+      left: $spacing1 !important;
+      right: auto !important
+    }
+  }
+}
+
+.mode-menu, .lang-menu {
+  text-transform: capitalize
+}
+
+.flex-menu {
+  display: flex;
+  justify-content: flex-start;
+  label {
+    text-transform: capitalize;
+  }
+}
+
+.mobile-menu {
+  @include margin-right($spacing1);
+  padding: spacing(1, 0);
+  &:focus {
+    background-color: transparent;
+  }
+  .bar {
+    @include palette-background-text-secondary;
+    &:after, &:before {
+      @include palette-background-text-secondary;
+    }
+  }
+}
+
+.menu-list {
+  text-transform: capitalize
+}
+
+/* Top Multi Lv Menu */
+.submenu-hover {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  background: none;
+}
+
+.parent-hover {
+  position: relative;
+  &:hover {
+    > .submenu-hover {
+      display: block;
+    }
+  }
+}
+
+.rounded-menu {
+  border-radius: 10px;
+}
+
+/* Top Mega Menu */
+.mega-menu-root {
+  transform: scaleX(1) scaleY(1) !important;
+  &.dropdown-content {
+    position: absolute;
+    overflow: visible;
+    z-index: 9;
+    padding: 0;
+    width: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    .mega-menu {
+      padding-top: $spacing12;
+      @include use-theme(background, rgba($light-background-paper, 0.8), rgba($dark-background-paper, 0.8));
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+    li a {
+      padding: spacing(0.5, 2);
+      margin: 4px 0
+    }
+  }
+}
+
+.multi-menu-root {
+  & > li {
+    position: relative;
+  }
+  .dropdown-content {
+    width: 200px !important;
+  }
+}
+
+.mega-menu {
+  position: relative;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: auto;
+  li {
+    margin-bottom: 4px
+  }
+}
+
+.thumb-menu {
+  width: 200px;
+  height: 78px;
+  border-radius: $rounded-small;
+  margin-bottom: $spacing2;
+  object-fit: cover;
+}
+
+.thumb-link {
+  flex-direction: column;
+  margin-bottom: $spacing4;
+  font-size: 14px;
+  text-decoration: none;
+  @include palette-text-primary;
+  display: flex;
+  text-align: center;
+  figure {
+    margin: spacing(0, 0, 1)
+  }
+  &:hover {
+    @include use-theme(color, $palette-primary-main, $palette-secondary-main)
+  }
+}
+
+.title-mega {
+  text-transform: uppercase;
+  font-weight: $font-bold;
+  font-size: 11px;
+  padding: spacing(0, 2);
+  margin-bottom: $spacing1;
+  @include use-theme(color, $palette-primary-dark, $palette-primary-light)
+}
+
+.main-menu, .multi-menu {
+  flex: 1;
+  .btn {
+    text-transform: capitalize;
+  }
+  .arrow-icon {
+    @include rtl-flip
+  }
+}
+
+.main-menu {
+  .btn {
+    margin: spacing(0, 1);
+    padding: $spacing1;
+  }
+}
+
+/* Hamburger Menu */
+#main_menu.paper-nav {
+  @include palette-background-paper;
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+  height: 100%;
+  display: none;
+  .full-nav {
+    z-index: 90;
+    min-width: 300px;
+    @include breakpoints-down(sm) {
+      width: 100% !important
+    }
+    .menu {
+      padding: spacing(2, 5);
+      margin-top: $spacing12;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      position: absolute;
+      list-style: none;
+      li {
+        text-align: center;
+        .btn-flat {
+          font-size: 24px;
+          @include palette-text-primary;
+          padding: spacing(2.5, 4);
+          overflow: visible;
+          height: auto;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            opacity: 0.2;
+            background: $palette-primary-main;
+            height: 75%;
+            width: 0;
+            border-radius: 36px;
+            transition: all 0.2s cubic-bezier(0, 0, 0.14, 0.97);
+          }
+          &:hover {
+            color: $palette-secondary-main;
+            background: none;
+            &:before {
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+      }
+      &.menu-open {
+        a {
+          animation-name: slide-right;
+          animation-timing-function: ease;
+        }
+      }
+    }
+    .divider-sidebar {
+      background: rgba(255, 255, 255, 0.2);
+      margin: spacing(3, 0)
+    }
+  }
+}

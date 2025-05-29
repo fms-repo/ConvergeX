@@ -1,0 +1,24 @@
+mixin product-nft-card(img, avatar, name, title, price, href='#', verified=false, small=false)
+  |
+  |
+  a.nft-card.waves-effect(draggable="false" href=href)
+    .chip.price
+      | Floor: #{price} ETH
+    |
+    |
+    span.figure
+      img(src=img alt='img')/
+    |
+    |
+    span.property
+      span.title-card(class=small ? 'small' : 'big')
+        | #{ title }
+      span.user
+        span.avatar
+          img(src=avatar alt='logo')/
+        span.name
+          | #{name}
+        if verified
+          i.mdi.verified.mdi-check-decagram
+  |
+  |

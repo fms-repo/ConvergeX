@@ -1,0 +1,105 @@
+include ../counter/countdown.pug
+
+-
+  var nftList = [
+    {
+      img: imgAPI.photosL[46],
+      circulation: '100000',
+      timeleft: 30000000,
+      title: 'Lorem Ipsum Dolor 1',
+      price: '0.5',
+      href: link.productDetail,
+    },
+    {
+      img: imgAPI.photosL[8],
+      circulation: '100000',
+      timeleft: 560000000,
+      title: 'Lorem Ipsum Dolor 2',
+      price: '0.5',
+      href: link.productDetail,
+    },
+    {
+      img: imgAPI.photosL[7],
+      circulation: '100000',
+      timeleft: 250000000,
+      title: 'Lorem Ipsum Dolor 3',
+      price: '0.5',
+      href: link.productDetail,
+    },
+    {
+      img: imgAPI.photosL[50],
+      circulation: '100000',
+      timeleft: 110000000,
+      title: 'Lorem Ipsum Dolor 4',
+      price: '0.5',
+      href: link.productDetail,
+    },
+    {
+      img: imgAPI.photosL[5],
+      circulation: '100000',
+      timeleft: 500000000,
+      title: 'Lorem Ipsum Dolor 5',
+      price: '0.5',
+      href: link.productDetail,
+    },
+    {
+      img: imgAPI.photosL[7],
+      circulation: '100,000',
+      timeleft: 1000000,
+      title: 'Lorem Ipsum Dolor 6',
+      price: '0.5',
+      href: link.productDetail,
+    }
+  ];
+
+#nft2-auction
+  .root
+    .carousel
+      |
+      |
+      button.btn.nav.prev.waves-effect#prev_fade_auction
+        |
+        |
+        i.ion-ios-arrow-back
+        |
+        |
+      |
+      |
+      #auction-fade-slider.slick-carousel
+        each item, index in nftList
+          .slide
+            .inner-slide
+              |
+              |
+              figure
+                img(src=item.img alt='nft')/
+              |
+              |
+              h4.title-slide
+                | #{item.title}
+              .countdown-wrap
+                +countdown('Sale starts in', item.timeleft)
+              .property
+                p
+                  | Circulation:
+                  | #{item.circulation}
+                strong
+                  | Price 
+                  span.price
+                    | #{item.price}
+                    | ETH
+            |
+            |
+            a.waves-effect(href=item.href)
+            |
+            |
+      |
+      |
+      button.btn.nav.next.waves-effect#next_fade_auction
+        |
+        |
+        i.ion-ios-arrow-forward
+        |
+        |
+      |
+      |

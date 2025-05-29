@@ -1,0 +1,45 @@
+include ../title/parallax-title.pug
+include ../icons3d.pug
+
+#blockchain-step
+  .container.px-0
+    +parallax-title($t.blockchain.discover_bgtitle, $t.blockchain.discover_title, 'double-main')
+    .row.step.spacing6-md-up
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-bitcoin', 'primary-double')
+            .left
+              +icons3d('mdi-arrow-top-right-bold-box', 'accent')
+            .right
+              +icons3d('mdi-shield-check-outline', 'secondary')
+          .glow.primary
+            h6.use-text-subtitle2 #{$t.blockchain.step_title1}
+            p.use-text-paragraph #{$t.blockchain.step_desc1}
+          hr.divider.primary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-wallet', 'secondary-double')
+            .left
+              +icons3d('mdi-bitcoin', 'primary')
+            .right
+              +icons3d('mdi-image', 'accent')
+          .glow.secondary
+            h6.use-text-subtitle2 #{$t.blockchain.step_title2}
+            p.use-text-paragraph #{$t.blockchain.step_desc2}
+          hr.divider.secondary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-cog', 'accent-double')
+            .left
+              +icons3d('mdi-hammer-screwdriver', 'primary')
+            .right
+              +icons3d('mdi-code-braces-box', 'secondary')
+          .glow.accent
+            h6.use-text-subtitle2 #{$t.blockchain.step_title3}
+            p.use-text-paragraph #{$t.blockchain.step_desc3}

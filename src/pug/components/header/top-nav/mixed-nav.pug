@@ -1,0 +1,112 @@
+include ../data/sample-page
+
+-
+  var landingMenu = [
+    {
+      name: 'Machine Learning',
+      url: link.home,
+      thumb: imgAPI.ui[6],
+    },
+    {
+      name: 'AI Trading Bot',
+      url: link.fintech,
+      thumb: imgAPI.ui[8],
+    },
+    {
+      name: 'Blockchain',
+      url: link.blockchain,
+      thumb: imgAPI.ui[7],
+    },
+    {
+      name: 'Crypto Wallet',
+      url: link.wallet,
+      thumb: imgAPI.ui[9],
+    },
+    {
+      name: 'NFT',
+      url: link.nft,
+      thumb: imgAPI.ui[5],
+    },
+    {
+      name: 'NFT2',
+      url: link.nft2,
+      thumb: imgAPI.ui[4],
+    },
+    {
+      name: 'Avatar',
+      url: link.avatar,
+      thumb: imgAPI.ui[10],
+    },
+    {
+      name: 'Online CV',
+      url: link.cv,
+      thumb: imgAPI.ui[11],
+    }
+  ]
+
+.scrollactive-nav.show-lg-up.multi-menu(class=headerHome && 'scrollnav')
+  ul.main-menu
+    each item in menu[menuLanding]
+      |
+      |
+      li
+        |
+        |
+        a.btn.btn-flat.anchor-link.waves-effect(
+          href=headerHome ? '#'+item.name : link.home+'#'+item.name
+        ) #{$t[prefix]['header_' + item.name]}
+        |
+        |
+    |
+    |
+    li
+      |
+      |
+      button.btn.btn-flat.megamenu-trigger-click.waves-effect(data-target='sample-page')
+        |
+        | #{$t.header_sample_page}
+        |
+        i.material-icons.right.icon keyboard_arrow_down
+        |
+        |
+      |
+      |
+      .mega-menu-root.dropdown-content(id='sample-page')
+        .mega-menu
+          .container
+            .row
+              .col-sm-5
+                .title-mega Landing Pages
+                .row.spacing2
+                  each item in landingMenu
+                    .col-sm-4.col-6.px-1
+                      |
+                      |
+                      a.thumb-link.waves-effect(href=item.url)
+                        img.thumb-menu(src=item.thumb alt="thumbnaul")/
+                        | #{item.name}
+                      |
+                      |
+              .col-sm-7.px-2
+                .row
+                  each subitem in sample
+                    .col-sm-3.mb-6
+                      .title-mega #{subitem.name}
+                      |
+                      |
+                      img.thumb-menu(src=subitem.thumb alt="thumbnail")/
+                      |
+                      |
+                      ul
+                        each childitem in subitem.child
+                          li.waves-effect
+                            |
+                            |
+                            a.menu-list(href=childitem.link class=childitem.name === pageName ? 'current' : '')
+                              | #{$t['header_' + childitem.name]}
+                            |
+                            |
+      
+    |
+    |
+    

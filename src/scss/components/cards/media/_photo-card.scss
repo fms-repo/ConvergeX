@@ -1,0 +1,133 @@
+.card.photo-card {
+  position: relative;
+  transition: none;
+  overflow: visible;
+  border-radius: $rounded-big;
+  overflow: hidden;
+  .figure {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: $rounded-big;
+  }
+  & > a {
+    height: 100%
+  }
+  .img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.2);
+    transition: transform 0.7s ease-out
+  }
+  img {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:hover {
+    .img {
+      transform: scale(1.1) rotate(-5deg)
+    }
+    .detail {
+      opacity: 1;
+      background-position: 60% 0;
+      h6, a, span {
+        transform: translate(0, 20px),
+      }
+      &:before {
+        bottom: 0;
+      }
+    }
+  }
+  .detail {
+    position: absolute;
+    transition: all 0.3s ease-out;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    opacity: 0;
+    background: $gradient-triple-light;
+    background-size: 300%;
+    background-position: 0 0;
+    padding: $spacing3;
+    border-radius: $rounded-big;
+    color: $palette-common-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > * {
+      transition: all 0.4s ease-out
+    }
+    h6 {
+      position: relative;
+      transform: translate(0, 60px);
+      margin-bottom: $spacing3;
+      line-height: 36px
+    }
+    a, span {
+      font-size: 18px;
+      text-decoration: underline;
+      color: $palette-primary-main;
+      position: relative;
+      transform: translate(0, 60px);
+    }
+  }
+  &.short {
+    height: 240px;
+    @include breakpoints-down(md) {
+      height: 210px
+    }
+    .img {
+      width: 100%
+    }
+    .detail {
+      height: 90%;
+    }
+    &:before {
+      width: 80px;
+      height: 80px
+    }
+  }
+  &.medium {
+    height: 320px;
+    @include breakpoints-down(sm) {
+      height: 210px
+    }
+    .detail {
+      height: 60%;
+    }
+    .img {
+      width: 100%
+    }
+  }
+  &.long {
+    height: 480px;
+    @include breakpoints-down(sm) {
+      height: 210px;
+    }
+    .detail {
+      height: 60%;
+    }
+    .img {
+      height: 100%
+    }
+    &:before {
+      width: 190px;
+      height: 260px;
+    }
+    .figure {
+      &:after {
+        width: 300px;
+        height: 300px;
+        @include left(-200px);
+        bottom: -120px;
+      }
+    }
+  }
+}

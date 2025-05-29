@@ -1,0 +1,47 @@
+include ../../forms/arrow-button/large.pug
+
+-
+  var apps = [
+    imgAPI.logos[31],
+    imgAPI.logos[37],
+    imgAPI.logos[34],
+    imgAPI.logos[36],
+    imgAPI.logos[35],
+  ];
+
+aside.sidebar#portfolio-detail
+  |
+  |
+  a.btn.action-btn.btn-large.full-width.primary-light.show-lg-down(href="#")
+    | #{$t.footer_quick_links}
+  |
+  |
+  ul.property-sidebar
+    li
+      i.ion-md-calendar
+      | Published on June 12, 2023
+    li
+      i.ion-md-eye
+      | 204 Views
+    li
+      i.ion-md-text
+      | 10 Comments
+    li
+      i.ion-md-contacts
+      | 8 Engineers
+  h4.mb-4.use-text-subtitle2.use-text-medium.text-uppercase #{$t.portfolio_tools}
+  .apps
+    each item in apps
+      |
+      |
+      figure
+        img(src=item, alt='apps')/
+      |
+      |
+  h4.mb-3.use-text-subtitle2.use-text-medium.text-uppercase Tags
+  .tags
+    .chip.use-bg-primary-light.use-text-medium Designs
+    .chip.use-bg-secondary-light.use-text-medium Architect
+    .chip.use-bg-accent2-light.use-text-medium Photography
+    .chip.use-bg-accent-light.use-text-medium Programming
+  +arrow-button-large($t.register_subtitle, link.contact)

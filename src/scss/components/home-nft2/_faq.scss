@@ -1,0 +1,95 @@
+#nft2-faq {
+  .root {
+    position: relative;
+    @include breakpoints-up(sm) {
+      padding-bottom: $spacing5;
+    }
+   .container {
+      position: relative;
+      z-index: 3
+    }
+  }
+  .accordion {
+    position: relative;
+  }
+  .item {
+    margin-bottom: $spacing3
+  }
+  .paper {
+    margin-bottom: $spacing3;
+    overflow: hidden;
+    border-radius: $rounded-medium;
+    &:not(.active) .collapsible-header {
+      @include use-theme(background, rgba($light-background-paper, 0.5), rgba($dark-background-paper, 0.75));
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+  }
+  .heading {
+    display: block;
+    font-weight: $font-medium;
+    padding: spacing(1, 2, 1, 0);
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex: 1;
+    @include breakpoints-down(sm) {
+      font-size: 16px;
+    }
+  }
+  .content {
+    i.material-icons {
+      margin-top: $spacing1;
+    }
+  }
+  .active {
+    .collapsible-header {
+      background: $palette-primary-main;
+      color: $palette-common-white;
+    }
+    i.material-icons {
+      color: $palette-common-white;
+      transform: rotate(180deg)
+    }
+  }
+  .detail {
+    background: $palette-primary-main;
+    color: $palette-common-white;
+    border-radius: 0 0 $rounded-medium $rounded-medium;
+    p {
+      font-size: 24px;
+      @include breakpoints-down(sm) {
+        font-size: 18px;
+      }
+    }
+  }
+  .help-group {
+    @include breakpoints-between(sm, md) {
+      display: flex;
+      justify-content: center;
+      button, a {
+        margin: spacing(0, 0.5);
+        margin-bottom: 0
+      }
+    }
+    @include breakpoints-down(md) {
+      button, a, .btn {
+        font-size: 14px !important;
+        padding: $spacing2 !important;
+        width: auto;
+        flex: 1;
+      }
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    @include breakpoints-between(sm, lg) {
+      margin-bottom: 0 !important;
+    }
+    @include breakpoints-down(sm) {
+      button, a {
+        margin-bottom: $spacing3
+      }
+    }
+  }
+}

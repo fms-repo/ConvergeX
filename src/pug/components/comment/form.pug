@@ -1,0 +1,24 @@
+.comments-style
+  .form-comment
+    .write
+      .avatar
+        |
+        |
+        img.avatar-img(src=imgAPI.avatar[6] alt='avatar')/
+        |
+        |
+      .input-field.rounded-pill
+        |
+        |
+        textarea#write_comment.pt-0(placeholder=$t.blog_write)
+        |
+        |
+        button.btn.waves-effect.primary.send-btn
+          |
+          |
+          span.hidden-xs-down #{$t.form_send}
+          i.material-icons.icon.show-xs-down.right send
+          |
+          |
+        |
+        |

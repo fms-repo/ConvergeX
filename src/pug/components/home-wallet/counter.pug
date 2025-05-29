@@ -1,0 +1,24 @@
+include ../title/parallax-title.pug
+include ../counter/counter.pug
+
+#wallet-counter
+  .container.root
+    +parallax-title($t.wallet.best_bgtitle, $t.wallet.best_title, 'triple-main')
+    +counter(
+      {
+        title: $t.wallet.counter_downloads,
+        count: 123,
+        prefix: '+',
+        suffix: 'M'
+      }, {
+        title: $t.wallet.counter_users,
+        count: 456,
+        prefix: '+',
+        suffix: 'M'
+      }, {
+        title: $t.wallet.counter_platforms,
+        count: 789,
+        prefix: '+',
+        suffix: 'K'
+      }
+    )

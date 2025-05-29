@@ -1,0 +1,531 @@
+extends ../layouts/app.pug
+
+block variables
+  - 
+    var pageTitle = " Product List"
+    var pageName = "product"
+    var headerHome = false
+    var footerBg = true
+    var menuLanding = "ai"
+    var prefix = "ai_landing"
+
+    var products = [
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosL[25],
+        category: 'cat-a',
+        tag: ['tag-one', 'tag-three', 'tag-four'],
+        price: 50,
+        rating: 5,
+        check: 'check-d',
+        radio: 'radio-b'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosL[26],
+        category: 'cat-b',
+        tag: ['tag-one', 'tag-one', 'tag-four'],
+        price: 10,
+        rating: 2,
+        check: 'check-d',
+        radio: 'radio-e'
+      },
+      {
+        title: 'Integer orci justo',
+        img: imgAPI.photosL[27],
+        category: 'cat-b',
+        tag: ['tag-one'],
+        price: 100,
+        rating: 5,
+        check: 'check-a',
+        radio: 'radio-e'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosL[28],
+        category: 'cat-c',
+        tag: ['tag-one', 'tag-two'],
+        price: 80,
+        rating: 0,
+        check: 'check-c',
+        radio: 'radio-d'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosL[29],
+        category: 'cat-d',
+        tag: ['tag-two'],
+        price: 20,
+        rating: 5,
+        check: 'check-b',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosL[30],
+        category: 'cat-e',
+        tag: ['tag-one', 'tag-three'],
+        price: 5,
+        rating: 4,
+        check: 'check-a',
+        radio: 'radio-b'
+      },
+      {
+        title: 'Pellentesque ullamcorper',
+        img: imgAPI.photosL[31],
+        category: 'cat-c',
+        tag: ['tag-one', 'tag-four', 'tag-two'],
+        price: 70,
+        rating: 4,
+        check: 'check-a',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosL[32],
+        category: 'cat-d',
+        tag: ['tag-one', 'tag-three'],
+        price: 74,
+        rating: 4,
+        check: 'check-a',
+        radio: 'radio-b'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosL[33],
+        category: 'cat-a',
+        tag: ['tag-one', 'tag-three'],
+        price: 80,
+        rating: 1,
+        check: 'check-b',
+        radio: 'radio-b'
+      },
+      {
+        title: 'Phasellus ante massa',
+        img: imgAPI.photosL[34],
+        category: 'cat-d',
+        tag: ['tag-one', 'tag-three'],
+        price: 40,
+        rating: 4,
+        check: 'check-d',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosL[35],
+        category: 'cat-a',
+        tag: ['tag-two', 'tag-three'],
+        price: 40,
+        rating: 0,
+        check: 'check-b',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosL[36],
+        category: 'cat-a',
+        tag: ['tag-one'],
+        price: 70,
+        rating: 0,
+        check: 'check-a',
+        radio: 'radio-d'
+      },
+      {
+        title: 'Phasellus ante massa',
+        img: imgAPI.photosL[37],
+        category: 'cat-e',
+        tag: ['tag-one', 'tag-three'],
+        price: 55,
+        rating: 2,
+        check: 'check-e',
+        radio: 'radio-d'
+      },
+      {
+        title: 'Pellentesque ullamcorper',
+        img: imgAPI.photosL[38],
+        category: 'cat-a',
+        tag: ['tag-three'],
+        price: 90,
+        rating: 0,
+        check: 'check-d',
+        radio: 'radio-c'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosL[39],
+        category: 'cat-a',
+        tag: ['tag-two', 'tag-four'],
+        price: 80,
+        rating: 5,
+        check: 'check-a',
+        radio: 'radio-f'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosL[40],
+        category: 'cat-b',
+        tag: ['tag-one', 'tag-two', 'tag-four'],
+        price: 10,
+        rating: 5,
+        check: 'check-e',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Pellentesque ullamcorper',
+        img: imgAPI.photosP[7],
+        category: 'cat-c',
+        tag: ['tag-one', 'tag-three'],
+        price: 100,
+        rating: 4,
+        check: 'check-f',
+        radio: 'radio-f'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosP[8],
+        category: 'cat-b',
+        tag: ['tag-one', 'tag-four'],
+        price: 70,
+        rating: 0,
+        check: 'check-d',
+        radio: 'radio-b'
+      },
+      {
+        title: 'Integer orci justo',
+        img: imgAPI.photosP[9],
+        category: 'cat-a',
+        tag: ['tag-one', 'tag-two', 'tag-four'],
+        price: 10,
+        rating: 0,
+        check: 'check-d',
+        radio: 'radio-c'
+      },
+      {
+        title: 'Phasellus ante massa',
+        img: imgAPI.photosP[10],
+        category: 'cat-f',
+        tag: ['tag-one', 'tag-two'],
+        price: 20,
+        rating: 0,
+        check: 'check-b',
+        radio: 'radio-e'
+      },
+      {
+        title: 'Pellentesque ullamcorper',
+        img: imgAPI.photosP[11],
+        category: 'cat-d',
+        tag: ['tag-one', 'tag-two', 'tag-four'],
+        price: 80,
+        rating: 1,
+        check: 'check-d',
+        radio: 'radio-e'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosP[12],
+        category: 'cat-b',
+        tag: ['tag-one', 'tag-two', 'tag-four'],
+        price: 45,
+        rating: 5,
+        check: 'check-c',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosP[13],
+        category: 'cat-f',
+        tag: ['tag-one', 'tag-two', 'tag-four'],
+        price: 40,
+        rating: 0,
+        check: 'check-c',
+        radio: 'radio-a'
+      },
+      {
+        title: 'Phasellus ante massa',
+        img: imgAPI.photosP[14],
+        category: 'cat-a',
+        tag: ['tag-one', 'tag-four'],
+        price: 50,
+        rating: 5,
+        check: 'check-f',
+        radio: 'radio-c'
+      },
+      {
+        title: 'Cras convallis lacus orci',
+        img: imgAPI.photosP[18],
+        category: 'cat-f',
+        tag: ['tag-one', 'tag-two'],
+        price: 20,
+        rating: 3,
+        check: 'check-a',
+        radio: 'radio-c'
+      },
+      {
+        title: 'Pellentesque ullamcorper',
+        img: imgAPI.photosP[19],
+        category: 'cat-b',
+        tag: ['tag-one', 'tag-two'],
+        price: 70,
+        rating: 5,
+        check: 'check-c',
+        radio: 'radio-c'
+      },
+      {
+        title: 'Ut sed eros finibus',
+        img: imgAPI.photosP[20],
+        category: 'cat-a',
+        tag: ['tag-four'],
+        price: 45,
+        rating: 0,
+        check: 'check-b',
+        radio: 'radio-a'
+      }
+    ];
+  
+    var collection = [
+      {
+        img: imgAPI.photosL[5],
+        avatar: imgAPI.logos[15],
+        logo: imgAPI.logos[1],
+        title: 'Lorem ipsum',
+        name: 'John Doe',
+        color: 'secondary',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. ',
+        count: '20',
+        items: [imgAPI.photosL[11], imgAPI.photosL[9], imgAPI.photosL[4], imgAPI.photosP[7]],
+        verifiedUser: true,
+        verifiedItem: true,
+        href: link.productDetail
+      },
+      {
+        img: imgAPI.photosL[30],
+        avatar: imgAPI.avatar[4],
+        logo: imgAPI.logos[2],
+        color: 'primary',
+        title: 'Lorem ipsum',
+        name: 'John Doe',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. ',
+        count: '20',
+        items: [imgAPI.photosL[32], imgAPI.photosS[1], imgAPI.photosP[27], imgAPI.photosS[5]],
+        verifiedUser: true,
+        verifiedItem: true,
+        href: link.productDetail
+      },
+      {
+        img: imgAPI.photosP[19],
+        avatar: imgAPI.logos[10],
+        logo: imgAPI.logos[5],
+        title: 'Lorem ipsum',
+        name: 'John Doe',
+        color: 'accent',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. ',
+        count: '20',
+        items: [imgAPI.photosP[23], imgAPI.photosP[24], imgAPI.photosP[19], imgAPI.photosL[29]],
+        verifiedUser: true,
+        verifiedItem: true,
+        href: link.productDetail
+      },
+      {
+        img: imgAPI.photosL[7],
+        avatar: imgAPI.avatar[7],
+        logo: imgAPI.logos[10],
+        title: 'Lorem ipsum',
+        name: 'John Doe',
+        color: 'primary',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. ',
+        count: '20',
+        items: [imgAPI.photosL[8], imgAPI.photosP[10], imgAPI.photosL[1], imgAPI.photosL[7]],
+        verifiedUser: true,
+        verifiedItem: true,
+        href: link.productDetail
+      }
+    ];
+  
+    var creators = [
+      {
+        avatar: imgAPI.photosP[18],
+        name: 'John Doe',
+        verified: true,
+        sales: 100,
+        items: 10,
+        volume: 1040,
+        change: 40,
+        href: link.profile
+      },
+      {
+        avatar: imgAPI.photosL[31],
+        name: 'John Doe',
+        verified: true,
+        sales: 100,
+        items: 10,
+        volume: 1040,
+        change: 40,
+        href: link.profile
+      },
+      {
+        avatar: imgAPI.photosL[42],
+        name: 'John Doe',
+        verified: true,
+        sales: 100,
+        items: 10,
+        volume: 1040,
+        change: 40,
+        href: link.profile
+      },
+      {
+        avatar: imgAPI.avatar[6],
+        name: 'John Doe',
+        verified: true,
+        sales: 100,
+        items: 10,
+        volume: 1040,
+        change: 40,
+        href: link.profile
+      },
+      {
+        avatar: imgAPI.avatar[11],
+        name: 'John Doe',
+        verified: true,
+        sales: 100,
+        items: 10,
+        volume: 1040,
+        change: 40,
+        href: link.profile
+      },
+      {
+        avatar: imgAPI.avatar[29],
+        name: 'John Doe',
+        verified: true,
+        sales: 100,
+        items: 10,
+        volume: 1040,
+        change: 40,
+        href: link.profile
+      },
+    ];
+
+block content
+  #products-page
+    |
+    |
+    |
+    // ##### FILTER #####
+    #modal_filter.modal.modal-popup.bottom-sheet
+      .modal-content.modal-filter
+        nav.filter-head
+          .nav-wrapper
+            div.d-flex
+              |
+              |
+              button.btn.btn-icon.btn-small.invert.waves-effect.modal-close(type='button')
+                i.material-icons close
+              |
+              |
+              h5.use-text-subtitle2.mx-2.my-3.my-sm-2 Filter
+            |
+            |
+            button.modal-close.btn-flat.waves-effect(type='button') DONE  
+            |
+            |
+        #filter_mobile.filter-style
+    // ##### END FILTER #####
+    |
+    |
+    |
+    .main-wrap
+      |
+      |
+      |
+      include ../components/header/main.pug
+      include ../components/artworks/blur-gradient.pug
+      |
+      |
+      |
+      .container-wrap.container-front
+        .inner-page
+          .container
+            |
+            |
+            |
+            // ##### SEARCH AND SORTER #####
+            .row.spacing2
+              .col-md-8.col-sm-12.px-0
+                include ../components/filter/search.pug
+              .col-md-4.col-sm-12.px-0
+                include ../components/filter/sorter.pug
+                +sorter()
+            // ##### END SEARCH AND SORTER #####
+            |
+            |
+            |
+            div(class="lg:mt-5 md:mt-3 sm:mt-2")
+              .row.spacing2.spacing3-md-up
+                // ##### SIDEBAR FILTER #####
+                .col-md-3.col-sm-12.show-md-up.px-0
+                  include ../components/filter/filter.pug
+                // ##### END SIDEBAR FILTER #####
+                |
+                |
+                |
+                // ##### ITEM LIST #####
+                .col-md-9.col-sm-12#item-list-collection
+                  include ../components/filter/tab-category.pug
+                  include ../components/cards/products/product-card.pug
+                  include ../components/cards/media/playlist-card.pug
+                  include ../components/cards/profile/profile-card.pug
+                  .row.spacing2#product_result(data-items=products)
+                    each item in products
+                      .col.col-lg-4.col-sm-6.px-sm-3.px-0.mb-2
+                        +product-card(item.rating, item.price, item.img, item.title, 'Last Sale: 0.01001 ETH', 'over', 'portrait', link.productDetail)
+                  |
+                  |
+                  |
+                  .row.spacing4#collection
+                    each item in collection
+                      .col-sm-6
+                        +playlist-card(
+                          item.img,
+                          item.avatar,
+                          item.logo,
+                          item.title,
+                          item.name,
+                          item.desc,
+                          item.count,
+                          item.items,
+                          item.color,
+                          item.verifiedUser,
+                          item.verifiedItem,
+                          false,
+                          item.href
+                        )
+                  |
+                  |
+                  |
+                  .row.spacing4.mt-5#creators
+                    each item in creators
+                      .col-sm-4
+                        +profile-card(
+                          null,
+                          item.name,
+                          item.verified,
+                          item.avatar,
+                          item.items,
+                          item.sales,
+                          null,
+                          null,
+                          item.href,
+                          false
+                        )
+                // ##### END ITEM LIST #####
+                |
+                |
+                |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco-general
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

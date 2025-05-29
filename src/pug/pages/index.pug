@@ -1,0 +1,101 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Homepage AI"
+  - var pageName = "homepage"
+  - var headerHome = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#home
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap.scroll-nav-content
+        // ##### BANNER #####
+        section#home
+          include ../components/home-ai/banner-slider.pug
+        // ##### END BANNER #####
+        |
+        |
+        |
+        // ##### ABOUT #####
+        section#about.space-top.space-top-short--md-down
+          include ../components/home-ai/about.pug
+        // ##### END ABOUT #####
+        |
+        |
+        |
+        // ##### FEATURE #####
+        section#feature.space-top-short
+          include ../components/home-ai/feature.pug
+        // ##### END FEATURE #####
+        |
+        |
+        |
+        // ##### STEP #####
+        section#discover.space-top-short
+          include ../components/home-ai/step.pug
+        // ##### END STEP #####
+        |
+        |
+        |
+        // ##### RESEARCH #####
+        section#research.space-top.space-top-short--sm-down
+          include ../components/home-ai/research.pug
+        // ##### END RESEARCH #####
+        |
+        |
+        |
+        // ##### COMMUNITY #####
+        section#community.space-top.space-top-short--sm-down
+          include ../components/home-ai/community.pug
+        // ##### END COMMUNITY #####
+        |
+        |
+        |
+        // ##### FAQ #####
+        section#faq.space-top-short
+          include ../components/home-ai/faq.pug
+        // ##### END FAQ #####
+        |
+        |
+        |
+        // ##### BLOG #####
+        section#blog.space-top-short
+          include ../components/home-ai/news-carousel.pug
+        // ##### END BLOG #####
+        |
+        |
+        |
+        // ##### CALL ACTION #####
+        section#blog.space-top.space-bottom
+          include ../components/home-ai/call-action.pug
+        // ##### CALL ACTION #####
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/liquid.pug
+      +footer-deco
+        include ../components/footer/main.pug
+      // ##### END FOOTER #####
+      |
+      |
+      |
+      // ##### NOTIFICATIONS #####
+      .hidden-md-down
+        include ../components/notifications.pug
+      // ##### END NOTIFICATIONS #####
+      |
+      |
+      |
+      // ##### CORNER #####
+      .hidden-md-down
+        include ../components/corner.pug
+      // ##### END CORNER #####
+      |
+      |

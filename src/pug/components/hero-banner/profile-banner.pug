@@ -1,0 +1,70 @@
+include ../counter/counter.pug
+
+mixin profile-banner(avatar, cover, name, desc, following, followers, posts, friends, socmed=[])
+  #hero-banner
+    .container.profile
+      block
+      .avatar
+        |
+        |
+        span.deco-circle-line
+        |
+        |
+        img.avatar-img(alt='avatar', src=avatar)/
+        |
+        |
+      .card.profile-cover
+        figure
+          |
+          |
+          img(src=cover, alt='cover')/
+          |
+          |
+        h3.use-text-title2 #{name}
+        p #{desc}
+        if socmed.length > 0
+          .socmed
+            each item, index in socmed
+              |
+              |
+              a.btn-icon.waves-effect(href='#')
+                i(class='ion-logo-'+item)
+              |
+              |
+        +counter(
+          {
+            title: $t.followers,
+            count: followers,
+            prefix: '',
+            suffix: ''
+          }, {
+            title: $t.posts,
+            count: posts,
+            prefix: '',
+            suffix: ''
+          }, {
+            title: $t.following,
+            count: following,
+            prefix: '',
+            suffix: ''
+          },
+          true
+        )
+      .followers
+        .avatar-group
+          each item, index in friends
+            |
+            |
+            img.avatar-img.avatar-small(alt='avatar', src=item)
+            |
+            |
+          .avatar-img.rest
+            .d-flex
+              | +3 
+              span Followers
+        |
+        |
+        a.btn.btn-large.primary-light(href="#")
+          | #{$t.follow}
+        |
+        |

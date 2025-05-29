@@ -1,0 +1,48 @@
+- var defaultUser = assets+'/images/avatars/pp_boy4.svg'
+
+mixin countdown-card(img, title, desc, like, price, href, avatars, bid, timeleft)
+  .card.countdown-card.portrait.over
+    a.hidden-link.waves-effect(draggable="false" focus-ripple="" href=href)
+    .head
+      div
+        each item in avatars
+          .avatar-img.avatar
+            |
+            |
+            img(alt="avatar" src=item || defaultUser)/
+            |
+            |
+      .chip.price
+        | #{bid}+ Place Bid
+    figure
+      |
+      |
+      img(src=img alt="nft")/
+      |
+      |
+      time.countdown
+        |
+        |
+        span.time
+          |
+          |
+          span(data-countdown=timeleft)
+          |
+          |
+    .desc
+      .card-content.text
+        h2.title.pb-2.text-truncate
+          | #{title}
+        p.use-text-paragraph
+          | circulation:
+          | #{desc}
+      div
+        .card-action.property
+          if price > 0
+            strong
+              | #{price}
+              | ETH
+          if like > 0
+            .like
+              i.ion-ios-heart-outline
+              | #{like}

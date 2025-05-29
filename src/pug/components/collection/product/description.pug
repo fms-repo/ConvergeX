@@ -1,0 +1,290 @@
+-
+  function createListing(price, usd, qty, exp, from) {
+    return {
+      price, usd, qty, exp, from
+    };
+  }
+
+  function createActivity(event, price, qty, from, to, date) {
+    return {
+      event, price, qty, from, to, date
+    };
+  }
+
+  var rowsListing = [
+    createListing(0.27, 315.26, 2, 'about 11 hours', '234569'),
+    createListing(0.27, 315.26, 1, 'about 11 hours', '234569'),
+    createListing(0.27, 315.26, 4, 'about 10 hours', 'John'),
+    createListing(0.27, 315.26, 5, '2 days', 'Doe'),
+    createListing(0.27, 315.26, 5, '2 days', '234569'),
+  ]
+
+  var rowsOffers = [
+    createListing(0.27, 315.26, 2, 'about 11 hours', '234569'),
+    createListing(0.27, 315.26, 1, 'about 11 hours', '234569'),
+    createListing(0.27, 315.26, 4, 'about 10 hours', 'John'),
+    createListing(0.27, 315.26, 5, '2 days', 'Doe'),
+    createListing(0.27, 315.26, 5, '2 days', '234569'),
+  ]
+
+  var rowsActivity = [
+    createActivity('Transfer', 0.223, 1, 'John Deo', 'Jin Deo', '2 May 2023'),
+    createActivity('Sale', 0.223, 1, 'John Deo', 'Jin Deo', '2 May 2023'),
+    createActivity('Transfer', 0.223, 1, 'John Deo', 'Jin Deo', '2 May 2023'),
+    createActivity('Sale', 0.223, 1, 'John Deo', 'Jin Deo', '2 May 2023'),
+    createActivity('Transfer', 0.223, 1, 'John Deo', 'Jin Deo', '2 May 2023'),
+  ]
+
+.product-style(class="sm:py-3")
+  .row.spacing4.spacing6-md-up.justify-content-center
+    .col-md-5.col-sm-12(class="sm:px-3")
+      .mb-3
+        h4.use-text-subtitle.mb-3
+          | #{$t.list_desc}
+      p.mb-4
+        | Vestibulum faucibus eget erat eget pretium. Donec commodo convallis eget suscipit orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      p.mb-4
+        | Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero. Proin varius, tortor faucibus tempor pharetra, nunc mi consectetur enim, nec posuere ante magna vitae quam.
+      .properties
+        .row
+          .col-6
+            h6.text-capitalize artist
+            p Lipsum
+          .col-6
+            h6.text-capitalize Artist URL
+            p
+              |
+              |
+              a(href='#') https://bungalion.io/collection/...;
+              |
+              |
+          .col-6
+            h6.text-capitalize ERC20
+            p 0x12345678910111
+          .col-6
+            h6.text-capitalize symbol
+            p CRO10
+        .details
+          h4.use-text-subtitle.mb-3
+            | #{$t.faq_topic}
+          ul
+            li
+              |
+              |
+              span Contract Address
+              |
+              |
+              strong
+                a(href='#') 0x1234..789a
+              |
+              |
+            li
+              |
+              |
+              span Token ID
+              |
+              |
+              strong
+                a(href='#') 230
+              |
+              |
+            li
+              |
+              |
+              span Token Standard
+              |
+              |
+              strong ABC-2018
+              |
+              |
+            li
+              |
+              |
+              span Last Updated
+              |
+              |
+              strong 2 days ago
+              |
+              |
+            li
+              |
+              |
+              span Creator Fee
+              |
+              |
+              strong 1.5%
+              |
+              |
+    .col-md-7.col-sm-12(class="sm:px-3")
+      .accordion
+        ul.collapsible.expandable
+          |
+          |
+          |
+          li.accordion-content.paper.active
+            .collapsible-header.content
+              .use-text-subtitle
+                i.mdi.mdi-chart-timeline-variant
+                | Price History
+              |
+              |
+              i.material-icons.right.arrow expand_more
+              |
+              |
+            .collapsible-body.detail
+              p.y-label Volume (ETH)
+              .chart
+                canvas(id="chart_product_detail" height="180")
+          |
+          |
+          |
+          li.accordion-content.paper.active
+            .collapsible-header.content
+              .use-text-subtitle
+                i.mdi.mdi-format-list-bulleted
+                | Listing
+              |
+              |
+              i.material-icons.right.arrow expand_more
+              |
+              |
+            .collapsible-body.detail
+              table.table
+                thead
+                  tr
+                    th Unit Price
+                    th.text-right(align='right') USD Price
+                    th.text-right(align='right') Quantity
+                    th Expiration
+                    th From
+                tbody
+                  each row in rowsListing
+                    tr
+                      td.text-start
+                        |
+                        |
+                        strong #{row.price}
+                        |
+                        |
+                      td.text-end
+                        |
+                        |
+                        strong #{row.usd}
+                        |
+                        |
+                      td.text-end #{row.qty}
+                      td.text-start #{row.exp}
+                      td.text-start
+                        |
+                        |
+                        a(href='#') #{row.from}
+                        |
+                        |
+          |
+          |
+          |
+          li.accordion-content.paper
+            .collapsible-header.content
+              .use-text-subtitle
+                i.mdi.mdi-tag
+                | Offer
+              |
+              |
+              i.material-icons.right.arrow expand_more
+              |
+              |
+            .collapsible-body.detail
+              table.table
+                thead
+                  tr
+                    th Unit Price
+                    th.text-right(align='right') USD Price
+                    th.text-right(align='right') Quantity
+                    th Expiration
+                    th From
+                tbody
+                  each row in rowsOffers
+                    tr
+                      td(align='left')
+                        |
+                        |
+                        strong #{row.price}
+                        |
+                        |
+                      td(align='right')
+                        |
+                        |
+                        strong #{row.usd}
+                        |
+                        |
+                      td(align='right') #{row.qty}
+                      td(align='left') #{row.exp}
+                      td(align='left')
+                        |
+                        |
+                        a(href='#') #{row.from}
+                        |
+                        |
+          |
+          |
+          |
+          li.accordion-content.paper
+            .collapsible-header.content
+              .use-text-subtitle
+                i.mdi.mdi-sort-variant
+                | Activity
+              |
+              |
+              i.material-icons.right.arrow expand_more
+              |
+              |
+            .collapsible-body.detail
+              table.table
+                thead
+                  tr
+                    th Event
+                    th Unit Price
+                    th.text-right(align='right') Quantity
+                    th From
+                    th To
+                    th Date
+                tbody
+                  each row in rowsActivity
+                    tr
+                      td(align='left')
+                        |
+                        |
+                        if row.event === 'Transfer'
+                          i.mdi.mdi-cart
+                        if row.event === 'Sale'
+                          i.mdi.mdi-upload
+                        |
+                        |
+                        strong #{row.event}
+                        |
+                        |
+                      td(align='right')
+                        |
+                        |
+                        strong #{row.price}
+                        |
+                        |
+                      td(align='right') #{row.qty}
+                      td(align='left')
+                        |
+                        |
+                        a(href='#') #{row.from}
+                        |
+                        |
+                      td(align='left')
+                        |
+                        |
+                        a(href='#') #{row.to}
+                        |
+                        |
+                      td(align='left')
+                        |
+                        |
+                        a(href='#') #{row.date}
+                        |
+                        |

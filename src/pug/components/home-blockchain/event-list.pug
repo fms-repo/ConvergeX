@@ -1,0 +1,131 @@
+include ../title/title.pug
+include ../cards/event/event-card.pug
+
+-
+  var eventLeft = [
+    {
+      date: '22 Aug',
+      location: 'Indianapolis',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et'
+    },
+    {
+      date: '10 Oct',
+      location: 'Kathmandu',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et'
+    },
+    {
+      date: '10 Nov',
+      location: 'Porto',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et'
+    },
+  ]
+
+  var eventRight = [
+    {
+      date: '12 Sep',
+      location: 'Dallas',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et'
+    },
+    {
+      date: '01 Nov',
+      location: 'Denver',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et'
+    },
+    {
+      date: '11 Dec',
+      location: 'Stockholm',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et'
+    },
+  ]
+
+#blockchain-event-list
+  .root
+    .background
+      include ./parallax/parallax-double.pug
+      .bg-gradient
+        |
+        |
+        span.oval-right
+        span.oval-top
+        span.oval-bottom
+        |
+        |
+      .container
+        +title-main($t.blockchain.event_list_title, "center")
+        p.text-center.use-text-subtitle2
+          | #{$t.blockchain.event_list_desc}
+        .timeline
+          h4.use-text-title.year-title
+            |
+            |
+            span.use-text-grd-double-main 2024
+            |
+            |
+          .dashed-divider
+          .row.justify-content-around
+            .col-md-5.col-sm-12
+              .wow.fadeInUpShort(data-wow-delay="0.5s" data-wow-duration="0.5s" data-wow-offset="-50")
+                .grid
+                  +event-card(
+                    'primary',
+                    '22 May',
+                    'Bandung',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et',
+                    { text: $t.register, href: link.register },
+                    { text: $t.btn_detail, href: link.blogDetail }
+                  )
+            .col-md-5.col-sm-12
+              .wow.fadeInUpShort(data-wow-delay="0.8s" data-wow-duration="0.5s" data-wow-offset="-50")
+                .grid.mb-0
+                  +event-card(
+                    'secondary',
+                    '30 Jul',
+                    'London',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue euismod elit, in eleifend lacus dignissim et',
+                    { text: $t.register, href: link.register },
+                    { text: $t.btn_detail, href: link.blogDetail }
+                  )
+      .container
+        .timeline
+          .solid-divider
+          .row
+            .col-sm-6
+              ul.px-lg-5.left-side
+                each item, index in eventLeft
+                  li
+                    .wow.fadeInRightShort(
+                      data-wow-offset="200"
+                      data-wow-delay=(0.2 + 0.1 * index) + "s"
+                      data-wow-duration="0.5s"
+                    )
+                      .item
+                        .text
+                          h2 #{item.date}
+                          h3 #{item.location}
+                          p #{item.subtitle}
+                        |
+                        |
+                        a.btn.btn-outlined.black-white(href=link.blogDetail)
+                          | #{$t.btn_detail}
+                        |
+                        |
+            .col-sm-6
+              ul.px-lg-5.right-side
+                each item, index in eventRight
+                  li
+                    .wow.fadeInLeftShort(
+                      data-wow-offset="200"
+                      data-wow-delay=(0.2 + 0.2 * index) + "s"
+                      data-wow-duration="0.5s"
+                    )
+                      .item
+                        .text
+                          h2 #{item.date}
+                          h3 #{item.location}
+                          p #{item.subtitle}
+                        |
+                        |
+                        a.btn.btn-outlined.black-white(href=link.blogDetail)
+                          | #{$t.btn_detail}
+                        |
+                        |

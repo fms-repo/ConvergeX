@@ -1,0 +1,38 @@
+include ../branding/logo.pug
+
+#cv-navigation
+  .navigation
+    nav.sidenav-menu
+      .scrollactive-nav
+        |
+        |
+        a.logo.anchor-link(href='#home')
+          |
+          |
+          +logo
+          |
+          |
+        |
+        |
+      .menu
+        ul.collection.scrollactive-nav.scrollnav
+          each item in menu.profile
+            li.collection-item.link.anchor-link
+              |
+              |
+              span.darken
+              |
+              |
+              span.deco
+              |
+              |
+              a(href='#'+item.name)
+                .icon
+                  span(class=item.icon)
+              |
+              |
+              span.text.waves-effect
+                | #{$t.profile['header_'+item.name]}
+              |
+              |
+

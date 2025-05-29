@@ -1,0 +1,100 @@
+include ../../title/title.pug
+include ../../cards/thumbnail/case-card.pug
+-
+  var caseData = [
+    {
+      bg: imgAPI.photosP[7],
+      logo: imgAPI.logos[1],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[10],
+      logo: imgAPI.logos[2],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[13],
+      logo: imgAPI.logos[3],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[1],
+      logo: imgAPI.logos[4],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[12],
+      logo: imgAPI.logos[5],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[6],
+      logo: imgAPI.logos[6],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[4],
+      logo: imgAPI.logos[7],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[28],
+      logo: imgAPI.logos[8],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[3],
+      logo: imgAPI.logos[9],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[2],
+      logo: imgAPI.logos[10],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    }
+  ];
+
+.service-style
+  .root
+    .container.carousel-header
+      +title-main($t.service_related_title2, 'left')
+      |
+      |
+      a.btn.btn-flat.view-all(href=link.product)
+        | #{$t.btn_seeall}
+        i.mdi.icon.mdi-arrow-right
+      |
+      |
+    .slider-wrap
+      .container
+        .floating-text.show-md-up
+          p #{$t.service_related_desc2}
+      .carousel
+        .slick-carousel#service-carousel
+          .props.item-props-first
+            div
+          each item, index in caseData
+            .item
+              +case-card(caseData[index].bg, caseData[index].logo, caseData[index].title, caseData[index].desc, link.portfolioDetail)
+          .props.item-props-first
+            div
+      |
+      |
+      button.btn.btn-large.nav.prev#prev_related_services(type="button")
+        i.ion-md-arrow-back
+      |
+      |
+      button.btn.btn-large.nav.next#next_related_services(type="button")
+        i.ion-md-arrow-forward
+      |
+      |

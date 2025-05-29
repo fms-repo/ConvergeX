@@ -1,0 +1,144 @@
+-
+  var comments = [
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    }
+  ]
+
+include ../../title/title.pug
+include ../../cards/testimonial/quote-card.pug
+
+.blog-style
+  .root
+    article.article
+      section.socmed-share
+        .btn-area
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-linkedin.indigo-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-pinterest.red-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-facebook.blue-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-ios-mail
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-md-link
+          |
+          |
+        h6.subtitle
+          | Share
+      .content
+        h6.category-blog
+          | Maecenas rutrum
+        +title-main('Interdum et Malesuada Fames Curabitur Blandit', 'left', false, true)
+        time.caption June 19, 2020 by Oliver &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  12 min to read
+        figure.image-blog
+          |
+          |
+          img(src=imgAPI.photosL[16] alt='blog')/
+          |
+          |
+        p
+          | Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        p
+          | Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+        strong Heading
+        p
+          | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+        strong Sub-heading
+        p
+          | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+        p
+          | Example code block Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo. Tortor mauris condimentum nibh, ut fermentum massa.
+        strong Sub-heading
+        p
+          | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        figure.image-blog
+          |
+          |
+          img(src=imgAPI.photosL[6] alt='blog')/
+          |
+          |
+        ul.list
+          li Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+          li Donec id elit non mi porta gravida at eget metus.
+          li Nulla vitae elit libero, a pharetra augue.
+        p
+          | Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a  pharetra augue.
+        ol
+          li Vestibulum id ligula porta felis euismod semper.
+          li
+            | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur  ridiculus mus.
+          li Maecenas sed diam eget risus varius blandit sit amet non magna.
+    .my-6
+      +quote-card(imgAPI.avatar[36], 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', 'Jena Doe', 'Client')
+    .share-mobile.hidden-sm-up
+      h6.use-text-subtitle.text-center
+        | #{$t.blog_share}
+      .btn-area.bottom
+        .d-flex.justify-center.my-3
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-linkedin.indigo-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-pinterest.red-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-facebook.blue-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-ios-mail
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-md-link
+          |
+          |
+  section.comment
+    h3.use-text-subtitle2.text-center.mb-5 #{$t.blog_write} (4)
+    include ../../comment/form
+    .collection.border-0
+      include ../../comment/item
+      .comments-style
+        each item, index in comments
+          +item(assets+item.avatar, item.name, item.date, item.comment, index >= comments.length - 1)

@@ -1,0 +1,104 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Homepage Fintech"
+  - var pageName = "homepage"
+  - var headerHome = true
+  - var menuLanding = "fintech"
+  - var prefix = "fintech"
+
+block content
+  div#home
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap.scroll-nav-content
+        // ##### BANNER #####
+        section#home
+          include ../components/home-fintech/banner-slider.pug
+        // ##### END BANNER #####
+        |
+        |
+        |
+        // ##### STEP #####
+        section#howto.space-top.container-front
+          include ../components/home-fintech/step.pug
+        // ##### END STEP #####
+        |
+        |
+        |
+        // ##### CHART #####
+        section#howto.space-top.space-top-short--sm-down
+          include ../components/home-fintech/chart-price.pug
+        // ##### END CHART #####
+        |
+        |
+        |
+        // ##### FEATURE #####
+        section#feature.space-top.space-top-short--lg-down
+          include ../components/home-fintech/feature.pug
+        // ##### END FEATURE #####
+        |
+        |
+        |
+        // ##### BENEFIT #####
+        section#benefit.space-top
+          include ../components/home-fintech/benefit.pug
+        // ##### END BENEFIT #####
+        |
+        |
+        |
+        // ##### COUNTER #####
+        section#counter.space-top-short
+          include ../components/home-fintech/counter.pug
+        // ##### END COUNTER #####
+        |
+        |
+        |
+        // ##### MERCHANTS #####
+        section#faq.space-top-short--md-up
+          include ../components/home-fintech/merchants.pug
+        // ##### END MERCHANTS #####
+        |
+        |
+        |
+        // ##### CALL ACTION #####
+        section#call-action.space-top
+          include ../components/home-fintech/call-action.pug
+        // ##### END CALL ACTION #####
+        |
+        |
+        |
+        // ##### FAQ #####
+        section#faq.space-top
+          include ../components/home-fintech/faq.pug
+        // ##### END FAQ #####
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/wave.pug
+      +footer-deco
+        div
+          section#subscribe.space-bottom-short
+            include ../components/home-fintech/subscribe-form.pug
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####
+      |
+      |
+      |
+      // ##### NOTIFICATIONS #####
+      .hidden-md-down
+        include ../components/notifications.pug
+      // ##### END NOTIFICATIONS #####
+      |
+      |
+      |
+      // ##### CORNER #####
+      .hidden-md-down
+        include ../components/corner.pug
+      // ##### END CORNER #####
+      |
+      |

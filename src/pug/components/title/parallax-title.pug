@@ -1,0 +1,6 @@
+include ./title.pug
+
+mixin parallax-title(bgTitle, mainTitle, color='double-main')
+  .parallax-title
+    h2.deco-title(class='use-text-grd-' + color) #{bgTitle}
+    +title-main(mainTitle, 'center')

@@ -1,0 +1,321 @@
+@function section-margin($margin) {
+  @return $margin * 20;
+}
+
+$default: section-margin($spacing1);
+$short: section-margin(6px);
+$default-mobile: section-margin(4px);
+$short-mobile: section-margin(2.5px);
+
+.main-wrap {
+  position: relative;
+  width: 100%;
+  &.has-fixed-scroll {
+    @include breakpoints-down(md) {
+      overflow: hidden;
+    }
+  }
+  &:not(.has-fixed-scroll) {
+    overflow: hidden;
+  }
+  .theme--dark & {
+    background-color: rgba(var(--v-theme-primarydark), 0.5);
+  }
+  .theme--light & {
+    background-color: $light-background-paper;
+  }
+}
+
+.inner-page {
+  padding-top: $spacing10;
+  @include breakpoints-up(sm) {
+    padding-top: $spacing15;
+  }
+}
+
+.higher-top {
+  @include breakpoints-down(sm) {
+    padding-top: $spacing8
+  }
+}
+
+// Space Bottom
+.space-bottom {
+  margin-bottom: $default;
+  @include breakpoints-down(lg) {
+    margin-bottom: $default-mobile;
+  }
+  &--lg-down {
+    @include breakpoints-down(lg) {
+      margin-bottom: $default-mobile;
+    }
+  }
+  &--md-down {
+    @include breakpoints-down(md) {
+      margin-bottom: $default-mobile;
+    }
+  }
+  &--sm-down {
+    @include breakpoints-down(sm) {
+      margin-bottom: $default-mobile;
+    }
+  }
+  &--lg-up {
+    @include breakpoints-up(lg) {
+      margin-bottom: $default-mobile;
+    }
+  }
+  &--md-up {
+    @include breakpoints-up(lg) {
+      margin-bottom: $default;
+    }
+    @include breakpoints-between(md, lg) {
+      margin-bottom: $default-mobile;
+    }
+  }
+  &--sm-up {
+    @include breakpoints-up(lg) {
+      margin-bottom: $default;
+    }
+    @include breakpoints-between(sm, lg) {
+      margin-bottom: $default-mobile;
+    }
+  }
+}
+
+.space-bottom-short {
+  margin-bottom: $short;
+  @include breakpoints-down(lg) {
+    margin-bottom: $short-mobile;
+  }
+  &--lg-down {
+    @include breakpoints-down(lg) {
+      margin-bottom: $short-mobile;
+    }
+  }
+  &--md-down {
+    @include breakpoints-down(md) {
+      margin-bottom: $short-mobile;
+    }
+  }
+  &--sm-down {
+    @include breakpoints-down(sm) {
+      margin-bottom: $short-mobile;
+    }
+  }
+  &--lg-up {
+    @include breakpoints-up(lg) {
+      margin-bottom: $short;
+    }
+  }
+  &--md-up {
+    @include breakpoints-up(lg) {
+      margin-bottom: $short;
+    }
+    @include breakpoints-between(md, lg) {
+      margin-bottom: $short-mobile;
+    }
+  }
+  &--sm-up {
+    @include breakpoints-up(lg) {
+      margin-bottom: $short;
+    }
+    @include breakpoints-between(sm, lg) {
+      margin-bottom: $short-mobile;
+    }
+  }
+}
+
+// space-top
+.space-top {
+  margin-top: $default;
+  @include breakpoints-down(lg) {
+    margin-top: $default-mobile;
+  }
+  &--lg-down {
+    @include breakpoints-down(lg) {
+      margin-top: $default-mobile;
+    }
+  }
+  &--md-down {
+    @include breakpoints-down(md) {
+      margin-top: $default-mobile;
+    }
+  }
+  &--sm-down {
+    @include breakpoints-down(sm) {
+      margin-top: $default-mobile;
+    }
+  }
+  &--lg-up {
+    @include breakpoints-up(lg) {
+      margin-top: $default;
+    }
+  }
+  &--md-up {
+    @include breakpoints-up(lg) {
+      margin-top: $default;
+    }
+    @include breakpoints-between(md, lg) {
+      margin-top: $default-mobile;
+    }
+  }
+  &--sm-up {
+    @include breakpoints-up(lg) {
+      margin-top: $default;
+    }
+    @include breakpoints-between(sm, lg) {
+      margin-top: $default-mobile;
+    }
+  }
+}
+.space-top-short {
+  margin-top: $short;
+  @include breakpoints-down(lg) {
+    margin-top: $short-mobile;
+  }
+  &--lg-down {
+    @include breakpoints-down(lg) {
+      margin-top: $short-mobile;
+    }
+  }
+  &--md-down {
+    @include breakpoints-down(md) {
+      margin-top: $short-mobile;
+    }
+  }
+  &--sm-down {
+    @include breakpoints-down(sm) {
+      margin-top: $short-mobile;
+    }
+  }
+  &--lg-up {
+    @include breakpoints-up(lg) {
+      margin-top: $short;
+    }
+  }
+  &--md-up {
+    @include breakpoints-up(lg) {
+      margin-top: $short;
+    }
+    @include breakpoints-between(md, lg) {
+      margin-top: $short-mobile;
+    }
+  }
+  &--sm-up {
+    @include breakpoints-up(lg) {
+      margin-top: $short;
+    }
+    @include breakpoints-between(sm, lg) {
+      margin-top: $short-mobile;
+    }
+  }
+}
+
+.container-wrap {
+  & > section {
+    position: relative;
+  }
+}
+
+.container-general {
+  position: relative;
+  padding-top: 32px;
+  margin-top: $spacing7;
+  margin-bottom: $spacing5;
+  @include breakpoints-up(sm) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.container-front {
+  position: relative;
+  z-index: 20
+}
+
+.full-screen-container {
+  height: 100vh;
+  display: flex;
+  .socmed-btn {
+    .ion-social-facebook {
+      color: #3f51b5
+    }
+    .ion-social-twitter {
+      color: #2196f3
+    }
+    .ion-social-instagram {
+      color: #9c27b0
+    }
+    .ion-social-linkedin {
+      color: #2196f3
+    }
+  }
+}
+
+.full-width {
+  width: 100% !important
+}
+
+.maintenance-icon {
+  margin: $spacing1;
+  > div {
+    font-size: 80px;
+    position: relative;
+    @include breakpoints-between(md, lg) {
+      font-size: 56px;
+      top: $spacing5;
+    }
+  }
+}
+
+.primary-icon {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  position: relative;
+  background-image: linear-gradient(180deg, $palette-accent-light 0%, $palette-primary-light 100%);
+  > div {
+    left: -50px;
+    top: 40px;
+    transform: scale(4);
+  }
+}
+
+.secondary-icon {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  background-image: linear-gradient(180deg, $palette-secondary-main 0%, $palette-primary-light 100%);
+  > div {
+    left: -20px;
+    top: -10px;
+    transform: scale(2.5);
+  }
+}
+
+.accent-icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: relative;
+  background-image: linear-gradient(180deg, $palette-secondary-light 0%, $palette-accent-light 100%);
+  > div {
+    left: -20px;
+    top: -20px;
+    transform: scale(1.5);
+  }
+}
+
+.arrow {
+  .btn-flat i {
+    @include rtl-flip;
+  }
+}
+
+#blog-page {
+  .news-card.portrait {
+    max-width: none;
+  }
+}

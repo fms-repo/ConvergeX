@@ -1,0 +1,199 @@
+#blockchain-banner-slider
+  .banner-wrap
+    #banner-slider.carousel-banner
+      #slide1.slide
+        .inner
+          .img.background-banner
+            |
+            |
+            img(
+              src=imgAPI.blockchain[0]
+              alt='background'
+            )/
+            |
+            |
+          .container
+            .row.align-items-center
+              .col-md-7.col-sm-12.px-0
+                .text
+                  h4.use-mq--title
+                    | #{$t.blockchain.banner_title}
+                    span.text-uppercase.use-theme--grd-text &nbsp;
+                      | #{$t.blockchain.banner_highlight}
+                  h5.use-mq--subtitle #{$t.blockchain.banner_desc}
+                  .btn-area
+                    a.btn.waves-effect.btn-large.button.secondary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.btn-outlined.waves-effect.btn-large.button.primary(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-md-5.col-sm-12
+                .deco-banner.show-md-up
+                  .parallax-scene.right-scene
+                    #scene1
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.hexa
+                          img(src=imgAPI.blockchain[1] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.4")
+                        |
+                        |
+                        span.cube
+                          img(src=imgAPI.blockchain[2] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.cube-blur
+                          img(src=imgAPI.blockchain[3] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.3")
+                        |
+                        |
+                        span.accent-blur
+                        |
+                        |
+      #slide2.slide
+        .inner
+          .container
+            .row
+              .col-md-7.col-sm-12.order-lg-5
+                .text.px-sm-3
+                  h4.use-mq--title
+                    | #{$t.blockchain.banner_title}
+                    span.text-uppercase.use-theme--grd-text &nbsp;
+                      | #{$t.blockchain.banner_highlight}
+                  h5.use-mq--subtitle #{$t.blockchain.banner_desc}
+                  .btn-area
+                    a.btn.waves-effect.btn-large.button.secondary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.btn-outlined.waves-effect.btn-large.button.primary(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-md-5.col-sm-12.order-lg-0
+                .deco-banner.show-md-up
+                  .parallax-scene.left-scene
+                    #scene2
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.pyramid
+                          img(src=imgAPI.blockchain[4] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.4")
+                        |
+                        |
+                        span.box
+                          img(src=imgAPI.blockchain[5] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.round
+                          img(src=imgAPI.blockchain[6] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.3")
+                        |
+                        |
+                        span.primary-blur
+                        |
+                        |
+      #slide3.slide.center-content
+        .inner
+          .container
+            .row.justify-content-center
+              .col-md-9.col-sm-11.px-md-12
+                .text.text-center(class="lg:pt-10")
+                  h4.use-mq--title
+                    | #{$t.blockchain.banner_title}
+                    span.text-uppercase.use-theme--grd-text &nbsp;
+                      | #{$t.blockchain.banner_highlight}
+                  h5.use-mq--subtitle #{$t.blockchain.banner_desc}
+                  .btn-area.justify-content-center
+                    a.btn.waves-effect.btn-large.button.secondary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.waves-effect.btn-large.button.black(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-xs-12
+                .img.h-banner
+                  .deco-banner.show-lg-up
+                    .parallax-scene.center-scene
+                      #scene3
+                        div(data-depth="0.2")
+                          |
+                          |
+                          span.hexa2
+                            img(src=imgAPI.blockchain[9] alt="parallax")/
+                          |
+                          |
+                        div(data-depth="0.4")
+                          |
+                          |
+                          span.pyramid-blur
+                            img(src=imgAPI.blockchain[4] alt="parallax")/
+                          |
+                          |
+                        div(data-depth="0.25")
+                          |
+                          |
+                          span.tube
+                            img(src=imgAPI.blockchain[8] alt="parallax")/
+                          |
+                          |
+                        div(data-depth="0.3")
+                          |
+                          |
+                          span.round2
+                            img(src=imgAPI.blockchain[6] alt="parallax")/
+                          |
+                          |
+                  |
+                  |
+                  img(src=imgAPI.blockchain[7] alt="background")/
+                  |
+                  |
+    .slide-nav-group
+      .hidden-md-down
+        .container
+          nav.slide-nav#banner_nav
+            |
+            |
+            a.waves-effect.active(data-slide='0')
+              strong First Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |
+            hr.divider
+            |
+            |
+            a.waves-effect(data-slide='1')
+              strong Second Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |
+            hr.divider
+            |
+            |
+            a.waves-effect(data-slide='2')
+              strong Third Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |

@@ -1,0 +1,42 @@
+#avatar-contact
+  .card.form-box
+    .row.spacing6--sm-up
+      .col-lg-5.col-sm-12
+        h3.title-form.use-text-title Contact
+          span Me.
+      .col-lg-7.col-sm-12
+        .form
+          form#contact_form
+            .row.spacing6
+              .col-sm-12.py-0
+                .input-field.secondary.light.filled
+                    |
+                    |
+                    input.validate#name(type='text' required)
+                    |
+                    |
+                    label(for='name') #{$t.avatar.form_name}
+                    |
+                    |
+              .col-sm-12.py-0
+                .input-field.secondary.light.filled
+                    |
+                    |
+                    input.validate#email(type='email' required)
+                    |
+                    |
+                    label(for='email') #{$t.avatar.form_email}
+                    |
+                    |
+              .col-sm-12.py-0
+                .input-field.secondary.light.filled
+                    |
+                    |
+                    textarea#message.materialize-textarea(rows="6")
+                    |
+                    |
+                    label(for='message') #{$t.avatar.form_message}
+                    |
+                    |
+                .btn-area
+                  button.full-width.btn.btn-large.secondary.waves-effect(type="submit") #{$t.avatar.form_send}

@@ -1,0 +1,49 @@
+include ../branding/logo.pug
+
+#cv-footer
+  .root
+    include ./parallax/parallax-full-big
+    footer.container.max-lg
+      .row.mb-0
+        .col-md-7.col-sm-12.order-lg-5.px-0(class="sm:px-5")
+          .wow.fadeInRightShort(data-wow-offset='100' data-wow-delay='0.2s' data-wow-duration='0.3s')
+            #contact
+              include contact.pug
+        .col-md-5.col-sm-12.order-lg-0
+          .wow.fadeInLeftShort(data-wow-offset='100' data-wow-delay='0.2s' data-wow-duration='0.3s')
+            div
+              .logo
+                |
+                |
+                +logo('only', 'large')
+                |
+                |
+                h3.use-text-title #{brand.profileName}
+                h4.use-text-subtitle #{brand.profileTitle}
+              .socmed
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-facebook.fb
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-linkedin.id
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-twitter.tw
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-instagram.ig
+                |
+                |
+              .contact
+                p.use-text-paragraph #{$t.blog_phone}
+                  br/
+                  | +12 345 678 90
+                .divider
+                p.use-text-paragraph #{$t.header_contact}
+                  br/
+                  | jenadoe.skype

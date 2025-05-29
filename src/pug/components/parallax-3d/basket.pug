@@ -1,0 +1,41 @@
+include ../artworks/clay-deco.pug
+
+mixin parallax3d-basket(type='scroll')
+  .parallax-3d
+    if type === 'hover'
+      .parallax-scene
+        .basket
+          #scene1
+            div(data-depth="0.2")
+              .obj-hover.ring2(style='left: -50px; top: 300px')
+                +clay-deco(assets+'/images/decoration/clay-ring2.png', 'accent-light')
+            div(data-depth="0.4")
+              .obj-hover.bom(style='left: 20px; top: 30px')
+                +clay-deco(assets+'/images/decoration/clay-bom.png', 'primary-main')
+            div(data-depth="0.3")
+              .obj-hover.ball(style='right: 50px; top: 280px')
+                +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+            div(data-depth="0.4")
+              .obj-hover.ring1(style='right: 100px; top: 250px')
+                +clay-deco(assets+'/images/decoration/clay-ring.png', 'triple-dark')
+    if type === 'scroll'
+      .parallax-wrap
+        .basket
+          .inner-parallax.start
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ring2(style='left: -3px; top: 90px')
+                  +clay-deco(assets+'/images/decoration/clay-ring2.png', 'accent')
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .bom(style='left: 30px; top: -40px')
+                  +clay-deco(assets+'/images/decoration/clay-bom.png', 'primary-light')
+          .inner-parallax.end
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ball(style='right: 50px; top: 50px')
+                  +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ring1(style='right: 180px; top: -100px')
+                  +clay-deco(assets+'/images/decoration/clay-ring.png', 'primary-dark')

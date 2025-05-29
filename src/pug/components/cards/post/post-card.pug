@@ -1,0 +1,24 @@
+mixin post-card(img, title, desc, href="#", source, small=false)
+  |
+  |
+  a.waves-effect.post-card(href=href)
+    |
+    |
+    span.figure
+      img(src=img alt="post card image")/
+    |
+    |
+    span.property
+      |
+      |
+      span.title-card(class=small ? "small" : "big")
+        | #{title}
+      |
+      |
+      span.desc
+        span.source #{source}
+        span #{desc}
+      |
+      |
+  |
+  |

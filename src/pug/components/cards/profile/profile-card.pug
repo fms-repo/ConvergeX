@@ -1,0 +1,61 @@
+mixin profile-card(number=null, name, verified=false, avatar, items, sales, change=null, volume=null, href="#", first=false)  
+  .card.profile-card(class=first ? "first" : "")
+    |
+    |
+    a.waves-effect(href=href) &nbsp;
+    |
+    |
+    .inner
+      .avatar-img.avatar
+        |
+        |
+        img(src=avatar alt="avatar")/
+        |
+        |
+      .properties
+        h5.title-profile
+          | #{name}
+          if verified
+            i.mdi.verified.mdi-check-decagram
+        .card-actions.action
+          div
+            p
+              |
+              |
+              i.mdi.icon-secondary.use-text-secondary-color.mdi-image-multiple
+              |
+              |
+              strong #{items} Items
+              |
+              |
+            p
+              |
+              |
+              i.mdi.icon-primary.use-text-primary-color.mdi-cart
+              |
+              |
+              strong #{sales} Sales
+          if change || volume
+            .stats
+              p
+                | Change: +
+                |
+                |
+                span.text-light-green
+                  | #{change}
+                  | %
+                |
+                |
+              p
+                | Volume:
+                |
+                |
+                span
+                  | #{volume}
+                  | ETH
+                |
+                |
+        if number
+          h2
+            i ##{number}
+

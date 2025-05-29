@@ -1,0 +1,16 @@
+mixin news-card(title, headline, orientation='portrait', type='full', img, href='#')
+  .card.news-card(class=orientation + ' ' + type)
+    .card-image.figure
+      .responsive-img(style={'background-image': `url(${img})`})
+    .properties
+      .caption
+        | #{headline}
+      .news-title
+        | #{title}
+      .card-actions
+        |
+        |
+        a.btn-flat.secondary-text.action-btn.waves-effect(href=href)
+          | #{$t.btn_read_more}
+        |
+        |

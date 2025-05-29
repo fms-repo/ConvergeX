@@ -1,0 +1,32 @@
+mixin mobile-app(screen, top, left, right)
+  .mobile-app-artwork
+    .root
+      .phone
+        .screen
+          |
+          |
+          img(src=screen alt="screen")/
+          |
+          |
+      .phone.reflect
+        .screen
+          |
+          |
+          img(src=screen alt="screen")/
+          |
+          |
+      .widget
+        |
+        |
+        span.top
+          img(src=top alt="app")/
+        |
+        |
+        span.left
+          img(src=left alt="app")/
+        |
+        |
+        span.right
+          img(src=right alt="app")/
+        |
+        |

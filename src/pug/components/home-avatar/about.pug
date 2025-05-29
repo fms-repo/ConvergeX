@@ -1,0 +1,53 @@
+include ../title/parallax-title.pug
+include ../cards/thumbnail/preview-card.pug
+
+-
+  var gameList = [imgAPI.logos[38], imgAPI.logos[39], imgAPI.logos[40], imgAPI.logos[41], imgAPI.logos[42], imgAPI.logos[43]]
+  var gameHighlight = [
+    {
+      img: imgAPI.photosP[19],
+      icon: imgAPI.logos[44]
+    },
+    {
+      img: imgAPI.photosS[5],
+      icon: imgAPI.logos[45]
+    },
+    {
+      img: imgAPI.photosS[6],
+      icon: imgAPI.logos[46]
+    },
+  ]
+
+#avatar-about
+  .about
+    include ./parallax/parallax-right.pug
+    +parallax-title($t.avatar.about_bgtitle, $t.avatar.about_title, 'double-custom')
+    .container.fixed-width(class="md:mt-15")
+      .row.spacing6--sm-up
+        .col-lg-1.col-sm-12.pa-6.hidden-lg-down
+          h2.name-deco
+            | #{brand.profileName}
+        .col-lg-7.col-md-9.col-sm-12
+          .use-text-subtitle2.text-center(class="lg:!text-start")
+            p.mb-5
+              | #{ $t.avatar.about_desc1}
+            p.mb-5
+              | #{$t.avatar.about_desc2}
+          .row.spacing6.flex.items-end(class="lg:items-start sm:mt-12")
+            .col-sm-7
+              .row.spacing12
+                each item, index in gameList
+                  .col-4.my-3
+                    .avatar-img.thumb
+                      |
+                      |
+                      img(src=item alt="thumb")/
+                      |
+                      |
+            .col-sm-5.show-sm-up.px-3
+              +app-card(gameHighlight[0].img, gameHighlight[0].icon)
+        .col-lg-3.col-md-3.col-sm-12(class="sm:ps-6")
+          .flex(class="lg:block")
+            +app-card(gameHighlight[1].img, gameHighlight[1].icon)
+            .lower
+              +app-card(gameHighlight[2].img, gameHighlight[2].icon)

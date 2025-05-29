@@ -1,0 +1,130 @@
+include ../cards/profile/profile-card.pug
+include ../title/title.pug
+
+-
+  var rankData = [
+    {
+      avatar: imgAPI.avatar[20],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[21],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[7],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosP[21],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosP[18],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosL[31],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosL[42],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[6],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[11],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[29],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+  ]
+
+#nft-list-rank
+  .root
+    include ./parallax/parallax-left
+    .container
+      .row.spacing2.spacing4-md-up
+        .col-md-5.col-sm-12
+          +title-main($t.nft.creators_title, 'left', true)
+        .col-md-7.col-sm-12
+          +profile-card(
+            1,
+            rankData[0].name,
+            rankData[0].verified,
+            rankData[0].avatar,
+            rankData[0].items,
+            rankData[0].sales,
+            rankData[0].change,
+            rankData[0].volume,
+            rankData[0].href,
+            true
+          )
+        each item, index in rankData.slice(1, 10)
+          .col-sm-4
+            +profile-card(
+              index + 2,
+              item.name,
+              item.verified,
+              item.avatar,
+              item.items,
+              item.sales,
+              item.change,
+              item.volume,
+              item.href
+            )

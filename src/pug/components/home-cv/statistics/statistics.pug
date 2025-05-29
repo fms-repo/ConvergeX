@@ -1,0 +1,43 @@
+include ../../title/title.pug
+
+#cv-statistic
+  .root
+    .background
+      .bg-gradient
+        |
+        |
+        span.oval-right
+        |
+        |
+        span.oval-top
+        |
+        |
+        span.oval-bottom
+        |
+        |
+      .px-3(class="sm:px-0")
+        +title-main($t.profile.stats_title, "center")
+      include ./expertise.pug
+      .row.wrapper.justify-center
+        .col-lg-4.col-md-4.col-sm-12.hidden-md-down
+          .avatar
+            |
+            |
+            img(src=imgAPI.profile[4] alt="avatar full")/
+            |
+            |
+        .col-lg-7.col-md-8.col-sm-10
+          .section
+            include ./progress.pug
+          .section.floating
+            include ./categories.pug
+          .section
+            include ./history.pug
+          .section.floating
+            .float-right.mt-5(class="md:mt-0")
+              include ./counter.pug
+      |
+      |
+      span.rounded-bottom
+      |
+      |

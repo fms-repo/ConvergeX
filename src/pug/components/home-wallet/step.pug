@@ -1,0 +1,47 @@
+include ../title/title.pug
+include ../icons3d.pug
+
+#wallet-step
+  .container
+    +title-main($t.wallet.step_title, 'center')
+    p.text-center.use-text-subtitle2
+      | #{$t.wallet.step_desc}
+    .row.step.spacing6-md-up
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-download-circle', 'primary-double')
+            .left
+              +icons3d('mdi-hexagon', 'accent')
+            .right
+              +icons3d('mdi-shield-check-outline', 'secondary')
+          .glow.primary
+            h6.use-text-subtitle2 #{$t.wallet.step_title1}
+            p.use-text-paragraph #{$t.wallet.step_desc1}
+          hr.divider.primary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-bitcoin', 'secondary-double')
+            .left
+              +icons3d('mdi-chart-bubble', 'primary')
+            .right
+              +icons3d('mdi-plus-thick', 'accent')
+          .glow.secondary
+            h6.use-text-subtitle2 #{$t.wallet.step_title2}
+            p.use-text-paragraph #{$t.wallet.step_desc2}
+          hr.divider.secondary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-shopping', 'accent-double')
+            .left
+              +icons3d('mdi-music', 'primary')
+            .right
+              +icons3d('mdi-folder-multiple-image', 'secondary')
+          .glow.accent
+            h6.use-text-subtitle2 #{$t.wallet.step_title3}
+            p.use-text-paragraph #{$t.wallet.step_desc3}

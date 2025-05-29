@@ -1,0 +1,28 @@
+mixin rating-card(avatar, title, name, text, rating)
+  .testi-rating-card
+    .card.paper
+      p #{text}
+      .rating
+        - var n = 1
+        - var m = 1
+        - var left = 5 - star
+        while n <= star
+          i.material-icons.star-icon(title=n++) star
+        while m <= left
+          i.material-icons.star-icon-disable(title=m++) star
+    .person
+      .avatar-img.avatar-profile
+        |
+        |
+        img(alt="name" src=avatar)/
+        |
+        |
+      .name
+        h6.text-h6
+          | #{name}
+        |
+        |
+        span.caption.use-text-caption
+          | #{title}
+        |
+        |

@@ -1,0 +1,85 @@
+#ai-faq {
+  .root {
+    position: relative;
+   .container {
+      position: relative;
+      z-index: 3
+    }
+  }
+  .parallax {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0
+  }
+  .illustration {
+    position: relative;
+    margin: $spacing3;
+    img {
+      display: block;
+      @include breakpoints-up(lg) {
+        @include margin-left(-100px);
+        width: 440px;
+        margin-top: -140px;
+        @include margin-left(-20px)
+      }
+    }
+  }
+  .text {
+    position: relative;
+    z-index: 2
+  }
+  .accordion {
+    position: relative;
+  }
+  .item {
+    margin-bottom: $spacing3
+  }
+  .paper {
+    margin-bottom: $spacing3;
+    overflow: hidden;
+    border-radius: $rounded-medium;
+    &:not(.active) .collapsible-header {
+      @include use-theme(background, rgba($light-background-paper, 0.5), rgba($dark-background-paper, 0.75));
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+  }
+  .heading {
+    display: block;
+    font-weight: $font-medium;
+    padding: spacing(1, 2, 1, 0);
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex: 1;
+    @include breakpoints-down(sm) {
+      font-size: 16px;
+    }
+  }
+  .content {
+    i.material-icons {
+      margin-top: $spacing1;
+    }
+  }
+  .active {
+    .collapsible-header {
+      background: $palette-primary-main;
+      color: $palette-common-white;
+    }
+    i.material-icons {
+      color: $palette-common-white;
+      transform: rotate(180deg)
+    }
+  }
+  .detail {
+    background: $palette-primary-main;
+    color: $palette-common-white;
+    border-radius: 0 0 $rounded-medium $rounded-medium;
+    p {
+      font-size: 18px;
+      @include breakpoints-down(sm) {
+        font-size: 16px;
+      }
+    }
+  }
+}

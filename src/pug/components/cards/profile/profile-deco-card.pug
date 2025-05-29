@@ -1,0 +1,63 @@
+mixin profile-deco-card(href=null, avatar, size='medium', name, title, desc=null, socmed=null)
+  .profile-deco-card(class=size)
+    .avatar
+      if size === 'big'
+        |
+        |
+        svg.primary
+          use(xlink:href=assets+'/images/decoration/deco-liquid-line.svg#main')
+        |
+        |
+        svg.secondary
+          use(xlink:href=assets+'/images/decoration/deco-liquid-line.svg#main')
+        |
+        |
+      if size === 'medium'
+        |
+        |
+        svg.primary
+          use(xlink:href=assets+'/images/decoration/deco-leaf-line.svg#main')
+        |
+        |
+        svg.secondary
+          use(xlink:href=assets+'/images/decoration/deco-leaf-line.svg#main')
+        |
+        |
+      if size === 'small'
+        |
+        |
+        span.deco-circle
+        |
+        |
+      else
+        .bg
+          |
+          |
+          span
+          |
+          |
+      figure
+        |
+        |
+        img(src=avatar, alt='avatar')/
+        |
+        |
+    .property
+      h1 #{name}
+      h3 #{title}
+      if size !== 'small'
+        p #{desc}
+      .socmed
+        each item, index in socmed
+          |
+          |
+          a.btn.btn-icon.waves-effect(class=size !== 'big' ? 'btn-small' : '')
+            i(class="ion-logo-"+item)
+          |
+          |
+    if href
+      |
+      |
+      a.link.waves-effect(href=href) &nbsp;
+      |
+      |

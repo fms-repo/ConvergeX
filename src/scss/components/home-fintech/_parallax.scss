@@ -1,0 +1,126 @@
+.clay-parallax {
+  .parallax-wrap {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    left: 0;
+    @include breakpoints-down(md) {
+      display: none;
+    }
+  }
+
+  .inner-parallax {
+    height: 2500px;
+    width: 50%;
+    position: absolute;
+    display: block;
+    @include use-theme(opacity, 0.5, 1);
+    .parallax-figure {
+      height: 2500px;
+      width: 50%;
+      display: block;
+      position: absolute;
+      img {
+        height: auto;
+        margin: 0;
+        display: block;
+      }
+    }
+    .parallax-figure > div {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  .obj {
+    position: relative
+  }
+
+  .small {
+    filter: blur(5px) drop-shadow(20px -25px 10px rgba(0, 0, 0, 0.3))
+  }
+
+  .left {
+    top: -70px;
+    left: -250px;
+    opacity: 0.5;
+    .big {
+      width: 400px;
+      left: 0;
+      height: 400px;
+    }
+    .small {
+      width: 123px;
+      height: 160px;
+      top: 240px;
+      left: 200px;
+    }
+  }
+
+  .top {
+    top: 700px;
+    right: -400px;
+    .big {
+      width: 314px;
+      height: 314px;
+      left: 100px;
+    }
+    .small {
+      width: 123px;
+      height: 160px;
+      top: 100px;
+      left: 80px;
+    }
+  }
+
+  .bottom {
+    top: 1500px;
+    left: -140px;
+    .big {
+      width: 400px;
+      left: -140px;
+      height: 400px;
+    }
+    .small {
+      width: 123px;
+      height: 160px;
+      top: 280px;
+      left: 190px;
+    }
+  }
+
+  .end {
+    top: -700px;
+    right: -410px;
+    .big {
+      width: 314px;
+      height: 314px;
+      left: 100px;
+    }
+    .small {
+      width: 123px;
+      height: 160px;
+      top: 250px;
+      left: 80px;
+    }
+  }
+
+  .start {
+    top: -150px;
+    left: -530px;
+    .big {
+      width: 300px;
+      top: -100px;
+      left: 350px;
+      height: 300px;
+      transform: rotate(-45deg);
+    }
+    .small {
+      width: 123px;
+      height: 160px;
+      top: 200px;
+      left: 590px;
+      transform: rotate(-60deg);
+    }
+  }
+}

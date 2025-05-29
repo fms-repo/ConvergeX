@@ -1,0 +1,37 @@
+-
+  function setType(cardType) {
+    switch (cardType) {
+      case 'Free':
+        return 'basic';
+      case 'Best Value':
+        return 'value';
+      default:
+        return 'general';
+    }
+  }
+
+mixin pricing-basic-card(title, price, description, info, buttonText, per, href)
+  .pricing-basic-card
+    .card.center-box.price-card(class=setType(title))
+      .price-header.justify-center
+        h5.text-xs-center(class=title === 'Free' ? 'use-text-secondary' : 'use-text-primary')
+          | #{title}
+        .card-pricing
+          h2.title-price.text-xs-center
+            span $
+            | #{price}
+          h6.title
+            | / #{per}
+      .pa-4
+        ul
+          each line in description
+            li.text-center.subtitle-1
+              | #{line}
+      .btn-area(class=title === 'Free' ? 'secondary-color' : 'primary-color')
+        p #{info}
+        |
+        |
+        a.btn(class=title === 'Free' ? 'btn-outlined' : 'btn-flat')
+          | #{buttonText}
+        |
+        |

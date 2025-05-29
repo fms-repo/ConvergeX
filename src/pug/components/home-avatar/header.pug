@@ -1,0 +1,85 @@
+include ../branding/logo.pug
+
+#header-avatar
+  header#header.app-bar.header
+    .container.fixed-width-md-up
+      .header-content
+        nav.nav-logo.nav-menu
+          .logo
+            |
+            |
+            button#mobile_menu_profile.btn-icon.waves-effect.hamburger.hamburger--spin.mobile-menu
+              |
+              |
+              span.hamburger-box
+                |
+                |
+                span.bar.hamburger-inner
+                |
+                |
+              |
+              |
+            |
+            |
+            a(href=link.home)
+              +logo('landscape')
+            |
+            |
+          include ../header/top-nav/settings
+  .paper-nav#main_menu
+    .mobile-nav
+      .container.max-md
+        .row
+          .col-sm-6
+            .root-menu
+              .hidden-md-down
+                h5.name-deco EXPLORE
+              .scrollactive-nav.scrollnav
+                ul.menu
+                  each item, index in menu.avatar
+                    li(style="animation-duration: "+(Number(index + 1)) * 0.25 + 's')
+                      |
+                      |
+                      a.btn-flat.waves-effect(href='#'+item.name)
+                        | #{$t.avatar['header_'+item.name]}
+                      |
+                      |
+          .col-sm-6
+            .detail
+              .hidden-md-down
+                h5.name-deco CONTACT
+              .logo-name
+                h3.use-text-title #{brand.name}
+                h4.use-text-subtitle #{brand.title}
+                |
+                |
+                a.btn.btn-outlined.primary.waves-effect.download(href="#") Download CV
+                |
+                |
+              .socmed
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-facebook.fb
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-linkedin.in
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-twitter.tw
+                |
+                |
+                a.btn-icon.margin.waves-effect(href="#")
+                  i.ion-logo-instagram.ig
+                |
+                |
+              .contact
+                p.use-text-paragraph #{$t.blog_phone}
+                  br/
+                  | +12 345 678 90
+                .divider
+                p.use-text-paragraph #{$t.blog_subscribe}
+                  br/
+                  | jenadoe.skype

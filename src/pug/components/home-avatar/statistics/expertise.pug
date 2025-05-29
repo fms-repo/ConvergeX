@@ -1,0 +1,53 @@
+include ./icon
+
+-
+  var expertise = [
+    {
+      icon: 'mdi-target',
+      color: 'teal',
+    },
+    {
+      icon: 'mdi-flash',
+      color: 'lightBlue'
+    },
+    {
+      icon: 'mdi-sign-yield',
+      color: 'cyan',
+    },
+    {
+      icon: 'mdi-shield-crown',
+      color: 'yellow',
+    },
+    {
+      icon: 'mdi-fire',
+      color: 'red',
+    },
+    {
+      icon: 'mdi-microsoft-xbox-controller',
+      color: 'green',
+    },
+    {
+      icon: 'mdi-steam',
+      color: 'grey',
+    },
+    {
+      icon: 'mdi-one-up',
+      color: 'orange'
+    },
+    {
+      icon: 'mdi-sword',
+      color: 'pink',
+    },
+    {
+      icon: 'mdi-snowflake',
+      color: 'purple',
+    },
+  ]
+
+.root-expertise
+  .slider-wrap
+    .carousel
+      .slick-carousel#stats-expertise-carousel
+        each item, index in expertise
+          .item
+            +icon-card(item.icon, item.color)

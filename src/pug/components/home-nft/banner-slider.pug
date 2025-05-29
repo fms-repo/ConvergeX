@@ -1,0 +1,236 @@
+include ../cards/products/nft-card
+
+-
+  var walletList = [imgAPI.logos[1], imgAPI.logos[2], imgAPI.logos[3], imgAPI.logos[11], imgAPI.logos[12], imgAPI.logos[21], imgAPI.logos[23], imgAPI.logos[9]]
+  var nftList = [
+    {
+      img: imgAPI.photosL[46],
+      avatar: imgAPI.logos[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[8],
+      avatar: imgAPI.logos[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[7],
+      avatar: imgAPI.logos[2],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[50],
+      avatar: imgAPI.avatar[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[27],
+      avatar: imgAPI.avatar[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[26],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[26],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[1],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    }
+  ]
+
+#nft-banner-slider
+  #wallet_modal.modal.modal-popup
+    .modal-content
+      |
+      |
+      .headline.text-center
+        h4.use-text-subtitle Connect your wallet
+        |
+        |
+        button.btn-icon.modal-close.waves-effect.close-btn
+          i.material-icons close
+      .my-3.text-center
+        p If you don't have a wallet, you can select a provider and create one now.
+        nav.collection.content-popup
+          |
+          |
+          each item, index in walletList
+            a.collection-item.avatar.wallet-list.waves-effect(href="#" title="Wallet Lorem")
+              |
+              |
+              img.circle(src=item alt="wallet")/
+              |
+              |
+              span.title Wallet Lorem
+              |
+              |
+              if index === 0
+                .secondary-content
+                  .chip.outlined Most Popular
+            if index === walletList.length - 1
+            |
+            |
+            hr.divider
+            |
+            |
+  .banner-wrap
+    .inner
+      .container
+        .row.spacing6--lg-up
+          .col-lg-6.col-sm-12.px-0
+            .text
+              h4.use-mq--title
+                | #{$t.nft.banner_title} 
+                span.text-uppercase.use-theme--grd-text
+                  | #{$t.nft.banner_highlight}
+              h5.use-mq--subtitle #{$t.nft.banner_desc}
+              .card.search
+                .input-field.search
+                  |
+                  |
+                  input#search(type="text" name="search")/
+                  |
+                  |
+                  label.show-sm-up(for="search") Search items, arts ors creators...
+                  label.show-sm-down(for="search") Search...
+                  |
+                  |
+                .action
+                  |
+                  |
+                  button.waves-effect.btn.secondary.button
+                    |
+                    |
+                    i.material-icons.icon.show-md-down search
+                    span.show-md-up #{$t.header_search}
+                    |
+                    |
+                  |
+                  |
+              .connect
+                h5
+                  hr
+                  | Connect to your wallet
+                  hr
+                ul
+                  li
+                    .btn-wallet.btn-flat.btn-small.waves-effect
+                      |
+                      |
+                      img(src=imgAPI.logos[1])/
+                      |
+                      |
+                      |  Wallet Lorem
+                  li
+                   .btn-wallet.btn-flat.btn-small.waves-effect
+                      |
+                      |
+                      img(src=imgAPI.logos[2])/
+                      |
+                      |
+                      |  Wallet Ipsum
+                  li
+                    .btn-wallet.btn-flat.btn-small.waves-effect
+                      |
+                      |
+                      img(src=imgAPI.logos[3])/
+                      |
+                      |
+                      |  Wallet Dolor
+                  li
+                    .btn-wallet.btn-flat.btn-small.waves-effect
+                      |
+                      |
+                      img(src=imgAPI.logos[11])/
+                      |
+                      |
+                      |  Wallet Sit Amet
+                  li
+                    button.mt-3.primary.btn.btn-outlined.modal-trigger.waves-effect(data-target="wallet_modal")
+                      | Show All Wallet
+          .col-lg-6.col-sm-12
+            .art-wrap
+              .art-scene
+                .fade-slider(class="lg:mt-5")
+                  |
+                  |
+                  span.deco-line
+                  |
+                  |
+                  .carousel
+                    .slick-carousel#flip1
+                      each item in nftList.sort(() => Math.random() - 0.5)
+                        .card-main
+                          +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified, true)
+                .fade-slider.hidden-sm
+                  |
+                  |
+                  span.deco-line
+                  |
+                  |
+                  .carousel
+                    .slick-carousel#flip2
+                      each item in nftList.sort(() => Math.random() - 0.5)
+                        .card-main
+                          +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified, true)
+                .fade-slider(class="lg:mt-5")
+                  |
+                  |
+                  span.deco-line
+                  |
+                  |
+                  .carousel
+                    .slick-carousel#flip3
+                      each item in nftList.sort(() => Math.random() - 0.5)
+                        .card-main
+                          +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified, true)
+                .fade-slider
+                  |
+                  |
+                  span.deco-line
+                  |
+                  |
+                  .carousel
+                    .slick-carousel#flip4
+                      each item in nftList.sort(() => Math.random() - 0.5)
+                        .card-main
+                          +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified, true)

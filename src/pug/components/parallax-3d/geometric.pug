@@ -1,0 +1,41 @@
+include ../artworks/clay-deco.pug
+
+mixin parallax3d-geometric(type='scroll')
+  .parallax-3d
+    if type === 'hover'
+      .parallax-scene
+        .geometric
+          #scene1
+            div(data-depth="0.2")
+              .obj-hover.box(style='left: -50px; top: 300px')
+                +clay-deco(assets+'/images/decoration/clay-box.png', 'triple-main')
+            div(data-depth="0.3")
+              .obj-hover.ring-left(style='left: 20px; top: 30px')
+                +clay-deco(assets+'/images/decoration/clay-ring2.png', 'primary-main')
+            div(data-depth="0.2")
+              .obj-hover.ball(style='right: 20px; top: 280px')
+                +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+            div(data-depth="0.4")
+              .obj-hover.ring-right(style='right: -160px; top: 250px')
+                +clay-deco(assets+'/images/decoration/clay-ring2.png', 'primary-dark')
+    if type === 'scroll'
+      .parallax-wrap
+        .geometric
+          .inner-parallax.start
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .box(style='left: 0; top: 90px')
+                  +clay-deco(assets+'/images/decoration/clay-box.png', 'triple-main')
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ring-left(style='left: 0; top: -70px')
+                  +clay-deco(assets+'/images/decoration/clay-ring2.png', 'primary-light')
+          .inner-parallax.end
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ball(style='right: 20px; top: 50px')
+                  +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ring-right(style='right: 50px; top: -70px')
+                  +clay-deco(assets+'/images/decoration/clay-ring2.png', 'primary-dark')

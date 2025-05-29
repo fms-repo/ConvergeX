@@ -1,0 +1,8 @@
+#nft2-counter {
+  .root {
+    position: relative;
+    @include breakpoints-up(sm) {
+      padding-bottom: $spacing5
+    }
+  }
+}

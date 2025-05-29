@@ -1,0 +1,68 @@
+include ../title/title
+include ../cards/category/icon3d-card
+
+-
+  var categories = [
+    {
+      color: 'pink',
+      href: link.product,
+      title: 'Animation',
+      icon: 'mdi-animation-play'
+    },
+    {
+      color: 'purple',
+      href: link.product,
+      title: 'Collectibles',
+      icon: 'mdi-collage'
+    },
+    {
+      color: 'deep-purple',
+      href: link.product,
+      title: 'Art',
+      icon: 'mdi-palette'
+    },
+    {
+      color: 'cyan',
+      href: link.product,
+      title: 'Music',
+      icon: 'mdi-music-note-eighth'
+    },
+    {
+      color: 'deep-orange',
+      href: link.product,
+      title: 'Sports',
+      icon: 'mdi-basketball'
+    },
+    {
+      color: 'blue',
+      href: link.product,
+      title: 'Virtual Worlds',
+      icon: 'mdi-earth'
+    },
+    {
+      color: 'grey',
+      href: link.product,
+      title: 'Photography',
+      icon: 'mdi-camera-image'
+    },
+    {
+      color: 'light-green',
+      href: link.product,
+      title: '3D',
+      icon: 'mdi-cube-outline'
+    },
+  ]
+
+#nft-explore
+  .root
+    .container
+      +title-main($t.nft.category_title, 'center')
+      .row.categories.spacing2.spacing6-lg-up
+        each item, index in categories
+          .col-sm-3.col-6(class="xl:px-2")
+            +category-icon-card(
+              item.color,
+              item.href,
+              item.title,
+              item.icon
+            )

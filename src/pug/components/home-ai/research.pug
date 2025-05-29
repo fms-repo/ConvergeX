@@ -1,0 +1,125 @@
+include ../title/title.pug
+include ../cards/thumbnail/case-card.pug
+include ./slider-art.pug
+
+-
+  var caseData = [
+    {
+      bg: imgAPI.photosP[7],
+      logo: imgAPI.logos[1],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[10],
+      logo: imgAPI.logos[2],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[13],
+      logo: imgAPI.logos[3],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[1],
+      logo: imgAPI.logos[4],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[12],
+      logo: imgAPI.logos[5],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[6],
+      logo: imgAPI.logos[6],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[4],
+      logo: imgAPI.logos[7],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[28],
+      logo: imgAPI.logos[8],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[3],
+      logo: imgAPI.logos[9],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[2],
+      logo: imgAPI.logos[10],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    }
+  ]
+
+#ai-research
+  .root
+    .container.carousel-header.px-md-15
+      +title-main($t.ai_landing.research_title)
+      p.use-text-subtitle2
+        | #{$t.ai_landing.research_desc}
+        |
+        |
+        a.btn-flat.btn-large.waves-effect.view-all.px-2.py-0.use-theme--btn-color(href=link.portfolio)
+          | #{$t.btn_seeall}
+          i.icon.material-icons arrow_forward
+        |
+        |
+    .container
+      .floating-artwork
+        +slider-art('ai-research')
+          .wow.fadeInRightShort(data-wow-offset="60" data-wow-delay="0.3s" data-wow-duration="0.5s")
+            |
+            |
+            img(
+              src=imgAPI.ai[18]
+              alt="research"
+            )/
+            |
+            |
+    .slider-wrap
+      .carousel
+        .slick-carousel#research-carousel(data-length=caseData.length)
+          .props.item-props-first
+            div
+          each item, index in caseData
+            .item
+              +case-card(
+                caseData[index].bg,
+                caseData[index].logo,
+                caseData[index].title,
+                caseData[index].desc,
+                link.portfolioDetail
+              )
+        |
+        |
+        button.btn-floating.nav.prev.waves-effect#prev_research(type="button")
+          |
+          |
+          i.ion-ios-arrow-back
+          |
+          |
+        |
+        |
+        button.btn-floating.nav.next.waves-effect#next_research(type="button")
+          |
+          |
+          i.ion-ios-arrow-forward
+          |
+          |
+        |
+        |

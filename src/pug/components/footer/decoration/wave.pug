@@ -1,0 +1,26 @@
+mixin footer-deco
+  .footer-deco
+    .wave
+      .deco-mask
+        |
+        |
+        svg.main
+          include ../../svg/deco-wave.pug
+        |
+        |
+        svg.darken
+          include ../../svg/deco-wave.pug
+        |
+        |
+      .deco
+        |
+        |
+        svg.primary
+          use(xlink:href=assets+'/images/decoration/wave.svg#main')
+        |
+        |
+        svg.secondary
+          use(xlink:href=assets+'/images/decoration/wave.svg#main')
+        |
+        |
+      block

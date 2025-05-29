@@ -1,0 +1,47 @@
+-
+  var avatars = [
+    imgAPI.avatar[7],
+    imgAPI.avatar[2],
+    imgAPI.logos[4],
+    imgAPI.avatar[4]
+  ]
+
+mixin product-card(rating = 0, price = 0, img, title, desc, type = 'full', orientation = 'portrait', href = '#')
+  .card.product-card(class=orientation + ' ' + type)
+    |
+    |
+    a.waves-effect.hidden-link(href=href) &nbsp;
+    |
+    |
+    .head
+      .avatar-group
+        |
+        |
+        each item in avatars
+          img.avatar-img.avatar(src=item alt='avatar')/
+        |
+        |
+      .chip.like
+        i.material-icons favorite_border
+        | &nbsp;125
+    .figure
+      .responsive-img(style={'background-image': `url(${img})`})
+    .desc
+      .text
+        h6.title.text-truncate #{title}
+        if price > 0
+          p.price #{price} ETH
+      div
+        .property
+          p.use-text-paragraph
+            | #{desc}
+          if rating > 0
+            .rating
+              i.material-icons.star-icon star
+              | #{rating}
+        |
+        |
+        a.btn.btn-outlined.secondary.button.block.waves-effect(href=href)
+          | #{$t.btn_detail}
+        |
+        |

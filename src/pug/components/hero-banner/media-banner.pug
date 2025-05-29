@@ -1,0 +1,73 @@
+include ../title/title.pug
+include ../cards/media/media-card.pug
+
+mixin media-banner(title, cover, thumb=null, videoBg=null, videoPopup=null, featured=null, tags=null)
+  #hero-banner
+    if videoPopup && youtube.use
+      #video_modal.modal.video-popup
+        .modal-content
+          |
+          |
+          .headline
+            h4 #{$t.wallet.feature_title3}
+            |
+            |
+            button.btn-icon.modal-close.waves-effect.close-btn
+              i.material-icons close
+          .text-center.p-2
+            #video_iframe
+    .deco-wrap
+      block
+    .container.root
+      .row.spacing2.spacing6-sm-up
+        .col-lg-11.col-md-12.col-sm-12
+          .card.banner
+            |
+            |
+            img.cover#media-banner-cover.show-md-down(src=cover, alt='cover')/
+            |
+            |
+            if youtube.use && videoBg
+              .video-background.hidden-md-down
+                #youtube-media-banner(data-video=videoBg)
+            else
+              |
+              |
+              img.cover(src=cover, alt='cover')/
+              |
+              |
+      .row.spacing2-sm-up.align-items-end(class=thumb ? 'content-thumb' : 'content')
+        div(class=thumb || featured ? 'col-sm-7' : 'col-lg-10 col-sm-12')
+          .ps-sm-2
+            if tags
+              .tags
+                each tag, index in tags
+                  h6.use-text-subtitle.use-text-primary #{tag}
+            +title-main(title, 'left', false, true)
+        if thumb
+          .col-sm-5.front
+            if videoPopup
+              .card.video-card
+                figure
+                  |
+                  |
+                  img(src=thumb alt='cover')/
+                  |
+                  |
+                |
+                |
+                button.btn-icon.play-btn.modal-trigger.waves-effect(data-target="video_modal" data-video=videoPopup)
+                  i.ion-ios-play-outline
+                |
+                |
+            else
+              +media-card('', 'portrait', 'photo', thumb)
+        if featured
+          .col-sm-5
+            .featured
+              .portrait-thumb
+                +media-card('', 'portrait', 'photo', featured[0])
+              .square-thumb
+                +media-card('', 'square', 'photo', featured[1])
+              .landscape-thumb
+                +media-card('', 'landscape', 'photo', featured[2])

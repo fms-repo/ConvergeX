@@ -1,0 +1,41 @@
+header.app-bar#header.header
+  .container.fixed-width-md-up
+    .header-content
+      nav.nav-logo.nav-menu.flex-grow-1
+        |
+        |
+        .logo
+          |
+          |
+          a(href=link.home)
+            include ../branding/logo.pug
+            +logo('landscape')
+          |
+          |
+        .flex-grow-1
+        include ./top-nav/user-menu
+        |
+        |
+        span.vertical-divider.show-sm-up &nbsp;
+        |
+        |
+        button#hamburger_menu.btn-icon.waves-effect.hamburger.hamburger--spin.mobile-menu
+          |
+          |
+          span.hamburger-box
+            |
+            |
+            span.bar.hamburger-inner
+            |
+            |
+          |
+          |
+.paper-nav#main_menu
+  .full-nav
+    .scrollactive-nav.scrollnav
+      ul.menu
+        each item, index in menu[menuLanding]
+          li
+            a.btn-flat.waves-effect(
+              href='#'+item.name
+            ) #{$t.ai_landing['header_'+item.name]}

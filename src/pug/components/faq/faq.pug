@@ -1,0 +1,54 @@
+include ../title/title
+include ../forms/arrow-button/standard.pug
+
+-
+  var faqData = [
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.'
+    },
+    {
+      q: 'In mi nulla, fringilla vestibulum?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque lacinia purus ut libero?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque ut metus sit amet augue?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    }
+  ]
+
+.faq-style
+  .root
+    .container.fixed-width
+      .row.spacing6--sm-up.spacing4
+        .col-md-5.col-sm-12(class="xl:px-4")
+          +title-main($t.ai_landing.faq_subtitle)
+          .help-group
+            div(class="sm:mb-6")
+              +arrow-button-standard($t.nft2.faq_help1, link.faq, 'secondary')
+            div(class="sm:mb-6")
+              +arrow-button-standard($t.nft2.faq_help2, link.contact, 'primary')
+            div(class="sm:mb-6")
+              +arrow-button-standard($t.nft2.faq_help3, link.blog, 'accent')
+        .col-md-7.col-sm-12(class="xl:px-6")
+          .accordion
+            ul.collapsible
+              each item, index in faqData
+                li.accordion-content.paper(class=index === 0 && "active")
+                  .collapsible-header.content
+                    p.heading #{item.q}
+                    |
+                    |
+                    i.material-icons.right.arrow expand_more
+                    |
+                    |
+                  .collapsible-body.detail
+                    p #{item.a}

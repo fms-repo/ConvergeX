@@ -1,0 +1,25 @@
+mixin pricing-card(title, color='primary', price, description, features, btnText, href='#', per='')
+  .pricing-card(class=color)
+    .card-wrap
+      .card-header
+        | #{title}
+      .card-pricing
+        h2.use-text-title
+          | $
+          | #{price}
+        if per !== ''
+          h3 / #{per}
+      p.text-center.desc #{description}
+      .card-content
+        ul
+          each item, index in features
+            li
+              | #{item}
+      .btn-area
+        |
+        |
+        a.btn.btn-large.black.waves-effect(href=href)
+          | #{btnText}
+        |
+        |
+

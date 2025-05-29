@@ -1,0 +1,158 @@
+include ../icons3d.pug
+
+mixin share-art(personBig, personMedium, personSmall1, personSmall2)
+  .sharing-artwork
+    .sharing
+      .big
+        .liquid
+          |
+          |
+          span.bg.bg-primary
+            span.shadow
+          |
+          |
+        .person
+          |
+          |
+          img(src=personBig alt='person big')/
+          |
+          |
+        .counter.large
+          .avatar-img.avatar
+            |
+            |
+            img(src=imgAPI.avatar[11] alt="avatar")/
+            |
+            |
+          .ammount
+            div
+              .avatar-img.logo
+                img(src=imgAPI.logos[48] alt="logo")/
+              | 0.000679
+            p.text-success
+              |
+              |
+              i.mdi.mdi-check
+              |
+              |
+              strong Sent
+              |
+              |
+      .arrow.primary
+        |
+        |
+        svg
+          use(xlink:href=assets+'/images/decoration/arrow.svg#main')
+        |
+        |
+        .icon
+          +icons3d('mdi-shield-lock', 'primary')
+      .medium
+        .liquid
+          |
+          |
+          span.bg.use-bg-secondary-main
+          |
+          |
+          span.shadow
+          |
+          |
+        .person
+          |
+          |
+          img(src=personMedium alt="person medium")/
+          |
+          |
+        .counter.small
+          .avatar-img.avatar
+            |
+            |
+            img(src=imgAPI.avatar[6] alt="avatar")/
+            |
+            |
+          .ammount
+            div
+              .avatar-img.avatar.logo
+                |
+                |
+                img(src=imgAPI.logos[55] alt="logo")/
+                |
+                |
+              | 0.079
+            p.text-success
+              |
+              |
+              i.mdi.mdi-check
+              |
+              |
+              strong Sent
+              |
+              |
+      .arrow.secondary
+        |
+        |
+        svg
+          use(xlink:href=assets+'/images/decoration/arrow.svg#main')
+        |
+        |
+        .icon
+          +icons3d('mdi-check-decagram', 'secondary')
+      .small1
+        .oval-deco
+          .avatar-img.avatar
+            |
+            |
+            img(src=personSmall1 alt="person small")/
+            |
+            |
+        .counter.mini
+          .avatar-img.icon
+            |
+            |
+            i.material-icons file-download
+            |
+            |
+          .ammount
+            div
+              .avatar-img.logo
+                |
+                |
+                img(src=imgAPI.logos[48] alt="logo")/
+                |
+                |
+              | 0.079
+            p
+              | Received from
+              strong Jihan Doe
+      .small2
+        .oval-deco
+          .avatar-img.avatar
+            |
+            |
+            img(src=personSmall2 alt="person small")/
+            |
+            |
+        .counter.mini
+          .avatar-img.icon
+            i.material-icons file_download
+          .ammount
+            div
+              .avatar-img.logo
+                |
+                |
+                img(src=imgAPI.logos[55] alt="logo")/
+                |
+                |
+              | 0.079
+            p
+              | Received from
+              strong Johan Doe
+      .arrow.accent
+        |
+        |
+        svg
+          use(xlink:href=assets+'/images/decoration/arrow.svg#main')
+        |
+        |
+        .icon
+          +icons3d('mdi-shield-check', 'accent')

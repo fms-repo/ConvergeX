@@ -1,0 +1,66 @@
+include ../icons3d.pug
+
+mixin icon-banner(cover, title, desc, features, icon, btnPrimary=null, btnSecondary=null, counterPrimary=null, counterSecondary=null)
+  #hero-banner
+    .deco-line.show-md-up
+      |
+      |
+      svg.line-primary
+        use(xlink:href=assets+'/images/decoration/banner-deco.svg#main')
+      |
+      |
+      svg.line-secondary
+        use(xlink:href=assets+'/images/decoration/banner-deco.svg#main')
+      |
+      |
+    .container.icon-banner
+      .row
+        .col-lg-11.col-md-12.col-sm-12.content-banner
+          figure
+            |
+            |
+            img(src=cover, alt='cover')/
+            |
+            |
+          .row.spacing4
+            .col-md-4.col-sm-12.show-md-up
+              .icon
+                .center
+                  +icons3d(icon[0], 'secondary-double')
+                .left
+                  +icons3d(icon[1], 'primary')
+                .right
+                  +icons3d(icon[2], 'accent')
+            .col-md-8.col-sm-12
+              .banner-content
+                h3 #{title}
+                .properties
+                  .desc
+                    p #{desc}
+                    ul
+                      each item, index in features
+                        li #{item}
+                    .btn-area
+                      if btnPrimary
+                        |
+                        |
+                        a.btn.btn-large.primary(href=btnPrimary.href)
+                          | #{btnPrimary.text}
+                        |
+                        |
+                      if btnSecondary
+                        |
+                        |
+                        a.btn.btn-large.btn-outlined.black-white(href=btnSecondary.href)
+                          | #{btnSecondary.text}
+                        |
+                        |
+                  .counter
+                    if counterPrimary
+                      .card.paper.bg-primary
+                        h2 #{counterPrimary.count}
+                        | #{counterPrimary.title}
+                    if counterSecondary
+                      .card.paper.bg-secondary
+                        h2 #{counterSecondary.count}
+                        | #{counterSecondary.title}

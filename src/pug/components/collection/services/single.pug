@@ -1,0 +1,77 @@
+include ../../cards/apps/single-card.pug
+include ../../title/title.pug
+include ../../forms/arrow-button/standard.pug
+
+.service-style
+  .container.root
+    .row.spacing4-sm-up.spacing6(class="md:mt-10")
+      .col-md-8.col-sm-12
+        +title-main($t.service_alacarte_title)
+        p.use-text-subtitle2
+          | #{ $t.service_alacarte_desc}
+        .row.mt-8.spacing4-sm-up(class="sm:mt-10")
+          .col-sm-6
+            .wow.fadeInLeftShort.hidden-sm(data-wow-offset='100', data-wow-delay='0', data-wow-duration='0.5s')
+              +arrow-button-standard($t.service_btn_arrow1, link.contact, 'accent')
+            .wow.fadeInUpShort(class="lg:pt-2" data-wow-offset='100', data-wow-delay='0.1s', data-wow-duration='0.5s')
+              +single-card(
+                'Mobile App Development',
+                'Vestibulum consequat hendrerit a massa vestibulum. Nam vitae scelerisque lorem, quis tempus libero.',
+                imgAPI.inner[18],
+                'accent',
+                'link.serviceDetail'
+              )
+            .wow.fadeInUpShort.pt-2(data-wow-offset='100', data-wow-delay='0.3s', data-aos-duration='0.5s')
+              +single-card(
+                'Blockchain Project',
+                'Vestibulum consequat hendrerit a massa vestibulum. Nam vitae scelerisque lorem, quis tempus libero.',
+                imgAPI.inner[14],
+                'secondary',
+                link.serviceDetail,
+                true
+              )
+          .col-sm-6
+            .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='0.5s', data-aos-duration='0.5s')
+              +single-card(
+                'UI & UX Design Development',
+                'Vestibulum consequat hendrerit a massa vestibulum. Nam vitae scelerisque lorem, quis tempus libero.',
+                imgAPI.inner[15],
+                'primary',
+                link.serviceDetail
+              )
+            .wow.fadeInUpShort.pt-2(data-wow-offset='100', data-wow-delay='0.7s', data-aos-duration='0.5s')
+              +single-card(
+                'SEO and Marketing',
+                'Vestibulum consequat hendrerit a massa vestibulum. Nam vitae scelerisque lorem, quis tempus libero.',
+                imgAPI.inner[13],
+                'secondary',
+                link.serviceDetail,
+                true
+              )
+      .col-md-4.col-sm-12
+        .row.spacing4-sm-up
+          .col-md-12.col-sm-6
+            .wow.fadeInUpShort.pt-2(data-wow-offset='100', data-wow-delay='0.9s', data-aos-duration='0.5s')
+              +single-card(
+                'Website Development',
+                'Vestibulum consequat hendrerit a massa vestibulum. Nam vitae scelerisque lorem, quis tempus libero.',
+                imgAPI.inner[16],
+                'secondary',
+                link.serviceDetail
+              )
+          .col-md-12.col-sm-6
+            .wow.fadeInUpShort.pt-2(data-wow-offset='100', data-wow-delay='1.1s', data-aos-duration='0.5s')
+              +single-card(
+                'QA and Tester Engineering',
+                'Vestibulum consequat hendrerit a massa vestibulum. Nam vitae scelerisque lorem, quis tempus libero.',
+                imgAPI.inner[17],
+                'accent',
+                link.serviceDetail,
+                true
+              )
+          .col-md-12.col-sm-6
+            .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='1.1s', data-aos-duration='0.5s')
+              +arrow-button-standard($t.service_btn_arrow2, link.product, 'secondary')
+          .col-md-12.col-sm-6
+            .wow.fadeInLeftShort(class="lg:pt-2" data-wow-offset='100', data-wow-delay='1.1s', data-aos-duration='0.5s')
+              +arrow-button-standard($t.service_btn_arrow3, link.primary, 'primary')

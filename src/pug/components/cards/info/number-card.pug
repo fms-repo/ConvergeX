@@ -1,0 +1,14 @@
+mixin number-card(icon, title, desc, number, color)
+  .number-card.root
+    .content
+      |
+      |
+      i(class=icon)
+      |
+      |
+      h5.mb-2.use-text-subtitle2.use-text-bold #{title}
+      p.use-text-paragraph #{desc}
+    h1(class="use-text-grd-"+color) #{number}
+
+  
+  

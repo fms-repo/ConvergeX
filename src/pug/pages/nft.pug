@@ -1,0 +1,107 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Homepage NFT"
+  - var pageName = "homepage"
+  - var headerHome = true
+  - var menuLanding = "nft"
+  - var prefix = "nft"
+
+block content
+  div#home
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap.scroll-nav-content
+        // ##### PARALLAX BANNER #####
+        div.show-lg-up
+          include ../components/home-nft/parallax/parallax-double
+        // ##### END PARALLAX BANNER #####
+        |
+        |
+        |
+        // ##### BANNER #####
+        section#home
+          include ../components/home-nft/banner-slider.pug
+        // ##### END BANNER #####
+        |
+        |
+        |
+        // ##### COLLECTION #####
+        section#collection.space-top
+          include ../components/home-nft/explore.pug
+        // ##### END COLLECTION #####
+        |
+        |
+        |
+        // ##### TRENDING #####
+        section#trending.space-top-short--sm-down.space-top
+          include ../components/home-nft/trending.pug
+        // ##### END TRENDING #####
+        |
+        |
+        |
+        // ##### LIST RANK #####
+        section#rank.space-top
+          include ../components/home-nft/list-rank.pug
+        // ##### END LIST RANK #####
+        |
+        |
+        |
+        // ##### AUCTION #####
+        section#explore.space-top--md-up
+          include ../components/home-nft/auction.pug
+        // ##### END AUCTION #####
+        |
+        |
+        |
+        // ##### NEW RELEASE #####
+        section#new-release.space-top-short.space-top--lg-down
+          include ../components/home-nft/new-release.pug
+        // ##### END NEW RELEASE #####
+        |
+        |
+        |
+        // ##### SELL #####
+        section#sell.space-top
+          include ../components/home-nft/step.pug
+        // ##### END SELL #####
+        |
+        |
+        |
+        // ##### SELL #####
+        section#call-action.space-top-short.space-bottom.space-top-short--sm-down
+          include ../components/home-nft/call-action.pug
+        // ##### END SELL #####
+        |
+        |
+        |
+        section#news.space-bottom-short
+          include ../components/home-nft/news-carousel.pug
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/fog.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####
+      |
+      |
+      |
+      // ##### NOTIFICATIONS #####
+      .hidden-md-down
+        include ../components/notifications.pug
+      // ##### END NOTIFICATIONS #####
+      |
+      |
+      |
+      // ##### CORNER #####
+      .hidden-md-down
+        include ../components/corner.pug
+      // ##### END CORNER #####
+      |
+      |

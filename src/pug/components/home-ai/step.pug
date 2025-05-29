@@ -1,0 +1,45 @@
+include ../title/parallax-title.pug
+include ../icons3d.pug
+
+#ai-step
+  .container
+    +parallax-title($t.ai_landing.discover_bgtitle, $t.ai_landing.discover_title, 'double-main')
+    .row.step.spacing6-md-up
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-ansible', 'primary-double')
+            .left
+              +icons3d('mdi-comment-text', 'accent')
+            .right
+              +icons3d('mdi-shield-check-outline', 'secondary')
+          .glow.primary
+            h6.use-text-subtitle2 #{$t.ai_landing.step_title1}
+            p.use-text-paragraph #{$t.ai_landing.step_desc1}
+          hr.divider.primary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-collage', 'secondary-double')
+            .left
+              +icons3d('mdi-nut', 'primary')
+            .right
+              +icons3d('mdi-tooltip-image', 'accent')
+          .glow.secondary
+            h6.use-text-subtitle2 #{$t.ai_landing.step_title2}
+            p.use-text-paragraph #{$t.ai_landing.step_desc2}
+          hr.divider.secondary
+      .col-sm-4
+        .item
+          .icon
+            .center
+              +icons3d('mdi-cog', 'accent-double')
+            .left
+              +icons3d('mdi-hammer-screwdriver', 'primary')
+            .right
+              +icons3d('mdi-code-braces-box', 'secondary')
+          .glow.accent
+            h6.use-text-subtitle2 #{$t.ai_landing.step_title3}
+            p.use-text-paragraph #{$t.ai_landing.step_desc3}

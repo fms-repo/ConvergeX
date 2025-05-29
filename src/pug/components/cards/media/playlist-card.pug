@@ -1,0 +1,56 @@
+mixin playlist-card(img=null, avatar='/', logo=null, title, name=null, desc, count, items, color='primary', verifieduser=false, verifiedItem=false, withDeco=false, href, textCenter=false, bgcolor='primary-light')
+  div
+    |
+    |
+    a.playlist-card.waves-effect(draggable="false" class=(withDeco ? "deco" : "") + " " + bgcolor, href=href)
+      if img
+        span.figure
+          |
+          |
+          img(src=img alt="img")/
+          |
+          |
+      span.property.text-start(class=color + " " + (textCenter ? "text-center" : ""))
+        span.head(class=textCenter ? "justify-content-center" : "justify-content-start")
+          if logo
+            span.logo
+              |
+              |
+              img(src=logo alt='logo')/
+              |
+              |
+          span.text
+            span.title-card
+              | #{title}
+              if verifiedItem
+                i.mdi.verified.mdi-check-decagram
+            if name
+              span.user
+                | By&nbsp;
+                span.avatar
+                  |
+                  |
+                  img(src=avatar alt='logo')/
+                  |
+                  |
+                span.name
+                  | #{name}
+                if verifiedItem
+                  i.mdi.verified.mdi-check-decagram
+        span.desc
+          | #{desc}
+        ul.gallery
+          each item, index in items
+            li
+              |
+              |
+              img(src=item alt='media')/
+              |
+              |
+              if index === items.length -1
+                span
+                  i.mdi.mdi-view-quilt
+                  | #{count}
+    |
+    |
+

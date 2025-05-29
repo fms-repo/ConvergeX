@@ -1,0 +1,88 @@
+-
+  var footer = {
+    title: "Quick Links",
+    description: ['Resource', 'Another resource', 'Final resource', 'Privacy policy', 'Terms of use', 'Terms Condition'],
+    link: ['#resource', '#another-resource', '#final-resource', '#privacy-policy', '#terms-of-use', '#terms-condition']
+  }
+  var news = [
+    {
+      type: 'news',
+      text: 'Sed imperdiet enim ligula vitae viverra.',
+      img: imgAPI.photosL[4]
+    },
+    {
+      type: 'news',
+      text: 'Sed imperdiet enim ligula vitae viverra.',
+      img: imgAPI.photosL[1]
+    },
+    {
+      type: 'news',
+      text: 'Sed imperdiet enim ligula vitae viverra.',
+      img: imgAPI.photosL[3]
+    }
+  ]
+  var locales = ['ar','de','en','id','pt','zh']
+
+footer.footer-blog
+  .container.fixed-width
+    .row.mb-0
+      .col-md-5.col-sm-12.pa-lg-6
+        .logo
+          |
+          |
+          img(src=assets+brand.img alt="logo")/
+          |
+          |
+          h6 #{brand.projectName}
+        p.footer-desc.pb-3 #{$t.ai_landing.banner_title} #{$t.ai_landing.banner_desc}
+        .quick-links
+          h6.title-nav.mb-2 #{$t.footer_link}
+          ul
+            each item, index in footer.description
+              li
+                a(href=footer.link[index]) #{item}
+      .col-md-4.col-sm-12.px-0.px-lg-6.pt-6
+        each item in news
+          |
+          |
+          a.btn.btn-flat.full-width.blog-item.waves-effect(href="#")
+            |
+            |
+            span.figure
+              img(src=item.img alt="thumb")/
+            span.list-text
+              span.category #{$t.footer_news}
+              span.content Sed imperdiet enim ligula vitae viverra.
+            |
+            |
+          |
+          |
+      .col-md-3.col-sm-12.px-lg-8.pt-8
+        .socmed
+          |
+          |
+          a.btn.btn-icon.waves-effect
+            span.ion-logo-facebook.icon
+          |
+          |
+          a.btn.btn-icon.waves-effect
+            span.ion-logo-twitter.icon
+          |
+          |
+          a.btn.btn-icon.waves-effect
+            span.ion-logo-instagram.icon
+          |
+          |
+          a.btn.btn-icon.waves-effect
+            span.ion-logo-linkedin.icon
+          |
+          |
+        .select-lang.select-outlined
+          |
+          |
+          select.select#lang_select
+            each locale in locales
+              option(value=locale selected=locale === doc_lang) #{$t[locale]}
+          |
+          |
+        p.body-2.copyright.ms-2 &copy; #{brand.footerText}

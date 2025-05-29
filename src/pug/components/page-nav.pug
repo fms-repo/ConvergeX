@@ -1,0 +1,18 @@
+.page-nav#page_nav
+  nav.section-nav
+    .scrollnav
+      ul
+        each item, index in menu[menuLanding]
+          li(style=`top: ${30 * (menu[menuLanding].length - index)}px`)
+            a.tooltiped(
+              href='#'+item.name
+              data-position="left"
+              data-tooltip=item.name
+            )
+  .scrollnav
+    a.btn-floating.btn-large.primary.tooltiped.waves-effect.waves-light(
+      href="#home"
+      data-position="left"
+      data-tooltip="To Top"
+    )
+      .icon.material-icons arrow_upward

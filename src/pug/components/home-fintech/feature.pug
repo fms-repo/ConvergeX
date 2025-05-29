@@ -1,0 +1,92 @@
+include ../title/parallax-title.pug
+include ../title/title-secondary.pug
+include ../artworks/desktop-app.pug
+include ../artworks/person.pug
+include ../artworks/video-banner.pug
+
+#fintech-feature
+  .root
+    .parallax-wrap
+      include ./parallax/parallax-ball.pug
+    .container.fixed-width-lg-up
+      +parallax-title($t.fintech.feature_bgtitle, $t.fintech.feature_title, 'triple-custom')
+      p.text-center.use-text-subtitle2.mb-5 
+        | #{$t.fintech.feature_desc}
+      div
+        .item
+          .row.align-items-center
+            .col-md-6.col-sm-7.order-lg-5(class="md:px-8")
+              .desc
+                +title-secondary($t.fintech.feature_title1, 'left', 'secondary')
+                h6.use-text-subtitle2.text-center.text-sm-start
+                  | #{$t.fintech.feature_desc1}
+                h6.use-text-subtitle2.text-center.text-sm-start
+                  | #{$t.fintech.feature_desc2}
+                |
+                |
+                a.btn.btn-outlined.secondary.waves-effect(href="#")
+                  | #{$t.btn_detail}
+                |
+                |
+            .col-md-6.col-sm-12.order-lg-0
+              .wow.fadeInRightShort(
+                data-wow-duration="0.5s"
+                data-wow-offset="100"
+              )
+                .illustration
+                  .person-art
+                    +person-art(imgAPI.avatar[19])
+        .item(class="lg:mt-15")
+          .row.align-items-center
+            .col-md-6.col-sm-7(class="lg:px-8")
+              .desc.text-sm-end.text-center
+                +title-secondary($t.fintech.feature_title2, 'right', 'primary')
+                h6.use-text-subtitle2.text-center.text-lg-end
+                  | #{$t.fintech.feature_desc2}
+                h6.use-text-subtitle2.text-center.text-lg-end
+                  | #{$t.fintech.feature_desc1}
+                |
+                |
+                a.btn.btn-outlined.primary.waves-effect(href="#")
+                  | #{$t.btn_detail}
+                |
+                |
+            .col-md-6.col-sm-12.px-5
+              .wow.fadeInLeftShort(
+                data-wow-duration="0.5s"
+                data-wow-delay="0.5s"
+                data-wow-offset="10"
+              )
+                .illustration
+                  .app-art
+                    +desktop-app(
+                      imgAPI.apps[15],
+                      imgAPI.apps[11],
+                      imgAPI.apps[12],
+                      imgAPI.apps[13]
+                    )
+        .item.last
+          .container.max-md
+            .row.align-items-center
+              .col-md-12.col-sm-12
+                .desc.px-md-4
+                  +title-secondary($t.fintech.feature_title3, 'center', 'secondary')
+                  h6.use-text-subtitle2.text-center
+                    | #{$t.fintech.feature_desc3}
+              .col-md-12.col-sm-12(class="sm:px-8")
+                .wow.fadeInUpShort(
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.5s"
+                  data-wow-offset="100"
+                )
+                  .illustration
+                    .video-art
+                      +video-banner(
+                        imgAPI.apps[16],
+                        imgAPI.apps[4],
+                        imgAPI.apps[5],
+                        imgAPI.apps[7],
+                        imgAPI.apps[6],
+                        '9vPfeczePww'
+                      )
+    .parallax-logo(style="background-image: url("+imgAPI.fintech[2]+")")

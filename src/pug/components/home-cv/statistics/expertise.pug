@@ -1,0 +1,22 @@
+include ./icon
+
+-
+  var expertise = [
+    imgAPI.logos[31],
+    imgAPI.logos[32],
+    imgAPI.logos[3],
+    imgAPI.logos[34],
+    imgAPI.logos[35],
+    imgAPI.logos[36],
+    imgAPI.logos[37],
+    imgAPI.logos[5],
+    imgAPI.logos[60]
+  ]
+
+.root-expertise
+  .slider-wrap
+    .carousel
+      .slick-carousel#stats-expertise-carousel
+        each item, index in expertise
+          .item
+            +icon-card(item)

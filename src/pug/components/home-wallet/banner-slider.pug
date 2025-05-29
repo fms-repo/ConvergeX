@@ -1,0 +1,180 @@
+include ../artworks/person.pug
+include ../artworks/desktop-app.pug
+include ../artworks/video-banner.pug
+
+#wallet-banner-slider
+  if youtube.use
+    #video_modal.modal.video-popup
+      .modal-content
+        |
+        |
+        .headline
+          h4 #{$t.wallet.feature_title}
+          |
+          |
+          button.btn-icon.modal-close.waves-effect.close-btn
+            i.material-icons close
+        .text-center
+          #video_iframe
+  .banner-wrap
+    #banner-slider.carousel-banner
+      #slide1.slide
+        .inner
+          .img.background-banner
+            .deco-mask
+              |
+              |
+              svg.main
+                include ../svg/banner-masking.pug
+              |
+              |
+              svg.darken
+                include ../svg/banner-masking.pug
+              |
+              |
+            .deco-line
+              |
+              |
+              svg.primary
+                use(xlink:href=assets+'/images/decoration/banner-line.svg#main')
+              |
+              |
+              svg.secondary
+                use(xlink:href=assets+'/images/decoration/banner-line.svg#main')
+              |
+              |
+            |
+            |
+            img.cover.hidden-md-up#banner-cover(src=imgAPI.photosL[49] alt="cover")/
+            |
+            |
+            if youtube.use
+              .video.show-md-up
+                #youtube-liquid-bg
+          .container
+            .row
+              .col-md-7.col-sm-12.px-0(class="lg:pe-15 sm:!pe-6")
+                .text
+                  h4.use-mq--title
+                    span.text-uppercase.use-theme--grd-text
+                      | #{$t.wallet.banner_highlight} 
+                    | #{$t.wallet.banner_title}
+                  h5.use-mq--subtitle #{$t.wallet.banner_desc}
+                  .btn-area.download
+                    |
+                    |
+                    a(href='#')
+                      |
+                      |
+                      img(src=assets+'/images/wallet/app-store.png', alt='app store')/
+                      |
+                      |
+                    |
+                    |
+                    a(href='#')
+                      |
+                      |
+                      img(src=assets+'/images/wallet/play-store.png', alt='play store')/
+                      |
+                      |
+                    |
+                    |
+              .col-md-5.col-sm-12.px-6.pt-md-0
+                .deco-banner
+                  .art-scene
+                    +person-art(imgAPI.avatar[19])
+      #slide2.slide
+        .inner
+          .container
+            .row.justify-content-end.align-item-center
+              .col-md-6.col-sm-12.px-0.order-lg-5
+                .text
+                  h4.use-mq--title
+                    span.text-uppercase.use-theme--grd-text
+                      | #{$t.wallet.banner_highlight} 
+                    | #{$t.wallet.banner_title}
+                  h5.use-mq--subtitle #{$t.wallet.banner_desc}
+                  .btn-area
+                    a.btn.waves-effect.btn-large.button.primary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.btn-outlined.waves-effect.btn-large.button.secondary(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-md-6.col-sm-12.order-lg-0
+                .deco-banner
+                  +desktop-app(
+                    imgAPI.apps[15],
+                    imgAPI.apps[11],
+                    imgAPI.apps[12],
+                    imgAPI.apps[13]
+                  )
+      #slide3.slide.center-content
+        .inner
+          .container
+            .row.justify-content-center.align-item-center
+              .col-sm-12.mt-5.p-0.pt-2(class="xl:!pt-15")
+                .text.text-center
+                  h4.use-mq--title
+                    span.text-uppercase.use-theme--grd-text
+                      | #{$t.wallet.banner_highlight} 
+                    | #{$t.wallet.banner_title}
+                  h5.use-mq--subtitle #{$t.wallet.feature_title1}
+              .col-sm-12.p-0
+                .img.h-banner
+                  .img.background-banner
+                    .deco-mask
+                      |
+                      |
+                      svg.main
+                        include ../svg/banner-masking.pug
+                      |
+                      |
+                      svg.darken
+                        include ../svg/banner-masking.pug
+                      |
+                      |
+                    |
+                    |
+                    img.cover(src=imgAPI.photosL[49] alt="cover")/
+                    |
+                    |
+                  .img.deco-banner
+                    +video-banner(
+                      imgAPI.apps[16],
+                      imgAPI.apps[4],
+                      imgAPI.apps[5],
+                      imgAPI.apps[7],
+                      imgAPI.apps[6],
+                      '9vPfeczePww'
+                    )
+
+    .slide-nav-group
+      .hidden-md-down
+        .container
+          nav.slide-nav#banner_nav
+            |
+            |
+            a.waves-effect.active(data-slide='0')
+              strong First Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |
+            hr.divider
+            |
+            |
+            a.waves-effect(data-slide='1')
+              strong Second Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |
+            hr.divider
+            |
+            |
+            a.waves-effect(data-slide='2')
+              strong Third Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |

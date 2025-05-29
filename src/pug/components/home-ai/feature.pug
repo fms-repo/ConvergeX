@@ -1,0 +1,78 @@
+include ../title/parallax-title.pug
+include ../title/title-secondary.pug
+
+#ai-feature
+  .root
+    include ./parallax/parallax-double.pug
+    .container.fixed-width-lg-up
+      +parallax-title($t.ai_landing.feature_bgtitle, $t.ai_landing.feature_title, 'triple-custom')
+      p.text-center.use-text-subtitle2.mb-5 
+        | #{$t.ai_landing.feature_desc}
+      div
+        .item
+          .row.align-items-center
+            .col-md-6.col-sm-12.order-lg-5(class="sm:px-8")
+              .desc
+                +title-secondary($t.ai_landing.feature_title1)
+                h6.use-text-subtitle2.text-center(class="lg:!text-start")
+                  | #{$t.ai_landing.feature_desc1}
+            .col-md-6.col-sm-12.order-lg-0(class="sm:px-8")
+              .wow.fadeInRightShort(
+                data-wow-duration="0.5s"
+                data-wow-offset="400"
+              )
+                .illustration.px-sm-4
+                  figure.illustration
+                    |
+                    |
+                    img(
+                      src=imgAPI.ai[15]
+                      alt='illustration'
+                    )/
+                    |
+                    |
+        .item
+          .row.align-items-center
+            .col-md-6.col-sm-12(class="sm:px-8")
+              .desc
+                +title-secondary($t.ai_landing.feature_title2, 'right', 'secondary')
+                h6.use-text-subtitle2.text-center(class="lg:!text-end")
+                  | #{$t.ai_landing.feature_desc2}
+            .col-md-6.col-sm-12(class="sm:px-15")
+              .wow.fadeInLeftShort(
+                data-wow-duration="0.5s"
+                data-wow-delay="0.5s"
+                data-wow-offset="200"
+              )
+                .illustration
+                  figure
+                    |
+                    |
+                    img(
+                      src=imgAPI.ai[16]
+                      alt='illustration'
+                    )/
+                    |
+                    |
+        .item.last
+          .row.align-items-center
+            .col-md-6.col-sm-12.order-lg-5(class="sm:px-8")
+              .desc
+                +title-secondary($t.ai_landing.feature_title3)
+                h6.use-text-subtitle2.text-center(class="lg:!text-start")
+                  | #{$t.ai_landing.feature_desc3}
+            .col-md-6.col-sm-12.order-lg-0(class="sm:px-8")
+              .wow.fadeInRightShort(
+                data-wow-duration="0.5s"
+                data-wow-offset="400"
+              )
+                .illustration.px-sm-4
+                  figure.illustration
+                    |
+                    |
+                    img(
+                      src=imgAPI.ai[17]
+                      alt='illustration'
+                    )/
+                    |
+                    |

@@ -1,0 +1,204 @@
+include ../title/title.pug
+include ../cards/thumbnail/case-card.pug
+include ./slider-art.pug
+
+-
+  var caseData = [
+    {
+      bg: imgAPI.photosP[11],
+      logo: imgAPI.logos[1],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[7],
+      logo: imgAPI.logos[2],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosP[12],
+      logo: imgAPI.logos[3],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosS[3],
+      logo: imgAPI.logos[4],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[1],
+      logo: imgAPI.logos[5],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[9],
+      logo: imgAPI.logos[6],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[2],
+      logo: imgAPI.logos[7],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[11],
+      logo: imgAPI.logos[8],
+      title: 'Convallis ligula',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[8],
+      logo: imgAPI.logos[9],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+    {
+      bg: imgAPI.photosL[10],
+      logo: imgAPI.logos[10],
+      title: 'Donec commodo',
+      desc: 'Vestibulum consequat hendrerit',
+    },
+  ]
+
+#blockchain-projects
+  .root
+    .container.carousel-header.px-md-15
+      +title-main($t.blockchain.project_title)
+      p.use-text-subtitle2
+        | #{$t.blockchain.project_desc}
+        |
+        |
+        a.btn-flat.btn-large.waves-effect.view-all.px-2.py-0.use-theme--btn-color(href=link.portfolio)
+          | #{$t.btn_seeall}
+          i.icon.material-icons arrow_forward
+        |
+        |
+    .container
+      .floating-artwork
+        +slider-art('blockchain-projects')
+          .wow.fadeInRightShort(data-wow-offset="60" data-wow-delay="0.3s" data-wow-duration="0.5s")
+            |
+            |
+            img(
+              src=imgAPI.blockchain[13]
+              alt="projects"
+            )/
+            |
+            |
+    .slider-wrap
+      .carousel
+        .slick-carousel#projects-carousel(data-length=caseData.length)
+          .props.item-props-first
+            div
+          .item
+            +case-card(
+              caseData[0].bg,
+              caseData[0].logo,
+              caseData[0].title,
+              caseData[0].desc,
+              link.serviceDetail,
+              "square"
+            )
+            +case-card(
+              caseData[1].bg,
+              caseData[1].logo,
+              caseData[1].title,
+              caseData[1].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+          .item
+            +case-card(
+              caseData[2].bg,
+              caseData[2].logo,
+              caseData[2].title,
+              caseData[2].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+            +case-card(
+              caseData[3].bg,
+              caseData[3].logo,
+              caseData[3].title,
+              caseData[3].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+            +case-card(
+              caseData[4].bg,
+              caseData[4].logo,
+              caseData[4].title,
+              caseData[4].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+          .item
+            +case-card(
+              caseData[5].bg,
+              caseData[5].logo,
+              caseData[5].title,
+              caseData[5].desc,
+              link.serviceDetail,
+              "square"
+            )
+            +case-card(
+              caseData[6].bg,
+              caseData[6].logo,
+              caseData[6].title,
+              caseData[6].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+          .item
+            +case-card(
+              caseData[7].bg,
+              caseData[7].logo,
+              caseData[7].title,
+              caseData[7].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+            +case-card(
+              caseData[8].bg,
+              caseData[8].logo,
+              caseData[8].title,
+              caseData[8].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+            +case-card(
+              caseData[9].bg,
+              caseData[9].logo,
+              caseData[9].title,
+              caseData[9].desc,
+              link.serviceDetail,
+              "landscape"
+            )
+          .props.item-props-first
+            div
+          .props.item-props-first
+            div
+        |
+        |
+        button.btn-floating.nav.prev.waves-effect#prev_project(type="button")
+          |
+          |
+          i.ion-ios-arrow-back
+          |
+          |
+        |
+        |
+        button.btn-floating.nav.next.waves-effect#next_project(type="button")
+          |
+          |
+          i.ion-ios-arrow-forward
+          |
+          |
+        |
+        |

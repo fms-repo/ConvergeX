@@ -1,0 +1,20 @@
+mixin category-image-card(color='purple', title, images, href='#')
+  |
+  |
+  a.waves-effect.category-img-card(draggable=false href=href)
+    |
+    |
+    span.images(class=color+'-bg')
+      each item, index in images
+        span.figure(class=index === 1 ? 'center' : '')
+          |
+          |
+          img(src=item alt="collection preview")/
+          |
+          |
+    span.title-card
+      | #{title}
+    |
+    |
+  |
+  |

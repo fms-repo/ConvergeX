@@ -1,0 +1,25 @@
+include ../../title/title.pug
+include ../../cards/info/number-card.pug
+include ../../forms/arrow-button/large.pug
+
+.service-style
+  .container.root
+    .row.spacing2.spacing4-sm-up
+      .col-md-4.col-sm-12
+        +title-main($t.values_title)
+      .col-md-7.col-sm-12.px-2
+        p.use-text-subtitle2
+          | #{$t.values_subtitle}
+      .col-md-4.col-sm-6.px-2
+        .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='0.1s', data-wow-duration='0.5s')
+          +number-card('ion-ios-radio-button-on', $t.values_info_title1, $t.values_info_desc2, '01', 'triple-main')
+        .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='0.3s', data-wow-duration='0.5s')
+          +number-card('ion-ios-medical-outline', $t.values_info_title2, $t.values_info_desc2, '02', 'triple-main')
+      .col-md-4.col-sm-6.px-2
+        .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='0.5s', data-wow-duration='0.5s')
+          +number-card('ion-ios-color-filter-outline', $t.values_info_title3, $t.values_info_desc3, '03', 'triple-light')
+        .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='0.7s', data-wow-duration='0.5s')
+          +number-card('ion-ios-sunny-outline', $t.values_info_title4, $t.values_info_desc4, '04', 'double-main')
+      .col-md-4.col-sm-12.px-2
+        .action.pt-4
+          +arrow-button-large($t.register_subtitle, link.contact, true)

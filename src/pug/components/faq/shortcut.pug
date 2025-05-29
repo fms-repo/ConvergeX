@@ -1,0 +1,53 @@
+include ../icons3d.pug
+
+.faq-style
+  .container.shortcut
+    .row.scroll-tablet.spacing4-md-up
+      .col-sm-4.col-10
+        .shortcut-btn.primary
+          |
+          |
+          a.waves-effect(href=link.blog)
+          |
+          |
+          .wrap
+            .icon-3d
+              +icons3d('mdi-newspaper-variant', 'primary-double')
+            strong.use-text-title-custom
+              | #{$t.faq_help3}
+            p.use-text-paragraph
+              | #{$t.list_title}
+          |
+          |
+      .col-sm-4.col-10
+        .shortcut-btn.secondary
+          |
+          |
+          a.waves-effect(href=link.contact)
+          |
+          |
+          .wrap
+            .icon-3d
+              +icons3d('mdi-code-greater-than-or-equal', 'secondary-double')
+            strong.use-text-title-custom
+              | #{$t.faq_help1}
+            p.use-text-paragraph
+              | #{$t.faq_title}
+          |
+          |
+      .col-sm-4.col-10
+        .shortcut-btn.accent
+          |
+          |
+          a.waves-effect(href=link.contact)
+          |
+          |
+          .wrap
+            .icon-3d
+              +icons3d('mdi-card-account-details', 'accent-double')
+            strong.use-text-title-custom
+              | #{$t.btn_contact}
+            p.use-text-paragraph
+              | #{$t.faq_luck}
+          |
+          |

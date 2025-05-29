@@ -1,0 +1,28 @@
+.blockchain-slider-art {
+  .deco {
+    @include breakpoints-down(md) {
+      display: none;
+    }
+    img {
+      z-index: 5;
+      position: relative;
+      width: 100%;
+      @include breakpoints-down(lg) {
+        width: 70%
+      }
+    }
+  }
+
+  .figure {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    direction: ltr;
+  }
+
+  .faded {
+    opacity: 0.25;
+    filter: blur(10px);
+  }
+}

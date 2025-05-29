@@ -1,0 +1,387 @@
+$card-width: 220px;
+$card-height: 280px;
+$reduced-mobile: 40px;
+
+#nft-banner-slider {
+  .use-theme {
+    &--grd-text {
+      .theme--light & {
+        @extend .use-text-grd-triple-main;
+      }
+      .theme--dark & {
+        @extend .use-text-grd-triple-light;
+      }
+    }
+  }
+  .use-mq {
+    &--title {
+      @include use-text-title;
+      @include breakpoints-between(md, lg) {
+        @include use-text-title2
+      }
+    }
+    &--subtitle {
+      @include use-text-subtitle;
+      @include breakpoints-between(md, lg) {
+        @include use-text-subtitle2
+      }
+    }
+  }
+  .banner-wrap {
+    position: relative;
+    display: block;
+    .container {
+      @include breakpoints-down(lg) {
+        padding: 0
+      }
+    }
+  }
+
+  .btn-area {
+    display: flex;
+    @include breakpoints-down(lg) {
+      justify-content: center
+    }
+    @include breakpoints-down(sm) {
+      align-items: center;
+      &:not(.download) {
+        flex-direction: column
+      }
+    }
+    .button {
+      font-size: 18px;
+      min-width: 200px;
+      @include breakpoints-up(sm) {
+        @include margin-right($spacing2);
+      }
+      @include breakpoints-down(sm) {
+        width: 100%;
+        margin-bottom: $spacing2;
+      }
+    }
+    a {
+      display: inline-flex;
+      @include breakpoints-down(sm) {
+        margin: 4px;
+      }
+      img {
+        width: 160px;
+        @include breakpoints-down(sm) {
+          width: 100%
+        }
+      }
+    }
+  }
+
+  .art-wrap {
+    position: relative;
+    @include breakpoints-up(lg) {
+      overflow: hidden;
+    }
+    @include breakpoints-down(lg) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .art-scene {
+    position: relative;
+    @include left($spacing2);
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoints-up(lg) {
+      margin-top: $spacing5
+    }
+    @include breakpoints-down(lg) {
+      width: 120%;
+      margin-top: $spacing5
+    }
+  }
+
+  .deco-line{
+    position: absolute;
+    top: 0;
+    @include left(16px);
+    border-radius: $rounded-big;
+    border: 1px solid transparent;
+    border-image-source: $gradient-double-main;
+    background-image: $gradient-double-main;
+    border-image-slice: 1;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    -mask-composite: exclude;
+    width: $card-width;
+    height: $card-height;
+    @include breakpoints-down(sm) {
+      display: none
+    }
+  }
+
+  .inner{
+    display: flex;
+    height: 100%;
+    position: relative;
+    padding-top: $spacing10;
+    @include breakpoints-up(lg) {
+      min-height: 640px;
+    }
+    @include breakpoints-down(lg) {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 160px;
+    }
+  }
+
+  .text {
+    position: relative;
+    z-index: 99;
+    @include breakpoints-up(lg) {
+      margin-top: $spacing10
+    }
+    @include breakpoints-between(sm, lg) {
+      padding: spacing(0, 3)
+    }
+    @include breakpoints-down(lg) {
+      text-align: center;
+    }
+    & h4 {
+      font-weight: $font-bold;
+      margin-bottom: $spacing2
+    }
+    & h5 {
+      margin-bottom: $spacing4
+    }
+  }
+
+  .carousel {
+    @include margin-left($spacing4);
+    transform: rotate(7deg);
+    transform-origin: center center
+  }
+
+  .card-main {
+    > a {
+      width: $card-width;
+      height: $card-height;
+      @include breakpoints-down(sm) {
+        width: $card-width - $reduced-mobile;
+        height: $card-height - $reduced-mobile;
+      }
+    }
+  }
+
+  .fade-slider {
+    position: relative;
+    z-index: 3;
+    width: 50%;
+    @include breakpoints-between(md, lg) {
+      width: 25%
+    }
+    @include breakpoints-between(sm, md) {
+      width: 33%
+    }
+    .slick-current {
+      &.card-main {
+        animation-name: flipInY;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+    }
+  }
+
+  .search {
+    position: relative;
+    margin-top: $spacing3;
+    font-size: 18px;
+    overflow: visible;
+    border-radius: 75px;
+    width: 100%;
+    .input-field.filled {
+      background: none !important;
+      min-height: 0;
+      padding: 0 !important;
+    }
+    @include breakpoints-down(sm) {
+      margin-top: $spacing4;
+    }
+    @include breakpoints-up(sm) {
+      margin-top: $spacing4
+    }
+    .input-field.filled label.active, .input-field.full-width .label.active {
+      transform: translateY(-18px) scale(0.75);
+      transform-origin: top left;
+    }
+    .input-field {
+      margin: 0;
+      input {
+        border-radius: 75px;
+        box-sizing: border-box;
+        margin: 0;
+        height: 75px;
+        padding: $spacing2;
+        max-height: none;
+        border: none;
+        @include breakpoints-up(md) {
+          padding: spacing(4, 30, 3, 3)
+        }
+        &:focus {
+          @include use-theme(box-shadow, $palette-primary-light 0 0 0 0.4rem, $palette-primary-dark 0 0 0 0.4rem)
+        }
+      }
+    }
+    label {
+      top: 8px;
+      @include left($spacing3 !important);
+      &:not(.label-icon).active {
+        transform: translateY(-6px) scale(0.8)
+      }
+    }
+  }
+
+  .action {
+    position: absolute;
+    @include right(0);
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: $spacing2;
+    .btn {
+      height: 48px;
+      line-height: 48px;
+      align-items: center;
+      box-sizing: content-box;
+      @include breakpoints-down(sm) {
+        padding: 2px;
+        width: 50px;
+        background: none; box-shadow: none;
+        color: $palette-primary-main;
+      }
+    }
+  }
+
+  .button {
+    height: 48px;
+    line-height: 48px;
+    align-items: center;
+    padding: 2px 28px;
+    box-sizing: content-box;
+    @include breakpoints-down(sm) {
+      padding: 2px;
+      width: 50px;
+      background: none !important;
+      box-shadow: none;
+      font-size: 24px;
+      color: $palette-primary-main !important;
+    }
+  }
+
+  .connect {
+    text-align: center;
+    margin-top: $spacing5;
+    h5 {
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      font-weight: $font-regular;
+      justify-content: center;
+      hr {
+        margin: spacing(0, 2);
+        border: 1px solid;
+        @include use-theme(border-color, $light-text-secondary, $dark-text-secondary);
+        width: 20%;
+        opacity: 0.3
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      li {
+        width: 25%;
+        margin-bottom: $spacing1;
+        list-style: none;
+        &:last-child {
+          width: 100%;
+          .btn {
+            text-transform: uppercase
+          }
+        }
+      }
+    }
+  }
+
+  .btn-wallet {
+    @include margin-right($spacing1);
+    width: 100%;
+    padding: $spacing1;
+    @include palette-text-primary;
+    text-transform: capitalize;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    @include breakpoints-down(sm) {
+      line-height: 18px;
+    }
+    img {
+      width: 48px;
+      border-radius: 50%;
+      margin-bottom: $spacing1;
+      @include margin-right($spacing1)
+    }
+  }
+
+  .modal {
+    width: 500px;
+    overflow: hidden;
+  }
+
+  .connect-popup {
+    max-width: none;
+    padding: $spacing3;
+    &.card {
+      border-radius: $rounded-big;
+      overflow: hidden;
+    }
+  }
+
+  .content-popup {
+    overflow: auto;
+    height: 300px;
+  }
+
+  .wallet-list {
+    margin: spacing(1, 0);
+    padding-top: $spacing1;
+    padding-bottom: $spacing1;
+    border-radius: $rounded-big;
+    align-items: center;
+    display: flex;
+    min-height: 0;
+    .secondary-content {
+      top: $spacing1;
+    }
+    @include text-align(left);
+    .avatar {
+      min-width: 0;
+      margin: spacing(0, 1)
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .divider {
+    opacity: 0.2
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+}

@@ -1,0 +1,106 @@
+include ../artworks/clay-deco.pug
+include ../title/title.pug
+
+mixin contact-map(full=false)
+  .form-style
+    .decoration.left-side
+      .ball
+        +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+      .bom
+        +clay-deco(assets+'/images/decoration/clay-bom.png', 'double-main')
+    .decoration.right-side
+      .flower
+        +clay-deco(assets+'/images/decoration/clay-snail.png', 'primary-light')
+      .bowl
+        +clay-deco(assets+'/images/decoration/clay-bowl.png', 'accent')
+    .page-wrap
+      .container.inner-wrap
+        |
+        |
+        .row.spacing4.d-flex.align-items-center
+          .col-md-6.col-sm-12.pe-md-0.wrap-deco
+            .card.form-box(class=full ? 'map-form' : '')
+              .form
+                .text-center
+                  +title-main($t.contact_title2, 'center')
+                  p
+                    | Aenean sit amet magna vel magna fringilla fermentum. Donec sed arcu pulvinar ultricies commodo id ligula.
+                form#contact_form
+                  .row.spacing6
+                    .col-sm-12(class="xl:px-6")
+                      .input-field.dark
+                        |
+                        |
+                        input.validate#name(type='text' required)/
+                        |
+                        |
+                        label(for='name') #{$t.form_name}
+                        |
+                        |
+                    .col-sm-12(class="xl:px-6")
+                      .input-field.dark
+                        |
+                        |
+                        input.validate#email(type='email' required)/
+                        |
+                        |
+                        label(for='email') #{$t.form_email}
+                        |
+                        |
+                    .col-sm-12(class="xl:px-6")
+                      .input-field.dark
+                        |
+                        |
+                        input#phone(type='tel')/
+                        |
+                        |
+                        label(for='phone') #{$t.form_phone}
+                        |
+                        |
+                    .col-sm-12(class="xl:px-6")
+                      .input-field.dark
+                        |
+                        |
+                        input#company(type='text')/
+                        |
+                        |
+                        label(for='company') #{$t.form_company}
+                        |
+                        |
+                    .col-sm-12(class="xl:px-6")
+                      .input-field.dark
+                        |
+                        |
+                        textarea#message.materialize-textarea(rows="6")
+                        |
+                        |
+                        label(for='message') #{$t.form_message}
+                        |
+                        |
+                  div(class="xl:px-2")
+                    .form-control-label
+                      |
+                      |
+                      label
+                        |
+                        |
+                        input.filled-in.secondary(type='checkbox' required)/
+                        |
+                        |
+                        span #{$t.form_terms} 
+                          br/
+                          a.link(href='#') #{$t.form_privacy}
+                        |
+                        |
+                      |
+                      |
+                    .btn-area
+                      |
+                      |
+                      button.btn.block.primary.btn-large.waves-effect(type="submit") #{$t.form_send}
+                      |
+                      |
+          .col-md-6.col-sm-12.ps-md-0
+            .card.map(class=full ? 'full' : '')
+              #map
+        

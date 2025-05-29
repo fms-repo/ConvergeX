@@ -1,0 +1,190 @@
+include ../cards/profile/profile-card.pug
+include ../title/title.pug
+
+-
+  var rankData = [
+    {
+      avatar: imgAPI.avatar[20],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[21],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[7],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosP[21],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosP[18],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosL[31],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.photosL[42],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[6],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[11],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+    {
+      avatar: imgAPI.avatar[29],
+      name: 'John Doe',
+      verified: true,
+      sales: 100,
+      items: 10,
+      volume: 1040,
+      change: 40
+    },
+  ]
+
+#nft2-table-rank
+  .root
+    include ./parallax/parallax-left
+    .container
+      +title-main($t.nft.creators_title, 'center', true)
+      .row.spacing2.spacing4-md-up
+        .col-sm-6.px-3
+          .table-wrap
+            table.table
+              thead
+                tr
+                  th(colspan='2') Creator
+                  th Sales
+                  th Item
+                  th Volume
+                  th Change
+              tbody
+                each item, index in rankData.slice(0, 5)
+                  tr
+                    td(align='right')
+                      span(class=index <= 0 ? 'one' : '')
+                        | #{index + 1}
+                    td.pe-0
+                      .d-flex.align-center.avatar-cell
+                        .avatar-img.avatar
+                          |
+                          |
+                          img(src=item.avatar alt="avatar")/
+                          |
+                          |
+                        |
+                        |
+                        strong #{item.name}
+                        |
+                        |
+                        if item.verified
+                          i.mdi.verified.mdi-check-decagram
+                    td(align='right') #{item.sales}
+                    td(align='right') #{item.items}
+                    td(align='right') #{item.volume}
+                    td(align='right')
+                      |
+                      |
+                      strong.green-text
+                        | +
+                        | #{item.change}
+                        | %
+                      |
+                      |
+        hr.divider.show-sm-up
+        .col-sm-6.px-3
+          .table-wrap
+            table.table
+              thead.show-sm-up
+                tr
+                  th(colspan='2') Creator
+                  th Sales
+                  th Item
+                  th Volume
+                  th Change
+              tbody
+                each item, index in rankData.slice(5, 10)
+                  tr
+                    td(align='right')
+                      | #{index + 6}
+                    td.pe-0
+                      .d-flex.align-center.avatar-cell
+                        .avatar-img.avatar
+                          |
+                          |
+                          img(src=item.avatar alt="avatar")/
+                          |
+                          |
+                        |
+                        |
+                        strong #{item.name}
+                        |
+                        |
+                        if item.verified
+                          i.mdi.verified.mdi-check-decagram
+                    td(align='right') #{item.sales}
+                    td(align='right') #{item.items}
+                    td(align='right') #{item.volume}
+                    td(align='right')
+                      |
+                      |
+                      strong.green-text
+                        | +
+                        | #{item.change}
+                        | %
+                      |
+                      |
+        

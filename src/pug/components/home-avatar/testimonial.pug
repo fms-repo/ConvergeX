@@ -1,0 +1,122 @@
+include ../title/title.pug
+include ../cards/testimonial/rating-card.pug
+include ./slider-art
+
+-
+  var testiContent = [
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
+      avatar: imgAPI.avatar[10],
+      name: 'John Doe',
+      title: 'Chief Digital Officer',
+      rating: 5
+    },
+    {
+      text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+      avatar: imgAPI.avatar[1],
+      name: 'Jean Doe',
+      title: 'Chief Digital Officer',
+      rating: 4
+    },
+    {
+      text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+      avatar: imgAPI.avatar[2],
+      name: 'Jena Doe',
+      title: 'Graphic Designer',
+      rating: 4
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
+      avatar: imgAPI.avatar[3],
+      name: 'Jovelin Doe',
+      title: 'Senior Graphic Designer',
+      rating: 3
+    },
+    {
+      text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+      avatar: imgAPI.avatar[4],
+      name: 'Jihan Doe',
+      title: 'CEO Software House',
+      rating: 5
+    },
+    {
+      text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+      avatar: imgAPI.avatar[6],
+      name: 'Jovelin Doe',
+      title: 'Senior Graphic Designer',
+      rating: 5
+    },
+    {
+      text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+      avatar: imgAPI.avatar[7],
+      name: 'John Doe',
+      title: 'Senior Graphic Designer',
+      rating: 4
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
+      avatar: imgAPI.avatar[10],
+      name: 'John Doe',
+      title: 'Chief Digital Officer',
+      rating: 5
+    },
+    {
+      text: 'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+      avatar: imgAPI.avatar[1],
+      name: 'Jean Doe',
+      title: 'Chief Digital Officer',
+      rating: 4
+    },
+  ]
+
+#avatar-testimonial
+  .root
+    .hidden-lg-down
+      include ./parallax/parallax-full.pug
+    .container
+      .row
+        .col-lg-7.col-md-12
+          +title-main($t.avatar.testi_title)
+    .carousel
+      .slick-carousel#testimonial_carousel(data-length=testiContent.length)
+        .item.show-lg-up
+          .item-props-first
+        each item in testiContent
+          .item
+            +rating-card(item.avatar, item.title, item.name, item.text, item.rating)
+    .floating-artwork
+      .container.fixed-width
+        .artwork
+          +slider-art('avatar-testimonial')
+            .wow.fadeInRightShort(data-wow-offset="60" data-wow-delay="0.3s" data-wow-duration="0.5s")
+              .avatar-art
+                .avatar-img.avatar(style="top: 120px; left: 240px")
+                  |
+                  |
+                  img.circle(src=imgAPI.avatar[30] alt="decoration")/
+                  |
+                  |
+                .avatar-img.avatar(style="top: 220px; left: 80px")
+                  |
+                  |
+                  img.circle(src=imgAPI.avatar[11] alt="decoration")/
+                  |
+                  |
+                .avatar-img.avatar(style="top: 280px; left: 340px")
+                  |
+                  |
+                  img.circle(src=imgAPI.avatar[33] alt="decoration")/
+                  |
+                  |
+                .avatar-img.avatar(style="top: 380px; left: 100px")
+                  |
+                  |
+                  img.circle(src=imgAPI.avatar[28] alt="decoration")/
+                  |
+                  |
+                .avatar-img.avatar(style="top: 460px; left: 300px")
+                  |
+                  |
+                  img.circle(src=imgAPI.avatar[32] alt="decoration")/
+                  |
+                  |

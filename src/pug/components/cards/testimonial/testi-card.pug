@@ -1,0 +1,18 @@
+mixin testi-card(img, text, name, title)
+  .testimonial-card
+    .testimonial
+      .deco
+      .text
+        p.content
+          span
+            | #{text}
+        h6.title.use-text-subtitle2
+          | #{name}
+        p.caption-title
+          | #{title}
+      figure
+        |
+        |
+        img(src=img alt="testimonial")/
+        |
+        |

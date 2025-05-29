@@ -1,0 +1,332 @@
+@mixin filter-tab-portfolio {
+  position: relative;
+  z-index: 20;
+  overflow: auto;
+  flex-grow: inherit;
+  padding: $spacing1;
+  display: flex;
+  background: $gradient-triple-light;
+  border-radius: 40px;
+  justify-content: center;
+  width: 100%;
+  @include breakpoints-up(sm) {
+    width: auto;
+    margin-bottom: $spacing5;
+  }
+  > .btn {
+    background: transparent;
+    border-radius: 40px;
+    font-weight: $font-medium;
+    color: $palette-common-black;
+    white-space: nowrap;
+    min-width: 100px;
+    display: inline-flex;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: spacing(1, 2);
+    @include breakpoints-up(sm) {
+      font-size: 16px;
+      padding: spacing(0, 4);
+      box-shadow: none;
+      @include margin-right($spacing3)
+    }
+    &.selected {
+      background: $palette-common-black;
+      color: $palette-common-white
+    }
+  }
+}
+
+#portfolio-gallery {
+  .root {
+    position: relative;
+    z-index: 10;
+    min-height: 600px;
+    padding: 0;
+  }
+
+  .post-card {
+    > a {
+      height: 410px;
+    }
+  }
+
+  .news-card {
+    > div {
+      height: 410px;
+      max-width: none
+    }
+  }
+
+  .photo-card {
+    > div {
+      height: 410px;
+    }
+  }
+
+  .collection-card {
+    div a {
+      height: 410px !important;
+    }
+  }
+
+  .massonry {
+    columns: 3 300px;
+    column-gap: $spacing4
+  }
+
+  .item {
+    break-inside: avoid;
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    &.loaded {
+      opacity: 1;
+      transition: all 0.3s ease-out;
+      transform: translateY(0px);
+    }
+  }
+
+  .filter {
+    @include filter-tab-portfolio
+  }
+}
+
+#portfolio-detail {
+  // Detail
+  .use-text-grd {
+    &-triple-custom {
+      .theme--light & {
+        @extend .use-text-grd-triple-dark;
+      }
+      .theme--dark & {
+        @extend .use-text-grd-triple-light;
+      }
+    }
+  }
+
+  .socmed-share {
+    @include left(30px)
+  }
+
+  .divider-main {
+    border: none;
+    position: relative;
+    overflow: visible;
+    height: 1px;
+    max-height: none;
+    margin: spacing(10, 0);
+    opacity: 1;
+    @include breakpoints-down(sm) {
+      margin: spacing(8, 0),
+    }
+    &:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      @include use-theme(background, $light-divider, $dark-divider);
+      position: absolute;
+      top: 0;
+      @include left(50%);
+      @include margin-left(-43px);
+    }
+    &:after {
+      content: "";
+      width: 70px;
+      height: 12px;
+      top: 0;
+      border-radius: 12px;
+      position: absolute;
+      @include use-theme(background, $light-divider, $dark-divider);
+      @include left(50%);
+      @include margin-left(-23px);
+    }
+  }
+
+  .counter {
+    @include text-align(right);
+    @include breakpoints-down(sm) {
+      text-align: center;
+      padding: spacing(0, 3);
+      justify-content: center
+    }
+    h2 {
+      font-size: 100px;
+      line-height: 80px;
+      font-weight: $font-bold;
+      @include breakpoints-up(sm) {
+        @include margin-right($spacing2);
+      }
+      @include breakpoints-down(sm) {
+        font-size: 56px;
+      }
+    }
+  }
+
+  .comment {
+    @include breakpoints-down(sm) {
+      padding: spacing(0, 1)
+    }
+  }
+
+  .filter {
+    @include filter-tab-portfolio
+  }
+
+  // Mini Gallery
+
+  .root-mini-gallery {
+    position: relative;
+  }
+
+  .massonry {
+    height: 500px;
+    @include use-theme(background, $light-divider, $dark-divider);
+    border-radius: $rounded-big;
+    overflow: hidden;
+    position: relative;
+    padding: $spacing1;
+    &.expand {
+      height: auto;
+      padding-bottom: $spacing10
+    }
+  }
+
+  .masonry-content {
+    column-count: 2;
+    column-gap: 10px;
+    .item {
+      display: grid;
+      margin-bottom: 20px;
+      break-inside: avoid;
+      .card {
+        margin: 0;
+      }
+    }
+  }
+
+  .landscape {
+    height: 180px;
+    position: relative;
+    > a {
+      height: 100%
+    }
+  }
+
+  .portrait {
+    height: 400px;
+    position: relative;
+    > a {
+      height: 100%
+    }
+  }
+
+  .btn-show {
+    position: absolute;
+    z-index: 10;
+    bottom: $spacing2;
+    margin: spacing(0, 2);
+    width: calc(100% - 32px)
+  }
+
+  .img-button {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .video-popup {
+    max-width: none;
+    h4 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      overflow: hidden;
+    }
+    @include breakpoints-up(sm) {
+      width: 690px;
+    }
+    .modal-content {
+      height: 100%;
+    }
+    iframe {
+      width: 100%
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 4px;
+    @include right(4px);
+  }
+
+  // Sidebar
+  &.sidebar {
+    z-index: 2;
+    @include padding-right($spacing3);
+    @include breakpoints-up(lg) {
+      margin: spacing(5, 0);
+      position: sticky;
+      top: -64px;
+    }
+    @include breakpoints-down(md) {
+      padding: spacing(0, 3);
+      margin-top: $spacing10;
+    }
+    @include breakpoints-down(sm) {
+      margin-top: $spacing5;
+      padding: 0
+    }
+  }
+
+  .property-sidebar {
+    margin: spacing(5, 0);
+    list-style: none;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-bottom: $spacing3;
+      display: inline-block;
+      @include margin-right($spacing3);
+      i {
+        @include margin-right(4px)
+      }
+    }
+  }
+
+  .tags {
+    margin-bottom: $spacing3;
+    > div, > span {
+      font-weight: $font-medium;
+      margin: 2px
+    }
+  }
+
+  .apps {
+    display: flex;
+    margin-bottom: $spacing3;
+    flex-wrap: wrap;
+    figure {
+      margin: 0;
+      border-radius: $rounded-big;
+      @include margin-right($spacing2);
+      overflow: hidden;
+      width: 65px;
+      height: 65px;
+      margin-bottom: $spacing1;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+      }
+    }
+  }
+}

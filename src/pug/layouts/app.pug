@@ -1,0 +1,10 @@
+extends ./document.pug
+
+block variables
+block layout
+  #app.m-application.theme--dark.transition-page
+    .loading
+    #main-wrap.m-content.cyber.cyber-var
+      if env === 'prod'
+        include ../components/theme-options/side-right.pug
+      block content

@@ -1,0 +1,384 @@
+// #### FILTER ####
+#filter_sidebar.filter-style
+  aside
+    ul.collapsible.expandable
+      // FILTER CATEGORY
+      li.accordion-content.active.filter-block.filter_category
+        .collapsible-header.collection-header 
+          .heading Filter Categories
+          |
+          |
+          i.material-icons.right.arrow expand_more
+          |
+          |
+        .collapsible-body.detail
+          ul.collection
+            li
+              a.waves-effect.collection-item.active(data-value='all' href='#!')
+                | #{$t.list_filter}
+                span.secondary-content 1123
+            li
+              a.waves-effect.collection-item(data-value='cat-a' href='#!')
+                | Category a
+                span.secondary-content 123
+            li
+              a.waves-effect.collection-item(data-value='cat-b' href='#!')
+                | Category b
+                span.secondary-content 456
+            li
+              a.waves-effect.collection-item(data-value='cat-c' href='#!')
+                | Category c
+                span.secondary-content 789
+            li
+              a.waves-effect.collection-item(data-value='cat-d' href='#!')
+                | Category d
+                span.secondary-content 10
+            li
+              a.waves-effect.collection-item(data-value='cat-e' href='#!')
+                | Category e
+                span.secondary-content 112
+            li
+              a.waves-effect.collection-item(data-value='cat-f' href='#!')
+                | Category f
+                span.secondary-content 13
+      // END FILTER CATEGORY
+      |
+      |
+      |
+      // FILTER RATING
+      li.accordion-content.active.filter-block.filter_rating
+        .collapsible-header.collection-header
+          .heading Rating
+          |
+          |
+          i.material-icons.right.arrow expand_more
+          |
+          |
+        .collapsible-body.detail.ps-0
+          ul.collection
+            li
+              a.waves-effect.collection-item.active(data-value='0' href='#!')
+                | All Rating
+            li
+              |
+              |
+              a.waves-effect.collection-item(data-value='1' href='#!')
+                |
+                |
+                span.star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon-disable star_border
+                  i.material-icons.star-icon-disable star_border
+                  i.material-icons.star-icon-disable star_border
+                  i.material-icons.star-icon-disable star_border
+                |
+                |
+                span.caption Minimum 1 star rating
+                |
+                |
+              |
+              |
+            li
+              |
+              |
+              a.waves-effect.collection-item(data-value='2' href='#!')
+                |
+                |
+                span.star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon-disable star_border
+                  i.material-icons.star-icon-disable star_border
+                  i.material-icons.star-icon-disable star_border
+                |
+                |
+                span.caption Minimum 2 star rating
+                |
+                |
+              |
+              |
+            li
+              |
+              |
+              a.waves-effect.collection-item(data-value='3' href='#!')
+                |
+                |
+                span.star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon-disable star_border
+                  i.material-icons.star-icon-disable star_border
+                |
+                |
+                span.caption Minimum 3 star rating
+                |
+                |
+              |
+              |
+            li
+              |
+              |
+              a.waves-effect.collection-item(data-value='4' href='#!')
+                |
+                |
+                span.star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon-disable star_border
+                |
+                |
+                span.caption Minimum 4 star rating
+                |
+                |
+              |
+              |
+            li
+              |
+              |
+              a.waves-effect.collection-item(data-value='5' href='#!')
+                |
+                |
+                span.star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                  i.material-icons.star-icon star
+                |
+                |
+                span.caption Minimum 5 star rating
+                |
+                |
+              |
+              |
+          
+      // END FILTER RATING
+      |
+      |
+      |
+      // FILTER TAGS
+      li.accordion-content.active.filter-block.filter_tags
+        .collapsible-header.collection-header 
+          .heading Filter Tags
+          |
+          |
+          i.material-icons.right.arrow expand_more
+          |
+          |
+        .collapsible-body.detail
+          .collection
+            |
+            |
+            span.btn-tag
+              input#tag_one(type='checkbox' value='tag-one' checked)/
+              label.waves-effect(for='tag_one') Tag One
+            |
+            |
+            span.btn-tag
+              input#tag_two(type='checkbox' value='tag-two' checked)/
+              label.waves-effect(for='tag_two') Tag Two
+            |
+            |
+            span.btn-tag
+              input#tag_three(type='checkbox' value='tag-three' checked)/
+              label.waves-effect(for='tag_three') Tag Three
+            |
+            |
+            span.btn-tag
+              input#tag_four(type='checkbox' value='tag-four' checked)/
+              label.waves-effect(for='tag_four') Tag Four
+            |
+            |
+      // END FILTER TAGS
+      |
+      |
+      |
+      // FILTER PRICE RANGE
+      li.accordion-content.active.filter-block.filter_tags
+        .collapsible-header.collection-header 
+          .heading Filter Range
+          |
+          |
+          i.material-icons.right.arrow expand_more
+          |
+          |
+        .collapsible-body.detail
+          .d-flex.align-items-center
+            .input-field.dark.pa-0
+              input#price_from.py-0(placeholder='$ From' type='text' value="0")/
+            .strip -
+            .input-field.dark.pa-0
+              input#price_to.py-0(placeholder='$ To' type='text' value="100")/
+            |
+            |
+            button.btn.primary.mx-2.py-0.waves-effect.d-flex.align-items-center.justify-content-center(type='button')
+              i.material-icons.use-rtl-flip keyboard_arrow_right
+            |
+            |
+      // END FILTER PRICE RANGE
+      |
+      |
+      |
+      // FILTER CHECK
+      li.accordion-content.filter-block.filter_check
+        .collapsible-header.collection-header 
+          .heading Filter Check
+          |
+          |
+          i.material-icons.right.arrow expand_more
+          |
+          |
+        .collapsible-body.detail.ps-0
+          ul.collection
+            li.collection-item.waves-effect.active.select_all_categories
+              | Select All
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                |
+                |
+                input.secondary.filled-in(type='checkbox' value='check-a' checked)/
+                span Check A
+                |
+                |
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                |
+                |
+                input.secondary.filled-in(type='checkbox' value='check-b' checked)/
+                span Check B
+                |
+                |
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                |
+                |
+                input.secondary.filled-in(type='checkbox' value='check-c' checked)/
+                span Check C
+                |
+                |
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                |
+                |
+                input.secondary.filled-in(type='checkbox' value='check-d' checked)/
+                span Check D
+                |
+                |
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                |
+                |
+                input.secondary.filled-in(type='checkbox' value='check-e' checked)/
+                span Check E
+                |
+                |
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                |
+                |
+                input.secondary.filled-in(type='checkbox' value='check-f' checked)/
+                span Check F
+                |
+                |
+              |
+              |
+      // END FILTER CHECK
+      |
+      |
+      |
+      // FILTER RADIO
+      li.accordion-content.filter-block.filter_radio
+        .collapsible-header.collection-header 
+          .heading Filter Radio
+          |
+          |
+          i.material-icons.right.arrow expand_more
+          |
+          |
+        .collapsible-body.detail.px-0
+          ul.collection
+            li.collection-item.waves-effect.active
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='all' checked)/
+                span #{$t.list_filter}
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='radio-a')/
+                span Radio A
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='radio-b')/
+                span Radio B
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='radio-c')/
+                span Radio C
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='radio-d')/
+                span Radio D
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='radio-e')/
+                span Radio E
+              |
+              |
+            li.collection-item.waves-effect
+              |
+              |
+              label.label-block
+                input.with-gap(name='filter_radio' type='radio' value='radio-f')/
+                span Radio F
+              |
+              |
+      // END FILTER RADIO
+      |
+      |
+      |

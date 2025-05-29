@@ -1,0 +1,86 @@
+include ../../counter/countdown.pug
+
+-
+  var imgs = [
+    imgAPI.photosP[7],
+    imgAPI.photosS[6],
+    imgAPI.photosS[7],
+    imgAPI.photosS[8],
+    imgAPI.photosP[22],
+    imgAPI.photosP[23]
+  ]
+
+.product-style
+  .product-detail.row.spacing6-sm-up.spacing2.justify-content-center
+    .col-sm-5(class="xl:px-4")
+      .carousel
+        .detail-carousel#detail_carousel
+          - var n = -1
+          while n < 5
+            .image(data-index=n++)
+              |
+              |
+              a.waves-effect(href=imgs[n])
+                .figure
+                  |
+                  |
+                  img(src=imgs[n] alt='thumb')/
+                  .img.image-detail(style=`background-image: url(${imgs[n]})`)
+                  |
+                  |
+                  i.material-icons.zoom-icon zoom_in
+                  |
+                  |
+              |
+              |
+    .col-sm-7
+      .text
+        .options
+          |
+          |
+          button.btn.btn-small.btn-icon.waves-effect(type="button")
+            i.mdi.mdi-share-variant
+          |
+          |
+          button.btn.btn-small.btn-icon.waves-effect(type="button")
+            i.mdi.mdi-dots-horizontal
+          |
+          |
+        h4.use-text-title2
+          span.use-text-subtitle.use-text-secondary-color
+            | John Doe 
+            i.mdi.mdi-check-decagram.use-text-subtitle2
+          |  The Lorem Ipsum Dolor Sit Amet
+        .property-title
+          i.ion-md-star
+          | 4.5
+          i.ion-md-contacts
+          | 1.0K&nbsp;
+          span.show-md-up Owners
+          i.ion-ios-apps
+          | 17&nbsp;
+          span.show-md-up Items
+          i.ion-md-eye
+          | 168K&nbsp;
+          span.show-md-up Views
+          i.ion-md-heart
+          | 1.4K&nbsp;
+          span.show-md-up Favorites
+        .counter-wrap
+          +countdown("Sale starts in", 560000000)
+        .btn-area.main
+          .price-main
+            p #{$t.list_current_price}
+            h3.use-text-primary
+              | 0.27 ETH
+              span $315.26
+          |
+          |
+          a.btn.button.secondary.btn-large.waves-effect(href='#')
+            | #{$t.list_cart}
+          |
+          |
+          a.btn.btn-outlined.btn-large.waves-effect(href='#')
+            | #{$t.list_whislist}
+          |
+          |

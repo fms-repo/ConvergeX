@@ -1,0 +1,25 @@
+include ../title/bg-title.pug
+
+mixin basic-banner(bgTitle, title, desc, btnPrimary=null, btnSecondary=null, link1='#', link2='#')
+  #hero-banner
+    block
+    .container
+      .basic-hero
+        +bg-title(bgTitle, title, 'triple-custom')
+        p(class="lg:px-10") #{desc}
+        if btnPrimary || btnSecondary
+          .btn-area-simple
+            if btnPrimary
+              |
+              |
+              a.btn.primary.btn-large.waves-effect(href=link1)
+                | #{btnPrimary}
+              |
+              |
+            if btnSecondary
+              |
+              |
+              a.btn.btn-outlined.black-white.btn-large.waves-effect(href=link2)
+                | #{btnSecondary}
+              |
+              |

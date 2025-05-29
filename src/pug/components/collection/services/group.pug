@@ -1,0 +1,183 @@
+include ../../title/parallax-title.pug
+include ../../cards/apps/group-card.pug
+
+.service-style
+  .container.root
+    +parallax-title($t.service_bgtitle, $t.service_bundle_title, 'triple-custom')
+    p.text-center.use-text-subtitle2
+      | #{$t.service_subtitle}
+    .row.spacing4(class="md:mt-10 sm:mt-5")
+      .col-md-8.col-sm-12(class="sm:py-5")
+        .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='0.3s', data-wow-duration='0.5s')
+          +group-card(
+            'Designs',
+            'Vestibulum consequat hendrerit nam sollicitudin dignissim nunc. Nam sollicitudin dignissim nunc, cursus ullamcorper eros vulputate sed.',
+            'primary',
+            'white',
+            true,
+            'full',
+            'right',
+            imgAPI.inner[10],
+            link.serviceDetail,
+            [
+              {
+                name: 'Logo & Branding',
+                icon: 'mdi-star-outline'
+              },
+              {
+                name: 'Apps Design',
+                icon: 'mdi-cellphone-cog'
+              },
+              {
+                name: 'Graphic Design',
+                icon: 'mdi-palette-outline'
+              },
+              {
+                name: 'Logo & Branding',
+                icon: 'mdi-monitor-shimmer'
+              }
+            ]
+          )
+      .col-md-4.col-sm-12(class="sm:py-5")
+        .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='0.5s', data-wow-duration='0.5s')
+          +group-card(
+            'Business',
+            'Vestibulum consequat hendrerit nam sollicitudin dignissim nunc. Nam sollicitudin dignissim nunc, cursus ullamcorper eros vulputate sed.',
+            'accent',
+            'primary-color',
+            false,
+            'compact',
+            'left',
+            null,
+            link.serviceDetail,
+            [
+              {
+                name: 'Digital Strategy',
+                icon: 'mdi-dice-5-outline'
+              },
+              {
+                name: 'Content Writing',
+                icon: 'mdi-pencil-box-multiple-outline'
+              },
+              {
+                name: 'Business Consulting',
+                icon: 'mdi-briefcase-outline'
+              },
+              {
+                name: 'Reporting',
+                icon: 'mdi-file-document-outline'
+              }
+            ]
+          )
+      .col-md-4.col-sm-12(class="sm:py-5")
+        .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='0.7s', data-wow-duration='0.5s')
+          +group-card(
+            'Technology',
+            'Vestibulum consequat hendrerit nam sollicitudin dignissim nunc. Nam sollicitudin dignissim nunc, cursus ullamcorper eros vulputate sed.',
+            'bright',
+            'secondary-color',
+            false,
+            'compact',
+            'left',
+            null,
+            link.serviceDetail,
+            [
+              {
+                name: 'Hosting',
+                icon: 'mdi-cloud-outline'
+              },
+              {
+                name: 'Big Data Analysis',
+                icon: 'mdi-chart-bar'
+              }
+            ]
+          )
+      .col-md-8.col-sm-12(class="sm:py-5")
+        .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='0.9s', data-wow-duration='0.5s')
+          +group-card(
+            'IT Development',
+            'Vestibulum consequat hendrerit nam sollicitudin dignissim nunc. Nam sollicitudin dignissim nunc, cursus ullamcorper eros vulputate sed.',
+            'secondary',
+            'white',
+            true,
+            'full',
+            'left',
+            imgAPI.inner[11],
+            link.serviceDetail,
+            [
+              {
+                name: 'Content Management',
+                icon: 'mdi-file-document-outline'
+              },
+              {
+                name: 'Mobile App Development',
+                icon: 'mdi-cellphone-cog'
+              },
+              {
+                name: 'Ecommerce',
+                icon: 'mdi-shopping-outline'
+              },
+            ]
+          )
+      .col-md-8.col-sm-12(class="sm:py-5")
+        .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='1.2s', data-wow-duration='0.5s')
+          +group-card(
+            'Online Marketing',
+            'Vestibulum consequat hendrerit nam sollicitudin dignissim nunc. Nam sollicitudin dignissim nunc, cursus ullamcorper eros vulputate sed.',
+            'accent',
+            'accent-color',
+            false,
+            'full',
+            'right',
+            imgAPI.inner[8],
+            link.serviceDetail,
+            [
+              {
+                name: 'Pay Per Click',
+                icon: 'mdi-button-cursor'
+              },
+              {
+                name: 'SEO',
+                icon: 'mdi-card-search-outline'
+              },
+              {
+                name: 'Social Media Marketing',
+                icon: 'mdi-account-group-outline'
+              },
+              {
+                name: 'Display Marketing',
+                icon: 'mdi-monitor-dashboard'
+              },
+              {
+                name: 'Email Marketing',
+                icon: 'mdi-email-multiple-outline'
+              },
+            ]
+          )
+      .col-md-4.col-sm-12(class="sm:py-5")
+        .wow.fadeInUpShort(data-wow-offset='100', data-wow-delay='1.5s', data-wow-duration='0.5s')
+          +group-card(
+            'Content Strategy',
+            'Vestibulum consequat hendrerit nam sollicitudin dignissim nunc.',
+            'accent2',
+            'white',
+            true,
+            'compact',
+            'left',
+            null,
+            link.serviceDetail,
+            [
+              {
+                name: 'Marketing Flexibility',
+                icon: 'mdi-arrow-expand-all'
+              },
+              {
+                name: 'Web Audit Practices',
+                icon: 'mdi-web'
+              },
+              {
+                name: 'Advertising Strategy',
+                icon: 'mdi-monitor-shimmer'
+              },
+            ]
+          )

@@ -1,0 +1,253 @@
+.faq-style {
+  .root {
+    position: relative;
+   .container {
+      position: relative;
+      z-index: 3
+    }
+  }
+  .accordion {
+    position: relative;
+  }
+  .item {
+    margin-bottom: $spacing3
+  }
+  .paper {
+    margin-bottom: $spacing3;
+    overflow: hidden;
+    border-radius: $rounded-medium;
+    &:not(.active) .collapsible-header {
+      @include use-theme(background, rgba($light-background-paper, 0.5), rgba($dark-background-paper, 0.75));
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+  }
+  .heading {
+    display: block;
+    font-weight: $font-medium;
+    padding: spacing(1, 2, 1, 0);
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex: 1;
+    @include breakpoints-down(sm) {
+      font-size: 16px;
+    }
+  }
+  .content {
+    i.material-icons {
+      margin-top: $spacing1;
+    }
+  }
+  .active {
+    .collapsible-header {
+      background: $palette-primary-main;
+      color: $palette-common-white;
+    }
+    i.material-icons {
+      color: $palette-common-white;
+      transform: rotate(180deg)
+    }
+  }
+  .detail {
+    background: $palette-primary-main;
+    color: $palette-common-white;
+    border-radius: 0 0 $rounded-medium $rounded-medium;
+    p {
+      font-size: 24px;
+      @include breakpoints-down(sm) {
+        font-size: 18px;
+      }
+    }
+  }
+  .help-paper {
+    overflow: visible;
+    @include use-theme(background, $gradient-double-light, $gradient-double-dark);
+    padding: spacing(2, 1);
+    img {
+      width: 100%;
+      max-width: 390px;
+      @include breakpoints-up(lg) {
+        width: 390px;
+      }
+    }
+  }
+
+  .topic-list {
+    padding: 0;
+    margin-bottom: $spacing3;
+    li {
+      padding: spacing(2, 0);
+      list-style: none;
+      a {
+        text-decoration: none;
+        @include palette-text-primary;
+        &:hover {
+          text-decoration: underline
+        }
+      }
+    }
+  }
+
+  .shortcut {
+    padding-top: $spacing5;
+    z-index: 3;
+    position: relative;
+    a {
+      overflow: visible;
+      text-decoration: none;
+    }
+    @include breakpoints-up(lg) {
+      padding: spacing(0, 10)
+    }
+    @include breakpoints-down(lg) {
+      overflow: hidden
+    }
+    @include breakpoints-down(sm) {
+      padding: 0
+    }
+  }
+
+  .scroll-tablet {
+    @include breakpoints-up(md) {
+      overflow: hidden
+    }
+    @include breakpoints-down(sm) {
+      flexFlow: row wrap;
+      width: 100%;
+      overflow: auto;
+      padding-bottom: $spacing2;
+      flex-wrap: nowrap;
+      padding: 0;
+      margin: 0;
+      > div {
+        padding-top: $spacing3
+      }
+    }
+  }
+
+  .shortcut-btn {
+    position: relative;
+    text-align: center;
+    min-width: 200px;
+    min-height: 220px;
+    margin: $spacing2;
+    padding: spacing(2, 0);
+    @include breakpoints-down(md) {
+      margin: spacing(0, 1)
+    }
+    p {
+      position: relative
+    }
+    strong {
+      text-transform: capitalize;
+      @include palette-text-primary;
+      position: relative
+    }
+    a, button {
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      overflow: hidden;
+      border-radius: $rounded-big
+    }
+    .wrap {
+      position: relative;
+      @include palette-text-primary;
+      border: 1px solid;
+      border-radius: $rounded-medium;
+      @include use-theme(background, $light-background-paper, $palette-primary-dark);
+      display: block;
+      text-align: center;
+      padding: $spacing2;
+      &:before {
+        content: "";
+        border-radius: $rounded-medium;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        @include use-theme(background, $palette-common-white, $palette-common-black);
+      }
+    }
+    &:before {
+      top: 0;
+      @include left($spacing2 * -1);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid;
+      border-radius: $rounded-medium;
+      transform: rotate(-5deg);
+      @include breakpoints-down(md) {
+        display: none
+      }
+    }
+    &.primary {
+      .wrap {
+        border-color: $palette-primary-main
+      }
+      &:before {
+        border-color: $palette-primary-main
+      }
+    }
+    &.secondary {
+      .wrap {
+        border-color: $palette-secondary-main
+      }
+      &:before {
+        border-color: $palette-secondary-main
+      }
+    }
+    &.accent {
+      .wrap {
+        border-color: $palette-accent-main
+      }
+      &:before {
+        border-color: $palette-accent-main
+      }
+    }
+  }
+
+  .icon-3d {
+    margin-bottom: $spacing2;
+    > div {
+      transform: scale(2);
+      position: relative;
+      top: -40px;
+      font-size: 80px;
+      @include breakpoints-down(sm) {
+        font-size: 60px;
+        top: -24px;
+      }
+    }
+  }
+
+  .help-group {
+    @include breakpoints-between(sm, md) {
+      display: flex;
+      justify-content: center;
+      button, a {
+        margin: spacing(0, 0.5);
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoints-down(md) {
+      button, a {
+        font-size: 14px;
+        padding: spacing(1, 2);
+      }
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+      & > * {
+        margin: spacing(0, 0.5)
+      }
+    }
+  }
+}

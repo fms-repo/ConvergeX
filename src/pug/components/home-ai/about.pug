@@ -1,0 +1,67 @@
+include ../icons3d.pug
+include ../title/title.pug
+
+#ai-about
+  .main-feature
+    include ./parallax/parallax-left.pug
+    if youtube.use
+      #video_modal.modal.video-popup
+        .modal-content
+          |
+          |
+          .headline
+            h4 #{$t.ai_landing.feature_title}
+            |
+            |
+            button.btn-icon.modal-close.waves-effect
+              i.material-icons close
+          .text-center
+            #video_iframe
+    .container.fixed-width-md-up
+      .row.spacing6--sm-up
+        .col-md-6.col-sm-12.order-lg-5
+          +title-main($t.ai_landing.feature_title2)
+          p.pb-2.use-text-subtitle2.text-center.text-md-start
+            | #{$t.ai_landing.feature_desc1}
+          .card.video
+            figure
+              |
+              |
+              img(src=imgAPI.photosL[4] alt='cover')/
+              |
+              |
+            |
+            |
+            button.btn-icon.play-btn.modal-trigger.waves-effect(data-target="video_modal" data-video="ugGOo8_ufXM")
+              i.ion-ios-play-outline
+            |
+            |
+        .col-md-6.col-sm-12.feature-wrap.order-lg-0
+          .counter
+            .lower
+              .card.paper
+                .icon
+                  +icons3d('mdi-memory', 'primary')
+                .glow.primary
+                  h4.use-text-title2 +600
+                  p #{$t.ai_landing.about_counter1}
+              .card.paper
+                .icon
+                  +icons3d('mdi-clock-time-eight-outline', 'light-blue')
+                .glow.light-blue-bg
+                  h4.use-text-title2 +200x
+                  p #{$t.ai_landing.about_counter2}
+            .higher
+              .card.paper
+                .icon
+                  +icons3d('mdi-atom', 'secondary')
+                .glow.secondary
+                  h4.use-text-title2 50x
+                  p #{$t.ai_landing.about_counter3}
+              .card.paper
+                .icon
+                  +icons3d('mdi-robot-vacuum', 'accent')
+                .glow.accent
+                  h4.use-text-title2 +20M
+                  p #{$t.ai_landing.about_counter4}
+            

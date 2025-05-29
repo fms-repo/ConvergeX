@@ -1,0 +1,79 @@
+include ./gallery-data.pug
+include ../../cards/media/playlist-card.pug
+include ../../cards/media/photo-card.pug
+include ../../cards/post/post-card.pug
+include ../../cards/post/news-card.pug
+
+#about-gallery
+  .root
+    .mt-5
+      #filter_about_gallery.filter
+        |
+        |
+        button.btn.waves-effect.selected(data-filter="all") All
+        |
+        |
+        button.btn.waves-effect(data-filter="post") Post
+        |
+        |
+        button.btn.waves-effect(data-filter="media") Media
+        |
+        |
+        button.btn.waves-effect(data-filter="collection") Collection
+        |
+        |
+        button.btn.waves-effect(data-filter="blog") Blog
+        |
+        |
+    .mt-5
+      .row.spacing4.spacing2-md-down
+        #image_about_gallery
+          .row
+            each item, index in combinedData
+              .item.loaded.pb-4(class=item.type === 'collection' ? 'col-sm-12' : 'col-sm-6' data-category=item.type)
+                if item.type === 'collection'
+                  +playlist-card(
+                    null,
+                    null,
+                    null,
+                    item.title,
+                    null,
+                    item.desc,
+                    item.count,
+                    item.items,
+                    'primary',
+                    false,
+                    false,
+                    false,
+                    item.href,
+                    true,
+                    item.bgColor
+                  )
+                else if item.type === 'media'
+                  div.photo-card
+                    +photo-card(
+                      item.img,
+                      item.title,
+                      item.link,
+                      'medium'
+                    )
+                else if item.type === 'post'
+                  div.post-card
+                    +post-card(
+                      item.img,
+                      item.title,
+                      item.text,
+                      link.portfolioDetail,
+                      'Facebook'
+                    )
+                else
+                  div.news-card
+                    +news-card(
+                      item.desc,
+                      item.title,
+                      'portrait',
+                      'over',
+                      item.img,
+                      item.href
+                    )
+                

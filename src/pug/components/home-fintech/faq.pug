@@ -1,0 +1,84 @@
+include ../title/title.pug
+include ../forms/arrow-button/standard.pug
+
+-
+  var faqData = [
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.'
+    },
+    {
+      q: 'In mi nulla, fringilla vestibulum?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque lacinia purus ut libero?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Quisque ut metus sit amet augue?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    },
+    {
+      q: 'Pellentesque ac bibendum tortor?',
+      a: 'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+    }
+  ]
+
+#fintech-faq
+  .root
+    .container.fixed-width--lg-up
+      .bg
+        .deco-mask
+          |
+          |
+          svg.main
+            include ../svg/liquid-masking.pug
+          |
+          |
+          svg.darken
+            include ../svg/liquid-masking.pug
+          |
+          |
+        .deco-line
+          |
+          |
+          svg
+            use(xlink:href=assets+'/images/decoration/liquid-line.svg#main')
+          |
+          |
+        |
+        |
+        img.use-theme--dark-bg(src=imgAPI.fintech[0] alt="background")/
+        |
+        |
+        img.use-theme--light-bg(src=imgAPI.fintech[1] alt="background")/
+        |
+        |
+      .row.spacing6-md-up
+        .col-lg-5.col-md-6.col-sm-12
+          +title-main($t.fintech.faq_subtitle)
+          .hidden-md-down.wow.fadeInUpShort(data-wow-offset="60" data-wow-delay="0.3s" data-wow-duration="0.5s")
+            .wrap.text-center
+              .photo
+                |
+                |
+                img(src=imgAPI.avatar[16] alt="illustration")/
+                |
+                |
+              .btn-faq
+                +arrow-button-standard($t.faq_luck, link.faq, 'secondary')
+        .col-lg-7.col-md-6.col-sm-12.pa-6.pt-0(class="lg:pt-15")
+          .accordion
+            ul.collapsible
+              each item, index in faqData
+                li.accordion-content.paper(class=index === 0 && "active")
+                  .collapsible-header.content
+                    p.heading #{item.q}
+                    |
+                    |
+                    i.material-icons.right.arrow expand_more
+                    |
+                    |
+                  .collapsible-body.detail
+                    p #{item.a}

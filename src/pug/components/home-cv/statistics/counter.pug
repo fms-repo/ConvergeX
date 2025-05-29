@@ -1,0 +1,22 @@
+include ../../counter/counter.pug
+
+.container.counter-bg
+  +counter(
+    {
+      title: $t.profile.counter_hours,
+      count: 123,
+      prefix: '+',
+      suffix: 'M'
+    }, {
+      title: $t.profile.counter_stream,
+      count: 456,
+      prefix: '+',
+      suffix: 'K'
+    }, {
+      title: $t.profile.counter_view,
+      count: 789,
+      prefix: '+',
+      suffix: 'M'
+    }
+  )
+  

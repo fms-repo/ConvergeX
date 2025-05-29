@@ -1,0 +1,58 @@
+block variables
+
+include ../artworks/clay-deco.pug
+
+.form-style
+  if authType === "login"
+    .decoration.left-side
+      .ball
+        +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+      .plate
+        +clay-deco(assets+'/images/decoration/clay-plate.png', 'secondary-light')
+    .decoration.right-side
+      .flower
+        +clay-deco(assets+'/images/decoration/clay-flower.png', 'primary-light')
+      .bowl
+        +clay-deco(assets+'/images/decoration/clay-bowl.png', 'secondary-light')
+  else
+    .decoration.left-side
+      .ufo
+        +clay-deco(assets+'/images/decoration/clay-ufo.png', 'triple-main')
+      .bom
+        +clay-deco(assets+'/images/decoration/clay-bom.png', 'double-main')
+    .decoration.right-side
+      .snail
+        +clay-deco(assets+'/images/decoration/clay-snail.png', 'primary-light')
+      .bowl
+        +clay-deco(assets+'/images/decoration/clay-bowl.png', 'accent')
+  .page-wrap
+    .container.inner-wrap.max-lg
+      .auth-frame
+        .row.spacing0
+          .col-lg-6.col-md-5.col-sm-12.hidden-md-down(class="-me-4")
+            .greeting
+              |
+              |
+              if authType === "login"
+                img.img-login(src=assets+'/images/inner/abstract.png', alt='decoration')/
+              else
+                img.img-register(src=assets+'/images/inner/fog.png', alt='decoration')/
+              |
+              |
+              .inner
+                .fog#style_gr
+                  .triple-main
+                  .primary-light
+                  .double-main
+                  .triple-light
+              |
+              |
+              i.mdi.arrow-icon.mdi-arrow-right
+              |
+              |
+              .text
+                h4.use-text-title2 #{title}
+                h6.use-text-subtitle2 #{subtitle}
+          .col-lg-6.col-md-7.col-sm-12
+            .form-wrap
+              block auth_content

@@ -1,0 +1,144 @@
+include ./portfolios-data.pug
+include ../title/title.pug
+include ../cards/media/playlist-card.pug
+
+#avatar-portfolios
+  .root.portfolios
+    .container
+      +title-main($t.avatar.gallery_title, "center")
+      .tab
+        .row.spacing2.justify-content-center
+          .col-lg-9.col-sm-12
+            .d-flex.justify-content-center
+              ul.tabs.tabs-basic.primary
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect.active(href='#tab-1') Trending
+                  |
+                  |
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect(href='#tab-2') Top
+                  |
+                  |
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect(href='#tab-3') Collectible
+                  |
+                  |
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect(href='#tab-4') Art
+                  |
+                  |
+                li.tab
+                  |
+                  |
+                  a.tab-label.waves-effect(href='#tab-5') Animation
+                  |
+                  |
+        .tab-content
+          #tab-1.tab-item.active
+            .row.justify-content-center.spacing4-sm-down
+              each item, index in trendingData
+                .col-sm-6.py-2
+                  .wow.fadeInUpShort(data-wow-delay=0.5 + 0.1 * index + 's' data-wow-duration="0.5s" data-wow-offset="-500")
+                    +playlist-card(
+                      item.img,
+                      item.avatar,
+                      item.logo,
+                      item.title,
+                      item.name,
+                      item.desc,
+                      item.count,
+                      item.items,
+                      item.color,
+                      item.verifiedUser,
+                      item.verifiedItem,
+                      item.withDeco,
+                      item.href
+                    )
+          #tab-2.tab-item
+            .row.justify-content-center.spacing4-sm-down
+              each item, index in topData
+                .col-sm-6.py-2
+                  .wow.fadeInUpShort(data-wow-delay=0.5 + 0.1 * index + 's' data-wow-duration="0.5s" data-wow-offset="-500")
+                    +playlist-card(
+                      item.img,
+                      item.avatar,
+                      item.logo,
+                      item.title,
+                      item.name,
+                      item.desc,
+                      item.count,
+                      item.items,
+                      item.color,
+                      item.verifiedUser,
+                      item.verifiedItem,
+                      item.withDeco,
+                      item.href
+                    )
+          #tab-3.tab-item
+            .row.justify-content-center.spacing4-sm-down
+              each item, index in collectibleData
+                .col-sm-6.py-2
+                  .wow.fadeInUpShort(data-wow-delay=0.5 + 0.1 * index + 's' data-wow-duration="0.5s" data-wow-offset="-500")
+                    +playlist-card(
+                      item.img,
+                      item.avatar,
+                      item.logo,
+                      item.title,
+                      item.name,
+                      item.desc,
+                      item.count,
+                      item.items,
+                      item.color,
+                      item.verifiedUser,
+                      item.verifiedItem,
+                      item.withDeco,
+                      item.href
+                    )
+          #tab-4.tab-item
+            .row.justify-content-center.spacing4-sm-down
+              each item, index in artData
+                .col-sm-6.py-2
+                  .wow.fadeInUpShort(data-wow-delay=0.5 + 0.1 * index + 's' data-wow-duration="0.5s" data-wow-offset="-500")
+                    +playlist-card(
+                      item.img,
+                      item.avatar,
+                      item.logo,
+                      item.title,
+                      item.name,
+                      item.desc,
+                      item.count,
+                      item.items,
+                      item.color,
+                      item.verifiedUser,
+                      item.verifiedItem,
+                      item.withDeco,
+                      item.href
+                    )
+          #tab-5.tab-item
+            .row.justify-content-center.spacing4-sm-down
+              each item, index in animationData
+                .col-sm-6.py-2
+                  .wow.fadeInUpShort(data-wow-delay=0.5 + 0.1 * index + 's' data-wow-duration="0.5s" data-wow-offset="-500")
+                    +playlist-card(
+                      item.img,
+                      item.avatar,
+                      item.logo,
+                      item.title,
+                      item.name,
+                      item.desc,
+                      item.count,
+                      item.items,
+                      item.color,
+                      item.verifiedUser,
+                      item.verifiedItem,
+                      item.withDeco,
+                      item.href
+                    )

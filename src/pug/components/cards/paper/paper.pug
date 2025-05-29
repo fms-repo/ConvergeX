@@ -1,0 +1,19 @@
+mixin paper(title, icon, subtitle='', color=null, noMargin=false, overflowX=false)
+  .card.paper(class=color)
+    header
+      .icon.icon-title(class=!color || color === 'transparent' && 'gradient-icon')
+        |
+        |
+        i(class=icon)
+        |
+        |
+      .text
+        |
+        |
+        span.title-paper #{title}
+        |
+        |
+        if subtitle !== ''
+          p.use-text-paragraph #{subtitle}
+    .content-paper(class=[{ transparent: color === 'transparent' }, { 'overflow-x': overflowX }])
+      block

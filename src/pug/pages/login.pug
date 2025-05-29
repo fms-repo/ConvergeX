@@ -1,0 +1,30 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Login"
+  - var pageName = "login"
+  - var headerHome = false
+  - var basicMenuText = $t.register
+  - var basicMenuLink = link.register
+  - var menuLanding = "ai"
+
+block content
+  div#login-page
+    .main-wrap
+      include ../components/header/basic.pug
+      |
+      |
+      |
+      // ##### FORM #####
+      .container-front
+        include ../components/forms/login.pug
+      // ##### END FORM #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

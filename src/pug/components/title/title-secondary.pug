@@ -1,0 +1,3 @@
+mixin title-secondary(text, align='left', color='primary', strictAlign=false)
+  .title-secondary(class=align + '-title' + ' ' + color + (!strictAlign ? ' center-mobile' : ''))
+    h4 #{text}

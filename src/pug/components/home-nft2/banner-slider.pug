@@ -1,0 +1,102 @@
+include ../cards/products/nft-card
+
+-
+  var nftList = [
+    {
+      img: imgAPI.photosL[46],
+      avatar: imgAPI.logos[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[8],
+      avatar: imgAPI.logos[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[7],
+      avatar: imgAPI.logos[2],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[50],
+      avatar: imgAPI.avatar[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[27],
+      avatar: imgAPI.avatar[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[26],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    }
+  ]
+
+#nft2-banner-slider
+  .banner-wrap
+    .inner
+      .container
+        .row.spacing6--lg-up
+          .col-md-6.col-sm-12
+            .text
+              h4.use-mq--title
+                | #{$t.nft2.banner_title} 
+                span.text-uppercase.use-theme--grd-text
+                  | #{$t.nft2.banner_highlight}
+              h5.use-mq--subtitle #{$t.nft2.banner_desc}
+              .btn-area
+                a.btn.waves-effect.btn-large.button.primary(href=link.register)
+                  | #{$t.btn_get}
+                |
+                |
+                a.btn.btn-outlined.waves-effect.btn-large.button.secondary(href=link.product)
+                  | #{$t.nft2.header_explore}
+                |
+                |
+          .col-md-6.col-sm-12.px-0
+            .art-wrap
+              .art-scene
+                .fade-slider.show-md-up
+                  |
+                  |
+                  span.deco-line
+                  |
+                  |
+                  .carousel
+                    #fade-slider.slick-carousel.single-slider
+                      each item, index in nftList
+                        div
+                          .card-main
+                            +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified)
+                .roll-slider
+                  .carousel
+                    #roll-slider.slick-carousel.multi-slider
+                      each item, index in nftList.sort(() => Math.random() - 0.5)
+                        .card-secondary
+                          +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified)

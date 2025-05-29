@@ -1,0 +1,101 @@
+include ../../title/title.pug
+include ../../cards/info/icon-card.pug
+include ./range-progress.pug
+
+-
+  const items = [
+    {
+      icon: 'mdi-pencil-box-multiple-outline',
+      text: 'Source Code',
+    },
+    {
+      icon: 'mdi-animation-outline',
+      text: 'Technical Consulting',
+    },
+    {
+      icon: 'mdi-file-document-outline',
+      text: 'Documentation',
+    },
+    {
+      icon: 'mdi-hand-extended-outline',
+      text: '6 Month Support',
+    },
+    {
+      icon: 'mdi-bullseye-arrow',
+      text: 'Marketing',
+    },
+  ];
+
+.service-style
+  .container.fixed-width--lg-up
+    .row.justify-content-center.spacing2.mb-5(class="sm:mb-15")
+      .col-md-5.col-sm-6
+        +title-main($t.service_get)
+        p.use-text-subtitle2.text-center(class="sm:!text-start")
+          | #{$t.service_alacarte_desc}
+      .col-md-6.col-sm-6
+        .row.spacing2.justify-center(class="sm:!justify-start")
+          each item, index in items
+            .col-md-4.col-sm-6.col-6
+              .wow.fadeIn(data-wow-offset='100', data-wow-delay=(0.5 + index * 0.1)+'s', data-wow-duration='0.5s')
+                +icon-card(item.icon, item.text)
+    #progress.zero.row.justify-content-center.spacing2.spacing6-md-up
+      .col-md-5.col-sm-12.text-center.mb-5(class="lg:!text-start")
+        +title-main($t.service_estimation)
+        p.use-text-subtitle2
+          | #{$t.service_related_desc2}
+        p.use-text-subtitle2
+          | #{$t.service_related_desc}
+      .col-md-6.col-sm-8(class="sm:px-8")
+        p.use-text-subtitle.text-capitalize.text-center(class="lg:!text-start")
+          | #{$t.service_timeline}
+        .wow.fadeIn.mt-5(data-wow-delay='0.5s' , data-wow-duration='0.5s')
+          .progress-bar
+            .progress
+              .determinate.progress-bg.progress-linear(style='width: 25%')
+            .text
+              p Meeting
+              .text-end
+                h3 1
+                  span day
+                | 10 business days/sprint
+          .progress-bar
+            .progress
+              .determinate.progress-bg.progress-linear(style='width: 80%')
+            .text
+              p Development
+              .text-end
+                h3  9
+                  span days
+                | 10 business days/sprint
+          .progress-bar
+            .progress
+              .determinate.progress-bg.progress-linear(style='width: 50%')
+            .text
+              p Changes/Fixing
+              .text-end
+                h3  5
+                  span days
+                | 10 business days/sprint
+        p.use-text-subtitle.text-capitalize.text-center(class="lg:!text-start")
+          | #{$t.service_budget}
+        .wow.fadeIn(data-wow-delay='0.4s', data-wow-duration='0.3s')
+          .pt-5
+            .progress-bar
+              .progress
+                +range-progress(250, 900, 1000, '$')
+              .text.use-text-medium
+                p Per sprint
+                p $1K
+            .progress-bar
+              .progress
+                +range-progress(10, 75, 100, '$')
+              .text.use-text-medium
+                p Hourly
+                p $100
+            .progress-bar.last
+              .progress
+                +range-progress(100, 800, 1000, '$')
+              .text.use-text-medium
+                p Per Feature
+                p $1K

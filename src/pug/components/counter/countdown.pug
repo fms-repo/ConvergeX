@@ -1,0 +1,14 @@
+mixin countdown(info=null, miliseconds, mini=false)
+  .counter-countdown
+    .inner
+      .countdown
+        if info
+          | #{info}
+        .time(class=mini ? 'mini' : '')
+          p
+            |
+            |
+            span.d-flex(data-countdown=miliseconds)
+            |
+            |
+            

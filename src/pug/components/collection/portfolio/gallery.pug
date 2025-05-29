@@ -1,0 +1,87 @@
+include ./gallery-data.pug
+include ../../cards/media/playlist-card.pug
+include ../../cards/media/photo-card.pug
+include ../../cards/post/post-card.pug
+include ../../cards/post/news-card.pug
+
+#portfolio-gallery
+  .container
+    .root
+      .mt-5
+        #filter_about_gallery.filter
+          |
+          |
+          button.btn.waves-effect.selected(data-filter="all") All
+          |
+          |
+          button.btn.waves-effect(data-filter="post") Post
+          |
+          |
+          button.btn.waves-effect(data-filter="media") Media
+          |
+          |
+          button.btn.waves-effect(data-filter="collection") Collection
+          |
+          |
+          button.btn.waves-effect(data-filter="blog") Blog
+          |
+          |
+          button.btn.waves-effect(data-filter="designs") Designs
+          |
+          |
+          button.btn.waves-effect(data-filter="art") Art
+          |
+          |
+      .mt-5
+        .row.spacing4.spacing2-md-down
+          #image_about_gallery
+            .row
+              each item, index in combinedData
+                .col-lg-4.col-sm-6.item.loaded.pb-4(data-category=item.type)
+                  if item.type === 'collection'
+                    .collection-card
+                      +playlist-card(
+                        null,
+                        null,
+                        null,
+                        item.title,
+                        null,
+                        item.desc,
+                        item.count,
+                        item.items,
+                        'primary',
+                        false,
+                        false,
+                        false,
+                        item.href,
+                        true,
+                        item.bgColor
+                      )
+                  else if item.type === 'media'
+                    .photo-card
+                      +photo-card(
+                        item.img,
+                        item.title,
+                        item.link,
+                        'medium'
+                      )
+                  else if item.type === 'post'
+                    .post-card
+                      +post-card(
+                        item.img,
+                        item.title,
+                        item.text,
+                        link.portfolioDetail,
+                        'Facebook'
+                      )
+                  else
+                    .news-card
+                      +news-card(
+                        item.desc,
+                        item.title,
+                        'portrait',
+                        'over',
+                        item.img,
+                        item.href
+                      )
+                

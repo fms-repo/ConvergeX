@@ -1,0 +1,43 @@
+#cv-contact {
+  .form-box {
+    padding: spacing(3, 2, 0);
+    overflow: visible;
+    border-radius: 40px;
+    @include use-theme(background, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
+    backdrop-filter: saturate(180%) blur(20px);
+    @include breakpoints-up(sm) {
+      padding: $spacing7
+    }
+  }
+
+  .title-form {
+    @include text-align(left);
+    background: none;
+    span {
+      display: block;
+      color: $palette-primary-main
+    }
+    @include breakpoints-down(lg) {
+      margin-bottom: $spacing2;
+    }
+  }
+  .input {
+    width: 100%;
+    margin-bottom: $spacing5;
+    @include breakpoints-down(sm) {
+      margin-bottom: $spacing3
+    }
+  }
+
+  .form {
+    @include text-align(left);
+    position: relative;
+  }
+  .btn-area {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoints-up(sm) {
+      margin: spacing(5, 0, 0)
+    }
+  }
+}

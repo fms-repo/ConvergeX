@@ -1,0 +1,24 @@
+#avatar-statistic {
+  .counter-bg {
+    position: relative;
+    z-index: 1;
+    border-radius: $rounded-big;
+    @include breakpoints-up(md) {
+      padding: spacing(5, 3, 3);
+      background: rgba(var(--v-theme-primarydark), 0.5);
+      color: $palette-common-white;
+      backdrop-filter: saturate(180%) blur(10px);
+      width: 960px;
+    }
+    @include breakpoints-down(md) {
+      > div {
+        margin-top: $spacing10 * -1;
+      }
+    }
+    .counter-item {
+      @include breakpoints-down(sm) {
+        margin-bottom: $spacing10;
+      }
+    }
+  }
+}

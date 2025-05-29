@@ -1,0 +1,27 @@
+mixin group-card(title, desc, color="primary", itemColor="white", darken=false, type="compact", align="left", img=null, href="#", items)
+  .card.group-card(class=[color, img && "with-img"])
+    |
+    |
+    a.waves-effect(href=href) &nbsp;
+    |
+    |
+    .content(class=type)
+      .text
+        h3 #{title}
+        p #{desc}
+      if img
+        |
+        |
+        img(class='align-'+align src=img alt='illustration')/
+        |
+        |
+      .group(class='align-'+align)
+        .items(class=[items.length > 4 && 'medium', items.length < 3 && 'full-width'])
+          each item in items
+            .item(class=darken && 'darken')
+              |
+              |
+              i.mdi(class=item.icon + ' ' + 'use-text-'+itemColor)
+              |
+              |
+              | #{item.name}

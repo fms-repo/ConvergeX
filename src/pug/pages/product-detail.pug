@@ -1,0 +1,51 @@
+extends ../layouts/app.pug
+
+block variables
+  - 
+    var pageTitle = " Product Detail"
+    var pageName = "product detail"
+    var headerHome = false
+    var menuLanding = "ai"
+    var footerBg = true
+    var prefix = "ai_landing"
+
+block content
+  #detail-product-page
+    .main-wrap
+      |
+      |
+      |
+      include ../components/header/main.pug
+      include ../components/artworks/blur-gradient.pug
+      |
+      |
+      |
+      .container-front.container-wrap
+        .inner-page
+          .container
+            // ##### DETAIL #####
+            include ../components/collection/product/detail.pug
+            // ##### END DETAIL #####
+            |
+            |
+            |
+            div
+              // ##### DESCRIPTION #####
+              include ../components/collection/product/description.pug
+              // ##### END DESCRIPTION #####
+        |
+        |
+        |
+        // ##### RELATED ITEMS #####
+        div
+          include ../components/collection/product/related-items.pug
+        // ##### END RELATED #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco-general
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

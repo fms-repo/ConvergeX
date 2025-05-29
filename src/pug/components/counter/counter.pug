@@ -1,0 +1,45 @@
+mixin counter(textFirst, textMiddle, textLast, mini=false, dark=false)
+  #counter-default
+    .counter-wrap(class=dark ? 'dark' : '')
+      .container(class=mini ? 'max-sm fixed-width' : 'max-md')
+        .row.justify-content-center.align-items-center.counter-inner(class=mini ? 'spacing3 mini' : 'spacing6')
+          .col-sm-4
+            .counter-item
+              .text.secondary
+                h3
+                  | #{textFirst.prefix}
+                  span.numscroller(
+                    data-min="0"
+                    data-max=textFirst.count
+                    data-delay="5"
+                    data-increment="5"
+                  )
+                  | #{textFirst.suffix}
+                h6.use-text-subtitle #{textFirst.title}
+          .col-sm-4
+            .counter-item
+              .text.primary
+                h3
+                  | #{textMiddle.prefix}
+                  span.numscroller(
+                    data-min="0"
+                    data-max=textMiddle.count
+                    data-delay="5"
+                    data-increment="5"
+                  )
+                  | #{textMiddle.suffix}
+                h6.use-text-subtitle #{textMiddle.title}
+          .col-sm-4
+            .counter-item
+              .text.secondary
+                h3
+                  | #{textLast.prefix}
+                  span.numscroller(
+                    data-min="0"
+                    data-max=textLast.count
+                    data-delay="5"
+                    data-increment="5"
+                  )
+                  | #{textLast.suffix}
+                h6.use-text-subtitle #{textLast.title}
+        

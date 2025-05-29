@@ -1,0 +1,41 @@
+#avatar-portfolios {
+  .tab-content {
+    position: relative;
+    @include breakpoints-up(md) {
+      padding: spacing(4, 4, 0)
+    }
+    section {
+      position: relative;
+      div {
+        overflow: visible
+      }
+    }
+  }
+
+  .tab-label {
+    font-size: 18px;
+    font-weight: $font-medium;
+    letter-spacing: 0;
+    padding: spacing(0, 3);
+    @include breakpoints-up(md) {
+      padding: spacing(0, 5);
+    }
+    @include breakpoints-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  .btn {
+    height: 48px;
+  }
+
+  .img-logo {
+    padding: $spacing2;
+    @include breakpoints-up(lg) {
+      padding: spacing(2, 8)
+    }
+    img {
+      width: 100%
+    }
+  }
+}

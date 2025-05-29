@@ -1,0 +1,77 @@
+extends auth-frame.pug
+
+block variables
+  - var title = $t.register_title
+  - var subtitle = $t.register_subtitle
+  - var authType = 'register'
+
+block auth_content
+  div.form-style
+    .head
+      h3.use-text-title2
+        | #{$t.register}
+      a.btn.btn-small.button-link(href=link.login)
+        i.mdi.mdi-arrow-right
+        | #{$t.register_already}
+    include ./social-auth
+    .separator
+      p #{$t.register_or}
+    form#register_form
+      .row.spacing3.mb-0
+        .col-sm-12
+          .input-field.dark
+            |
+            |
+            input.validate#name(type="text" name="name" required)/
+            |
+            |
+            label(for='name') #{$t.register_name}
+            |
+            |
+        .col-sm-12
+          .input-field.dark
+            |
+            |
+            input.validate#email(type="email" name="email" required)/
+            |
+            |
+            label(for='email') #{$t.register_email}
+            |
+            |
+        .col-md-6.col-sm-12
+          .input-field.dark(class="lg:me-1")
+            |
+            |
+            input.validate#password(type="password" name="password" required)/
+            |
+            |
+            label(for='password') #{$t.register_password}
+            |
+            |
+        .col-md-6.col-sm-12
+          .input-field.dark(class="lg:ms-1")
+            |
+            |
+            input.validate#confirm(type="password" name="confirm" data-validation="confirmation" data-validation-confirm="password" required)/
+            |
+            |
+            label(for='confirm') #{$t.register_confirm}
+            |
+            |
+      .btn-area
+        .form-helper.me-1
+          .form-control-label
+            |
+            |
+            label
+              input.filled-in.secondary(type='checkbox' required)/
+              span #{$t.form_terms} 
+                a.link(href='#') #{$t.form_privacy}
+            |
+            |
+        |
+        |
+        .mt-2
+          button.btn.primary.btn-large.waves-effect(type="submit") #{$t.continue}
+        |
+        |

@@ -1,0 +1,96 @@
+include ../title/parallax-title.pug
+include ../title/title-secondary.pug
+include ../artworks/mobile-app.pug
+include ../artworks/sharing.pug
+include ../artworks/video-banner.pug
+
+#wallet-feature
+  .root
+    .parallax-wrap
+      include ./parallax/parallax-ball.pug
+    .container.fixed-width-lg-up
+      +parallax-title($t.wallet.feature_bgtitle, $t.wallet.feature_title, 'triple-custom')
+      p.text-center.use-text-subtitle2.mb-5 
+        | #{$t.wallet.feature_desc}
+      div
+        .item
+          .row.align-items-center
+            .col-md-6.col-sm-12.order-lg-5(class="md:px-8")
+              .desc
+                +title-secondary($t.wallet.feature_title1, 'left', 'secondary')
+                h6.use-text-subtitle2.text-center(class="lg:!text-start")
+                  | #{$t.wallet.feature_desc1}
+                h6.use-text-subtitle2.text-center(class="lg:!text-start")
+                  | #{$t.wallet.feature_desc2}
+                |
+                |
+                a.btn.btn-outlined.secondary.waves-effect(href="#")
+                  | #{$t.btn_detail}
+                |
+                |
+            .col-md-6.col-sm-12.order-lg-0
+              .wow.fadeInRightShort(
+                data-wow-duration="0.5s"
+                data-wow-offset="400"
+              )
+                .illustration.start
+                  .mobile-art
+                    +mobile-app(
+                      imgAPI.apps[14],
+                      imgAPI.apps[8],
+                      imgAPI.apps[10],
+                      imgAPI.apps[9]
+                    )
+        .item
+          .row.align-items-center
+            .col-md-6.col-sm-12(class="md:pe-8")
+              .desc.text-center(class="lg:!text-end")
+                +title-secondary($t.wallet.feature_title2, 'right', 'primary')
+                h6.use-text-subtitle2.text-center(class="lg:!text-end")
+                  | #{$t.wallet.feature_desc2}
+                h6.use-text-subtitle2.text-center(class="lg:!text-end")
+                  | #{$t.wallet.feature_desc1}
+                |
+                |
+                a.btn.btn-outlined.primary.waves-effect(href="#")
+                  | #{$t.btn_detail}
+                |
+                |
+            .col-md-6.col-sm-12
+              .wow.fadeInLeftShort(
+                data-wow-duration="0.5s"
+                data-wow-delay="0.5s"
+                data-wow-offset="200"
+              )
+                .illustration
+                  .share-art
+                    +share-art(
+                      imgAPI.avatar[12],
+                      imgAPI.avatar[11],
+                      imgAPI.avatar[20],
+                      imgAPI.avatar[21]
+                    )
+        .item.last
+          .container.max-md
+            .row.align-items-center
+              .col-md-12.col-sm-12
+                .desc.px-md-4
+                  +title-secondary($t.wallet.feature_title3, 'center', 'secondary')
+                  h6.use-text-subtitle2.text-center
+                    | #{$t.wallet.feature_desc3}
+              .col-md-12.col-sm-12(class="sm:px-8")
+                .wow.fadeInUpShort(
+                  data-wow-duration="0.5s"
+                  data-wow-delay="0.5s"
+                  data-wow-offset="400"
+                )
+                  .illustration
+                    +video-banner(
+                      imgAPI.photosL[48],
+                      imgAPI.apps[4],
+                      imgAPI.apps[5],
+                      imgAPI.apps[7],
+                      imgAPI.apps[6],
+                      'MgnXhbuxVF0'
+                    )
+    .parallax-logo

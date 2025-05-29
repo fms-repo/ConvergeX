@@ -1,0 +1,80 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Homepage Avatar"
+  - var pageName = "homepage"
+  - var headerHome = true
+  - var menuLanding = "avatar"
+  - var prefix = "avatar"
+
+block content
+  div#home
+    .main-wrap.has-fixed-scroll
+      include ../components/home-avatar/header.pug
+      |
+      |
+      |
+      main.container-wrap.scroll-nav-content.container-front
+        // ##### BANNER NAV #####
+        section#home
+          include ../components/home-avatar/banner-nav.pug
+          include ../components/home-avatar/profile.pug
+        // ##### END BANNER NAV #####
+        |
+        |
+        |
+        // ##### ABOUT #####
+        section#about.space-top
+          include ../components/home-avatar/about.pug
+        // ##### END ABOUT #####
+        |
+        |
+        |
+        // ##### STATISTICS #####
+        section#stats
+          include ../components/home-avatar/statistics/statistics.pug
+        // ##### END STATISTICS #####
+        |
+        |
+        |
+        // ##### PORTFOLIOS #####
+        section#portfolios
+          include ../components/home-avatar/portfolios.pug
+        // ##### END PORTFOLIOS #####
+        |
+        |
+        |
+        // ##### TESTIMONIAL #####
+        section#testimonial
+          include ../components/home-avatar/testimonial.pug
+        // ##### END TESTIMONIAL #####
+        |
+        |
+        |
+        // ##### BLOG #####
+        section#blog.space-top--md-up.space-top-short--sm-down
+          include ../components/home-avatar/blog.pug
+        // ##### END BLOG #####
+        |
+        |
+        |
+        // ##### FOOTER CONTACT #####
+        section#contact.space-top-short
+          include ../components/home-avatar/footer.pug
+        // ##### END FOOTER CONTACT #####
+        |
+        |
+        |
+      // ##### NOTIFICATIONS #####
+      .hidden-md-down
+        include ../components/notifications.pug
+      // ##### END NOTIFICATIONS #####
+      |
+      |
+      |
+      // ##### CORNER #####
+      .hidden-md-down
+        include ../components/corner.pug
+      // ##### END CORNER #####
+      |
+      |

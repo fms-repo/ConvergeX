@@ -1,0 +1,3 @@
+mixin title-main(text, align="left", dark=false, strictAlign=false)
+  .title-main(class=align + '-title' + (dark ? ' dark' : '') + (!strictAlign ? ' center-mobile' : ''))
+    h3 #{text}

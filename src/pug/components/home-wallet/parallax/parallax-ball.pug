@@ -1,0 +1,39 @@
+include ../../artworks/clay-deco.pug
+
+.clay-parallax
+  .parallax-wrap
+    .inner-parallax.top
+      div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+        .parallax-figure
+          |
+          |
+          .obj.big
+            +clay-deco(assets+'/images/decoration/clay-ball.png', 'triple-main')
+          |
+          |
+      div(data-enllax-ratio="-0.25" data-enllax-type="foreground")
+        .parallax-figure
+          |
+          |
+          .obj.small
+            +clay-deco(assets+'/images/decoration/clay-ring.png', 'primary-light')
+          |
+          |
+    .inner-parallax.bottom
+      div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+        .parallax-figure
+          |
+          |
+          .obj.big
+            +clay-deco(assets+'/images/decoration/clay-ball.png', 'double-main')
+          |
+          |
+      div(data-enllax-ratio="-0.25" data-enllax-type="foreground")
+        .parallax-figure
+          |
+          |
+          .obj.small
+            +clay-deco(assets+'/images/decoration/clay-plate.png', 'secondary-light')
+          |
+          |
+      

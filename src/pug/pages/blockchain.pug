@@ -1,0 +1,101 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Homepage Blockchain"
+  - var pageName = "homepage"
+  - var headerHome = true
+  - var menuLanding = "blockchain"
+  - var prefix = "blockchain"
+
+block content
+  div#home
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap.scroll-nav-content
+        // ##### BANNER #####
+        section#home
+          include ../components/home-blockchain/banner-slider.pug
+        // ##### END BANNER #####
+        |
+        |
+        |
+        // ##### ABOUT #####
+        section#about.space-top.space-top-short--md-down.space-bottom--md-down
+          include ../components/home-blockchain/about.pug
+        // ##### END ABOUT #####
+        |
+        |
+        |
+        // ##### FEATURE #####
+        section#feature.space-top-short
+          include ../components/home-blockchain/feature.pug
+        // ##### END FEATURE #####
+        |
+        |
+        |
+        // ##### STEP #####
+        section#discover.space-top-short
+          include ../components/home-blockchain/step.pug
+        // ##### END STEP #####
+        |
+        |
+        |
+        // ##### PROJECTS #####
+        section#project.space-top.space-top-short--sm-down
+          include ../components/home-blockchain/projects.pug
+        // ##### END PROJECTS #####
+        |
+        |
+        |
+        // ##### EVENT SLIDER #####
+        section#events.space-top.space-top-short--sm-down
+          include ../components/home-blockchain/event-slider.pug
+        // ##### END EVENT SLIDER #####
+        |
+        |
+        |
+        // ##### EVENT LIST #####
+        section#events.space-top
+          include ../components/home-blockchain/event-list.pug
+        // ##### END EVENT LIST #####
+        |
+        |
+        |
+        // ##### BLOG #####
+        section#blog.space-top-short
+          include ../components/home-blockchain/news-carousel.pug
+        // ##### END BLOG #####
+        |
+        |
+        |
+        // ##### CALL ACTION #####
+        section#blog.space-top.space-bottom
+          include ../components/home-blockchain/call-action.pug
+        // ##### CALL ACTION #####
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/stone.pug
+      +footer-deco
+        include ../components/footer/main.pug
+      // ##### END FOOTER #####
+      |
+      |
+      |
+      // ##### NOTIFICATIONS #####
+      .hidden-md-down
+        include ../components/notifications.pug
+      // ##### END NOTIFICATIONS #####
+      |
+      |
+      |
+      // ##### CORNER #####
+      .hidden-md-down
+        include ../components/corner.pug
+      // ##### END CORNER #####
+      |
+      |

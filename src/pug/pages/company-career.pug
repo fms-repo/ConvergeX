@@ -1,0 +1,78 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Career"
+  - var pageName = "career"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+  - var overlap = true
+  - var btnJoin = false
+
+block content
+  div#about-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/basic-banner.pug
+            +basic-banner(
+              $t.career_bgtitle,
+              $t.career_title,
+              $t.career_subtitle,
+              $t.career_joblist,
+              $t.about_bgtitle,
+              '#joblist',
+              link.about
+            )
+              div
+                include ../components/parallax-3d/planet.pug
+                +parallax3d-planet()
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### STATIC GALLERY #####
+          div
+            include ../components/company/collage/static.pug
+          // ##### END STATIC GALLERY #####
+          |
+          |
+          |
+          // ##### BENEFIT #####
+          section#benefit.space-top
+            include ../components/company/career/benefit.pug
+          // ##### END BENEFIT #####
+          |
+          |
+          |
+          // ##### JOBLIST #####
+          section#joblist.space-top
+            include ../components/company/career/joblist.pug
+          // ##### END JOBLIST #####
+          |
+          |
+          |
+          // ##### NEWS CAROUSEL #####
+          section#news.space-top-short
+            include ../components/company/news-carousel.pug
+          // ##### END NEWS CAROUSEL #####
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

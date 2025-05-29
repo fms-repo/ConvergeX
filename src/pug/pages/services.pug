@@ -1,0 +1,82 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Services"
+  - var pageName = "services"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#services-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/media-banner.pug
+            +media-banner(
+              $t.service_banner_title,
+              imgAPI.inner[2]
+            )
+              div
+                include ../components/parallax-3d/snail.pug
+                +parallax3d-snail()
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### GROUP #####
+          section.space-top-short--sm-down.space-top#group
+            include ../components/collection/services/group.pug
+          // ##### END GROUP #####
+          |
+          |
+          |
+          // ##### SINGLE #####
+          section.space-top--sm-down.space-top--md-up#group
+            include ../components/collection/services/single.pug
+          // ##### END SINGLE #####
+          |
+          |
+          |
+          // ##### COUNTER #####
+          section.space-top-short
+            include ../components/counter/counter-carousel.pug
+            +counter-carousel(
+              $t.service_counter_title,
+              $t.service_counter_desc,
+              imgAPI.photosL[32]
+            )
+          // ##### END COUNTER #####
+          |
+          |
+          |
+          // ##### VALUES #####
+          section#values.space-top-short
+            include ../components/collection/services/value.pug
+          // ##### END VALUES #####
+          |
+          |
+          |
+          // ##### RELATED #####
+          section#related.space-top-short--lg-up.space-top.space-bottom--lg-down
+            include ../components/collection/services/related.pug
+          // ##### END RELATED #####
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

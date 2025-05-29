@@ -1,0 +1,116 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Homepage NFT 2"
+  - var pageName = "homepage"
+  - var headerHome = true
+  - var menuLanding = "nft2"
+  - var prefix = "nft2"
+
+block content
+  div#home
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap.scroll-nav-content
+        // ##### PARALLAX BANNER #####
+        div.show-lg-up
+          include ../components/home-nft2/parallax/parallax-double
+        // ##### END PARALLAX BANNER #####
+        |
+        |
+        |
+        // ##### BANNER #####
+        section#home
+          include ../components/home-nft2/banner-slider.pug
+        // ##### END BANNER #####
+        |
+        |
+        |
+        // ##### NEW RELEASE #####
+        section#new.space-top-short--md-down
+          include ../components/home-nft2/new-release.pug
+        // ##### END NEW RELEASE #####
+        |
+        |
+        |
+        // ##### TRANDING #####
+        section#trending.space-top
+          include ../components/home-nft2/trending.pug
+        // ##### END TRANDING #####
+        |
+        |
+        |
+        // ##### RANK #####
+        section#rank.space-top-short.space-top--lg-down
+          include ../components/home-nft2/table-rank.pug
+        // ##### END RANK #####
+        |
+        |
+        |
+        // ##### EXPLORE #####
+        section#explore.space-top--sm-up
+          include ../components/home-nft2/explore.pug
+        // ##### END EXPLORE #####
+        |
+        |
+        |
+        // ##### COUNTER #####
+        section#counter.space-top-short
+          include ../components/home-nft2/counter.pug
+        // ##### END COUNTER #####
+        |
+        |
+        |
+        // ##### AUCTION #####
+        section#auction.space-top-short
+          include ../components/home-nft2/auction.pug
+        // ##### AUCTION #####
+        |
+        |
+        |
+        // ##### STEP #####
+        section#sell.space-top-short
+          include ../components/home-nft2/step.pug
+        // ##### END STEP #####
+        |
+        |
+        |
+        // ##### STEP #####
+        section#call-action.space-top-short.space-top-short--sm-down
+          include ../components/home-nft2/call-action.pug
+        // ##### END STEP #####
+        |
+        |
+        |
+        // ##### FAQ #####
+        section#call-action.space-top.space-top-short--lg-up
+          include ../components/home-nft2/faq.pug
+        // ##### END FAQ #####
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/fog.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####
+      |
+      |
+      |
+      // ##### NOTIFICATIONS #####
+      .hidden-md-down
+        include ../components/notifications.pug
+      // ##### END NOTIFICATIONS #####
+      |
+      |
+      |
+      // ##### CORNER #####
+      .hidden-md-down
+        include ../components/corner.pug
+      // ##### END CORNER #####
+      |
+      |

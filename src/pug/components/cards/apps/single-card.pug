@@ -1,0 +1,16 @@
+mixin single-card(title, desc, img=null, color='primary', href="#", bordered=false)
+  .single-card.card(class=color)
+    |
+    |
+    a.waves-effect(href=href) &nbsp;
+    |
+    |
+    .content(class=bordered && 'bordered')
+      .text
+        h3 #{title}
+        p #{desc}
+      |
+      |
+      img(src=img alt='illustration')/
+      |
+      |

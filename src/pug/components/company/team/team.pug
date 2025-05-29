@@ -1,0 +1,172 @@
+include ../../title/title.pug
+include ../../cards/profile/profile-deco-card.pug
+
+#about-team
+  .root#bg-scroll
+    .background(class=profileBg)
+      if profileBg === 'images'
+        .scrollactive-nav.scrollnav.scroll-bg
+          ul
+            li.bg-big(style='background-image: url('+imgAPI.photosL[15]+')')
+              a.anchor-link(href='#big') &nbsp;
+            li.bg-medium(style='background-image: url('+imgAPI.photosL[16]+')')
+              a.anchor-link(href='#medium') &nbsp;
+            li.bg-small(style='background-image: url('+imgAPI.photosL[55]+')')
+              a.anchor-link(href='#small') &nbsp;
+        .bg-gradient-scroll
+      else
+        .parallax-wrap
+          .inner-parallax.full
+            .figure
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                |
+                |
+                span.oval.big
+                  span.gradient
+                |
+                |
+            .figure
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .dots
+                  |
+                  |
+                  svg.parallax-vertical.parallax-dot(fill='#cccccc', width='845', height='1099')
+                    use(xlink:href=assets+'/images/decoration/dot-deco.svg#dot')
+                  |
+                  |
+      .container
+        +title-main($t.team_title, 'center')
+        .scroll-nav-content
+          .row#big.section.justify-content-center.spacing6.spacing2-sm-down
+            .col-md-10.col-sm-12
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[26],
+                'big',
+                'John Doe',
+                'Founder & CEO',
+                'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+          .row#medium.section.justify-content-center.spacing6.spacing2-sm-down
+            .col-md-6.col-sm-12(class="xl:px-4")
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[18],
+                'medium',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-6.col-sm-12(class="xl:px-4")
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[24],
+                'medium',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-6.col-sm-12(class="xl:px-4")
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[23],
+                'medium',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-6.col-sm-12(class="xl:px-4")
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[25],
+                'medium',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+          .row#small.section.justify-content-center.spacing6.spacing2-sm-down
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[0],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[10],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[2],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[5],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[7],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[9],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[4],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )
+            .col-md-3.col-sm-4.col-6
+              +profile-deco-card(
+                link.profile,
+                imgAPI.avatar[6],
+                'small',
+                'John Doe',
+                'Founder & CEO',
+                'In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat.',
+                ['facebook', 'linkedin', 'twitter', 'instagram']
+              )

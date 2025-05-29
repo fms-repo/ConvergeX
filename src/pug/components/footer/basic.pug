@@ -1,0 +1,33 @@
+footer.footer-basic
+  .root
+    .container.max-lg
+      nav
+        ul
+          each item in menu[menuLanding]
+            li
+              a(href="#" + item.name) #{$t.ai_landing["header_"+item.name]}
+      .socmed
+        |
+        |
+        a.btn.btn-icon.waves-effect
+            span.ion-logo-facebook.icon
+        |
+        |
+        a.btn.btn-icon.waves-effect
+          span.ion-logo-twitter.icon
+        |
+        |
+        a.btn.btn-icon.waves-effect
+          span.ion-logo-instagram.icon
+        |
+        |
+        a.btn.btn-icon.waves-effect
+          span.ion-logo-linkedin.icon
+        |
+        |
+    .copyright
+      |
+      |
+      p.body-2.text-center
+        | &copy; #{brand.footerText}
+

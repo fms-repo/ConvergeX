@@ -1,0 +1,202 @@
+-
+  var comments = [
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    },
+    {
+      name: 'John Doe',
+      avatar: '/images/avatars/pp_boy4.svg',
+      date: '13 Dec 2021',
+      comment:
+        'Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum.'
+    }
+  ]
+
+include ../../title/title.pug
+include ../../cards/testimonial/quote-card.pug
+
+#portfolio-detail.blog-style
+  .root
+    article.article
+      section.socmed-share
+        .btn-area
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-linkedin.indigo-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-pinterest.red-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-facebook.blue-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-ios-mail
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-md-link
+          |
+          |
+        h6.subtitle
+          | Share
+      .content
+        .d-flex
+          #portfolio_desc.filter.scrollnav
+            |
+            |
+            a.btn.waves-effect.anchor-link.selected(href="#summary") Summary
+            |
+            |
+            a.btn.waves-effect.anchor-link(href="#gallery") Gallery
+            |
+            |
+            a.btn.waves-effect.anchor-link(href="#specs") Specs
+            |
+            |
+          |
+          |
+          a.show-lg-up.btn.btn-large.ms-2.primary-light(href='#')
+            | #{$t.btn_visit}
+          |
+          |
+        #summary
+          h3.use-text-title2 #{$t.login_create}
+          p.my-4
+            | Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+          .my-6
+            h5.mb-1.d-flex.align-center.use-text-subtitle.use-text-primary
+              |
+              |
+              i.mdi.icon.me-1.mdi-fullscreen
+              | #{$t.login_remember}
+            p
+              | Nam suscipit lacus pulvinar elementum condimentum. Cras tristique rhoncus placerat. Sed eros nulla, porta vel porttitor nec, ultrices in ligula. Nam viverra urna in feugiat ultricies.
+          .my-6
+            h5.mb-1.d-flex.align-center.use-text-subtitle.use-text-primary
+              i.mdi.icon.me-1.mdi-pencil-ruler
+              | #{$t.continue}
+            p
+              | Nam suscipit lacus pulvinar elementum condimentum. Cras tristique rhoncus placerat. Sed eros nulla, porta vel porttitor nec, ultrices in ligula. Nam viverra urna in feugiat ultricies.
+          .my-6
+            h5.mb-1.d-flex.align-center.use-text-subtitle.use-text-primary
+              i.mdi.icon.me-1.mdi-code-tags
+              | #{$t.form_send}
+            p
+              | Nam suscipit lacus pulvinar elementum condimentum. Cras tristique rhoncus placerat. Sed eros nulla, porta vel porttitor nec, ultrices in ligula. Nam viverra urna in feugiat ultricies.
+    .content
+      .my-5
+        +quote-card(imgAPI.avatar[36], 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.', 'Jena Doe', 'Client')
+      |
+      |
+      hr.divider-main/
+      |
+      |
+      #gallery
+        include ./mini-gallery.pug
+      |
+      |
+    hr.divider-main/
+    .row#specs.counter.spacing6.spcaing2-sm-down
+      .col-sm-6.col-5.p-3
+        .d-sm-flex.items-end.justify-end
+          h2.use-text-grd-triple-custom
+            span.numscroller(
+              data-min="0"
+              data-max="20"
+              data-delay="5"
+              data-increment="2"
+            )
+          p.use-text-subtitle2.mb-0
+            | Grid
+      .col-sm-6.col-5.p-3
+        .d-sm-flex.items-end
+          h2.use-text-grd-triple-custom
+            span.numscroller(
+              data-min="0"
+              data-max="1.8"
+              data-delay="0.1"
+              data-increment="0.1"
+            )
+          p.use-text-subtitle2.mb-0
+            | x Faster
+      .col-sm-6.col-5.p-3
+        .d-sm-flex.items-end.justify-end
+          h2.use-text-grd-triple-custom
+            span.numscroller(
+              data-min="0"
+              data-max="170"
+              data-delay="5"
+              data-increment="10"
+            )
+          p.use-text-subtitle2.mb-0
+            | Colors
+      .col-sm-6.col-5.p-3
+        .d-sm-flex.items-end
+          h2.use-text-grd-triple-custom
+            span.numscroller(
+              data-min="0"
+              data-max="2.5"
+              data-delay="0.1"
+              data-increment="0.1"
+            )
+          p.use-text-subtitle2.mb-0
+            | x Thinner
+    hr.divider-main/
+    .share-mobile.hidden-sm-up
+      h6.use-text-subtitle.text-center
+        | #{$t.blog_share}
+      .btn-area.bottom
+        .d-flex.justify-center.my-3
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-linkedin.indigo-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-pinterest.red-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-logo-facebook.blue-btn
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-ios-mail
+          |
+          |
+          a.btn.btn-icon.waves-effect(href="#")
+            i.ion-md-link
+          |
+          |
+  section.comment
+    h3.use-text-subtitle2.text-center.mb-5 #{$t.blog_write} (4)
+    include ../../comment/form
+    .collection.border-0
+      include ../../comment/item
+      .comments-style
+        each item, index in comments
+          +item(assets+item.avatar, item.name, item.date, item.comment, index >= comments.length - 1)

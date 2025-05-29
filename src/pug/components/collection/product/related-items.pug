@@ -1,0 +1,86 @@
+include ../../title/title.pug
+include ../../cards/products/nft-card
+
+-
+  var nftList = [
+    {
+      img: imgAPI.photosL[41],
+      avatar: imgAPI.logos[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[23],
+      avatar: imgAPI.logos[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[7],
+      avatar: imgAPI.logos[2],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[42],
+      avatar: imgAPI.avatar[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[9],
+      avatar: imgAPI.avatar[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[3],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[12],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: '#',
+      verified: true,
+    }
+  ];
+.product-style.row.justify-content-center
+  .col-lg-11.col-md-12.col-sm-12
+    .container.pt-5.carousel-header
+      +title-main($t.list_related, 'left', false, true)
+      |
+      |
+      a.btn.view-all.btn-flat.btn-large.waves-effect(href="#")
+        | #{$t.btn_seeall}
+        i.mdi.ms-1.mdi-arrow-right.right
+      |
+      |
+    .container
+    .row.scroll-tablet.spacing2
+      each item in nftList
+        .col-md-3.col-sm-4.col-10
+          .card-related
+            +product-nft-card(item.img, item.avatar, item.name, item.title, item.price, item.href, item.verified)

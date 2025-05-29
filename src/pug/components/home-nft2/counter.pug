@@ -1,0 +1,23 @@
+include ../counter/counter.pug
+
+#nft2-counter
+  .container.root
+    +counter(
+        {
+          title: $t.nft2.counter_users,
+          count: 123,
+          prefix: '+',
+          suffix: 'M'
+        }, {
+          title: $t.nft2.counter_platforms,
+          count: 456,
+          prefix: '+',
+          suffix: 'M'
+        }, {
+          title: $t.nft2.counter_member,
+          count: 789,
+          prefix: '+',
+          suffix: 'K'
+        }
+      )
+  

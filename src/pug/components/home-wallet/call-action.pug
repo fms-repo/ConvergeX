@@ -1,0 +1,28 @@
+include ../branding/logo.pug
+
+#wallet-call-action
+  .container.max-lg.fixed-width-lg-up
+    .wow.fadeInUpShort(data-wow-offset="-100" data-wow-delay="0.5s" data-wow-duration="0.5s")
+      .action
+        .wrap
+          .row
+            .col-sm-4.flex.justify-content-center.show-sm-up
+              .phone
+                div
+                  +logo('portrait')
+            .col-sm-8
+              h4.use-text-title2
+                | #{$t.wallet.cta_title}
+              p.use-text-subtitle2
+                | #{$t.wallet.cta_desc}
+              .btn-area
+                |
+                |
+                a(href="#")
+                  img(src=assets+"/images/wallet/app-store.png" alt="app store")/
+                |
+                |
+                a(href="#")
+                  img(src=assets+"/images/wallet/play-store.png" alt="play store")/
+                |
+                |

@@ -1,0 +1,33 @@
+// #### HEADER ####
+include side-nav/mega-mobile.pug
+header.app-bar.header#header
+  .container
+    .header-content
+      nav.nav-menu
+        |
+        |
+        .logo
+          |
+          |
+          a(href=link.home)
+            include ../branding/logo.pug
+            +logo('landscape')
+          |
+          |
+        .scrollactive-nav.show-lg-up.multi-menu
+          include top-nav/mega-menu
+        include ./top-nav/user-menu
+        |
+        |
+        span.vertical-divider.show-sm-up &nbsp;
+        |
+        |
+        button.btn-icon.waves-effect.sidenav-trigger.hamburger.hamburger--spin.show-lg-down(
+          id="mobile_menu"
+          type="button"
+          data-target="slide_menu"
+        )
+          span.hamburger-box
+            span.bar.hamburger-inner
+      #container_menu
+// #### END HEADER ####

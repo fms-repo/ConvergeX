@@ -1,0 +1,14 @@
+case footerType
+  when 'sitemap'
+    include ./sitemap
+  when 'blog'
+    include ./blog
+  when 'basic'
+    include ./basic
+  default
+    #footer-sitemap.footer-component
+      include ./sitemap
+    #footer-blog.footer-component
+      include ./blog
+    #footer-basic.footer-component
+      include ./basic

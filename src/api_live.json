@@ -1,0 +1,644 @@
+{
+  "brand": {
+    "name": "Awrora",
+    "desc": "Awrora - HTML5 Bootstrap Template",
+    "prefix": "awrora",
+    "footerText": "Awrora Theme 2024",
+    "logoText": "Awrora",
+    "projectName": "Awrora",
+    "profileName": "John Doe",
+    "profileTitle": "NFT Artist",
+    "profileTitle2": "Content Creator",
+    "url": "awrora.indisains.com",
+    "img": "/images/logo-glovora.png",
+    "notifMsg": "Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula"
+  },
+  "link": {
+    "home": "index.html",
+    "about": "company-about.html",
+    "career": "company-career.html",
+    "team": "company-team.html",
+    "profile": "company-profile.html",
+    "blog": "blog.html",
+    "blogGrid": "blog-grid.html",
+    "blogDetail": "blog-detail.html",
+    "login": "login.html",
+    "register": "register.html",
+    "contact": "contact.html",
+    "product": "products.html",
+    "productDetail": "product-detail.html",
+    "services": "services.html",
+    "serviceDetail": "service-detail.html",
+    "portfolio": "portfolio.html",
+    "portfolioDetail": "portfolio-detail.html",
+    "pricing": "pricing.html",
+    "faq": "faq.html",
+    "maintenance": "maintenance.html",
+    "comingSoon": "coming-soon.html",
+    "error": "404.html",
+    "blockchain": "blockchain.html",
+    "wallet": "wallet.html",
+    "fintech": "fintech.html",
+    "avatar": "avatar.html",
+    "cv": "online-cv.html",
+    "nft": "nft.html",
+    "nft2": "nft2.html"
+  },
+  "imgAPI": {
+    "avatar": [
+      "https://randomuser.me/api/portraits/women/0.jpg",
+      "https://randomuser.me/api/portraits/women/8.jpg",
+      "https://randomuser.me/api/portraits/women/17.jpg",
+      "https://randomuser.me/api/portraits/women/90.jpg",
+      "https://randomuser.me/api/portraits/women/44.jpg",
+      "https://randomuser.me/api/portraits/women/18.jpg",
+      "https://randomuser.me/api/portraits/men/75.jpg",
+      "https://randomuser.me/api/portraits/men/4.jpg",
+      "https://randomuser.me/api/portraits/men/40.jpg",
+      "https://randomuser.me/api/portraits/men/83.jpg",
+      "https://randomuser.me/api/portraits/men/3.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613788/bungalion/avatars/anim1_c0axgh.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613790/bungalion/avatars/female1_ge6bwk.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613790/bungalion/avatars/female2_iwrojp.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613790/bungalion/avatars/female3_oi4rhs.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613790/bungalion/avatars/female4_kruipd.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613790/bungalion/avatars/female5_pnr3t9.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/female6_xopiut.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/female7_lrelgs.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/male1_xx1y2v.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/male2_ygccsj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/male3_qfqopy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613792/bungalion/avatars/male4_mbbyug.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613792/bungalion/avatars/male5_g1j5oi.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613792/bungalion/avatars/male6_wqwcnu.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613792/bungalion/avatars/male7_hwe0kq.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613792/bungalion/avatars/male8_iodxvm.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613792/bungalion/avatars/male9_xiw4ce.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613788/bungalion/avatars/anim2_nudwqo.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613788/bungalion/avatars/anim3_fzcrrs.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613788/bungalion/avatars/anim4_sg4nvx.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613789/bungalion/avatars/anim5_rjpjsw.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613789/bungalion/avatars/anim6_edfepo.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613789/bungalion/avatars/anim7_rhxwcj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/male10_gkhudx.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613788/bungalion/avatars/anim5_gmltke.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613791/bungalion/avatars/female8_kysdah.jpg"
+    ],
+    "ui": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l53_ghhq17.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s13_c5gyjw.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l56_wmsrr8.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l57_rpszc4.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l58_bhmfyc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l59_dpppgm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l60_arrczr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l61_qdoqgn.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l62_gasigm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l63_qlvs47.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l64_qcq6cg.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l65_bey9xo.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/about_zzgwwl.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/career_r6lwwb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300863/bungalion/inner/team_iiv5mj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300862/bungalion/inner/profile_mxdl64.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/blog_grid_list_stuwkx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/blog_grid_list_stuwkx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/blog_detail_eg2t7g.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300862/bungalion/inner/login_hv3rmr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/register_dpjro5.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/contact_zobnzx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300863/bungalion/inner/product_mj2ql7.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300862/bungalion/inner/product_detail_j80h5n.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300863/bungalion/inner/services_gl43eb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300863/bungalion/inner/services_detail_ecy4b7.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300862/bungalion/inner/portfolio_jkb411.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300862/bungalion/inner/portfolio_detail_nytw2k.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300862/bungalion/inner/pricing_rjtx0n.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693300861/bungalion/inner/faq_gai03m.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693301480/bungalion/inner/maintenance_fpx07g.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693301480/bungalion/inner/coming_soon_wgyh4q.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693301480/bungalion/inner/error_zxnb0j.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/header_basic_fby9ae.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318412/bungalion/inner/header_gxytti.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/header_mixed_gmdzes.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/header_mega_qa3xeg.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/header_list_rgl7ta.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/header_search_enberd.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/header_hamburger_x7ctlk.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318410/bungalion/inner/footer_basic_falr7n.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/footer_list_zrqlam.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693318411/bungalion/inner/footer_blog_jlprsb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693319599/bungalion/inner/chat_lghtj6.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693319599/bungalion/inner/pagenav_blg8ft.png"
+    ],
+    "inner": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613834/bungalion/inner/robot_v7abmn.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/banner_r6bdwf.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613832/bungalion/inner/banner2_py3gly.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613832/bungalion/inner/illustration_agency_wcmla8.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613832/bungalion/inner/illustration_cloud_hes5kz.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_crypto_ieuxa8.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_education_fjkyag.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_fintech_en004h.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_marketing_hhcsbo.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_medical_hdxrhz.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_saas_psf9lj.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613833/bungalion/inner/illustration_saas2_tddwwx.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613834/bungalion/inner/illustration_social_rixncb.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/art_ball_cyh7po.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/art_blockchain_jjmoir.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/art_flower_uqfzo3.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/art_hills_ui1ow1.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/art_pyramid_mg6i6z.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613831/bungalion/inner/art_wave_uiiheb.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613832/bungalion/inner/banner3_m0zt42.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613832/bungalion/inner/faq_illustration_vh6lfu.png"
+    ],
+    "ai": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/banner_ai_m7ru8l.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/hexa_qbnay8.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612280/bungalion/ai/diamond_a9huzy.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612282/bungalion/ai/egg_ng3ic4.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612282/bungalion/ai/nail_aog1yx.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/gem_le0tlz.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612280/bungalion/ai/bar_hyiha8.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612283/bungalion/ai/pyramid_cb4o7y.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612283/bungalion/ai/shield_mkqdnn.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/fog_r7nvlh.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/duo_hskh2x.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612282/bungalion/ai/ring_pj2s7q.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612282/bungalion/ai/pearl_lsi0jx.png",
+      "",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612282/bungalion/ai/parallax_zqaizh.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/feature1_2x_tjihji.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612281/bungalion/ai/feature2_2x_ztsr7p.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612282/bungalion/ai/feature3_2x_idh2mq.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692612283/bungalion/ai/research_2x_tkqk0c.png"
+    ],
+    "blockchain": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613818/bungalion/blockchain/core_j9ecww.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613815/bungalion/blockchain/hexa_fw629z.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613815/bungalion/blockchain/cube_gvpbxg.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613815/bungalion/blockchain/cube-blur_cdxaz3.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613817/bungalion/blockchain/pyramid_gsclse.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613815/bungalion/blockchain/box_umxxfw.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613817/bungalion/blockchain/round_usafhk.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613816/bungalion/blockchain/orbit_izuhgo.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613817/bungalion/blockchain/tube_kuktty.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613815/bungalion/blockchain/hexa2_bb1okq.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613816/bungalion/blockchain/feature1_2x_tzvnjd.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613816/bungalion/blockchain/feature2_2x_nbrtxw.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613817/bungalion/blockchain/feature3_2x_fa7dfq.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613817/bungalion/blockchain/project_2x_or8rsf.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613816/bungalion/blockchain/parallax_fdchyv.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613815/bungalion/blockchain/action_k0wrvk.png"
+    ],
+    "fintech": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613820/bungalion/fintech/faq_bg_dark_vxturf.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613820/bungalion/fintech/faq_bg_light_eldw6n.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1693578898/bungalion/wallet/app_showcase_mawkbj.png"
+    ],
+    "wallet": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613924/bungalion/wallet/hp_bretic.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613924/bungalion/wallet/dongle_xp0igh.png"
+    ],
+    "nft": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613869/bungalion/nft/cta_wzfvae.png"
+    ],
+    "profile": [
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613905/bungalion/profile/cover_j4jlvh.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613906/bungalion/profile/avatar3d-half_kdukre.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613906/bungalion/profile/avatar3d-full_vi3qrp.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613907/bungalion/profile/avatar-photo-half_vjdq5u.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1694107174/bungalion/profile/avatar-photo-full_yu9ihj.png"
+    ],
+    "photosL": [
+      "",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/l1_dzinag.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l2_cdcwko.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l3_ialvvl.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l4_hzzrmz.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l5_rpiapr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l6_xkdxal.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l7_nmhswy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/l8_hwdlly.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613892/bungalion/photos/l9_wij8v7.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/l10_hayhe2.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/l11_fesaiq.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/l12_qp6os9.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/l13_uljsfh.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/l14_islm3z.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l15_scwgwc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l16_h2gkxu.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l17_wvivnv.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l18_lulc2f.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l19_aturrb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l20_epewv0.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l21_pknwox.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l22_z1thos.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613886/bungalion/photos/l23_khddqy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l24_hszdso.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l25_wsrmkr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l26_javr6u.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l27_ikbara.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l28_iinlgy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613887/bungalion/photos/l29_fasova.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l30_gg0tru.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l31_o1npdb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l32_m87pkx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l33_vp4ncr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l34_gvnjst.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l35_rpkv4y.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l36_ck54bm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613888/bungalion/photos/l37_nqanlh.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l38_s5xg4n.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l39_nm9zyr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l40_dltgmn.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l41_wz2kab.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l42_pngotq.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l43_br4vbp.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l44_ksq3ar.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613889/bungalion/photos/l45_or36wj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l46_ugwgo4.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l47_c1oyqe.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l48_ohfyce.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l49_hidv6j.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613890/bungalion/photos/l50_grohjm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l51_tceslw.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l52_znwocs.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l53_ghhq17.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l54_mjrmel.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613891/bungalion/photos/l55_jlihsk.jpg"
+    ],
+    "photosP": [
+      "",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p1_jpclkr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p2_bcurmw.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p3_xiak2q.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613896/bungalion/photos/p4_jnlwsm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613896/bungalion/photos/p5_kg8zel.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613896/bungalion/photos/p6_xwaka8.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613896/bungalion/photos/p7_tvaefe.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613896/bungalion/photos/p8_nkewuj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/p9_bhbsi7.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p10_praedc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p11_dvsvx8.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p12_k8u9bk.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p13_mlbpor.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p14_czpks5.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p15_guyawy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613893/bungalion/photos/p16_rltlbn.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p17_cwy0yc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p18_r9sktx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p19_xk57fv.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p20_da8sqc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613894/bungalion/photos/p21_gonhpd.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p22_asvh43.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p23_gpei3h.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p24_pmpuwx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p25_bvarrp.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p26_ha7mbj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p27_mxjuwi.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p28_m2ueao.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p29_ffqlsw.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p30_krmymm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613895/bungalion/photos/p31_liriff.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613896/bungalion/photos/p32_kzhjdt.jpg"
+    ],
+    "photosS": [
+      "",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s1_fownqi.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s2_boyaza.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s3_rrjxsw.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s4_kqwjsc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s5_tcvdvy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613898/bungalion/photos/s6_ny9kxz.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613898/bungalion/photos/s7_aqow6v.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613898/bungalion/photos/s8_mm7ntz.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613898/bungalion/photos/s9_ibkih5.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s10_j2j43g.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s11_uqonla.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s12_isbsyr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613897/bungalion/photos/s13_c5gyjw.jpg"
+    ],
+    "apps": [
+      "",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613882/bungalion/photos/app1_wwpcvb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app2_ssklus.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app3_kwmzjc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app4_vwtx1x.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app4_vwtx1x.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app6_r0ed4v.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app7_tj4o6y.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app8_ntyvbh.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613885/bungalion/photos/app9_jbfod4.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613883/bungalion/photos/app10_liocvc.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613883/bungalion/photos/app11_h0zwpq.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613883/bungalion/photos/app12_ipeq8m.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613883/bungalion/photos/app13_boikgy.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613883/bungalion/photos/app14_lfhnsb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613883/bungalion/photos/app15_ezcnwb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613884/bungalion/photos/app16_hmk7os.jpg"
+    ],
+    "logos": [
+      "",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/logo1_vl6kt8.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo2_egga51.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo3_cgnugx.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo4_ipb86a.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo5_xkjt4q.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo6_m77thj.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo7_tqvfzm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo8_cruhas.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo9_fowwc7.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/logo10_qhit4x.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/logo11_my7vh2.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/logo12_enl06k.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo13_jtmxvs.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo14_pq0o23.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo15_ytocqf.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo16_a6yqys.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo17_mqhlr0.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo18_hqtprv.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613853/bungalion/logos/logo19_xcfgmk.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo20_ro7edn.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo21_oeidxv.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo22_lciato.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo23_pje9k9.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo24_tedmem.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo25_xysu2r.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo26_tomgl0.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo27_w3we9h.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613854/bungalion/logos/logo28_ui7sxc.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo29_djepz6.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo30_moudsi.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_ai_hvjipa.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613855/bungalion/logos/logo_blender_n3c14y.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_bocil_li6kxm.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_c4d_cnplqg.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_maya_cy2igo.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_ps_upezb7.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/logo_sketch3d_yngljv.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_game1_rle2nb.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_game2_ok33nr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_game3_qsre5s.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613856/bungalion/logos/logo_game4_vezjib.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_game5_emnyex.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_game6_fvca2v.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_game7_tujl5n.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_game8_ppjtlr.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613857/bungalion/logos/logo_game9_dxakzt.jpg",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/binance_ikgpy9.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/bitcoin_y1hmi6.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/bytecoin_ffamn4.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/cardano_ankqrz.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/decred_c4mpkz.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/ion_gmfn7c.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/iota_bepsjk.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613852/bungalion/logos/litecoin_pyz3pj.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/monero_hcaafj.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/nano_b4l74p.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/nem_gwbin5.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/papulous_nmhm29.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/ripple_mavodi.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/stellar_kaybe2.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/stratis_xgrqgg.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1692613858/bungalion/logos/tron_oyef7r.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1695050282/bungalion/logos/envato-logo_w9ggyz.png",
+      "https://res.cloudinary.com/skyrev/image/upload/v1695050282/bungalion/logos/envato_zm6rab.png"
+    ],
+    "showcase": [
+      "",
+      "https://placehold.co/476x638/2196F3/FFFFFF",
+      "https://placehold.co/476x638/4CAF50/FFFFFF",
+      "https://placehold.co/476x638/FFA000/FFFFFF",
+      "https://placehold.co/476x638/546E7A/FFFFFF",
+      "https://placehold.co/476x638/03A9F4/FFFFFF",
+      "https://placehold.co/476x638/673AB7/FFFFFF",
+      "https://placehold.co/476x638/EC407A/FFFFFF",
+      "https://placehold.co/476x638/9C27B0/FFFFFF",
+      "https://placehold.co/476x638/27b05c/FFFFFF",
+      "https://placehold.co/476x638/f54242/FFFFFF",
+      "https://placehold.co/476x638/30c1e3/FFFFFF",
+      "https://placehold.co/476x638/eae219/FFFFFF",
+      "https://placehold.co/476x638/4426eb/FFFFFF",
+      "https://placehold.co/476x638/fd1818/FFFFFF",
+      "https://placehold.co/476x638/61b027/FFFFFF",
+      "https://placehold.co/476x638/e823f0/FFFFFF",
+      "https://placehold.co/476x638/6a3c06/FFFFFF"
+    ]
+  },
+  "menu": {
+    "ai": [
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "discover",
+        "name": "discover",
+        "offset": 0
+      },
+      {
+        "id": "community",
+        "name": "community",
+        "offset": 0
+      },
+      {
+        "id": "faq",
+        "name": "faq",
+        "offset": 0
+      }
+    ],
+    "blockchain": [
+      {
+        "id": "about",
+        "name": "about",
+        "offset": 0
+      },
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "discover",
+        "name": "discover",
+        "offset": 0
+      },
+      {
+        "id": "events",
+        "name": "events",
+        "offset": 0
+      }
+    ],
+    "profile": [
+      {
+        "id": "about",
+        "name": "about",
+        "offset": 0,
+        "icon": "ion-ios-contact-outline"
+      },
+      {
+        "id": "stats",
+        "name": "stats",
+        "offset": 0,
+        "icon": "ion-ios-analytics-outline"
+      },
+      {
+        "id": "portfolios",
+        "name": "portfolios",
+        "offset": 0,
+        "icon": "ion-ios-keypad-outline"
+      },
+      {
+        "id": "testimonial",
+        "name": "testimonial",
+        "offset": 0,
+        "icon": "ion-ios-chatboxes-outline"
+      },
+      {
+        "id": "pricing",
+        "name": "pricing",
+        "offset": 0,
+        "icon": "ion-ios-list-box-outline"
+      },
+      {
+        "id": "contact",
+        "name": "contact",
+        "offset": 0,
+        "icon": "ion-ios-mail-outline"
+      }
+    ],
+    "avatar": [
+      {
+        "id": "about",
+        "name": "about",
+        "offset": 0,
+        "icon": "ion-ios-contact-outline"
+      },
+      {
+        "id": "stats",
+        "name": "stats",
+        "offset": 0,
+        "icon": "ion-ios-analytics-outline"
+      },
+      {
+        "id": "portfolios",
+        "name": "portfolios",
+        "offset": 0,
+        "icon": "ion-ios-keypad-outline"
+      },
+      {
+        "id": "testimonial",
+        "name": "testimonial",
+        "offset": 0,
+        "icon": "ion-ios-chatboxes-outline"
+      },
+      {
+        "id": "blog",
+        "name": "blog",
+        "offset": 0,
+        "icon": "ion-ios-paper-outline"
+      },
+      {
+        "id": "contact",
+        "name": "contact",
+        "offset": 0,
+        "icon": "ion-ios-mail-outline"
+      }
+    ],
+    "wallet": [
+      {
+        "id": "howto",
+        "name": "howto",
+        "offset": 0
+      },
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "discover",
+        "name": "discover",
+        "offset": 0
+      },
+      {
+        "id": "community",
+        "name": "community",
+        "offset": 0
+      }
+    ],
+    "fintech": [
+      {
+        "id": "howto",
+        "name": "howto",
+        "offset": 0
+      },
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "benefit",
+        "name": "benefit",
+        "offset": 0
+      },
+      {
+        "id": "faq",
+        "name": "faq",
+        "offset": 0
+      }
+    ],
+    "nft": [
+      {
+        "id": "collection",
+        "name": "collection",
+        "offset": 0
+      },
+      {
+        "id": "trending",
+        "name": "trending",
+        "offset": 0
+      },
+      {
+        "id": "explore",
+        "name": "explore",
+        "offset": 0
+      },
+      {
+        "id": "sell",
+        "name": "sell",
+        "offset": 0
+      }
+    ],
+    "nft2": [
+      {
+        "id": "new",
+        "name": "new",
+        "offset": 0
+      },
+      {
+        "id": "trending",
+        "name": "trending",
+        "offset": 0
+      },
+      {
+        "id": "explore",
+        "name": "explore",
+        "offset": 0
+      },
+      {
+        "id": "sell",
+        "name": "sell",
+        "offset": 0
+      }
+    ]
+  },
+  "youtube": {
+    "use": true
+  }
+}

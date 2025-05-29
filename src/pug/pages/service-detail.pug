@@ -1,0 +1,81 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Service Detail"
+  - var pageName = "service_detail"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#services-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/icon-banner.pug
+            +icon-banner(
+              imgAPI.photosL[6],
+              $t.footer_resources_final,
+              $t.contact_subtitle,
+              ['200+ DEVELOPERS', 'FLEXIBLE SCOPE', 'SPRINT BASED', 'FULL TEAM'],
+              ['mdi-shopping', 'mdi-music', 'mdi-folder-multiple-image'],
+              { href: link.contact, text: $t.btn_get },
+              { href: link.faq, text: $t.btn_read_more },
+              { title: 'Project Success', count: 345 },
+              { title: 'Experts', count: 56 }
+            )
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### LOGO GROUP #####
+          section#logo_group.space-top-short
+            include ../components/branding/logo-group.pug
+          // ##### END LOGO GROUP #####
+          |
+          |
+          |
+          // ##### FEATURE #####
+          section#feature.space-top-short
+            include ../components/collection/services/feature.pug
+          // ##### END FEATURE #####
+          |
+          |
+          |
+          // ##### INFOGRAPHIC #####
+          section#infographic.space-top
+            include ../components/collection/services/infographic.pug
+          // ##### END INFOGRAPHIC #####
+          |
+          |
+          |
+          // ##### RELATED #####
+          section#related.space-top-short--lg-up.space-top.space-bottom--lg-down
+            include ../components/collection/services/related.pug
+          // ##### END RELATED #####
+          |
+          |
+          |
+          // ##### CATEGORIES #####
+          section#categories.space-top.space-bottom-short
+            include ../components/collection/services/categories.pug
+          // ##### END CATEGORIES #####
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

@@ -1,0 +1,55 @@
+include ../cards/post/news-card.pug
+include ../title/title.pug
+
+-
+  var newsContent = [
+    {
+      text: 'Sed imperdiet enim ligula.',
+      img: imgAPI.photosL[1],
+      subTitle: 'caption_news',
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel. Duis eget felis bibendum, pretium mi sed, placerat ante.',
+      img: imgAPI.photosL[2],
+      subTitle: 'caption_news',
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel. Duis eget felis bibendum, pretium mi sed, placerat ante.',
+      img: imgAPI.photosL[3],
+      subTitle: 'caption_event',
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel. Duis eget felis bibendum, pretium mi sed, placerat ante.',
+      img: imgAPI.photosL[4],
+      subTitle: 'caption_news',
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel. Duis eget felis bibendum, pretium mi sed, placerat ante.',
+      img: imgAPI.photosL[5],
+      subTitle: 'caption_event',
+    },
+    {
+      text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel. Duis eget felis bibendum, pretium mi sed, placerat ante.',
+      img: imgAPI.photosL[6],
+      subTitle: 'caption_news',
+    }
+  ]
+
+#news-carousel-wrap
+  .root
+    +title-main($t.nft.new_release_title, "center")
+    p.use-text-subtitle2.text-center
+      | #{$t.nft.new_release_desc}
+    .carousel
+      .slick-carousel#news-carousel
+        each item in newsContent
+          .item
+            +news-card(
+              item.text,
+              item.subtitle,
+              "portrait",
+              "over",
+              item.img,
+              link.blogDetail
+            )
+

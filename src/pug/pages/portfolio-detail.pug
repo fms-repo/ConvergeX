@@ -1,0 +1,56 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Portfolio Detail"
+  - var pageName = "portfolio_detail"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#services-page
+    .main-wrap.has-fixed-scroll
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/media-banner.pug
+            +media-banner(
+              'Interdum et Malesuada Fames',
+              imgAPI.photosL[43],
+              imgAPI.photosP[5],
+              null,
+              null,
+              null,
+              ['branding', 'creative']
+            )
+              div
+                include ../components/parallax-3d/basket.pug
+                +parallax3d-basket()
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### CONTENT #####
+          section#content
+            .container(class="sm:px-0")
+              .row.spacing2.justify-content-center
+                .col-lg-7.col-md-8.col-sm-12
+                  include ../components/collection/portfolio/detail.pug
+                .col-lg-5.col-md-4.col-sm-8
+                  include ../components/collection/portfolio/sidebar.pug
+          // ##### END CONTENT #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

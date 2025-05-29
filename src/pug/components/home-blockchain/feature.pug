@@ -1,0 +1,78 @@
+include ../title/parallax-title.pug
+include ../title/title-secondary.pug
+
+#blockchain-feature
+  .root
+    include ./parallax/parallax-right.pug
+    .container.fixed-width-lg-up
+      +parallax-title($t.blockchain.feature_bgtitle, $t.blockchain.feature_title, 'triple-custom')
+      p.text-center.use-text-subtitle2.mb-5 
+        | #{$t.blockchain.feature_desc}
+      div
+        .item
+          .row.align-items-center
+            .col-md-6.col-sm-12.order-lg-5
+              .desc
+                +title-secondary($t.blockchain.feature_title1)
+                h6.use-text-subtitle2.text-center(class="lg:!text-start")
+                  | #{$t.blockchain.feature_desc1}
+            .col-md-6.col-sm-12.order-lg-0
+              .wow.fadeInRightShort(
+                data-wow-duration="0.5s"
+                data-wow-offset="400"
+              )
+                .illustration.start
+                  figure.text-center
+                    |
+                    |
+                    img(
+                      src=imgAPI.blockchain[10]
+                      alt='illustration'
+                    )/
+                    |
+                    |
+        .item
+          .row.align-items-center
+            .col-md-6.py-0.col-sm-12
+              .desc
+                +title-secondary($t.blockchain.feature_title2, 'right', 'secondary')
+                h6.use-text-subtitle2.text-center(class="lg:!text-end")
+                  | #{$t.blockchain.feature_desc2}
+            .col-md-6.col-sm-12
+              .wow.fadeInLeftShort(
+                data-wow-duration="0.5s"
+                data-wow-delay="0.5s"
+                data-wow-offset="200"
+              )
+                .illustration
+                  figure
+                    |
+                    |
+                    img(
+                      src=imgAPI.blockchain[11]
+                      alt='illustration'
+                    )/
+                    |
+                    |
+        .item.last
+          .row.align-items-center
+            .col-md-6.col-sm-12.order-lg-5
+              .desc
+                +title-secondary($t.blockchain.feature_title3)
+                h6.use-text-subtitle2.text-center(class="lg:!text-start")
+                  | #{$t.blockchain.feature_desc3}
+            .col-md-6.col-sm-12.order-lg-0
+              .wow.fadeInRightShort(
+                data-wow-duration="0.5s"
+                data-wow-offset="400"
+              )
+                .illustration.start
+                  figure.text-center
+                    |
+                    |
+                    img(
+                      src=imgAPI.blockchain[12]
+                      alt='illustration'
+                    )/
+                    |
+                    |

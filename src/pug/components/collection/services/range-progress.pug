@@ -1,0 +1,19 @@
+mixin range-progress(from, to, max, prefix, suffix)
+  - var divider = max/100
+  .service-style
+    .range
+      .range-progress(style="left: " + from / divider + "%; width: " + ((to/divider) - (from/divider)) + "%")
+        |
+        |
+        span
+          | #{prefix}
+          | #{from}
+          | #{suffix}
+        |
+        |
+        span
+          | #{prefix}
+          | #{to}
+          | #{suffix}
+        |
+        |

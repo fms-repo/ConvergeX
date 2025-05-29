@@ -1,0 +1,22 @@
+include ../../icons3d.pug
+
+mixin category-icon-card(color='purple', href='#', title, icon)
+  div
+    |
+    |
+    a.category3d-card(draggable="false" class=color+'-bg' href=href)
+      |
+      |
+      span.icons
+        +icons3d(icon, color)
+      |
+      |
+      span.title-card
+        | #{title}
+      |
+      |
+      span.waves-effect &nbsp;
+      |
+      |
+    |
+    |

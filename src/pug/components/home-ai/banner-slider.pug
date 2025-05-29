@@ -1,0 +1,194 @@
+#ai-banner-slider
+  .banner-wrap
+    #banner-slider.carousel-banner
+      #slide1.slide
+        .inner
+          .img.background-banner
+            |
+            |
+            img(
+              src=imgAPI.ai[0]
+              alt='background'
+            )/
+            |
+            |
+          .container
+            .row.align-items-center
+              .col-md-7.col-sm-12.px-0
+                .text
+                  h4.use-mq--title
+                    | #{$t.ai_landing.banner_title}
+                    span.text-uppercase.use-theme--grd-text &nbsp;
+                      | #{$t.ai_landing.banner_highlight}
+                  h5.use-mq--subtitle #{$t.ai_landing.banner_desc}
+                  .btn-area
+                    a.btn.waves-effect.btn-large.button.primary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.btn-outlined.waves-effect.btn-large.button.secondary(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-md-5.col-sm-12
+                .deco-banner.show-md-up
+                  .parallax-scene.right-scene
+                    #scene1
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.hexa
+                          img(src=imgAPI.ai[1] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.4")
+                        |
+                        |
+                        span.diamond
+                          img(src=imgAPI.ai[2] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.egg
+                          img(src=imgAPI.ai[3] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.3")
+                        |
+                        |
+                        span.nail
+                          img(src=imgAPI.ai[4] alt="parallax")/
+                        |
+                        |
+      #slide2.slide
+        .inner
+          .container
+            .row
+              .col-md-7.col-sm-12.order-lg-5
+                .text.px-sm-3
+                  h4.use-mq--title
+                    | #{$t.ai_landing.banner_title}
+                    span.text-uppercase.use-theme--grd-text &nbsp;
+                      | #{$t.ai_landing.banner_highlight}
+                  h5.use-mq--subtitle #{$t.ai_landing.banner_desc}
+                  .btn-area
+                    a.btn.waves-effect.btn-large.button.primary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.btn-outlined.waves-effect.btn-large.button.secondary(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-md-5.col-sm-12.order-lg-0
+                .deco-banner.show-md-up
+                  .parallax-scene.left-scene
+                    #scene2
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.gem
+                          img(src=imgAPI.ai[5] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.4")
+                        |
+                        |
+                        span.bar
+                          img(src=imgAPI.ai[6] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.2")
+                        |
+                        |
+                        span.pyramid
+                          img(src=imgAPI.ai[7] alt="parallax")/
+                        |
+                        |
+                      div(data-depth="0.3")
+                        |
+                        |
+                        span.shield
+                          img(src=imgAPI.ai[8] alt="parallax")/
+                        |
+                        |
+      #slide3.slide.center-content
+        .inner
+          .container
+            .row.justify-content-center
+              .col-xs-12.px-md-12
+                .text.text-center
+                  h4.use-mq--title
+                    | #{$t.ai_landing.banner_title}
+                    span.text-uppercase.use-theme--grd-text &nbsp;
+                      | #{$t.ai_landing.banner_highlight}
+                  h5.use-mq--subtitle #{$t.ai_landing.banner_desc}
+                  .btn-area.justify-content-center
+                    a.btn.waves-effect.btn-large.button.primary(href=link.register)
+                      | #{$t.btn_get}
+                    |
+                    |
+                    a.btn.waves-effect.btn-large.button.black(href="#")
+                      | #{$t.btn_detail}
+                    |
+                    |
+              .col-xs-12
+                .img.h-banner
+                  .deco-banner.show-md-up
+                    .parallax-scene.center-scene
+                      #scene3
+                        div(data-depth="0.2")
+                          |
+                          |
+                          span.duo
+                            img(src=imgAPI.ai[10] alt="parallax")/
+                          |
+                          |
+                        div(data-depth="0.4")
+                          |
+                          |
+                          span.hexa-ring
+                            img(src=imgAPI.ai[11] alt="parallax")/
+                          |
+                          |
+                        div(data-depth="0.2")
+                          |
+                          |
+                          span.pearl
+                            img(src=imgAPI.ai[12] alt="parallax")/
+                          |
+                          |
+                  |
+                  |
+                  img(src=imgAPI.ai[9] alt="background")/
+                  |
+                  |
+    .slide-nav-group
+      .hidden-md-down
+        .container
+          nav.slide-nav#banner_nav
+            |
+            |
+            a.waves-effect.active(data-slide='0')
+              strong First Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |
+            hr.divider
+            |
+            |
+            a.waves-effect(data-slide='1')
+              strong Second Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |
+            hr.divider
+            |
+            |
+            a.waves-effect(data-slide='2')
+              strong Third Slide
+              | Interdum et malesuada fames ac ante
+            |
+            |

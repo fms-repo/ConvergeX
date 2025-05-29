@@ -1,0 +1,32 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Not Found"
+  - var pageName = "error"
+  - var headerHome = false
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  #not-found-page
+    .main-wrap
+      |
+      |
+      include ../components/header/main.pug
+      |
+      |
+      |
+      // ##### ERROR
+      include ../components/error.pug
+      +error("404", $t["404"])
+      // ##### END ERROR
+      |
+      |
+      |
+      // ##### FOOTER
+      div
+        include ../components/footer/main.pug
+      // ##### END FOOTER
+      |
+      |
+      |

@@ -1,0 +1,81 @@
+include ../title/parallax-title.pug
+include ../title/title-secondary.pug
+include ../cards/pricing/pricing-card.pug
+include ../icons3d.pug
+
+#cv-pricing
+  .root
+    +parallax-title($t.profile.pricing_bgtitle, $t.profile.pricing_title, "triple-custom")
+    .container
+      .row.spacing4-sm-up(class="sm:justify-center")
+        .col-md-4.col-sm-6.item(class="xl:px-0")
+          .wow.fadeInUpShort(data-wow-offset="60" data-wow-delay="0.3s" data-wow-duration="0.5s")
+            div
+              +title-secondary($t.profile.pricing_title1, "left", "secondary")
+              p.text-center(class="lg:!text-start md:pe-4")
+                | #{$t.profile.pricing_desc1}
+              +pricing-card(
+                'Fixed Project',
+                'secondary',
+                '50',
+                'Minimum fixed price budget',
+                ['Lorem ipsum dolor', 'Suspendisse sed urna', ' Cras convallis lacus orci', 'Quisque ut metus sit'],
+                $t.profile.banner_contact,
+                link.pricing
+              )
+        .col-md-4.col-sm-6(class="xl:px-0")
+          .wow.fadeInUpShort(data-wow-offset="60" data-wow-delay="0.5s" data-wow-duration="0.5s")
+            .item(class="xl:-ms-6 sm:-mt-5")
+              +pricing-card(
+                'Hourly Project',
+                'primary',
+                '20',
+                'Minimum 8 hours',
+                ['Lorem ipsum dolor', 'Suspendisse sed urna', ' Cras convallis lacus orci', 'Quisque ut metus sit', 'Cras convallis lacus orci', 'Interdum et malesuada'],
+                $t.profile.banner_contact,
+                link.pricing,
+                'hr'
+              )
+        .col-md-4.col-sm-9.pt-10.ps-4(class="xl:!p-0")
+          .wow.fadeInLeftShort(data-wow-offset="60" data-wow-delay="0.7s" data-wow-duration="0.5s")
+            div
+              +title-secondary($t.profile.pricing_title2, "left", "primary")
+              p.text-center(class="lg:!text-start")
+                | #{$t.profile.pricing_desc2}
+              ul.feature-list
+                li
+                  .primary
+                    +icons3d('mdi-check-circle', 'primary')
+                  |
+                  |
+                  strong #{$t.profile.pricing_icon_title1}
+                  |
+                  |
+                  p #{$t.profile.pricing_icon_desc1}
+                li
+                  .secondary
+                    +icons3d('mdi-creation', 'secondary')
+                  |
+                  |
+                  strong #{$t.profile.pricing_icon_title2}
+                  |
+                  |
+                  p #{$t.profile.pricing_icon_desc2}
+                li
+                  .accent
+                    +icons3d('mdi-eye', 'accent')
+                  |
+                  |
+                  strong #{$t.profile.pricing_icon_title3}
+                  |
+                  |
+                  p #{$t.profile.pricing_icon_desc3}
+                li
+                  .primary
+                    +icons3d('mdi-clock-time-eight-outline', 'primary')
+                  |
+                  |
+                  strong #{$t.profile.pricing_icon_title4}
+                  |
+                  |
+                  p #{$t.profile.pricing_icon_desc4}

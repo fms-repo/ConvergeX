@@ -1,0 +1,37 @@
+extends ../layouts/app.pug
+
+block variables
+  -
+    var pageTitle = " Pricing"
+    var pageName = "pricing"
+    var headerHome = false
+    var footerBg = true
+    var menuLanding = "ai"
+    var prefix = "ai_landing"
+
+block content
+  div#pricing-page
+    .main-wrap
+      |
+      |
+      |
+      include ../components/artworks/blur-gradient.pug
+      include ../components/header/main.pug
+      |
+      |
+      |
+      // ##### PRICING #####
+      .container-general.container-front
+        include ../components/cards/pricing/pricing-group-card.pug
+        .space-top-short
+          include ../components/faq/faq.pug
+      // ##### END  PRICING #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco-general
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

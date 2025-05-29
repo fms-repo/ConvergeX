@@ -1,0 +1,75 @@
+.error-style {
+  .error-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include breakpoints-up(md) {
+      min-height: 100vh;
+      padding-top: $spacing10;
+      padding-bottom: $spacing10;
+    }
+    @include breakpoints-down(md) {
+      margin: spacing(10, 0)
+    }
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center
+  }
+
+  .illustration {
+    position: relative;
+    margin: $spacing5;
+    @include breakpoints-up(sm) {
+      margin: spacing(2, 5);
+    }
+    img {
+      position: relative;
+      max-width: 350px;
+      @include breakpoints-up(md) {
+        @include right($spacing10);
+      }
+      @include breakpoints-down(sm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .text {
+    position: relative;
+    @include breakpoints-up(md) {
+      @include padding-left($spacing5);
+    }
+    &:before {
+      @include border-left(2px solid);
+      @include palette-divider;
+      content: "";
+      position: absolute;
+      @include left(-32px);
+      top: calc(50% - 90px);
+      height: 180px;
+    }
+    @include breakpoints-down(md) {
+      text-align: center;
+      padding-top: $spacing10
+    }
+    h3 {
+      font-size: 106px;
+      text-transform: capitalize;
+      font-weight: $font-bold;
+      @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+    }
+    h4 {
+      font-weight: $font-bold;
+      margin-bottom: $spacing3  
+    }
+    p {
+      @include palette-text-secondary
+    }
+  }
+
+  .button {
+    margin-top: $spacing4
+  }
+}

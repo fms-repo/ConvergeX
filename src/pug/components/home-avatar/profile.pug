@@ -1,0 +1,89 @@
+#avatar-profile
+  .root
+    .container.px-0.max-lg.mq-sm-down
+      .row
+        .col-lg-1.pa-0
+        .col-lg-11.pa-0
+          .about
+            .reward
+              .item
+                figure
+                  |
+                  |
+                  img(src=assets+'/images/profile/reward1.svg' alt='badge')/
+                  |
+                  |
+                p.use-text-paragraph Special Mention
+                h5.use-mq--text-subtitle Awards
+              .item
+                figure
+                  |
+                  |
+                  img(src=assets+'/images/profile/reward2.svg' alt='badge')/
+                  |
+                  |
+                p.use-text-paragraph 100k videos
+                h5.use-mq--text-subtitle Subscriber
+              .item
+                figure
+                  |
+                  |
+                  img(src=assets+'/images/profile/reward3.svg' alt='badge')/
+                  |
+                  |
+                p.use-text-paragraph Best Filmography
+                h5.use-mq--text-subtitle Footage
+            .hidden-md-up
+              .container.max-sm.mt-5
+                h6.use-text-subtitle2
+                  | #{$t.avatar.banner_desc}
+                .socmed
+                  |
+                  |
+                  a.btn-icon.margin.waves-effect(href="#")
+                    i.ion-logo-facebook
+                  |
+                  |
+                  a.btn-icon.margin.waves-effect(href="#")
+                    i.ion-logo-twitter
+                  |
+                  |
+                  a.btn-icon.margin.waves-effect(href="#")
+                    i.ion-logo-instagram
+                  |
+                  |
+                  a.btn-icon.margin.waves-effect(href="#")
+                    i.ion-logo-linkedin
+                  |
+                  |
+            .photo
+              figure.avatar
+                |
+                |
+                img(src=imgAPI.profile[1] alt='avatar')/
+                |
+                |
+              .card.live-paper
+                .row.spacing2.align-items-center.mb-2
+                  .col-4.px-0
+                    figure
+                      |
+                      |
+                      img(src=imgAPI.photosL[4] alt="content")/
+                      |
+                      |
+                  .col-8.ps-4
+                    h6.use-text-subtitle2.use-text-medium Lorem ipsum dolor sit amet consectetur
+                    .live
+                      strong
+                        span
+                        | Live
+                      | 450 watching
+                |
+                |
+                a.btn.secondary.full-width
+                  | #{$t.avatar.btn_watch}
+                |
+                |
+
+            

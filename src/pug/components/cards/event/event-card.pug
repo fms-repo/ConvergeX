@@ -1,0 +1,16 @@
+mixin event-card(color, date, location, desc, actionPrimary, actionSecondary)
+  .card.event-card(class=color)
+    h3.date #{date}
+    h5.location #{location}
+    p #{desc}
+    .btn-area
+      |
+      |
+      if actionPrimary
+        a.btn.black.waves-effect(href=actionPrimary.href) #{actionPrimary.text}
+      |
+      |
+      if actionSecondary
+        a.btn.btn-outlined.black.waves-effect(href=actionSecondary.href) #{actionSecondary.text}
+      |
+      |

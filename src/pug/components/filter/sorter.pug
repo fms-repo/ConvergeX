@@ -1,0 +1,57 @@
+// #### SORTER ####
+
+- 
+  var sortList = [
+    {
+      title: 'Title A to Z',
+      value: 'title-asc'
+    },
+    {
+      title: 'Title Z to A',
+      value: 'title-desc'
+    },
+    {
+      title: 'Highest Price',
+      value: 'price-asc'
+    },
+    {
+      title: 'Lowest Price',
+      value: 'price-desc'
+    }
+  ]
+
+mixin sorter()
+  .sorter
+    .d-flex.align-items-center
+      .input-field.btn-select
+        |
+        |
+        select.select#sort_by
+          option(value='', disabled='', selected='') Sort By:
+          each item in sortList
+            option(value=item.value) #{item.title}
+        |
+        |
+      |
+      |
+      a#open_filter.btn-filter.modal-trigger.btn.black.waves-effect.show-md-down(class="sm:me-4" href="#modal_filter")
+        |
+        |
+        i.material-icons.left filter_list
+        | Filter
+        |
+      |
+      |
+      .toggle-btn-group.show-sm-up#switch_view
+        |
+        |
+        button.btn.active(type='button' data-value="grid")
+          i.material-icons grid_on
+        |
+        |
+        button.btn(type='button' data-value="list")
+          i.material-icons view_list
+        |
+        |
+      h6.show-md-down.total-result
+        | Show #{products.length} Result

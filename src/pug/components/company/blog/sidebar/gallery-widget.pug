@@ -1,0 +1,39 @@
+include ../../../cards/paper/paper.pug
+
+-
+  var images = [
+    {
+      src: imgAPI.photosL[3]
+    },
+    {
+      src: imgAPI.photosL[5]
+    },
+    {
+      src: imgAPI.photosL[9]
+    },
+    {
+      src: imgAPI.photosL[10]
+    }
+  ]
+
++paper($t.blog_album, 'ion-ios-images', '', 'transparent')
+  .mt-3
+    .row.ma-0
+      each item in images
+        .col-6.gallery-item
+          .card-image
+            |
+            |
+            img.responsive-image.text-right(src=item.src alt='thumb')/
+            |
+            |
+            a.btn.btn-icon.waves-effect.btn-small
+              i.material-icons.white-text star
+            |
+            |
+  |
+  |
+  a.btn.waves-effect.btn-flat.use-theme--color-custom.block
+    | #{$t.btn_seeall}
+  |
+  |

@@ -1,0 +1,30 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Contact with Map"
+  - var pageName = "contact map"
+  - var headerHome = false
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#contact-page
+    .main-wrap
+      include ../components/artworks/blur-gradient.pug
+      include ../components/header/main.pug
+      |
+      |
+      |
+      // ##### FORM #####
+      include ../components/forms/contact-map.pug
+      +contact-map
+      // ##### END FORM #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

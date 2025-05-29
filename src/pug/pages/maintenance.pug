@@ -1,0 +1,42 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Under Maintenance"
+  - var pageName = "maintenance"
+  - var headerHome = false
+  - var menuLanding = "ai"
+
+block content
+  #maintenace-page
+    .main-wrap
+      |
+      |
+      |
+      // ##### DECORATION #####
+      include ../components/artworks/blur-gradient.pug
+      // ##### END DECORATION #####
+      |
+      |
+      |
+      .container.max-md
+        .full-screen-container
+          .row.align-items-center
+            .col-md-12.text-center
+              |
+              |
+              |
+              // ##### ICONS #####
+              include ../components/icons3d.pug
+              .my-5.d-flex.justify-center
+                .primary-icon.maintenance-icon.show-sm-up
+                  +icons3d('mdi-cog', 'primary-double')
+                div
+                  .secondary-icon.maintenance-icon.show-sm-up
+                    +icons3d('mdi-code-greater-than-or-equal', 'primary')
+                  .accent-icon.maintenance-icon
+                    +icons3d('mdi-wrench', 'accent-double')
+              .text-center.text-white
+                h3.use-text-title.use-theme-grd-triple-auto
+                  | #{$t.util_maintenance}
+                h5.use-text-subtitle2
+                  | #{$t.util_maintenance_dec}

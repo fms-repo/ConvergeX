@@ -1,0 +1,29 @@
+#news-carousel-wrap {
+  .root {
+    position: relative;
+    z-index: 56;
+    & > p {
+      padding: spacing(0, 2)
+    }
+  }
+
+  .carousel {
+    margin: $spacing5 auto 0;
+    .slick-dots {
+      @include pagination-slide;
+      bottom: -20px;
+      @include breakpoints-up(lg) {
+        bottom: 0;
+      }
+    }
+  }
+
+  .item {
+    padding: spacing(5, 1);
+    max-width: 300px;
+    @include breakpoints-down(lg) {
+      padding-bottom: 0
+    }
+  }
+
+}

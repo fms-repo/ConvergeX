@@ -1,0 +1,32 @@
+mixin desktop-app(screen, top, left, right)
+  .desktop-app-artworks
+    .root
+      .desktop
+        .screen
+          |
+          |
+          img(src=screen alt="screen")/
+          |
+          |
+      .desktop.reflect
+        .screen
+          |
+          |
+          img(src=screen alt="screen")/
+          |
+          |
+      .widget
+        |
+        |
+        span.top
+          img(src=top alt="app")
+        |
+        |
+        span.left
+          img(src=left alt="app")
+        |
+        |
+        span.right
+          img(src=right alt="app")
+        |
+        |

@@ -1,0 +1,16 @@
+include ../../../cards/paper/paper.pug
+
++paper($t.blog_subscribe, 'ion-ios-wifi', $t.blog_subscribe_desc, 'gradient')
+  div
+    .form
+      .input-field.light.flex-fill.m-0
+        |
+        |
+        input.input.light#subscribe(type='text')/
+        |
+        |
+        label.text-black(for='subscribe') #{$t.register_email}
+        |
+        |
+      button.btn.black.small.send
+        | #{$t.btn_submit}

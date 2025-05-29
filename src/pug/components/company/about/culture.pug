@@ -1,0 +1,62 @@
+include ../../title/parallax-title.pug
+
+#company-about
+  .container.culture
+    +parallax-title($t.culture_bgtitle, $t.culture_title, 'triple-custom')
+    .row.spacing6.spacing2-sm-down
+      .col-md-6.col-sm-12.order-lg-5
+        div(class="md:pt-10")
+          p.use-text-subtitle2
+            strong.use-text-medium
+              | #{$t.culture_subtitle}
+          p
+            | #{$t.culture_desc1}
+          p
+            | #{$t.culture_desc2}
+      .col-md-6.col-sm-12.collages-wrap.order-lg-1
+        .collages
+          .mt-15
+            .wow.flipInY(data-wow-offset='100', data-wow-delay='0.1s', data-wow-duration='0.5s')
+              figure
+                |
+                |
+                img(src=imgAPI.photosL[15] alt='collage')/
+                |
+                |
+            .wow.flipInY(data-wow-offset='100', data-wow-delay='0.3s', data-wow-duration='0.5s')
+              figure
+                |
+                |
+                img(src=imgAPI.photosL[22] alt='collage')/
+                |
+                |
+          .mt-7
+            .wow.flipInY(data-wow-offset='100', data-wow-delay='0.5s', data-wow-duration='0.5s')
+              figure
+                |
+                |
+                img(src=imgAPI.photosP[17], alt='collage')/
+                |
+                |
+            .wow.flipInY(data-wow-offset='100', data-wow-delay='0.7s', data-wow-duration='0.5s')
+              figure
+                |
+                |
+                img(src=imgAPI.photosS[10], alt='collage')/
+                |
+                |
+          div
+            .wow.flipInY(data-wow-offset='100', data-wow-delay='0.9s', data-wow-duration='0.5s')
+              figure
+                |
+                |
+                img(src=imgAPI.photosP[31], alt='collage')/
+                |
+                |
+            .wow.flipInY(data-wow-offset='100', data-wow-delay='1.1s', data-wow-duration='0.5s')
+              figure
+                |
+                |
+                img(src=imgAPI.photosS[11], alt='collage')/
+                |
+                |

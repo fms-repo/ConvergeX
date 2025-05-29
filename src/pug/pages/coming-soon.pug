@@ -1,0 +1,96 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Coming Soon"
+  - var pageName = "coming soon"
+  - var headerHome = false
+  - var menuLanding = "ai"
+
+block content
+  #coming-soon-page
+    .main-wrap
+      |
+      |
+      |
+      // ##### DECORATION
+      include ../components/artworks/blur-gradient.pug
+      .show-sm-up
+        include ../components/artworks/line-deco.pug
+      // ##### END DECORATION
+      |
+      |
+      |
+      .container.max-sm
+        .pt-10
+          .d-flex.flex-fill.align-items-center
+            .col-md-12.col.px-2.text-center
+              |
+              |
+              |
+              // ##### LOGO #####
+              .d-flex.justify-content-center.align-items-center.mb-5
+                include ../components/branding/logo.pug
+                +logo('landscape', 'large')
+              // ##### END LOGO #####
+              |
+              |
+              |
+              // ##### TEXT #####
+              .text-center
+                h3.use-text-title.use-text-primary.text-uppercase
+                  | #{$t.util_soon}
+                .counter-wrap
+                  include ../components/counter/countdown.pug
+                  +countdown("", 300000000)
+                h5.use-text-subtitle2.mb-sm-10
+                  | #{$t.util_soon_desc}
+                .form.mb-sm-12.mt-8
+                  .justify-content-center
+                    form
+                      .row
+                        .col-sm-12.px-0
+                          .input-field.rounded-pill.dark
+                            |
+                            |
+                            input#email(type='text')/
+                            |
+                            |
+                            label(for='email') #{$t.form_email}
+                            |
+                            |
+                            button.waves-effect.btn.primary.me-1.suffix.show-sm-up(class="-mt-0.5")
+                              | #{$t.util_notif}
+                            |
+                            |
+                          |
+                          |
+                          button.waves-effect.btn.btn-large.primary.mb-2.block.hidden-sm-up
+                            | #{$t.util_notif}
+                // ##### END TEXT #####
+                |
+                |
+                |
+                // ##### SOCIAL #####
+                .socmed-btn.my-10
+                  |
+                  |
+                  a.waves-effect.btn-icon.btn-floating.mx-2(href='#')
+                    i.icon.ion-logo-facebook.indigo-text
+                  |
+                  |
+                  a.waves-effect.btn-icon.btn-floating.mx-2(href='#')
+                    i.icon.ion-logo-twitter.blue-text
+                  |
+                  |
+                  a.waves-effect.btn-icon.btn-floating.mx-2(href='#')
+                   i.icon.ion-logo-instagram.purple-text
+                  |
+                  |
+                  a.waves-effect.btn-icon.btn-floating.mx-2(href='#')
+                    i.icon.ion-logo-linkedin.blue-text
+                  |
+                  |
+                // ##### END SOCIAL #####
+                |
+                |
+                |

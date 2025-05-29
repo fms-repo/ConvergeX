@@ -1,0 +1,299 @@
+@mixin arrow-nav {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  bottom: 36px;
+  top: auto;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  text-indent: 1px;
+  background: #000;
+  color: #fff;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.6
+  }
+}
+
+$height: 560px;
+$height-mobile: 460px;
+
+#blockchain-event-slider {
+  .container {
+    overflow: hidden;
+  }
+  .root {
+    position: relative;
+    z-index: 12;
+    width: 100%;
+    color: $palette-common-black;
+    border-radius: 60px;
+    background: linear-gradient(to bottom, $palette-secondary-light 10%, $palette-accent-light 100%);
+    @include breakpoints-up(md) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include breakpoints-up(sm) {
+      margin-top: $spacing10
+    }
+    @include breakpoints-down(sm) {
+      padding: $spacing2;
+      text-align: center;
+    }
+    > div {
+      @include breakpoints-down(lg) {
+        padding: 0
+      }
+    }
+    .anim-dots {
+      display: none;
+    }
+    &:before {
+      content: "";
+      height: 160px;
+      position: absolute;
+      z-index: -1;
+      width: calc(100% - 10px);
+      left: 5px;
+      top: -125px;
+      clip-path: polygon(13% 0%, 0% 100%, 100% 100%, 87% 0);
+      background: linear-gradient(transparent 35%, $palette-secondary-light 80%);
+      @include breakpoints-down(sm) {
+        display: none
+      }
+    }
+  }
+
+  .title-event {
+    color: $palette-secondary-dark;
+    text-transform: capitalize;
+    font-weight: $font-bold;
+    font-size: 122px;
+    line-height: 80px;
+    position: relative;
+    @include breakpoints-up(md) {
+      position: absolute;
+      top: 40px;
+      @include left(40px)
+    }
+    @include breakpoints-down(lg) {
+      font-size: 100px;
+      display: inline-block;
+    }
+    @include breakpoints-down(md) {
+      font-size: 40px;
+      line-height: 56px;
+      @include padding-left($spacing5);
+    }
+    @include breakpoints-down(sm) {
+      display: block;
+      text-align: center;
+      padding: $spacing2;
+      @include padding-left(0);
+    }
+    span {
+      display: inline-block;
+      @include breakpoints-up(md) {
+        font-size: 62px;
+        display: block;
+      }
+    }
+  }
+
+  .desc {
+    max-height: 130px;
+    min-height: 100px;
+    overflow: hidden;
+    padding: spacing(1, 0);
+    margin-top: $spacing2;
+    @include breakpoints-down(sm) {
+      display: none
+    }
+  }
+
+  .inner-bg {
+    padding: spacing(6, 3, 0);
+    .row {
+      z-index: 2;
+      position: relative
+    }
+    @include breakpoints-down(sm) {
+      padding: 0
+    }
+  }
+
+  .slider-wrap {
+    position: relative;
+    z-index: 1;
+    .prev {
+      left: calc(50% + 40px);
+      @include arrow-nav;
+      @include breakpoints-down(sm) {
+        bottom: 25px;
+      }
+    }
+    .next {
+      left: calc(50% + 90px);
+      @include arrow-nav;
+      @include breakpoints-down(sm) {
+        bottom: 25px;
+      }
+    }
+    .anim-slider {
+      z-index: 1
+    }
+    > div {
+      overflow: visible;
+      height: $height;
+      @include breakpoints-down(md) {
+        height: $height-mobile
+      }
+      > a {
+        z-index: 11;
+        background: none !important;
+        position: absolute;
+        transition: all 0.3s ease;
+        top: 40%;
+        @include breakpoints-down(sm) {
+          display: none
+        }
+      }
+    }
+  }
+
+  .item {
+    display: flex;
+    padding: 0;
+    height: $height;
+    @include breakpoints-up(md) {
+      overflow: visible !important;
+    }
+    @include breakpoints-down(md) {
+      height: $height-mobile
+    }
+    &:before {
+      display: none
+    }
+    .text {
+      flex: 1;
+      padding: spacing(2, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include breakpoints-up(md) {
+        padding-top: 220px;
+      }
+      h1 {
+        font-size: 52px;
+        font-weight: $font-bold;
+        margin-bottom: $spacing1;
+        width: 100%;
+        @include breakpoints-up(lg) {
+          line-height: 60px;
+        }
+        @include breakpoints-down(lg) {
+          font-size: 36px;
+        }
+        @include breakpoints-down(sm) {
+          font-size: 26px;
+        }
+        span {
+          display: block;
+          font-size: 18px;
+          font-weight: $font-medium;
+        }
+      }
+    }
+    &:before {
+      display: none
+    }
+  }
+
+  .anim-arrows {
+    bottom: -12px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    .container {
+      position: relative;
+    }  
+  }
+
+  .anim-arrows-prev, .anim-arrows-next {
+    position: absolute;
+    z-index: 1000;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    @include breakpoints-down(sm) {
+      display: none;
+    }
+    i {
+      @include palette-text-secondary;
+      font-size: 40px;
+    }
+  }
+
+  /* Position the "next button" to the right */
+  .anim-arrows-next {
+    right: 0;
+  }
+
+  .anim-arrows-prev {
+    left: 0;
+  }
+
+  .btn-area {
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    @include breakpoints-down(md) {
+      @include margin-left($spacing3)
+    }
+    @include breakpoints-up(sm) {
+      @include padding-left($spacing5)
+    }
+    @include breakpoints-down(sm) {
+      margin-top: 6px;
+      @include margin-left($spacing2);
+      @include text-align(left);
+    }
+  }
+
+  .image {
+    text-align: center;
+    @include breakpoints-down(sm) {
+      width: 100%
+    }
+    figure {
+      overflow: hidden;
+      height: 260px;
+      margin: 0 auto;
+      border-radius: 20px;
+      @include breakpoints-up(sm) {
+        height: 300px;
+        border-radius: 60px;
+      }
+      @include breakpoints-up(md) {
+        height: 400px;
+      }
+      @include breakpoints-up(lg) {
+        width: 640px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+      }
+    }
+  }
+}

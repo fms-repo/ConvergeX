@@ -1,0 +1,345 @@
+.blog-style {
+  .use-theme {
+    &--color-custom {
+      .theme--light & {
+        @extend .primary-text;
+      }
+      .theme--dark & {
+        @extend .secondary-text;
+      }
+    }
+  }
+  .root {
+    position: relative;
+  }
+  .blog-headline {
+    cursor: pointer;
+    .responsive-img {
+      width: 100%;
+      height: 460px;
+      background-size: cover;
+      @include breakpoints-down(sm) {
+        height: 300px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.9;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 30%, $palette-secondary-dark 60%, $palette-primary-main 110%);
+      }
+    }
+  }
+  .subtitle {
+    font-weight: $font-bold;
+    margin-bottom: $spacing3;
+    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+  }
+  a.anchor-content {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    @include breakpoints-up(md) {
+      padding: $spacing8;
+    }
+    .text-h6 {
+      @include breakpoints-down(sm) {
+        display: none;
+      }
+    }
+  }
+  .headline-title {
+    font-weight: $font-medium;
+    display: block;
+    @include breakpoints-up(sm) {
+      margin-bottom: $spacing4;
+    }
+  }
+  .category-blog {
+    font-size: 22px;
+    margin-bottom: $spacing2;
+    text-transform: uppercase;
+    font-weight: $font-medium;
+    @include use-theme(color, $palette-primary-main, $palette-secondary-main);
+  }
+  .title-blog {
+    font-weight: $font-medium
+  }
+  .sidebar {
+    @include breakpoints-down(md) {
+      margin-top: $spacing10
+    }
+  }
+  .card-title {
+    z-index: 1;
+  }
+  .input.dark {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: $palette-common-white;
+    &:focus {
+      border-color: $palette-common-white !important;
+    }
+  }
+  .gallery-item {
+    padding: 4px;
+    position: relative;
+    .card-image {
+      padding: 1px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: $rounded-big;
+      img {
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+    a {
+      position: absolute;
+      top: $spacing1;
+      right: $spacing1;
+    }
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .btn {
+      position: absolute;
+      @include right($spacing1);
+      top: $spacing1;
+    }
+  }
+  .input {
+    flex: 1;
+    width: auto;
+    color: black !important;
+    @include padding-right(120px);
+    height: 54px !important;
+    box-sizing: border-box !important;
+  }
+  .send {
+    @include margin-left($spacing2);
+  }
+  .avatar-char {
+    font-style: normal;
+  }
+  .collection {
+    border: none;
+    .secondary-content {
+      i {
+        @include rtl-flip
+      }
+    }
+    li {
+      border: none;
+      font-size: 14px;
+      .circle.icon {
+        @include palette-background-paper
+      }
+    }
+  }
+  
+  .article {
+    @include palette-text-primary;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-start;
+    ul, ol {
+      @include margin-left($spacing5);
+      padding-bottom: $spacing2;
+      @include padding-left(0)
+    }
+    ul {
+      list-style-type: disc
+    }
+    ol {
+      list-style-type: decimal
+    }
+    code {
+      white-space: normal
+    }
+  }
+
+  .socmed-share {
+    position: sticky;
+    top: $spacing15;
+    @include left(0);
+    padding-bottom: 140px;
+    margin-bottom: $spacing10;
+    @include breakpoints-down(sm) {
+      display: none
+    }
+    h6 {
+      transform: rotate(-90deg);
+      transform-origin: bottom left;
+      font-weight: $font-medium;
+      @include padding-right($spacing8);
+      @include left(34px);
+      bottom: -20px;
+      position: absolute;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      &:after {
+        content: "";
+        width: 48px;
+        height: 3px;
+        position: absolute;
+        background: $gradient-triple-light;
+        border-radius: 3px;
+        top: 16px;
+        @include left(80px)
+      }
+    }
+  }
+
+  .btn-area {
+    &:not(.bottom) {
+      @include breakpoints-up(sm) {
+        width: 48px;
+      }
+    }
+    &.bottom {
+      a, button {
+        margin: spacing(0, 1)
+      }
+    }
+    a, button {
+      display: block;
+      @include use-theme(background, $light-divider, $dark-divider);
+      margin-bottom: $spacing1;
+      line-height: 24px;
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .share-mobile {
+    margin-bottom: $spacing5;
+    button {
+      border-width: 2px;
+      @include margin-right($spacing2);
+      @include breakpoints-down(sm) {
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        min-width: 0
+      }
+      i {
+        font-size: 22px;
+        line-height: 22px;
+        @include breakpoints-up(sm) {
+          @include margin-right($spacing1)
+        }
+      }
+    }
+  }
+
+  .red-btn {
+    color: material-color('red', '500');
+    border-color: material-color('red', '500');
+    &:hover {
+      border-color: material-color('red', '700');
+    }
+  }
+
+  .blue-btn {
+    color: material-color('blue', '500');
+    border-color: material-color('blue', '500');
+    &:hover {
+      borderColor: material-color('blue', '700');
+    }
+  }
+
+  .indigo-btn {
+    color: material-color('indigo', '300');
+    border-color: material-color('indigo', '300');
+    &:hover {
+      borderColor: material-color('indigo', '700');
+    }
+  }
+
+  .cyan-btn {
+    color: material-color('cyan', '500');
+    border-color: material-color('cyan', '500');
+    &:hover {
+      borderColor: material-color('cyan', '700');
+    }
+  }
+  .content {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    @include breakpoints-up(sm) {
+      padding: 0 $spacing5;
+    }
+    @include breakpoints-down(sm) {
+      margin-top: $spacing2;
+      & h3 {
+        display: none
+      }
+    }
+    ul, ol, p {
+      margin-bottom: $spacing2
+    }
+    & > * {
+      white-space: normal;
+    }
+  }
+  .image-blog {
+    margin: spacing(5, 0);
+    img {
+      border-radius: $rounded-big;
+      width: 100%
+    }
+  }
+
+  .list li {
+    list-style: disc
+  }
+
+  .share-socmed {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    @include palette-divider;
+    padding: spacing(3, 0);
+    margin: spacing(3, 0);
+    .btn {
+      border-width: 2px;
+      @include margin-right($spacing2);
+      i {
+        
+      }
+    }
+  }
+
+  .facebook {
+    border-color: #0D47A1;
+    i {
+      color: #0D47A1;
+    }
+  }
+
+  .twitter {
+    border-color: #00BCD4;
+    i {
+      color: #00BCD4;
+    }
+  }
+
+  .linkedin {
+    border-color: #2196F3;
+    i {
+      color: #2196F3;
+    }
+  }
+}

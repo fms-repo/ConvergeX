@@ -1,0 +1,15 @@
+mixin icon-card(icon, text, href=null)
+  .icon-card.card.root
+    if href
+      |
+      |
+      a.waves-effect(href=href) &nbsp;
+      |
+      |
+    |
+    |
+    span
+      i.mdi(class=icon)
+      | #{text}
+    |
+    |

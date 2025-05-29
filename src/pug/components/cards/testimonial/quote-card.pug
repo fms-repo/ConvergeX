@@ -1,0 +1,22 @@
+mixin quote-card(avatar, text, name, title)
+  .quote-card
+    .deco
+    .card
+      .paper
+        |
+        |
+        i.ion-ios-quote.primary
+        |
+        |
+        i.ion-ios-quote.secondary
+        |
+        |
+        img.avatar.avatar-img(src=avatar, alt='avatar profile')/
+        |
+        |
+        .content-quote
+          p &ldquo;#{text}&rdquo;
+          h6.use-text-subtitle2
+            | #{name}
+          .use-text-caption.caption-title
+            | #{title}

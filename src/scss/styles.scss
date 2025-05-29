@@ -1,0 +1,273 @@
+/*
+** Tailwind directives for each of Tailwind’s layers to main CSS file
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+** RTL Mixins including margin, pading, position, border and border radius
+** See documentation https://www.npmjs.com/package/rtl-sass
+*/
+@import './vendors/rtl-sass/rtl';
+
+/*
+** An easy way to use Google's Material Design color palette on your project.
+** See documentation https://www.npmjs.com/package/sass-material-colors
+*/
+@import './vendors/material-color/sass-material-colors';
+
+/*
+** Variables, Functions and Mixins
+*/
+
+// Custom variable
+@import './utils/variables';
+
+// Custom gradients
+@import './utils/gradient-var';
+
+// Custom mixins
+@import './utils/mixins';
+
+// Custom functions
+@import './utils/functions';
+
+// Custom media queries
+@import './utils/media-queries';
+
+// Commons scss class
+@import './utils/common';
+
+// Page transition
+@import './utils/transition';
+
+// Image API variable
+@import './utils/url-img';
+
+// Materialize and Bootstrap overide
+@import './utils/root';
+
+// Materialize extended style
+@import './utils/material_extends';
+
+// Utility for text alignment
+@import './utils/text-align';
+
+// Bootstrap custom media query for grid
+@import './utils/grid';
+
+// Bootstrap additional spacing
+// @import './utils/spacing';
+
+/*
+** Components and Pages
+*/
+
+// General Components
+@import './components/branding/logo';
+@import './components/branding/logo-group';
+@import './components/title';
+@import './components/title-parallax';
+@import './components/news-carousel';
+@import './components/arrow-button';
+@import './components/icons3d';
+@import './components/artworks/blur-gradient';
+@import './components/artworks/clay-deco';
+@import './components/artworks/desktop-app';
+@import './components/artworks/line-deco';
+@import './components/artworks/mobile-app';
+@import './components/artworks/person';
+@import './components/artworks/sharing';
+@import './components/artworks/video-banner';
+
+// Header and Mobile Nav
+@import './components/header';
+@import './components/side-nav';
+
+// Homepage AI
+@import './components/home-ai/banner-slider';
+@import './components/home-ai/about';
+@import './components/home-ai/parallax';
+@import './components/home-ai/feature';
+@import './components/home-ai/step';
+@import './components/home-ai/research';
+@import './components/home-ai/slider-art';
+@import './components/home-ai/communities';
+@import './components/home-ai/faq';
+@import './components/home-ai/call-action';
+
+// Homepage Blockchain
+@import './components/home-blockchain/banner-slider';
+@import './components/home-blockchain/about';
+@import './components/home-blockchain/parallax';
+@import './components/home-blockchain/feature';
+@import './components/home-blockchain/step';
+@import './components/home-blockchain/projects';
+@import './components/home-blockchain/slider-art';
+@import './components/home-blockchain/event-list';
+@import './components/home-blockchain/event-slider';
+@import './components/home-blockchain/call-action';
+
+// Homepage Wallet
+@import './components/home-wallet/banner-slider';
+@import './components/home-wallet/step';
+@import './components/home-wallet/chart-price';
+@import './components/home-wallet/feature';
+@import './components/home-wallet/parallax';
+@import './components/home-wallet/benefit';
+@import './components/home-wallet/security';
+@import './components/home-wallet/counter';
+@import './components/home-wallet/testimonials';
+@import './components/home-wallet/call-action';
+
+// Homepage fintech
+@import './components/home-fintech/banner-slider';
+@import './components/home-fintech/step';
+@import './components/home-fintech/chart-price';
+@import './components/home-fintech/feature';
+@import './components/home-fintech/parallax';
+@import './components/home-fintech/benefit';
+@import './components/home-fintech/counter';
+@import './components/home-fintech/merchants';
+@import './components/home-fintech/faq';
+@import './components/home-fintech/subscribe-form';
+@import './components/home-fintech/call-action';
+
+// Homepage NFT
+@import './components/home-nft/parallax';
+@import './components/home-nft/banner-slider';
+@import './components/home-nft/explore';
+@import './components/home-nft/trending';
+@import './components/home-nft/list-rank';
+@import './components/home-nft/slider-art';
+@import './components/home-nft/auction';
+@import './components/home-nft/new-release';
+@import './components/home-nft/step';
+@import './components/home-nft/call-action';
+
+// Homepage NFT2
+@import './components/home-nft2/banner-slider';
+@import './components/home-nft2/new-release';
+@import './components/home-nft2/trending';
+@import './components/home-nft2/table-rank';
+@import './components/home-nft2/explore';
+@import './components/home-nft2/counter';
+@import './components/home-nft2/auction';
+@import './components/home-nft2/step';
+@import './components/home-nft2/call-action';
+@import './components/home-nft2/faq';
+
+// Homepage Avatar
+@import './components/home-avatar/header';
+@import './components/home-avatar/banner-nav';
+@import './components/home-avatar/sidenav';
+@import './components/home-avatar/profile';
+@import './components/home-avatar/about';
+@import './components/home-avatar/parallax';
+@import './components/home-avatar/statistics/expertise';
+@import './components/home-avatar/statistics/icon';
+@import './components/home-avatar/statistics/progress';
+@import './components/home-avatar/statistics/categories';
+@import './components/home-avatar/statistics/history';
+@import './components/home-avatar/statistics/counter';
+@import './components/home-avatar/statistics/statistics';
+@import './components/home-avatar/portfolios';
+@import './components/home-avatar/slider-art';
+@import './components/home-avatar/testimonial';
+@import './components/home-avatar/blog';
+@import './components/home-avatar/footer';
+@import './components/home-avatar/contact';
+
+// Homepage Online CV
+@import './components/home-cv/header';
+@import './components/home-cv/banner-nav';
+@import './components/home-cv/sidenav';
+@import './components/home-cv/profile';
+@import './components/home-cv/about';
+@import './components/home-cv/statistics/expertise';
+@import './components/home-cv/statistics/icon';
+@import './components/home-cv/statistics/progress';
+@import './components/home-cv/statistics/categories';
+@import './components/home-cv/statistics/history';
+@import './components/home-cv/statistics/counter';
+@import './components/home-cv/statistics/statistics';
+@import './components/home-cv/portfolios';
+@import './components/home-cv/testimonial';
+@import './components/home-cv/slider-art';
+@import './components/home-cv/pricing';
+@import './components/home-cv/footer';
+@import './components/home-cv/contact';
+
+// Home Components
+@import './components/chat';
+@import './components/page-nav';
+@import './components/notification';
+
+// Cards components
+@import './components/cards/paper';
+@import './components/cards/apps/group-card.scss';
+@import './components/cards/apps/single-card.scss';
+@import './components/cards/products/countdown-card';
+@import './components/cards/products/nft-card';
+@import './components/cards/products/product-card';
+@import './components/cards/profile/profile-card';
+@import './components/cards/profile/profile-deco-card';
+@import './components/cards/category/icon3d-card';
+@import './components/cards/category/img-card';
+@import './components/cards/info/icon-card';
+@import './components/cards/info/number-card';
+@import './components/cards/media/media-card';
+@import './components/cards/media/photo-card';
+@import './components/cards/media/playlist-card';
+@import './components/cards/post/post-card';
+@import './components/cards/post/news-card';
+@import './components/cards/pricing/pricing-card';
+@import './components/cards/pricing/pricing-basic-card';
+@import './components/cards/pricing/pricing-group-card';
+@import './components/cards/testimonial/testimonial-card';
+@import './components/cards/testimonial/rating-card';
+@import './components/cards/testimonial/quote-card';
+@import './components/cards/profile/profile-card';
+@import './components/cards/thumbnail/case-card';
+@import './components/cards/thumbnail/preview-card';
+@import './components/cards/event-card';
+
+// Footer components
+@import './components/footer/decoration';
+@import './components/footer/basic';
+@import './components/footer/sitemap';
+@import './components/footer/blog';
+
+// Inner Page Components
+@import './components/counter/counter';
+@import './components/counter/counter-carousel';
+@import './components/counter/countdown';
+@import './components/banner-basic';
+@import './components/company/about';
+@import './components/company/blog';
+@import './components/company/call-action';
+@import './components/company/career';
+@import './components/company/collage';
+@import './components/company/gallery';
+@import './components/company/sidebar';
+@import './components/company/team';
+@import './components/call-action';
+@import './components/comments';
+@import './components/company-logo';
+@import './components/error';
+@import './components/filter';
+@import './components/faq';
+@import './components/forms';
+@import './components/product';
+@import './components/services';
+@import './components/portfolio';
+@import './components/map';
+@import './components/pricing';
+@import './components/decoration';
+@import './components/hero-banner';
+@import './components/parallax3d';
+
+// Inner pages
+@import './pages/pages';

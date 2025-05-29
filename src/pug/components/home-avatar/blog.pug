@@ -1,0 +1,92 @@
+include ../cards/post/post-card.pug
+include ../title/title.pug
+
+-
+  var blogData = [
+    {
+      img: imgAPI.photosP[28],
+      href: link.blogDetail,
+      source: 'Youtube',
+      title: 'Vivamus sit amet interdum elit',
+      desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat lorem ipsum'
+    },
+    {
+      img: imgAPI.photosL[30],
+      href: link.blogDetail,
+      source: 'Twitter',
+      title: 'Vivamus sit amet interdum elit',
+      desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat lorem ipsum'
+    },
+    {
+      img: imgAPI.photosP[21],
+      href: link.blogDetail,
+      source: 'Behance',
+      title: 'Vivamus sit amet interdum elit',
+      desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat lorem ipsum'
+    },
+    {
+      img: imgAPI.photosP[29],
+      href: link.blogDetail,
+      source: 'Youtube',
+      title: 'Vivamus sit amet interdum elit',
+      desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat lorem ipsum'
+    },
+    {
+      img: imgAPI.photosP[14],
+      href: link.blogDetail,
+      source: 'Instagram',
+      title: 'Vivamus sit amet interdum elit',
+      desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat lorem ipsum'
+    },
+    {
+      img: imgAPI.photosP[15],
+      href: link.blogDetail,
+      source: 'Youtube',
+      title: 'Vivamus sit amet interdum elit',
+      desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat lorem ipsum'
+    },
+  ]
+
+#avatar-blog
+  .root
+    .show-sm-down
+      +title-main($t.avatar.blog_title, 'center')
+      p.mb-5.text-center.use-text-paragraph #{$t.avatar.blog_desc}
+    .floating-title
+      .container
+        .text
+          h3.use-text-title
+            span #
+            strong #{$t.avatar.blog_title}
+          p.mb-5.use-text-subtitle2 #{$t.avatar.blog_desc}
+    .slider-wrap
+      .carousel
+        |
+        |
+        button.btn.nav.prev.waves-effect#prev_blog
+          |
+          |
+          i.ion-ios-arrow-back
+          |
+          |
+        |
+        |
+        .slick-carousel#blog_carousel(data-length=blogData.length)
+          .item.item-props-first.show-md-up
+            div
+          each item in blogData
+            .item
+              .card
+                +post-card(item.img, item.title, item.desc, item.href, item.source)
+          .item.item-props-last.show-md-up
+            div
+        |
+        |
+        button.btn.nav.next.waves-effect#next_blog
+          |
+          |
+          i.ion-ios-arrow-forward
+          |
+          |
+        |
+        |

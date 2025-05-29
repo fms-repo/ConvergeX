@@ -1,0 +1,73 @@
+include ../title/title.pug
+include ../cards/products/nft-card.pug
+include ../cards/media/playlist-card.pug
+
+#nft2-new-release
+  .main-feature
+    .container.fixed-width--lg-up
+      .row.spacing6-sm-up
+        .col-md-6.col-sm-12
+          .pt-3
+            +title-main($t.nft2.new_release_title)
+            p.mb-5.use-text-subtitle2.text-center(class="lg:!text-start")
+              | #{$t.nft2.new_release_desc}
+          .group
+            +playlist-card(
+              imgAPI.photosL[8],
+              imgAPI.avatar[7],
+              imgAPI.logos[12],
+              'Lorem ipsum',
+              'John Doe',
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum.',
+              20,
+              [imgAPI.photosP[7], imgAPI.photosL[49], imgAPI.photosL[2], imgAPI.photosL[8]],
+              'primary',
+              true,
+              true,
+              true,
+              link.productDetail
+            )
+        .col-md-6.feature-wrap.px-0.col-sm-12
+          .cards
+            .lower
+              .card-item
+                +product-nft-card(
+                  imgAPI.photosL[42],
+                  imgAPI.avatar[4],
+                  'John Doe',
+                  'Lorem Ipsum dolor',
+                  '0.5',
+                  link.productDetail,
+                  true
+                )
+              .card-item
+                +product-nft-card(
+                  imgAPI.photosL[3],
+                  imgAPI.avatar[10],
+                  'John Doe',
+                  'Lorem Ipsum dolor',
+                  '0.5',
+                  link.productDetail,
+                  true
+                )
+            .higher
+              .card-item
+                +product-nft-card(
+                  imgAPI.photosL[12],
+                  imgAPI.avatar[20],
+                  'John Doe',
+                  'Lorem Ipsum dolor',
+                  '0.5',
+                  link.productDetail,
+                  true
+                )
+              .card-item
+                +product-nft-card(
+                  imgAPI.photosL[7],
+                  imgAPI.avatar[10],
+                  'John Doe',
+                  'Lorem Ipsum dolor',
+                  '0.5',
+                  link.productDetail,
+                  true
+                )

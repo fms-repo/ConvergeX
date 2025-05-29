@@ -1,0 +1,56 @@
+include ../../title/title.pug
+include ../../title/title-secondary.pug
+include ../../icons3d.pug
+
+.service-style
+  .root
+    .container.fixed-width--lg-up
+      +title-main($t.service_feature, 'center')
+      div(class="sm:mt-15 sm:pt-5 md:px-5")
+        .item-text
+          .row.spacing2.spacing4-sm-up.align-item-center
+            .col-md-6.col-sm-8.order-sm-5
+              .px-lg-4
+                .desc
+                  +title-secondary($t.service_estimation)
+                  p.use-text-subtitle2.text-center(class="sm:!text-start")
+                    | #{$t.auth_desc}
+                  p.use-text-subtitle2.text-center(class="sm:!text-start")
+                    | #{$t.service_banner_title}
+            .col-md-6.col-sm-4.order-sm-0
+              .mx-md-4
+                .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='0.5s', data-wow-duration='0.5s')
+                  .text-center(class="sm:!text-end")
+                    .illustration.primary
+                      +icons3d('mdi-clock-time-eight-outline', 'primary')
+        .item-text
+          .row.spacing2.spacing4-sm-up.align-item-center
+            .col-md-6.col-sm-8(class="xl:px-8")
+              .desc(class="lg:px-4")
+                +title-secondary($t.service_timeline, 'right', 'secondary')
+                p.use-text-subtitle2.text-center(class="sm:!text-end")
+                  | #{$t.auth_desc}
+                p.use-text-subtitle2.text-center(class="sm:!text-end")
+                  | #{$t.service_banner_title}
+            .col-md-6.col-sm-4(class="lg:px-8")
+              div(class="md:px-5")
+                .wow.fadeInRightShort(data-wow-offset='100', data-wow-delay='0.5s', data-wow-duration='0.5s')
+                  .text-center(class="sm:!text-start")
+                    .illustration.secondary
+                      +icons3d('mdi-cloud', 'secondary')
+        .item-text.last
+          .row.spacing2.spacing4-sm-up.align-item-center
+            .col-md-6.col-sm-8.order-sm-5
+              div(class="lg:px-4")
+                .desc
+                  +title-secondary($t.values_title, 'left', 'accent')
+                  p.use-text-subtitle2.text-center(class="sm:!text-start")
+                    | #{$t.values_info_desc1}
+                  p.use-text-subtitle2.text-center(class="sm:!text-start")
+                    | #{$t.values_info_desc2}
+            .col-md-6.col-sm-4.order-sm-0
+              .px-md-4
+                .wow.fadeInLeftShort(data-wow-offset='100', data-wow-delay='0.5s', data-wow-duration='0.5s')
+                  .text-center(class="sm:!text-end")
+                    .illustration.accent
+                      +icons3d('mdi-source-branch', 'accent')

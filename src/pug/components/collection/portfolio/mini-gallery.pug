@@ -1,0 +1,97 @@
+include ../../cards/media/media-card.pug
+
+-
+  var gallery = [
+    {
+      thumb: imgAPI.photosL[25],
+      type: 'video',
+      videoId: 'MgnXhbuxVF0',
+      orientation: 'landscape',
+      title: 'Sed lacinia velit, ut malesuada eros interdum a'
+    },
+    {
+      thumb: imgAPI.photosL[23],
+      type: 'image',
+      orientation: 'landscape'
+    },
+    {
+      thumb: imgAPI.photosL[35],
+      type: 'video',
+      videoId: '5QFvlhX_DmM',
+      orientation: 'landscape'
+    },
+    {
+      thumb: imgAPI.photosP[2],
+      type: 'image',
+      orientation: 'portrait'
+    },
+    {
+      thumb: imgAPI.photosL[27],
+      type: 'image',
+      orientation: 'landscape'
+    },
+    {
+      thumb: imgAPI.photosP[5],
+      type: 'image',
+      orientation: 'portrait'
+    },
+    {
+      thumb: imgAPI.photosL[53],
+      type: 'image',
+      orientation: 'landscape',
+      title: 'Sed lacinia velit, ut malesuada eros interdum a'
+    },
+    {
+      thumb: imgAPI.photosL[11],
+      type: 'image',
+      orientation: 'landscape'
+    },
+  ];
+
+#portfolio-detail
+  if youtube.use
+    #video_modal.modal.video-popup
+      .modal-content
+        |
+        |
+        .headline
+          h4 Lorem ipsum dolor sit amet
+          |
+          |
+          button.btn-icon.modal-close.waves-effect.close-btn
+            i.material-icons close
+          |
+          |
+        .text-center.p-2
+          #video_iframe
+  .root-mini-gallery
+    .massonry
+      .masonry-content#mini_gallery
+        each item in gallery
+          .item(class=item.orientation === 'landscape' ? 'landscape' : 'portrait')
+            if item.type === 'image'
+              a.img-button.waves-effect(href=item.thumb)
+                +media-card(
+                  "",
+                  item.orientation,
+                  "image",
+                  item.thumb
+                )
+                |
+                |
+            else
+              button.img-button.modal-trigger.waves-effect(type="button" data-target="video_modal" data-video=item.videoId)
+              +media-card(
+                "",
+                item.orientation,
+                "video",
+                item.thumb
+              )
+            |
+            |
+      |
+      |
+      button.btn.btn-show.waves-effect.btn-large.black#show_all_gallery(type="button")
+        | Show All Media
+      |
+      |

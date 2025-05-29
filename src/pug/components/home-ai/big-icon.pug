@@ -1,0 +1,20 @@
+mixin big-icon(icon, name, count, color1, color2, members)
+  .big-icon
+    .icon(style="background: linear-gradient(120deg, " + color2 + ", " + color1 + ")")
+      .bg
+        |
+        |
+        i(class=icon style="background: linear-gradient(120deg, " + color2 + ", " + color1 + "); color: " + color2)
+        |
+        |
+    .members
+      each item in members
+        .avatar-img
+          |
+          |
+          img(src=item alt='member')/
+          |
+          |
+      .chip(style='background-color: ' + color2)
+        | +#{count}
+    h4(style="color: " + color2) #{name}

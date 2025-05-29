@@ -1,0 +1,40 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Blog Detail"
+  - var pageName = "blog_detail"
+  - var menuLanding = "ai"
+
+block content
+  div#blog-page
+    .main-wrap.has-fixed-scroll
+      include ../components/header/blog-header.pug
+      include ../components/artworks/blur-gradient.pug
+      .higher-top
+        .inner-page
+          .container
+            .row.spacing4-sm-down
+              |
+              |
+              |
+              // ##### ARTICLE #####
+              .col-md-8.col-sm-12.py-0
+                include ../components/company/blog/article.pug
+              // ##### END ARTICLE #####
+              |
+              |
+              |
+              // ##### ARTICLE #####
+              .col-md-4.col-sm-12
+                include ../components/company/blog/sidebar/sidebar.pug
+              // ##### END ARTICLE #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      #footer.space-top-short
+        include ../components/footer/main.pug
+      // ##### END FOOTER #####
+      |
+      |
+      |

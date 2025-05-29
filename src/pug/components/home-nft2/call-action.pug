@@ -1,0 +1,26 @@
+#nft2-call-action
+  .container.max-lg.fixed-width--lg-up
+    .wow.fadeInUpShort(data-wow-offset="-100" data-wow-delay="0.5s" data-wow-duration="0.5s")
+      .action
+        .wrap
+          .row.mb-0
+            .col-md-6.col-sm-5.show-sm-up.p-0.d-flex.justify-content-center
+              .illustration
+                |
+                |
+                img(src=imgAPI.nft[0] alt="illustration")/
+                |
+                |
+            .col-md-6.col-sm-7.pe-sm-2.d-flex.align-items-center
+              div(class="sm:pe-8")
+                h4.use-mq--title
+                  | #{$t.nft.cta_title}
+                p.use-text-subtitle2
+                  | #{$t.nft.cta_desc}
+                .btn-area
+                  |
+                  |
+                  a.btn.black.btn-large(href=link.register)
+                    | #{$t.nft.cta_btn}
+                  |
+                  |

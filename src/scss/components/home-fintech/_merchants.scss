@@ -1,0 +1,55 @@
+#fintech-merchants {
+  .tabs {
+    position: relative;
+    z-index: 55;
+    margin-top: $spacing5 * -1;
+    margin: 0 auto;
+  }
+
+  .tabs-content {
+    position: relative;
+    display: block;
+    margin: $spacing5 auto;
+    height: 400px !important;
+    overflow: visible;
+    @include breakpoints-down(md) {
+      margin-bottom: 0;
+    }
+    @include breakpoints-up(sm) {
+      height: 550px !important;
+      padding: spacing(8, 4, 0)
+    }
+    section {
+      position: relative;
+      div {
+        overflow: visible
+      }
+    }
+  }
+
+  .tab-label {
+    font-size: 18px;
+    font-weight: $font-medium;
+    letter-spacing: 0;
+    padding: spacing(0, 5);
+    @include breakpoints-down(sm) {
+      font-size: 14px;
+    }
+  }
+  
+  .img-logo {
+    padding: $spacing2;
+    @include breakpoints-up(lg) {
+      padding: spacing(2, 6)
+    }
+    img {
+      border-radius: $rounded-small;
+      width: 100%
+    }
+  }
+  
+  .carousel-item {
+    transition: none;
+    min-height: 0;
+  }
+}

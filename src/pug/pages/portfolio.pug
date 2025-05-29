@@ -1,0 +1,53 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Portfolios"
+  - var pageName = "portfolio"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+block content
+  div#services-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/media-banner.pug
+            +media-banner(
+              $t.portfolio_title,
+              imgAPI.inner[19],
+              null,
+              null,
+              null,
+              [imgAPI.photosP[27], imgAPI.photosS[12], imgAPI.photosL[54]]
+            )
+              div
+                include ../components/parallax-3d/ufo.pug
+                +parallax3d-ufo()
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### GALLERY #####
+          section#gallery.space-top-short--sm-up
+            include ../components/collection/portfolio/gallery.pug
+          // ##### END GALLERY #####
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

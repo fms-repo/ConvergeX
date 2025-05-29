@@ -1,0 +1,26 @@
+mixin error(errCode, text)
+  .error-style
+    .error-wrap
+      include ./artworks/blur-gradient.pug
+      .container.max-md
+        .row.align-items-center
+          .col-md-5.col-sm-12.show-md-up
+            .flex
+              .illustration
+                |
+                |
+                img(src=imgAPI.inner[0] alt='error')/
+                |
+                |
+          .col-md-7.col-sm-12
+            .text
+              h3.use-text-grd-triple-light.use-text-primary #{errCode}
+              h4.use-text-subtitle2 #{text}
+              p.use-text-paragraph #{$t['404_subtitle']}
+              |
+              |
+              a.btn.btn-outlined.primary.waves-effect.btn-large.button(
+                href=link.home
+              ) #{$t.back}
+              |
+              |

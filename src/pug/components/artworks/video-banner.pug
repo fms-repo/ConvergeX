@@ -1,0 +1,37 @@
+mixin video-banner(cover, topLeft, topRight, bottomLeft, bottomRight, videoId=null)
+  .video-banner-artwork
+    .root
+      if videoId
+        |
+        |
+        button.btn.play-btn.btn-large.secondary.modal-trigger.waves-effect(data-target="video_modal" data-video=videoId)
+          i.material-icons play_arrow
+        |
+        |
+      .video-art
+        .cover-video
+          |
+          |
+          img(src=cover alt="cover")/
+          |
+          |
+        |
+        |
+        span.top-left
+          img(src=topLeft alt="app")/
+        |
+        |
+        span.top-right
+          img(src=topRight alt="app")/
+        |
+        |
+        span.bottom-left
+          img(src=bottomLeft alt="app")/
+        |
+        |
+        span.bottom-right
+          img(src=bottomRight alt="app")/
+        |
+        |
+
+    

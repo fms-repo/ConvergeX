@@ -1,0 +1,12 @@
+.scrollactive-nav.show-lg-up.main-menu(class=headerHome && 'scrollnav')
+  ul.main-menu
+    each item in menu[menuLanding]
+      |
+      |
+      li
+        a.btn.btn-flat.anchor-link.waves-effect(
+          href=headerHome ? '#'+item.name : link.home+'#'+item.name
+        ) #{$t.ai_landing['header_' + item.name]}
+    li
+      a.btn.btn-flat.waves-effect(href="/") 
+        | #{$t.header_sample_page}

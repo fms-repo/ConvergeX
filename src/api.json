@@ -1,0 +1,624 @@
+{
+  "brand": {
+    "name": "Awrora",
+    "desc": "Awrora - HTML5 Bootstrap Template",
+    "prefix": "awrora",
+    "footerText": "Awrora Theme 2024",
+    "logoText": "Awrora",
+    "projectName": "Awrora",
+    "profileName": "John Doe",
+    "profileTitle": "NFT Artist",
+    "profileTitle2": "Content Creator",
+    "url": "awrora.indisains.com",
+    "img": "/images/logo-glovora.png",
+    "notifMsg": "Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula"
+  },
+  "link": {
+    "home": "index.html",
+    "about": "company-about.html",
+    "career": "company-career.html",
+    "team": "company-team.html",
+    "profile": "company-profile.html",
+    "blog": "blog.html",
+    "blogGrid": "blog-grid.html",
+    "blogDetail": "blog-detail.html",
+    "login": "login.html",
+    "register": "register.html",
+    "contact": "contact.html",
+    "product": "products.html",
+    "productDetail": "product-detail.html",
+    "services": "services.html",
+    "serviceDetail": "service-detail.html",
+    "portfolio": "portfolio.html",
+    "portfolioDetail": "portfolio-detail.html",
+    "pricing": "pricing.html",
+    "faq": "faq.html",
+    "maintenance": "maintenance.html",
+    "comingSoon": "coming-soon.html",
+    "error": "404.html",
+    "blockchain": "blockchain.html",
+    "wallet": "wallet.html",
+    "fintech": "fintech.html",
+    "avatar": "avatar.html",
+    "cv": "online-cv.html",
+    "nft": "nft.html",
+    "nft2": "nft2.html"
+  },
+  "imgAPI": {
+    "avatar": [
+      "./assets/images/avatars/pp_girl.svg",
+      "./assets/images/avatars/pp_girl2.svg",
+      "./assets/images/avatars/pp_girl3.svg",
+      "./assets/images/avatars/pp_girl4.svg",
+      "./assets/images/avatars/pp_girl5.svg",
+      "./assets/images/avatars/pp_girl3.svg",
+      "./assets/images/avatars/pp_boy.svg",
+      "./assets/images/avatars/pp_boy2.svg",
+      "./assets/images/avatars/pp_boy3.svg",
+      "./assets/images/avatars/pp_boy4.svg",
+      "./assets/images/avatars/pp_boy5.svg",
+      "./assets/images/avatars/anim1.png",
+      "./assets/images/avatars/female1.png",
+      "./assets/images/avatars/female2.png",
+      "./assets/images/avatars/female3.png",
+      "./assets/images/avatars/female4.png",
+      "./assets/images/avatars/female5.png",
+      "./assets/images/avatars/female6.png",
+      "./assets/images/avatars/female7.png",
+      "./assets/images/avatars/male1.png",
+      "https://placehold.co/294x296/b4aff7/FFFFFF",
+      "https://placehold.co/296x296/e8672e/FFFFFF",
+      "./assets/images/avatars/male4.png",
+      "./assets/images/avatars/male5.png",
+      "./assets/images/avatars/male6.png",
+      "./assets/images/avatars/male7.png",
+      "./assets/images/avatars/male8.png",
+      "./assets/images/avatars/male9.png",
+      "./assets/images/avatars/anim2.png",
+      "./assets/images/avatars/anim3.png",
+      "./assets/images/avatars/anim4.png",
+      "https://placehold.co/512x512/8400e5/FFFFFF",
+      "https://placehold.co/512x512/4ab0e6/FFFFFF",
+      "https://placehold.co/512x512/e57200/FFFFFF",
+      "./assets/images/avatars/male10.png",
+      "./assets/images/avatars/anim5.png",
+      "https://placehold.co/360x360/cbe500/FFFFFF"
+    ],
+    "ui": [
+      "https://placehold.co/551x367/ffc999/FFFFFF",
+      "https://placehold.co/478x506/ffc999/FFFFFF",
+      "https://placehold.co/432x278/8900bc/FFFFFF",
+      "https://placehold.co/432x203/ab09b9/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/e31082/FFFFFF",
+      "https://placehold.co/720x413/60a214/FFFFFF",
+      "https://placehold.co/720x413/c9b30b/FFFFFF",
+      "https://placehold.co/720x413/ff032a/FFFFFF",
+      "https://placehold.co/720x413/1927ce/FFFFFF",
+      "https://placehold.co/720x413/00c2e5/FFFFFF",
+      "https://placehold.co/720x413/ffc999/FFFFFF",
+      "https://placehold.co/720x413/e099ff/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/ffc999/FFFFFF",
+      "https://placehold.co/720x413/e31082/FFFFFF",
+      "https://placehold.co/720x413/e099ff/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/ffc999/FFFFFF",
+      "https://placehold.co/720x413/e099ff/FFFFFF",
+      "https://placehold.co/720x413/e31082/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/e099ff/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/e31082/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/ffc999/FFFFFF",
+      "https://placehold.co/720x413/e099ff/FFFFFF",
+      "https://placehold.co/720x413/e31082/FFFFFF",
+      "https://placehold.co/720x413/ffc999/FFFFFF",
+      "https://placehold.co/720x413/5602c7/FFFFFF",
+      "https://placehold.co/720x413/e099ff/FFFFFF",
+      "https://placehold.co/720x413/e31082/FFFFFF",
+      "https://placehold.co/1400x100/e31082/FFFFFF",
+      "https://placehold.co/1400x100/e31082/FFFFFF",
+      "https://placehold.co/1400x100/e31082/FFFFFF",
+      "https://placehold.co/1400x599/e31082/FFFFFF",
+      "https://placehold.co/1400x599/e31082/FFFFFF",
+      "https://placehold.co/1400x599/e31082/FFFFFF",
+      "https://placehold.co/1400x599/e31082/FFFFFF",
+      "https://placehold.co/1400x230/e31082/FFFFFF",
+      "https://placehold.co/1400x208/e31082/FFFFFF",
+      "https://placehold.co/1400x242/e31082/FFFFFF",
+      "https://placehold.co/501x880/e31082/FFFFFF",
+      "https://placehold.co/181x290/e31082/FFFFFF"
+    ],
+    "inner": [
+      "./assets/images/inner/robot.png",
+      "https://placehold.co/1112x342/2e7ce6/FFFFFF",
+      "https://placehold.co/2340x684/e400f7/FFFFFF",
+      "./assets/images/inner/illustration_agency.png",
+      "./assets/images/inner/illustration_cloud.png",
+      "./assets/images/inner/illustration_crypto.png",
+      "./assets/images/inner/illustration_education.png",
+      "./assets/images/inner/illustration_fintech.png",
+      "./assets/images/inner/illustration_marketing.png",
+      "./assets/images/inner/illustration_medical,png",
+      "./assets/images/inner/illustration_saas.png",
+      "./assets/images/inner/illustration_saas2.png",
+      "./assets/images/inner/illustration_png",
+      "./assets/images/inner/art_ball.png",
+      "./assets/images/inner/art_blockchain.png",
+      "./assets/images/inner/art_flower.png",
+      "./assets/images/inner/art_hills.png",
+      "./assets/images/inner/art_pyramid.png",
+      "./assets/images/inner/art_wave.png",
+      "https://placehold.co/1112x342/7200f7/FFFFFF",
+      "./assets/images/inner/faq_illustration.png"
+    ],
+    "ai": [
+      "./assets/images/ai/banner_ai.png",
+      "./assets/images/ai/hexa.png",
+      "./assets/images/ai/diamond.png",
+      "./assets/images/ai/egg.png",
+      "./assets/images/ai/nail.png",
+      "./assets/images/ai/gem.png",
+      "./assets/images/ai/bar.png",
+      "./assets/images/ai/pyramid.png",
+      "./assets/images/ai/shield.png",
+      "./assets/images/ai/fog.png",
+      "./assets/images/ai/duo.png",
+      "./assets/images/ai/ring.png",
+      "./assets/images/ai/pearl.png",
+      "./assets/images/ai/about_video.jpg",
+      "./assets/images/ai/parallax.png",
+      "./assets/images/ai/feature1@2x.png",
+      "./assets/images/ai/feature2@2x.png",
+      "./assets/images/ai/feature3@2x.png",
+      "./assets/images/ai/research@2x.png"
+    ],
+    "blockchain": [
+      "./assets/images/blockchain/core.png",
+      "./assets/images/blockchain/hexa.png",
+      "./assets/images/blockchain/cube.png",
+      "./assets/images/blockchain/cube-blur.png",
+      "./assets/images/blockchain/pyramid.png",
+      "./assets/images/blockchain/box.png",
+      "./assets/images/blockchain/round.png",
+      "./assets/images/blockchain/orbit.png",
+      "./assets/images/blockchain/tube.png",
+      "./assets/images/blockchain/hexa2.png",
+      "./assets/images/blockchain/feature1@2x.png",
+      "./assets/images/blockchain/feature2@2x.png",
+      "./assets/images/blockchain/feature3@2x.png",
+      "./assets/images/blockchain/project@2x.png",
+      "./assets/images/blockchain/parallax.png",
+      "./assets/images/blockchain/action.png"
+    ],
+    "fintech": [
+      "https://placehold.co/1470x980/481bc3/FFFFFF",
+      "https://placehold.co/1470x980/8bdef7/FFFFFF",
+      "./assets/images/fintech/app_showcase.png"
+    ],
+    "wallet": [
+      "./assets/images/wallet/hp.png",
+      "./assets/images/wallet/dongle.png"
+    ],
+    "nft": [
+      "./assets/images/nft/cta.png"
+    ],
+    "profile": [
+      "https://placehold.co/1306x635/7b06d1/FFFFFF",
+      "./assets/images/profile/avatar3d-half.png",
+      "./assets/images/profile/avatar3d-full.png",
+      "./assets/images/profile/avatar-photo-half.png",
+      "./assets/images/profile/avatar-photo-full.png"
+    ],
+    "photosL": [
+      "",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/81D4FA/FFFFFF",
+      "https://placehold.co/1080x720/558B2F/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/558B2F/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/81D4FA/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/81D4FA/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/558B2F/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/81D4FA/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/558B2F/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/558B2F/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1080x720/81D4FA/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF",
+      "https://placehold.co/1500x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/558B2F/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/AA00FF/FFFFFF",
+      "https://placehold.co/1080x720/EF5350/FFFFFF",
+      "https://placehold.co/1080x720/3D5AFE/FFFFFF"
+    ],
+    "photosP": [
+      "",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/4CAF50/FFFFFF",
+      "https://placehold.co/640x960/4CAF50/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/4CAF50/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/4CAF50/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/4CAF50/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/4CAF50/FFFFFF",
+      "https://placehold.co/640x960/3D5AFE/FFFFFF",
+      "https://placehold.co/640x960/FF5722/FFFFFF",
+      "https://placehold.co/640x960/00BCD4/FFFFFF"
+    ],
+    "photosS": [
+      "",
+      "https://placehold.co/640x640/1E88E5/FFFFFF",
+      "https://placehold.co/640x640/ef00a5/FFFFFF",
+      "https://placehold.co/640x640/00BCD4/FFFFFF",
+      "https://placehold.co/640x640/1E88E5/FFFFFF",
+      "https://placehold.co/640x640/00BCD4/FFFFFF",
+      "https://placehold.co/640x640/ef00a5/FFFFFF",
+      "https://placehold.co/640x640/1E88E5/FFFFFF",
+      "https://placehold.co/640x640/00BCD4/FFFFFF",
+      "https://placehold.co/640x640/ef00a5/FFFFFF",
+      "https://placehold.co/640x640/1E88E5/FFFFFF",
+      "https://placehold.co/640x640/00BCD4/FFFFFF",
+      "https://placehold.co/640x640/ef00a5/FFFFFF",
+      "https://placehold.co/640x640/1E88E5/FFFFFF"
+    ],
+    "apps": [
+      "",
+      "https://placehold.co/316x80/1E88E5/FFFFFF",
+      "https://placehold.co/242x212/E91E63/FFFFFF",
+      "https://placehold.co/172x172/AA00FF/FFFFFF",
+      "https://placehold.co/257x184/00BCD4/FFFFFF",
+      "https://placehold.co/257x184/E91E63/FFFFFF",
+      "https://placehold.co/690x142/AA00FF/FFFFFF",
+      "https://placehold.co/256x243/1E88E5/FFFFFF",
+      "https://placehold.co/342x137/E91E63/FFFFFF",
+      "https://placehold.co/342x203/AA00FF/FFFFFF",
+      "https://placehold.co/333x176/00BCD4/FFFFFF",
+      "https://placehold.co/778x539/E91E63/FFFFFF",
+      "https://placehold.co/778x537/1E88E5/FFFFFF",
+      "https://placehold.co/778x539/E91E63/FFFFFF",
+      "https://placehold.co/228x548/00BCD4/FFFFFF",
+      "https://placehold.co/778x539/AA00FF/FFFFFF",
+      "https://placehold.co/1167x675/1E88E5/FFFFFF"
+    ],
+    "logos": [
+      "",
+      "./assets/images/logos/logo1.jpg",
+      "./assets/images/logos/logo2.jpg",
+      "./assets/images/logos/logo3.jpg",
+      "./assets/images/logos/logo4.jpg",
+      "./assets/images/logos/logo5.jpg",
+      "./assets/images/logos/logo6.jpg",
+      "./assets/images/logos/logo7.jpg",
+      "./assets/images/logos/logo8.jpg",
+      "./assets/images/logos/logo9.jpg",
+      "./assets/images/logos/logo10.jpg",
+      "./assets/images/logos/logo11.jpg",
+      "./assets/images/logos/logo12.jpg",
+      "./assets/images/logos/logo13.png",
+      "./assets/images/logos/logo14.png",
+      "./assets/images/logos/logo15.png",
+      "./assets/images/logos/logo16.png",
+      "./assets/images/logos/logo17.png",
+      "./assets/images/logos/logo18.png",
+      "./assets/images/logos/logo19.png",
+      "./assets/images/logos/logo20.png",
+      "./assets/images/logos/logo21.png",
+      "./assets/images/logos/logo22.png",
+      "./assets/images/logos/logo23.png",
+      "./assets/images/logos/logo24.png",
+      "./assets/images/logos/logo25.png",
+      "./assets/images/logos/logo26.png",
+      "./assets/images/logos/logo27.png",
+      "./assets/images/logos/logo28.png",
+      "./assets/images/logos/logo29.png",
+      "./assets/images/logos/logo30.png",
+      "https://placehold.co/256x256/AA00FF/FFFFFF",
+      "https://placehold.co/256x256/1E88E5/FFFFFF",
+      "https://placehold.co/256x256/E91E63/FFFFFF",
+      "https://placehold.co/256x256/AA00FF/FFFFFF",
+      "https://placehold.co/256x256/1E88E5/FFFFFF",
+      "https://placehold.co/256x256/AA00FF/FFFFFF",
+      "https://placehold.co/256x256/E91E63/FFFFFF",
+      "https://placehold.co/256x256/1E88E5/FFFFFF",
+      "https://placehold.co/256x256/E91E63/FFFFFF",
+      "https://placehold.co/256x256/AA00FF/FFFFFF",
+      "https://placehold.co/256x256/1E88E5/FFFFFF",
+      "https://placehold.co/256x256/E91E63/FFFFFF",
+      "https://placehold.co/256x256/1E88E5/FFFFFF",
+      "https://placehold.co/256x256/E91E63/FFFFFF",
+      "https://placehold.co/256x256/1E88E5/FFFFFF",
+      "https://placehold.co/256x256/AA00FF/FFFFFF",
+      "./assets/images/logos/binance.png",
+      "./assets/images/logos/bitcoin.png",
+      "./assets/images/logos/bytecoin.png",
+      "./assets/images/logos/cardano.png",
+      "./assets/images/logos/decred.png",
+      "./assets/images/logos/ion.png",
+      "./assets/images/logos/iota.png",
+      "./assets/images/logos/litecoin.png",
+      "./assets/images/logos/monero.png",
+      "./assets/images/logos/nano.png",
+      "./assets/images/logos/nem.png",
+      "./assets/images/logos/papulous.png",
+      "./assets/images/logos/ripple.png",
+      "./assets/images/logos/stellar.png",
+      "./assets/images/logos/stratis.png",
+      "./assets/images/logos/tron.png",
+      "./assets/images/logo-valden.png",
+      "https://placehold.co/304x36/559d17/FFFFFF"
+    ]
+  },
+  "menu": {
+    "ai": [
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "discover",
+        "name": "discover",
+        "offset": 0
+      },
+      {
+        "id": "community",
+        "name": "community",
+        "offset": 0
+      },
+      {
+        "id": "faq",
+        "name": "faq",
+        "offset": 0
+      }
+    ],
+    "blockchain": [
+      {
+        "id": "about",
+        "name": "about",
+        "offset": 0
+      },
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "discover",
+        "name": "discover",
+        "offset": 0
+      },
+      {
+        "id": "events",
+        "name": "events",
+        "offset": 0
+      }
+    ],
+    "profile": [
+      {
+        "id": "about",
+        "name": "about",
+        "offset": 0,
+        "icon": "ion-ios-contact-outline"
+      },
+      {
+        "id": "stats",
+        "name": "stats",
+        "offset": 0,
+        "icon": "ion-ios-analytics-outline"
+      },
+      {
+        "id": "portfolios",
+        "name": "portfolios",
+        "offset": 0,
+        "icon": "ion-ios-keypad-outline"
+      },
+      {
+        "id": "testimonial",
+        "name": "testimonial",
+        "offset": 0,
+        "icon": "ion-ios-chatboxes-outline"
+      },
+      {
+        "id": "pricing",
+        "name": "pricing",
+        "offset": 0,
+        "icon": "ion-ios-list-box-outline"
+      },
+      {
+        "id": "contact",
+        "name": "contact",
+        "offset": 0,
+        "icon": "ion-ios-mail-outline"
+      }
+    ],
+    "avatar": [
+      {
+        "id": "about",
+        "name": "about",
+        "offset": 0,
+        "icon": "ion-ios-contact-outline"
+      },
+      {
+        "id": "stats",
+        "name": "stats",
+        "offset": 0,
+        "icon": "ion-ios-analytics-outline"
+      },
+      {
+        "id": "portfolios",
+        "name": "portfolios",
+        "offset": 0,
+        "icon": "ion-ios-keypad-outline"
+      },
+      {
+        "id": "testimonial",
+        "name": "testimonial",
+        "offset": 0,
+        "icon": "ion-ios-chatboxes-outline"
+      },
+      {
+        "id": "blog",
+        "name": "blog",
+        "offset": 0,
+        "icon": "ion-ios-paper-outline"
+      },
+      {
+        "id": "contact",
+        "name": "contact",
+        "offset": 0,
+        "icon": "ion-ios-mail-outline"
+      }
+    ],
+    "wallet": [
+      {
+        "id": "howto",
+        "name": "howto",
+        "offset": 0
+      },
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "benefit",
+        "name": "benefit",
+        "offset": 0
+      },
+      {
+        "id": "community",
+        "name": "community",
+        "offset": 0
+      }
+    ],
+    "fintech": [
+      {
+        "id": "howto",
+        "name": "howto",
+        "offset": 0
+      },
+      {
+        "id": "feature",
+        "name": "feature",
+        "offset": 0
+      },
+      {
+        "id": "benefit",
+        "name": "benefit",
+        "offset": 0
+      },
+      {
+        "id": "faq",
+        "name": "faq",
+        "offset": 0
+      }
+    ],
+    "nft": [
+      {
+        "id": "collection",
+        "name": "collection",
+        "offset": 0
+      },
+      {
+        "id": "trending",
+        "name": "trending",
+        "offset": 0
+      },
+      {
+        "id": "explore",
+        "name": "explore",
+        "offset": 0
+      },
+      {
+        "id": "sell",
+        "name": "sell",
+        "offset": 0
+      }
+    ],
+    "nft2": [
+      {
+        "id": "new",
+        "name": "new",
+        "offset": 0
+      },
+      {
+        "id": "trending",
+        "name": "trending",
+        "offset": 0
+      },
+      {
+        "id": "explore",
+        "name": "explore",
+        "offset": 0
+      },
+      {
+        "id": "sell",
+        "name": "sell",
+        "offset": 0
+      }
+    ]
+  },
+  "youtube": {
+    "use": true
+  }
+}

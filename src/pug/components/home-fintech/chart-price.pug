@@ -1,0 +1,94 @@
+include ../title/title.pug
+
+-
+  var coinData = [
+    {
+      name: 'BTC',
+      logo: imgAPI.logos[48],
+      status: 'up',
+      price: 1234,
+      percent: 3,
+    },
+    {
+      name: 'DASH',
+      logo: imgAPI.logos[52],
+      status: 'up',
+      price: 1234,
+      percent: 2,
+    },
+    {
+      name: 'NAN',
+      logo: imgAPI.logos[56],
+      status: 'down',
+      price: 1234,
+      percent: 10,
+    },
+    {
+      name: 'MNR',
+      logo: imgAPI.logos[55],
+      status: 'up',
+      price: 1234,
+      percent: 6,
+    },
+    {
+      name: 'IOT',
+      logo: imgAPI.logos[53],
+      status: 'down',
+      price: 1234,
+      percent: 3,
+    }
+  ]
+
+#fintech-chart-price
+  include ./parallax/parallax-left.pug
+  .root
+    .container
+      .row.spacing-6-sm-up.justify-content-center.justify-content-sm-start
+        .col-md-5.col-sm-12
+          +title-main($t.fintech.chart_title)
+          p.use-text-subtitle2
+            | #{$t.fintech.chart_desc}
+          .py-2
+            |
+            |
+            a.btn.primary(href=link.register)
+              | #{$t.btn_get}
+            |
+            |
+        .col-md-7.col-sm-12
+          ul.chart-wrap
+            each item, index in coinData
+              li
+                .coin
+                  .avatar-img.logo
+                    |
+                    |
+                    img(src=item.logo alt=item.name)/
+                    |
+                    |
+                  h5
+                    | #{item.name}
+                .price
+                  h6 $ #{item.price}
+                  if item.status === 'down'
+                    .down
+                      i &#x25BC;
+                      | #{item.percent}%
+                  else if item.status === 'up'
+                    .up
+                      i &#x25B2;
+                      | #{item.percent}%
+                  else
+                    .stay
+                      i -
+                      | #{item.percent}%
+                .progress-chart
+                  canvas(id="chart_canvas"+index height="40")
+          .px-6
+            |
+            |
+            a.btn-flat.btn-large.secondary-text.waves-effect(href=link.register class="-ms-3")
+              | #{$t.btn_get}
+              i.icon.material-icons.right arrow_forward
+            |
+            |

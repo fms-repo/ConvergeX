@@ -1,0 +1,41 @@
+include ../artworks/clay-deco.pug
+
+mixin parallax3d-food(type='scroll')
+  .parallax-3d
+    if type === 'hover'
+      .parallax-scene
+        .food
+          #scene1
+            div(data-depth="0.2")
+              .obj-hover.ufo(style='left: 240px; top: 470px')
+                +clay-deco(assets+'/images/decoration/clay-ufo.png', 'double-primary')
+            div(data-depth="0.4")
+              .obj-hover.bom(style='left: -60px; top: 260px')
+                +clay-deco(assets+'/images/decoration/clay-plate.png', 'accent')
+            div(data-depth="0.3")
+              .obj-hover.tube(style='right: 0px; top: 320px')
+                +clay-deco(assets+'/images/decoration/clay-tube.png', 'double-main')
+            div(data-depth="0.4")
+              .obj-hover.wormhole(style='right: -200px; top: 250px')
+                +clay-deco(assets+'/images/decoration/clay-wormhole.png', 'primary-light')
+    if type === 'scroll'
+      .parallax-wrap
+        .food
+          .inner-parallax.start
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .ufo(style='left: 100px; top: 0px')
+                  +clay-deco(assets+'/images/decoration/clay-ufo.png', 'double-primary')
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .plate(style='left: 180px; top: 0px')
+                  +clay-deco(assets+'/images/decoration/clay-plate.png', 'accent')
+          .inner-parallax.end
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .tube(style='right: -40px; top: 0px')
+                  +clay-deco(assets+'/images/decoration/clay-tube.png', 'double-main')
+            .obj-scroll
+              div(data-enllax-ratio="-0.15" data-enllax-type="foreground")
+                .wormhole(style='right: 30px; top: -100px')
+                  +clay-deco(assets+'/images/decoration/clay-wormhole.png', 'primary-light')

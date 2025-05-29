@@ -1,0 +1,199 @@
+include ../title/title.pug
+include ../icons3d.pug
+
+-
+  var integration1 = [
+    {
+      icon: 'search',
+      title: 'Vestibulum a massa'
+    },
+    {
+      icon: 'device_hub',
+      title: 'Document collaboration'
+    },
+    {
+      icon: 'layers',
+      title: 'Project and issue tracking'
+    },
+    {
+      icon: 'rss_feed',
+      title: 'Role & Responsibilities'
+    },
+    {
+      icon: 'desktop_mac',
+      title: 'Launch Your First Application'
+    },
+    {
+      icon: 'thumb_up',
+      title: 'Powering innovation'
+    },
+    {
+      icon: 'cloud_upload',
+      title: 'Serverless Computing'
+    },
+    {
+      icon: 'build',
+      title: 'Learn, Build & Get Connected'
+    }
+  ]
+
+  var integration2 = [
+    {
+      icon: 'keyboard_hide',
+      title: ' Analytics & Data Lakes'
+    },
+    {
+      icon: 'device_hub',
+      title: 'Enjoy the freedom to access'
+    },
+    {
+      icon: 'insert_chart',
+      title: 'Optimize Business Value'
+    },
+    {
+      icon: 'add_circle',
+      title: 'Files on demand'
+    },
+    {
+      icon: 'pie_chart',
+      title: 'Reinvent with Data'
+    },
+    {
+      icon: 'supervisor_account',
+      title: 'Share and collaborate'
+    },
+    {
+      icon: 'call_merge',
+      title: 'Unify your infrastructure'
+    },
+    {
+      icon: 'sync',
+      title: 'Migrate your workloads'
+    }
+  ]
+
+#wallet-security
+  .root
+    .background
+      .bg-gradient
+        |
+        |
+        span.oval-right
+        |
+        |
+        span.oval-top
+        |
+        |
+        span.oval-bottom
+        |
+        |
+      .container
+        +title-main($t.wallet.security_title, 'center')
+        .list
+          .row.spacing3.justify-content-center.mb-0(class="sm:mb-15")
+            .col-lg-12.col-sm-12(class="md:px-4")
+              .row.spacing3(class="sm:mb-15")
+                .col-sm-6(class="md:px-4")
+                  .wow.fadeInUpShort(
+                    data-wow-offset="-100"
+                    data-aos-delay="0.5s"
+                    data-aos-duration="0.5s"
+                  )
+                    .text-center.text-sm-end
+                      .illustration.left-side
+                        .obj
+                          .deco.liquid
+                            |
+                            |
+                            span.bg.use-bg-primary-main
+                            |
+                            |
+                            span.shadow
+                            |
+                            |
+                          .photo
+                            |
+                            |
+                            img(src=imgAPI.wallet[0] alt="person big")/
+                            |
+                            |
+                          .icon3D
+                            .medium(style="bottom: 0; left: 0")
+                              +icons3d('mdi-fingerprint', 'secondary')
+                            .small(style="top: 0; right: 60px")
+                              +icons3d('mdi-eye-off', 'primary')
+                            .big(style="top: 10; right: -10px")
+                              +icons3d('mdi-shield-lock', 'primary')
+                      h3.use-text-primary.use-text-subtitle
+                        | #{$t.wallet.security_subtitle2}
+                      p.use-text-subtitle2
+                        | #{$t.wallet.security_desc2}
+                .col-sm-6(class="xl:px-4")
+                  .wow.fadeInUpShort(
+                    data-wow-offset="-100"
+                    data-aos-delay="0.8s"
+                    data-aos-duration="0.5s"
+                  )
+                    .list-wrap
+                      ul.list-primary
+                        each item in integration1
+                          li
+                            |
+                            |
+                            i.material-icons #{item.icon}
+                            | #{item.title}
+                            |
+                            |
+              .row
+                .col-sm-6.order-sm-5(class="lg:px-4")
+                  .px-2.wow.fadeInUpShort(
+                    data-wow-offset="-100"
+                    data-aos-delay="0.5s"
+                    data-aos-duration="0.5s"
+                  )
+                    .text-center.text-sm-start
+                      figure.illustration
+                        .obj
+                          .deco.leaf
+                            |
+                            |
+                            span.bg.use-bg-secondary-main
+                            |
+                            |
+                            span.shadow
+                            |
+                            |
+                          .photo
+                            |
+                            |
+                            img(src=imgAPI.wallet[1] alt="person big")/
+                            |
+                            |
+                          .icon3D
+                            .medium(style="bottom: 40px; left: -30px")
+                              +icons3d('mdi-key', 'secondary')
+                            .big(style="top: -20px; right: -40px")
+                              +icons3d('mdi-wall', 'secondary')
+                            .medium(style="top: -30px; right: -60px")
+                              +icons3d('mdi-fire', 'accent')
+                      h3.use-text-secondary.use-text-subtitle
+                        | #{$t.wallet.security_subtitle1}
+                      p.use-text-subtitle2
+                        | #{$t.wallet.security_desc1}
+                .col-sm-6.order-sm-0(class="xl:px-4")
+                  .wow.fadeInUpShort(
+                    data-wow-offset="-100"
+                    data-aos-delay="0.8s"
+                    data-aos-duration="0.5s"
+                  )
+                    .list-wrap
+                      ul.list-secondary
+                        each item in integration2
+                          li
+                            |
+                            |
+                            | #{item.title}
+                            i.material-icons #{item.icon}
+                            |
+                            |
+      include ./parallax/parallax-flower.pug

@@ -1,0 +1,65 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Team"
+  - var pageName = "team"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+  - var profileBg = 'parallax'
+
+  - var overlap = true
+  - var btnJoin = false
+
+block content
+  div#about-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/basic-banner.pug
+            +basic-banner(
+              $t.team_bgtitle,
+              $t.team_title,
+              $t.team_desc
+            )
+              div
+                include ../components/parallax-3d/flower.pug
+                +parallax3d-flower()
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### STATIC GALLERY #####
+          div(class="sm:!mt-0 -mt-10")
+            include ../components/company/collage/carousel.pug
+          // ##### END STATIC GALLERY #####
+          |
+          |
+          |
+          // ##### TEAM #####
+          section#team.pt-40
+            include ../components/company/team/team.pug
+          // ##### END TEAM #####
+          |
+          |
+          |
+          include ../components/company/call-action.pug
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

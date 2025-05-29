@@ -1,0 +1,75 @@
+extends ../layouts/app.pug
+
+block variables
+  -
+    var pageTitle = " FAQ"
+    var pageName = "faq"
+    var headerHome = false
+    var footerBg = true
+    var menuLanding = "ai"
+    var prefix = "ai_landing"
+
+block content
+  #faq-page
+    .main-wrap
+      |
+      |
+      |
+      include ../components/artworks/blur-gradient.pug
+      include ../components/header/main.pug
+      |
+      |
+      |
+      .inner-wrap
+        .container-wrap
+          .container-general
+            // ##### BANNER #####
+            #banner.space-bottom-short
+              include ../components/hero-banner/basic-banner.pug
+              +basic-banner(
+                $t.header_faq,
+                $t.faq_title,
+                $t.contact_subtitle
+              )
+                div
+                  include ../components/parallax-3d/food.pug
+                  +parallax3d-food()
+              div(class="-mt-10")
+                br/
+                div(class="lg:-mt-15 -mt-5")
+                  .container.container-front.max-md
+                    include ../components/filter/search.pug
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### SHORTCUT #####
+          .space-bottom-short
+            include ../components/faq/shortcut.pug
+          // ##### END SHORTCUT #####
+          |
+          |
+          |
+          .container
+            .row.spacing2.justify-content-center
+              // ##### FAQ #####
+              .col-md-7.col-sm-12.order-lg-5(class="xl:px-10")
+                include ../components/faq/faq-list.pug
+              // ##### END FAQ #####
+              |
+              |
+              |
+              // ##### SIDEBAR #####
+              .col-md-4.col-sm-12.order-lg-0(class="xl:px-6")
+                include ../components/faq/topic-list.pug
+                include ../components/faq/helper-widget.pug
+              // ##### END SIDEBAR #####
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco-general
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

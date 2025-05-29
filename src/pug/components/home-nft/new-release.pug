@@ -1,0 +1,91 @@
+include ../title/title
+include ../cards/products/nft-card.pug
+
+-
+  var nftList = [
+    {
+      img: imgAPI.photosL[41],
+      avatar: imgAPI.logos[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[23],
+      avatar: imgAPI.logos[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[7],
+      avatar: imgAPI.logos[2],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[42],
+      avatar: imgAPI.avatar[13],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    },
+    {
+      img: imgAPI.photosL[9],
+      avatar: imgAPI.avatar[1],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    },
+    {
+      img: imgAPI.photosS[3],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    },
+    {
+      img: imgAPI.photosP[12],
+      avatar: imgAPI.avatar[8],
+      name: 'John Doe',
+      title: 'Lorem Ipsum Dolor',
+      price: '0.5',
+      href: link.productDetail,
+      verified: true,
+    }
+  ]
+
+#nft-new-release
+  .main-feature
+    .container.fixed-width--md-down
+      .row.d-flex.justify-content-center.spacing4.spacing2-sm-down
+        .col-lg-3.col-md-4.col-sm-12
+          div(class="lg:pt-3")
+            +title-main($t.nft.new_release_title)
+            p.mb-5.use-text-subtitle2.text-center(class="lg:!text-start")
+              | #{$t.nft.new_release_desc}
+        each item, index in nftList
+          .col-lg-3.col-md-4.col-sm-6.col-6
+            .card-new
+              +product-nft-card(
+                item.img,
+                item.avatar,
+                item.name,
+                item.title,
+                item.price,
+                item.href,
+                item.verified
+              )

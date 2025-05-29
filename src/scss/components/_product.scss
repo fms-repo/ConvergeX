@@ -1,0 +1,437 @@
+.product-style {
+  .product-detail {
+    margin-bottom: $spacing5;
+  }
+  .desc {
+    max-height: 130px;
+    padding: spacing(1, 0);
+    margin-bottom: $spacing5;
+    h6 {
+      font-weight: $font-medium;
+    }
+  }
+  .responsive-img {
+    width: 100%;
+    max-height: 460px;
+  }
+  .card-image {
+    padding: 1px;
+    height: 150px;
+    overflow: hidden;
+    img {
+      min-height: 100%
+    }
+    .btn-icon {
+      position: absolute;
+      top: 10px;
+      @include right(10px)
+    }
+  }
+  .text {
+    position: relative;
+    @include text-align(left);
+    h4 {
+      font-weight: $font-bold;
+      margin-bottom: $spacing2;
+      width: 100%;
+      span {
+        display: block;
+        font-weight: $font-medium;
+      }
+    }
+  }
+  .options {
+    position: absolute;
+    @include right(0);
+    top: 0px;
+    @include breakpoints-down(sm) {
+      top: -8px;
+    }
+    .btn {
+      margin: spacing(0, 0.5);
+      width: 30px;
+      height: 30px;
+      @include use-theme(background, $palette-primary-light, $palette-primary-dark);
+      i {
+        font-size: 16px;
+        line-height: 32px;
+        @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+      }
+    }
+  }
+  .property-title {
+    width: 100%;
+    display: flex;
+    margin-bottom: $spacing2;
+    i:not(:first-child) {
+      @include margin-left($spacing2);
+    }
+    i {
+      @include margin-right(4px);
+      @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+    }
+    .divider {
+      background: none;
+      border-left: 1px solid;
+      @include use-theme(border-color, $light-text-primary, $dark-text-primary);
+      height: 12px;
+      margin: 6px $spacing2;
+      display: inline-block;
+    }
+  }
+  .price-main {
+    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+    @include margin-right($spacing4);
+    line-height: 22px;
+    @include breakpoints-down(lg) {
+      width: 100%;
+      flex-basis: 100%;
+      margin-bottom: $spacing5;
+      @include margin-left($spacing2)
+    }
+    p {
+      @include palette-text-secondary;
+      margin-bottom: 4px
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: $font-medium;
+      span {
+        font-size: 18px;
+        display: inline-block;
+        @include margin-left($spacing1)
+      }
+    }
+  }
+  .btn-area {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    @include breakpoints-down(lg) {
+      flex-wrap: wrap;
+      .btn {
+        width: calc(50% - 24px)
+      }
+    }
+    @include breakpoints-down(sm) {
+      display: block;
+      text-align: center;
+      &.main {
+        & > * {
+          width: 100%;
+        }
+      }
+      & > * {
+        margin: spacing(0, 0, 2);
+      }
+    }
+    .text-btn {
+      padding-left: 8px;
+      padding-right: 8px;
+      @include use-theme(color, $palette-secondary-main, $palette-secondary-light);
+      i {
+        font-size: 1.3rem;
+        @include margin-right(4px);
+      }
+    }
+    & > * {
+      @include margin-right($spacing3);
+    }
+  }
+  .zoom-icon {
+    &.material-icons {
+      position: absolute;
+      font-size: 56px;
+    }
+    top: calc(50% - 28px);
+    left: calc(50% - 28px);
+    opacity: 0;
+    color: $palette-common-white;
+    text-shadow: 1px 1px 10px $palette-common-black;
+  }
+  .image {
+    text-align: center;
+    line-height: 360px;
+    vertical-align: middle;
+    position: relative !important;
+    margin: 0 auto;
+    width: 360px;
+    a {
+      display: block
+    }
+    .figure {
+      display: block;
+      @include shadow3;
+      overflow: hidden;
+      border-radius: $rounded-big;
+      margin:spacing(2, 0);
+      margin-top: 0;
+      cursor: pointer;
+      position: relative;
+      @include breakpoints-up(md) {
+        margin: spacing(2, 4)
+      }
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .zoom-icon {
+        opacity: 1
+      }
+    }
+  }
+  .image-detail {
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 360px;
+  }
+  .about {
+    margin-top: $spacing12 * -1;
+    padding: spacing(7, 10);
+    @include breakpoints-down(sm) {
+      padding: $spacing2;
+    }
+    h4 {
+      margin: 0;
+    }
+    .btn-area {
+      margin-top: $spacing6;
+    }
+  }
+  .person {
+    @include breakpoints-down(lg) {
+      margin-top: $spacing5;
+    }
+    h6 {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: $font-bold;
+    }
+    p {
+      margin-bottom: $spacing4;
+      &:last-child {
+        margin-bottom: 0
+      }
+    }
+  }
+  .help-paper {
+    @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+    padding: spacing(2, 1);
+  }
+  .headline {
+    color: $palette-primary-dark;
+  }
+  .gallery-item {
+    padding: 2px;
+  }
+  .detail-carousel {
+    .slick-dots {
+      bottom: -10px;
+      @include pagination-slide
+    }
+  }
+  .product-item {
+    padding: $spacing1;
+    margin-bottom: $spacing1;
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+  .image {
+    border-radius: $rounded-small;
+  }
+  .properties {
+    margin-top: $spacing5;
+    h6 {
+      font-size: 14px;
+      text-transform: uppercase;
+      @include use-theme(color, $palette-primary-main, $palette-secondary-main);
+      font-weight: $font-bold
+    }
+    p {
+      margin-bottom: $spacing4;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+    a {
+      @include palette-text-primary;
+    }
+  }
+  .details {
+    margin-top: $spacing5;
+    ul {
+      list-style: none;
+      padding: 0;
+      @include breakpoints-up(sm) {
+        margin: spacing(5, 0, 10);
+      }
+      li {
+        list-style: none;
+        margin-bottom: $spacing2;
+        display: flex;
+        span {
+          flex: 1
+        }
+        a {
+          text-decoration: none;
+          @include use-theme(color, $palette-primary-main, $palette-secondary-main)
+        }
+      }
+    }
+  }
+  .accordion {
+    position: relative;
+  }
+  .paper {
+    @include palette-background-paper;
+    margin-bottom: $spacing3;
+    overflow: hidden;
+    border-radius: $rounded-medium;
+    .collapsible-header {
+      background: none;
+    }
+  }
+  .content {
+    & > div {
+      flex: 1
+    }
+    i.material-icons {
+      margin-top: $spacing1;
+    }
+  }
+  .active {
+    .collapsible-header {
+      color: $palette-common-white;
+    }
+    i.material-icons {
+      color: $palette-common-white;
+      transform: rotate(180deg)
+    }
+  }
+  .detail {
+    color: $palette-common-white;
+    border-radius: 0 0 $rounded-medium $rounded-medium;
+    border: none;
+    overflow: auto;
+    table {
+      min-width: 100%;
+      width: auto;
+    }
+    p {
+      font-size: 18px;
+      @include breakpoints-down(sm) {
+        font-size: 16px;
+      }
+    }
+  }
+  .y-label {
+    position: absolute;
+    font-weight: $font-medium;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    @include left(-15px);
+    top: 130px;
+  }
+  .chart {
+    @include padding-left($spacing6);
+    flex: 1;
+    padding-bottom: $spacing5;
+    canvas {
+      max-height: 180px  
+    }
+  }
+  .table {
+    position: relative;
+    background: none;
+    z-index: 2;
+    @include breakpoints-down(md) {
+      margin-bottom: $spacing5;
+    }
+    @include breakpoints-up(sm) {
+      margin-top: $spacing5
+    }
+    th {
+      border: none;
+      color: $palette-common-white !important;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: $font-medium !important;
+    }
+    & > tbody > tr > td,
+    & > thead > tr > th {
+      padding: 12px;
+    }
+    td {
+      border: none;
+      color: $palette-common-white;
+    }
+    strong {
+      font-weight: $font-medium;
+    }
+    a {
+      text-decoration: none;
+      @include use-theme(color, $palette-primary-main, $palette-secondary-main);
+    }
+  }
+  .carousel-header {
+    position: relative;
+    z-index: 3;
+    @include breakpoints-up(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        flex: 1
+      }
+    }
+    @include breakpoints-down(sm) {
+      text-align: center;
+      margin-bottom: $spacing5
+    }
+  }
+
+  .view-all {
+    padding: 6px 24px;
+    line-height: 36px;
+    @include use-theme(color, $palette-primary-main, $palette-secondary-light);
+  }
+
+  .card-related {
+    min-width: 220px;
+    height: 300px;
+    > a {
+      height: 100%
+    }
+  }
+
+  .scroll-tablet {
+    flex-flow: row wrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: $spacing2;
+    @include breakpoints-down(sm) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+}
+
+#product_result {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

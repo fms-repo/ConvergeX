@@ -1,0 +1,46 @@
+-
+  var statsData = [
+    {
+      icon: 'mdi-cube-outline',
+      color: 'cyan',
+      title: '3d Designs',
+      done: 7
+    },
+    {
+      icon: 'mdi-palette',
+      color: 'purple',
+      title: '2d Graphics',
+      done: 10
+    },
+    {
+      icon: 'mdi-animation-play',
+      color: 'red',
+      title: 'Animation',
+      done: 2
+    },
+    {
+      icon: 'mdi-hexagon-outline',
+      color: 'pink',
+      title: 'NFT',
+      done: 13
+    }
+  ];
+
+include ../../icons3d.pug
+
+.root-categories
+  .row.spacing6.mt-1
+    .col-10
+      h5.title-progress.use-text-subtitle.mb-3.text-center.text-uppercase
+        | #{$t.profile.stats_subtitle2}
+    each item, index in statsData
+      .col-sm-5
+        .wow.fadeInLeftShort(data-wow-offset="300" data-wow-delay=0.1 * index + 0.1 + "s" data-wow-duration="0.3s")
+          .category
+            .bg(class=item.color)
+              +icons3d(item.icon, item.color)
+            .text-categories
+              p.name #{item.title}
+              p
+                | #{item.done}
+                | Projects Done

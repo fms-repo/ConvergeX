@@ -1,0 +1,98 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " About"
+  - var pageName = "about"
+  - var headerHome = false
+  - var footerBg = true
+  - var menuLanding = "ai"
+  - var prefix = "ai_landing"
+
+  - var overlap = false
+  - var profileBg = 'images'
+  - var btnJoin = true
+
+block content
+  div#about-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      main.container-wrap
+        .inner-page
+          // ##### BANNER #####
+          section#banner
+            include ../components/hero-banner/media-banner.pug
+            +media-banner(
+              $t.about_banner_title,
+              imgAPI.inner[1],
+              imgAPI.photosL[53],
+              'WRCB2QSrQQU',
+              'rX2T9jH0OxA'
+            )
+              div
+                include ../components/parallax-3d/geometric.pug
+                +parallax3d-geometric()
+          // ##### END BANNER #####
+          |
+          |
+          |
+          // ##### DESCRIPTION #####
+          section#desc.space-top.space-top-short--sm-down
+            include ../components/company/about/description.pug
+          // ##### END DESCRIPTION #####
+          |
+          |
+          // ##### KEY VALUE #####
+          section#desc.space-top.space-top-short--sm-down
+            include ../components/company/about/key-values.pug
+          // ##### END KEY VALUE #####
+          |
+          |
+          |
+          // ##### COUNTER #####
+          section#counter.space-top-short
+            include ../components/counter/counter-carousel.pug
+            +counter-carousel($t.service_counter_title, $t.service_counter_desc, imgAPI.photosL[32])
+          // ##### END COUNTER #####
+          |
+          |
+          |
+          // ##### CULTURE #####
+          section#counter.space-top-short
+            include ../components/company/about/culture.pug
+          // ##### END CULTURE #####
+          |
+          |
+          |
+          // ##### TEAM #####
+          section#team.space-top
+            include ../components/company/team/team.pug
+          // ##### END TEAM #####
+          |
+          |
+          |
+          // ##### STATIC GALLERY #####
+          div(class="sm:-mt-25")
+            include ../components/company/collage/static.pug
+          // ##### END STATIC GALLERY #####
+          |
+          |
+          |
+          // ##### NEWS CAROUSEL #####
+          section#news.space-top.space-bottom-short
+            include ../components/company/news-carousel.pug
+          // ##### END NEWS CAROUSEL #####
+          |
+          |
+          |
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/decoration/general.pug
+      +footer-deco
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

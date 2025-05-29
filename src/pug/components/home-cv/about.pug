@@ -1,0 +1,89 @@
+include ../title/parallax-title.pug
+include ../cards/thumbnail/preview-card.pug
+
+-
+  var profileList = [
+    {
+      icon: 'ion-md-contact',
+      text: 'Senior UI UX Designer',
+      color: 'primary-light',
+    },
+    {
+      icon: 'ion-ios-briefcase',
+      text: 'Work at Lorem Company ',
+      color: 'secondary-light',
+    },
+    {
+      icon: 'ion-ios-school',
+      text: 'Alumni from Lipsum University',
+      color: 'primary-light',
+    },
+    {
+      icon: 'ion-md-globe',
+      text: 'From England',
+      color: 'secondary-light',
+    },
+    {
+      icon: 'ion-md-checkmark-circle-outline',
+      text: 'Verified Account',
+      color: 'primary-light',
+    },
+    {
+      icon: 'ion-ios-radio-button-on',
+      text: 'Available for Hire',
+      color: 'success',
+    }
+  ]
+
+  var appHighlight = [
+    {
+      img: imgAPI.photosP[26],
+      icon: imgAPI.logos[34]
+    },
+    {
+      img: imgAPI.photosP[27],
+      icon: imgAPI.logos[36]
+    },
+    {
+      img: imgAPI.photosS[7],
+      icon: imgAPI.logos[31]
+    },
+  ]
+
+#cv-about
+  .about
+    include ./parallax/parallax-right.pug
+    +parallax-title($t.profile.about_bgtitle, $t.profile.about_title, 'double-custom')
+    .container.fixed-width(class="md:mt-15")
+      .row.spacing6--sm-up
+        .col-lg-1.col-sm-12.pa-6.hidden-lg-down
+          h2.name-deco
+            | #{brand.profileName}
+        .col-lg-7.col-md-8.col-sm-12(class="lg:pe-6")
+          .use-text-subtitle2.text-center(class="lg:!text-start")
+            p(class="xl:mb-10")
+              | #{ $t.profile.about_desc1}
+              | #{ $t.profile.about_desc2}
+            p(class="xl:mb-5")
+              | #{$t.profile.about_desc1}
+              | #{$t.profile.about_desc2}
+          .row.spacing6.flex.items-end(class="lg:items-start xl:mt-12")
+            .col-lg-7.col-sm-12.py-0.px-2
+              .row.spacing2.icon-profile(class="sm:px-3")
+                each item, index in profileList
+                  .col-4.mb-3.pt-0.icon
+                    |
+                    |
+                    i(class="use-text-grd-" + item.color + " " + item.icon)
+                    |
+                    |
+                    p #{item.text}
+                    |
+                    |
+            .col-md-5.show-lg-up.px-3
+              +app-card(appHighlight[0].img, appHighlight[0].icon)
+        .col-lg-3.col-md-4.col-sm-12(class="sm:ps-6")
+          .flex(class="lg:block")
+            +app-card(appHighlight[1].img, appHighlight[1].icon)
+            .lower
+              +app-card(appHighlight[2].img, appHighlight[2].icon)
